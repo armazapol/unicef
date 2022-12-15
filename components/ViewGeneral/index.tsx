@@ -71,7 +71,7 @@ const ViewGeneral = ({
   const [finishTrivia, setFinishTrivia] = useState(false);
 
   //ref
-  const refAnimationInstance = useRef(null);
+  const refAnimationInstance :any = useRef(null);
 
   const actualizarFinTrivia = () => {
     setFinishTrivia(true);
