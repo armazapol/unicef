@@ -69,4 +69,9 @@
   .z-60 {
     z-index: 60;
   }
+  /*text-border*/
+  .text-shadow {
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+      1px 1px 0 #fff;
+  }
 }

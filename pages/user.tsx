@@ -13,6 +13,8 @@ const User = () => {
     dispatch(logOut(null));
   };
 
+  if(!user) router.push("/login");
+
   return (
     <div>
       {user ? (

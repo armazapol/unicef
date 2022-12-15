@@ -1,55 +1,111 @@
-import React from "react";
+import React,{useEffect} from "react";
 import Image from "next/image";
 import Button from "../commons/button/Button";
-import img1 from "../../public/img/videogames/babimaiki/img1.jpg";
-import img2 from "../../public/img/videogames/babimaiki/img2.png";
-import img3 from "../../public/img/videogames/babimaiki/img3.png";
-import img4 from "../../public/img/videogames/babimaiki/img4.png";
-import img5 from "../../public/img/videogames/babimaiki/img5.jpg";
+import { gsap } from "gsap";
+import img1 from "../../public/img/view1/img1.png";
+import img2 from "../../public/img/view1/img2.jpg";
+import img3 from "../../public/img/view1/img3.jpg";
+import img4 from "../../public/img/view1/img4.jpg";
+import img5 from "../../public/img/view1/img5.jpg";
 import logo from "../../public/img/products/trivia/logo.png";
 
 type Props = {
   viewVideo: () => void;
   toggleViewImages: () => void;
+  keyCarrousel: number;
+  index: number;
+  stateSide: string;
 };
 
-const View15 = ({ viewVideo, toggleViewImages }: Props) => {
+const View15 = ({
+  viewVideo,
+  toggleViewImages,
+  keyCarrousel,
+  index,
+  stateSide,
+}: Props) => {
+  useEffect(() => {
+    // console.log(keyCarrousel, index)
+    if (keyCarrousel === index) {
+      if (stateSide === "left") {
+        gsap.fromTo(
+          `.animate_logo${keyCarrousel}`,
+          { x: "50%", opacity: 0 },
+          { x: 0, opacity: 1, duration: 1.5, delay: 1.2 }
+        );
+        gsap.fromTo(
+          `.animate_component${keyCarrousel}`,
+          { x: "50%", opacity: 0 },
+          { x: 0, opacity: 1, duration: 1.5, delay: 1.5 }
+        );
+      } else {
+        gsap.fromTo(
+          `.animate_logo${keyCarrousel}`,
+          { x: "-50%", opacity: 0 },
+          { x: 0, opacity: 1, duration: 1.5, delay: 1.2 }
+        );
+        gsap.fromTo(
+          `.animate_component${keyCarrousel}`,
+          { x: "-50%", opacity: 0 },
+          { x: 0, opacity: 1, duration: 1.5, delay: 1.5 }
+        );
+      }
+    }
+  }, [index]);
+
   return (
     <div className="w-full h-screen grid grid-cols-12 grid-rows-3 ">
       <div className="row-span-2 col-span-7 flex items-center justify-center bg-blue-500 relative">
-      <Image alt="img1" src={img2} placeholder="blur" fill />
+      <Image className="object-cover" alt="img1" src={img2} placeholder="blur" fill  quality={50} />
         <div className="bg-black/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700"></div>
-        <div className="flex flex-col z-20 relative items-center">
-          <div className="w-52 ">
+        <div className="flex flex-col z-20 relative items-center  ">
+          {/* <div className={`w-20  lg:w-52 opacity-0 animate_logo${keyCarrousel}`}>
             <Image alt="logo" src={logo} placeholder="empty" />
-          </div>
-          <div className="">
-            <p className="uppercase font_MilkyNiceClean text-2xl py-5">
-             ¡rescata y cuida a los animales del mundo!
-            </p>
-            <div className="font_LatoRegular text-lg leading-tight">
-              <p>
-               Es un juego casual de aventura como ningún otro, con una gran variedad
-              </p>
-              <p>de mini juegos e interacciones de esta dupla que día a día buscan</p>
-              <p>proteger a todo aquel animalito que se encuentre en peligro.</p>
+          </div> */}
+          <p
+            className={`uppercase font-bold text-sm  lg:text-3xl py-1  lg:py-5 animate_logo${keyCarrousel}`}
+          >
+            unicef para cada infancia
+          </p>
+          <div
+            className={` opacity-0 flex items-center flex-col animate_component${keyCarrousel}  `}
+          >
+            <div className=" ">
+              {/* <p className="uppercase font-bold text-sm  lg:text-3xl py-1  lg:py-5">
+                unicef para cada infancia
+              </p> */}
+              <div className="font_LatoRegular text-xs  lg:text-lg leading-tight bg-white/90 text-sky-500 p-4">
+                <p>
+                  UNICEF es conocido por la labor que realiza para la infancia
+                  en
+                </p>
+                <p>
+                  cualquier contexto y en cualquier lugar del mundo; porque
+                  salva
+                </p>
+                <p>
+                  vidas, protege los derechos de los niños y los adolescentes y
+                  les
+                </p>
+                <p>ayuda a desarrollar su potencial.</p>
+              </div>
             </div>
-          </div>
-          <div className="flex gap-10 mt-5">
-            <Button text="Play" />
-            <Button text="Compartir" />
+            <div className="flex gap-10 mt-2 lg:mt-5">
+              <Button text="Play" />
+              {/* <Button text="Compartir" /> */}
+            </div>
           </div>
         </div>
       </div>
       <div className="row-span-2 col-span-5 flex items-center justify-center bg-red-500 relative">
-      <Image alt="img5" src={img3} placeholder="blur" fill />
+      <Image className="object-cover" alt="img5" src={img3} placeholder="blur" fill  quality={50} />
           <div className="bg-black/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700"></div>
           <a onClick={toggleViewImages} className="z-20">
-            <Button text="Galería de Fotos" />
+            <Button text="Galería" />
           </a>
       </div>
       <div className="col-span-4  flex items-center justify-center bg-pink-500 relative">
-      <Image alt="img2" src={img4} placeholder="blur" fill />
+      <Image className="object-cover" alt="img2" src={img4} placeholder="blur" fill  quality={50} />
         <div className="bg-black/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group">
           <a
             onClick={viewVideo}
@@ -60,11 +116,11 @@ const View15 = ({ viewVideo, toggleViewImages }: Props) => {
         </div>
       </div>
       <div className="col-span-4 flex items-center justify-center bg-green-500 relative">
-      <Image alt="img3" src={img5} placeholder="blur" fill />
+      <Image className="object-cover" alt="img3" src={img5} placeholder="blur" fill  quality={50} />
         <div className="bg-black/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group">
           <a
             className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 "
-            href="https://www.google.com/"
+            href="https://www.unicef.org/peru/"
             target="_blank"
             rel="noreferrer"
           >
@@ -73,7 +129,7 @@ const View15 = ({ viewVideo, toggleViewImages }: Props) => {
         </div>
       </div>
       <div className="col-span-4 flex items-center justify-center bg-violet-500 relative">
-      <Image className="" alt="img4" src={img1} placeholder="blur" fill />
+      <Image className="object-cover" alt="img4" src={img1} placeholder="blur" fill />
         <div className="bg-black/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group" />
       </div>
     </div>

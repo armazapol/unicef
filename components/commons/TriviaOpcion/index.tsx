@@ -38,11 +38,19 @@ const TriviaOpcion = ({
     }
   };
 
+  // console.log("state:", state, "stateres:", stateRespuesta);
+
   return (
     <li
-      className={`text-white p-2   
-      ${state && "hover:bg-zinc-600 cursor-pointer bg-zinc-500"} 
-       ${!state && stateRespuesta ? "bg-green-500" : "bg-red-500"} `}
+      className={` py-2 px-10 rounded-2xl h-14 leading-none text-left font-semibold text-lg border-b-4
+      ${state && "hover:bg-zinc-300 cursor-pointer bg-white text-black border-sky-500 "} 
+       ${
+         state === false
+           ? stateRespuesta === true
+             ? "bg-green-500 text-white border-green-900"
+             : "bg-red-500 text-white border-red-900"
+           : null
+       } `}
       onClick={() => responder(data)}
     >
       {data.respuesta}

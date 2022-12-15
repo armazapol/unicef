@@ -2,10 +2,8 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
-import img1 from "../../public/img/view1/img1.png";
-import img2 from "../../public/img/view1/img2.png";
-import img3 from "../../public/img/view1/img3.png";
-import img4 from "../../public/img/view1/img4.png";
+import img1 from "../../public/img/view1/galeria1.jpg";
+import img2 from "../../public/img/view1/galeria2.jpg";
 
 type Props = {
   toggleViewImages: () => void;
@@ -45,9 +43,10 @@ const ViewImages = ({ toggleViewImages }: Props) => {
               <Image
                 className="object-cover"
                 alt="img2"
-                src={img2}
+                src={img1}
                 placeholder="blur"
                 fill
+                quality={50}
               />
             </div>
             <div className="bg-black/60 px-5 lg:px-20 pt-5 pb-10 w-full flex-1">
@@ -64,6 +63,7 @@ const ViewImages = ({ toggleViewImages }: Props) => {
                 alt="img2"
                 src={img2}
                 placeholder="blur"
+                quality={50}
                 fill
               />
             </div>

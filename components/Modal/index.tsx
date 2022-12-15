@@ -16,27 +16,21 @@ const Modal = ({ viewVideo }: Props) => {
       className="h-screen w-full z-60 bg-black/60 flex items-center justify-center fixed modal"
       onClick={viewVideo}
     >
- 
-        <div className="flex video gap-2 h-5/6 w-10/12 xl:w-[1020px] xl:h-[630px] relative">
+      <div className="flex video gap-2 h-5/6 w-10/12 xl:w-[1020px] xl:h-[630px] relative">
+        <iframe
 
-          <iframe
-            // width="1020"
-            // height="630"
-            src="https://www.youtube.com/embed/C3iW3Zhv3Ns?autoplay=1"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-           <a
-            onClick={viewVideo}
-            className="cursor-pointer absolute -right-5 text-white text-xl font-semibold"
-          >
-            X
-          </a>
-        </div>
-      
-      
+          src="https://www.youtube.com/embed/EH3ipfAY6AY?autoplay=1"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+        <a
+          onClick={viewVideo}
+          className="cursor-pointer absolute -right-5 text-white text-xl font-semibold"
+        >
+          X
+        </a>
+      </div>
     </div>
   );
 };
