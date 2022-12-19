@@ -1,15 +1,20 @@
-import React from 'react'
+import React from "react";
 
 const Menu = () => {
   return (
-    <div className='flex fixed w-screen h-screen items-center justify-center text-white top-0 left-0 gap-10'>
-        <div className='flex flex-col gap-5 w-80 text-base'>
-            <h2 className='border-b w-52 '>Conoce aquí sobre Nosotros</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia vel unde esse illum ratione minima repudiandae eum labore neque culpa ipsum iure, sapiente rem tempora laudantium, natus numquam excepturi autem.</p>
-        </div>
-        <div>Unicef</div>
+    <div className="flex fixed w-screen h-screen items-center justify-center text-white top-0 left-0 gap-10">
+      <div className="flex">
+        <ul className="text-white text-center text-xl lg:text-3xl flex flex-col gap-5 ">
+          <li className="hover:underline cursor-pointer">Galería</li>
+          <li className="hover:underline cursor-pointer">Videos</li>
+          <li className="hover:underline cursor-pointer">Web</li>
+          <li className="hover:underline cursor-pointer">Trivia</li>
+          <li className="hover:underline cursor-pointer">Emparejar</li>
+          <li className="hover:underline cursor-pointer">Clasificar</li>
+        </ul>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;

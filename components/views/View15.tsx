@@ -7,7 +7,7 @@ import img2 from "../../public/img/view1/img2.jpg";
 import img3 from "../../public/img/view1/img3.jpg";
 import img4 from "../../public/img/view1/img4.jpg";
 import img5 from "../../public/img/view1/img5.jpg";
-import logo from "../../public/img/products/trivia/logo.png";
+import logo from "../../public/img/view1/logo.png";
 
 type Props = {
   viewVideo: () => void;
@@ -54,19 +54,19 @@ const View15 = ({
   }, [index]);
 
   return (
-    <div className="w-full h-screen grid grid-cols-12 grid-rows-3 ">
+    <div className="w-full h-screen grid grid-cols-12 grid-rows-3 gap-1 border-[0.25rem]">
       <div className="row-span-2 col-span-7 flex items-center justify-center bg-blue-500 relative">
-      <Image className="object-cover" alt="img1" src={img2} placeholder="blur" fill  quality={50} />
-        <div className="bg-black/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700"></div>
+      <Image className="object-cover" alt="img1" src={img5} placeholder="blur" fill  quality={50} />
+        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700"></div>
         <div className="flex flex-col z-20 relative items-center  ">
-          {/* <div className={`w-20  lg:w-52 opacity-0 animate_logo${keyCarrousel}`}>
+          <div className={`w-20  lg:w-52 opacity-0 animate_logo${keyCarrousel}`}>
             <Image alt="logo" src={logo} placeholder="empty" />
-          </div> */}
-          <p
+          </div>
+          {/* <p
             className={`uppercase font-bold text-sm  lg:text-3xl py-1  lg:py-5 animate_logo${keyCarrousel}`}
           >
             unicef para cada infancia
-          </p>
+          </p> */}
           <div
             className={` opacity-0 flex items-center flex-col animate_component${keyCarrousel}  `}
           >
@@ -99,14 +99,14 @@ const View15 = ({
       </div>
       <div className="row-span-2 col-span-5 flex items-center justify-center bg-red-500 relative">
       <Image className="object-cover" alt="img5" src={img3} placeholder="blur" fill  quality={50} />
-          <div className="bg-black/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700"></div>
+          <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700"></div>
           <a onClick={toggleViewImages} className="z-20">
             <Button text="Galería" />
           </a>
       </div>
       <div className="col-span-4  flex items-center justify-center bg-pink-500 relative">
       <Image className="object-cover" alt="img2" src={img4} placeholder="blur" fill  quality={50} />
-        <div className="bg-black/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group">
+        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group">
           <a
             onClick={viewVideo}
             className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 "
@@ -116,8 +116,8 @@ const View15 = ({
         </div>
       </div>
       <div className="col-span-4 flex items-center justify-center bg-green-500 relative">
-      <Image className="object-cover" alt="img3" src={img5} placeholder="blur" fill  quality={50} />
-        <div className="bg-black/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group">
+      <Image className="object-cover" alt="img3" src={img2} placeholder="blur" fill  quality={50} />
+        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group">
           <a
             className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 "
             href="https://www.unicef.org/peru/"
@@ -130,7 +130,7 @@ const View15 = ({
       </div>
       <div className="col-span-4 flex items-center justify-center bg-violet-500 relative">
       <Image className="object-cover" alt="img4" src={img1} placeholder="blur" fill />
-        <div className="bg-black/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group" />
+        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group" />
       </div>
     </div>
   );

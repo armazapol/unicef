@@ -10,7 +10,6 @@ import Menu from "../Menu";
 import MenuBurguer from "../MenuBurguer";
 
 import View5 from "../views/View5";
-import View3 from "../views/View3";
 import View15 from "../views/View15";
 import ViewGeneral from "../ViewGeneral";
 
@@ -116,7 +115,7 @@ const Carousell = (props) => {
           index={stateCarousel}
           stateSide={stateSide}
         />
-         <View3
+         <View1
           viewVideo={viewVideo}
           toggleViewImages={toggleViewImages}
           keyCarrousel={3}
