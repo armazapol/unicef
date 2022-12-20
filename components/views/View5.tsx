@@ -57,7 +57,7 @@ const View5 = ({
       <div className="row-span-4 col-span-2 flex items-center justify-center bg-blue-500 relative ">
         <Image className="object-cover" alt="img1" src={img5} placeholder="blur" fill  quality={50} />
         <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700"></div>
-        <div className="flex flex-col z-20 relative items-center  ">
+        <div className="flex flex-col z-20 relative items-center  gap-5">
           <div className={`w-20  lg:w-52 opacity-0 animate_logo${keyCarrousel}`}>
             <Image alt="logo" src={logo} placeholder="empty" />
           </div>

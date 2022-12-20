@@ -166,6 +166,9 @@ const ViewGeneral = ({
         placeholder="blur"
         fill
       />
+      <div className="absolute left-5 top-5 px-10 py-6 bg-white">
+          <p className="text-sky-500 font-bold text-xl">Pregunta 2/4</p>
+      </div>
       <div className="flex flex-col z-20 relative items-center w-[30rem]  p-5">
         <div className="relative w-full flex items-center justify-center">
           <Image className="" alt="quest" src={quest} placeholder="blur" />

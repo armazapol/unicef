@@ -12,6 +12,8 @@ import MenuBurguer from "../MenuBurguer";
 import View5 from "../views/View5";
 import View15 from "../views/View15";
 import ViewGeneral from "../ViewGeneral";
+import ModalAntecedentes from "../Modal/ModalAntecedentes";
+import ModalDiagnostico from "../Modal/ModalDiagnostico";
 
 const Carousell = (props) => {
   // const [stateModalVideo, setStateModalVideo] = useState<boolean>(false);
@@ -20,6 +22,8 @@ const Carousell = (props) => {
   // const [stateHamburger, setStateHamburger] = useState<boolean>(false);
   const [stateModalVideo, setStateModalVideo] = useState(false);
   const [stateModalImages, setStateModalImages] = useState(false);
+  const [stateModalAntecedentes, setStateModalAntecedentes] = useState(false);
+  const [stateModalDiagnostico, setStateModalDiagnostico] = useState(false);
   // const [stateMenu, setStateMenu] = useState(false);
   const [stateHamburger, setStateHamburger] = useState(false);
   const [stateCarousel, setStateCarousel] = useState(0);
@@ -33,6 +37,13 @@ const Carousell = (props) => {
 
   const toggleViewImages = () => {
     setStateModalImages(!stateModalImages);
+  };
+
+  const toggleViewAntecedentes = () => {
+    setStateModalAntecedentes(!stateModalAntecedentes);
+  };
+  const toggleViewDiagnostico = () => {
+    setStateModalDiagnostico(!stateModalDiagnostico);
   };
 
   useEffect(() => {
@@ -76,7 +87,8 @@ const Carousell = (props) => {
     <div {...props} className="relative overflow-hidden">
       {stateModalVideo && <Modal viewVideo={viewVideo} />}
       {stateModalImages && <ViewImages toggleViewImages={toggleViewImages} />}
-
+      {stateModalAntecedentes && <ModalAntecedentes toggleViewAntecedentes={toggleViewAntecedentes} />}
+      {stateModalDiagnostico && <ModalDiagnostico toggleViewDiagnostico={toggleViewDiagnostico} />}
       <div className="absolute -bottom-14 -right-14 lg:-bottom-20 lg:-right-20 bg-blue-900/90 rounded-full w-32 h-32 lg:w-40 text-white z-40 background">
         <div className="contentMenu hidden">
           <Menu />
@@ -97,6 +109,8 @@ const Carousell = (props) => {
         <View1
           viewVideo={viewVideo}
           toggleViewImages={toggleViewImages}
+          toggleViewAntecedentes={toggleViewAntecedentes}
+          toggleViewDiagnostico={toggleViewDiagnostico}
           keyCarrousel={0}
           index={stateCarousel}
           stateSide={stateSide}

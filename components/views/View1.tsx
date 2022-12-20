@@ -10,10 +10,11 @@ import logo from "../../public/img/view1/logo.png";
 import Button from "../commons/button/Button";
 // import video from '../../public/img/view1/video.mp4';
 
-
 type Props = {
   viewVideo: () => void;
   toggleViewImages: () => void;
+  toggleViewAntecedentes: () => void;
+  toggleViewDiagnostico: () => void;
   keyCarrousel: number;
   index: number;
   stateSide: string;
@@ -22,6 +23,8 @@ type Props = {
 const View1 = ({
   viewVideo,
   toggleViewImages,
+  toggleViewAntecedentes,
+  toggleViewDiagnostico,
   keyCarrousel,
   index,
   stateSide,
@@ -66,8 +69,10 @@ const View1 = ({
           quality={50}
         />
         <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700"></div>
-        <div className="flex flex-col z-20 relative items-center  ">
-          <div className={`w-20  lg:w-52 opacity-0 animate_logo${keyCarrousel}`}>
+        <div className="flex flex-col z-20 relative items-center  gap-5">
+          <div
+            className={`w-20  lg:w-52 opacity-0 animate_logo${keyCarrousel}`}
+          >
             <Image alt="logo" src={logo} placeholder="empty" />
           </div>
           {/* <p
@@ -99,8 +104,10 @@ const View1 = ({
               </div>
             </div>
             <div className="flex gap-10 mt-2 lg:mt-5">
-              <Button text="Play" />
-              {/* <Button text="Compartir" /> */}
+              <a onClick={toggleViewAntecedentes} className="z-20 ">
+                <Button text="Antedecedentes" />
+              </a>
+              <Button text="Variantes del Covid" />
             </div>
           </div>
         </div>
@@ -115,13 +122,17 @@ const View1 = ({
             fill
             quality={50}
           />
-          <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700"></div>
-          <a onClick={toggleViewImages} className="z-20">
-            <Button text="Galería" />
-          </a>
+          <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group">
+            <a
+              onClick={viewVideo}
+              className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 "
+            >
+              <Button text="Aislamiento y prevención del contagio" />
+            </a>
+          </div>
         </div>
         <div className="flex items-center justify-center  relative">
-        <Image
+          <Image
             className="object-cover"
             alt="img5"
             src={img1}
@@ -129,7 +140,16 @@ const View1 = ({
             fill
             quality={50}
           />
-          <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700"></div>
+          <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group">
+            <a
+              className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 "
+              href="https://www.unicef.org/peru/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button text="Signos de alarma y Factores de riesgo" />
+            </a>
+          </div>
         </div>
       </div>
       <div className="flex items-center justify-center  relative">
@@ -146,7 +166,7 @@ const View1 = ({
             onClick={viewVideo}
             className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 "
           >
-            <Button text="Ver Video" />
+            <Button text="Síntomas" />
           </a>
         </div>
       </div>
@@ -160,13 +180,8 @@ const View1 = ({
           quality={50}
         />
         <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group">
-          <a
-            className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 "
-            href="https://www.unicef.org/peru/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Button text="Web" />
+        <a onClick={toggleViewDiagnostico} className="z-20 ">
+            <Button text="Diagnóstico" />
           </a>
         </div>
       </div>
