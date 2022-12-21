@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
+import Image from "next/image";
+import background from "../../public/img/bgModal.png";
 
 type Props = {
   toggleViewDiagnostico: () => void;
@@ -16,12 +18,20 @@ const ModalDiagnostico = ({ toggleViewDiagnostico }: Props) => {
       className="h-screen w-full z-60 bg-black/60 flex items-center justify-center fixed modal"
       onClick={toggleViewDiagnostico}
     >
+      <Image
+        className="object-cover"
+        alt="background"
+        src={background}
+        placeholder="blur"
+        fill
+        quality={50}
+      />
       <div className="w-[40rem] bg-white flex flex-col gap-2 p-5 relative component rounded-md">
         <a
           onClick={toggleViewDiagnostico}
-          className="cursor-pointer absolute -right-5 text-white text-xl font-semibold"
+          className="cursor-pointer absolute -right-10 text-white text-xl font-semibold"
         >
-          X
+            <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="" />
         </a>
         <h2 className="font-semibold text-lg">Diagnóstico</h2>
         <p>

@@ -2,9 +2,12 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
+import background from "../../public/img/bgModal.png";
+import close from "../../public/img/closeModal.png";
 import img1 from "../../public/img/view1/alarma/img1.png";
 import img2 from "../../public/img/view1/alarma/img2.png";
 import img3 from "../../public/img/view1/alarma/img3.png";
+
 
 type Props = {
   toggleViewAlarmaPrevencion: () => void;
@@ -26,6 +29,14 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
       className="h-screen w-full z-60 bg-black/60 flex items-center justify-center fixed modal"
       onClick={toggleViewAlarmaPrevencion}
     >
+      <Image
+        className="object-cover"
+        alt="background"
+        src={background}
+        placeholder="blur"
+        fill
+        quality={50}
+      />
       <div className="flex flex-col gap-5">
         {/* <h3 className="text-white text-xl text-center font-semibold">Aislamiento y Prevención del Riesgo:</h3> */}
         <div
@@ -39,7 +50,7 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
             infiniteLoop={true}
             autoPlay={false}
             stopOnHover={false}
-            className="  w-full h-full relative "
+            className="  w-full h-full relative carousel1"
           >
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
               <div className="w-[40rem] bg-white flex flex-col gap-2 p-5 relative component rounded-md">
@@ -233,7 +244,7 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
             onClick={toggleViewAlarmaPrevencion}
             className="cursor-pointer absolute top-0 -right-5 text-white text-xl font-semibold"
           >
-            X
+            <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="" />
           </a>
         </div>
       </div>

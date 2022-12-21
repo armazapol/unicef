@@ -16,6 +16,14 @@ import ModalAntecedentes from "../Modal/ModalAntecedentes";
 import ModalDiagnostico from "../Modal/ModalDiagnostico";
 import ModalAlarmaPrevencion from "../Modal/ModalAlarmaPrevencion";
 import ModalVarianteCovid from "../Modal/ModalVarianteCovid";
+import ModalVacunas from "../Modal/ModalVacunas";
+import ModalInmunidadColectiva from "../Modal/ModalInmunidadColectiva";
+import ModalTiposVacunas from "../Modal/ModalTiposVacunas";
+import ModalInocuidadEfectividad from "../Modal/ModalInocuidadEfectividad";
+import ModalEmbarazoLactancia from "../Modal/ModalEmbarazoLactancia";
+import ModalEfectosSecundarios from "../Modal/ModalEfectosSecundarios";
+import ModalAvanceVacunacion from "../Modal/ModalAvanceVacunacion";
+import ModalConsecuencias from "../Modal/ModalConsecuencias";
 
 const Carousell = (props) => {
   // const [stateModalVideo, setStateModalVideo] = useState<boolean>(false);
@@ -28,6 +36,14 @@ const Carousell = (props) => {
   const [stateModalDiagnostico, setStateModalDiagnostico] = useState(false);
   const [stateModalAlarmaPrevencion, setStateModalAlarmaPrevencion] = useState(false);
   const [stateModalVarianteCovid, setStateModalVarianteCovid] = useState(false);
+  const [stateModalVacunas, setStateModalVacunas] = useState(false);
+  const [stateModalInmunidadColectiva, setStateModalInmunidadColectiva] = useState(false);
+  const [stateModalTiposVacunas, setStateModalTiposVacunas] = useState(false);
+  const [stateModalInocuidadEfectividad, setStateModalInocuidadEfectividad] = useState(false);
+  const [stateModalEmbarazoLactancia, setStateModalEmbarazoLactancia] = useState(false);
+  const [stateModalEfectosSecundarios, setStateModalEfectosSecundarios] = useState(false);
+  const [stateModalAvanceVacunacion, setStateModalAvanceVacunacion] = useState(false);
+  const [stateModalConsecuencias, setStateModalConsecuencias] = useState(false);
   // const [stateMenu, setStateMenu] = useState(false);
   const [stateHamburger, setStateHamburger] = useState(false);
   const [stateCarousel, setStateCarousel] = useState(0);
@@ -55,6 +71,30 @@ const Carousell = (props) => {
   }
   const toggleViewVarianteCovid = () => {
     setStateModalVarianteCovid(!stateModalVarianteCovid);
+  }
+  const toggleViewVacunas = () => {
+    setStateModalVacunas(!stateModalVacunas);
+  }
+  const toggleViewInmunidadColectiva = () => {
+    setStateModalInmunidadColectiva(!stateModalInmunidadColectiva);
+  }
+  const toggleViewTiposVacunas = () => {
+    setStateModalTiposVacunas(!stateModalTiposVacunas);
+  }
+  const toggleViewInocuidadEfectividad = () => {
+    setStateModalInocuidadEfectividad(!stateModalInocuidadEfectividad);
+  }
+  const toggleViewEmbarazoLactancia = () => {
+    setStateModalEmbarazoLactancia(!stateModalEmbarazoLactancia);
+  }
+  const toggleViewEfectosSecundarios = () => {
+    setStateModalEfectosSecundarios(!stateModalEfectosSecundarios);
+  }
+  const toggleViewAvanceVacunacion = () => {
+    setStateModalAvanceVacunacion(!stateModalAvanceVacunacion);
+  }
+  const toggleViewConsecuencias = () => {
+    setStateModalConsecuencias(!stateModalConsecuencias);
   }
 
   useEffect(() => {
@@ -102,6 +142,14 @@ const Carousell = (props) => {
       {stateModalDiagnostico && <ModalDiagnostico toggleViewDiagnostico={toggleViewDiagnostico} />}
       {stateModalAlarmaPrevencion && <ModalAlarmaPrevencion toggleViewAlarmaPrevencion={toggleViewAlarmaPrevencion} />}
       {stateModalVarianteCovid && <ModalVarianteCovid toggleViewVarianteCovid={toggleViewVarianteCovid} />}
+      {stateModalVacunas && <ModalVacunas toggleViewVacunas={toggleViewVacunas} />}
+      {stateModalInmunidadColectiva && <ModalInmunidadColectiva toggleViewInmunidadColectiva={toggleViewInmunidadColectiva} />}
+      {stateModalTiposVacunas && <ModalTiposVacunas toggleViewTiposVacunas={toggleViewTiposVacunas} />}
+      {stateModalInocuidadEfectividad && <ModalInocuidadEfectividad toggleViewInocuidadEfectividad={toggleViewInocuidadEfectividad} />}
+      {stateModalEmbarazoLactancia && <ModalEmbarazoLactancia toggleViewEmbarazoLactancia={toggleViewEmbarazoLactancia} />}
+      {stateModalEfectosSecundarios && <ModalEfectosSecundarios toggleViewEfectosSecundarios={toggleViewEfectosSecundarios} />}
+      {stateModalAvanceVacunacion && <ModalAvanceVacunacion toggleViewAvanceVacunacion={toggleViewAvanceVacunacion} />}
+      {stateModalConsecuencias && <ModalConsecuencias toggleViewConsecuencias={toggleViewConsecuencias} />}
       <div className="absolute -bottom-14 -right-14 lg:-bottom-20 lg:-right-20 bg-blue-900/90 rounded-full w-32 h-32 lg:w-40 text-white z-40 background">
         <div className="contentMenu hidden">
           <Menu />
@@ -142,6 +190,14 @@ const Carousell = (props) => {
           <View5
           viewVideo={viewVideo}
           toggleViewImages={toggleViewImages}
+          toggleViewVacunas={toggleViewVacunas}
+          toggleViewInmunidadColectiva={toggleViewInmunidadColectiva}
+          toggleViewTiposVacunas={toggleViewTiposVacunas}
+          toggleViewInocuidadEfectividad={toggleViewInocuidadEfectividad}
+          toggleViewEmbarazoLactancia={toggleViewEmbarazoLactancia}
+          toggleViewEfectosSecundarios={toggleViewEfectosSecundarios}
+          toggleViewAvanceVacunacion={toggleViewAvanceVacunacion}
+          toggleViewConsecuencias={toggleViewConsecuencias}
           keyCarrousel={2}
           index={stateCarousel}
           stateSide={stateSide}

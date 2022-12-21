@@ -12,6 +12,14 @@ import logo from "../../public/img/view1/logo.png";
 type Props = {
   viewVideo: () => void;
   toggleViewImages: () => void;
+  toggleViewVacunas: () => void;
+  toggleViewInmunidadColectiva: () => void;
+  toggleViewTiposVacunas: () => void;
+  toggleViewInocuidadEfectividad: () => void;
+  toggleViewEmbarazoLactancia: () => void;
+  toggleViewEfectosSecundarios: () => void;
+  toggleViewAvanceVacunacion: () => void;
+  toggleViewConsecuencias: () => void;
   keyCarrousel: number;
   index: number;
   stateSide: string;
@@ -20,6 +28,14 @@ type Props = {
 const View5 = ({
   viewVideo,
   toggleViewImages,
+  toggleViewVacunas,
+  toggleViewInmunidadColectiva,
+  toggleViewTiposVacunas,
+  toggleViewInocuidadEfectividad,
+  toggleViewEmbarazoLactancia,
+  toggleViewEfectosSecundarios,
+  toggleViewAvanceVacunacion,
+  toggleViewConsecuencias,
   keyCarrousel,
   index,
   stateSide,
@@ -55,10 +71,19 @@ const View5 = ({
   return (
     <div className="w-full h-screen grid grid-cols-4 grid-rows-4 gap-1 border-[0.25rem]">
       <div className="row-span-4 col-span-2 flex items-center justify-center bg-blue-500 relative ">
-        <Image className="object-cover" alt="img1" src={img5} placeholder="blur" fill  quality={50} />
+        <Image
+          className="object-cover"
+          alt="img1"
+          src={img5}
+          placeholder="blur"
+          fill
+          quality={50}
+        />
         <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700"></div>
         <div className="flex flex-col z-20 relative items-center  gap-5">
-          <div className={`w-20  lg:w-52 opacity-0 animate_logo${keyCarrousel}`}>
+          <div
+            className={`w-20  lg:w-52 opacity-0 animate_logo${keyCarrousel}`}
+          >
             <Image alt="logo" src={logo} placeholder="empty" />
           </div>
           {/* <p
@@ -90,48 +115,111 @@ const View5 = ({
               </div>
             </div>
             <div className="flex gap-10 mt-2 lg:mt-5">
-              <Button text="Play" />
-              {/* <Button text="Compartir" /> */}
+              <a
+                onClick={toggleViewVacunas}
+                className="z-20"
+              >
+                <Button text="¿Cómo actuan las vacunas?" />
+              </a>
+              <a
+                onClick={toggleViewInmunidadColectiva}
+                className="z-20"
+              >
+              <Button text="Inmunidad Colectiva" />
+              </a>
+            </div>
+            <div className="flex gap-10 mt-2 lg:mt-5">
+            <a
+                onClick={toggleViewAvanceVacunacion}
+                className="z-20"
+              >
+              <Button text="Avance de la vacunación" />
+              </a>
+              <a
+                onClick={toggleViewEfectosSecundarios}
+                className="z-20"
+              >
+              <Button text="Efectos secundarios" />
+              </a>
             </div>
           </div>
         </div>
       </div>
       <div className="row-span-2 col-span-2  bg-red-500">
         <div className="flex items-center justify-center  relative h-full">
-          <Image  className="object-cover" alt="img5" src={img3} placeholder="blur" fill  quality={50} />
-          <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700"></div>
-          <a onClick={toggleViewImages} className="z-20">
-            <Button text="Galería" />
-          </a>
+          <Image
+            className="object-cover"
+            alt="img5"
+            src={img3}
+            placeholder="blur"
+            fill
+            quality={50}
+          />
+          <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group">
+            {" "}
+            <a
+              onClick={toggleViewEmbarazoLactancia}
+              className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 "
+            >
+              <Button text="Embarazo y lactancia materna" />
+            </a>
+          </div>
         </div>
       </div>
       <div className="row-span-2  flex items-center justify-center bg-pink-500 relative">
-        <Image className="object-cover" alt="img2" src={img4} placeholder="blur" fill  quality={50} />
+        <Image
+          className="object-cover"
+          alt="img2"
+          src={img4}
+          placeholder="blur"
+          fill
+          quality={50}
+        />
         <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group">
           <a
-            onClick={viewVideo}
+            onClick={toggleViewTiposVacunas}
             className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 "
           >
-            <Button text="Ver Video" />
+            <Button text="Tipos de vacunas y Esquema de vacunación" />
           </a>
         </div>
       </div>
       <div className="flex items-center justify-center bg-green-500 relative">
-        <Image className="object-cover" alt="img3" src={img1} placeholder="blur" fill  quality={50} />
+        <Image
+          className="object-cover"
+          alt="img3"
+          src={img1}
+          placeholder="blur"
+          fill
+          quality={50}
+        />
         <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group">
           <a
             className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 "
-            href="https://www.unicef.org/peru/"
-            target="_blank"
-            rel="noreferrer"
+            onClick={toggleViewInocuidadEfectividad}
           >
-            <Button text="Web" />
+            <Button text="Inocuidad y Efectividad de las vacunas" />
           </a>
         </div>
       </div>
       <div className="flex items-center justify-center bg-violet-500 relative">
-        <Image className="object-cover" alt="img4" src={img2} placeholder="blur" fill  quality={50} />
-        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group" />
+        <Image
+          className="object-cover"
+          alt="img4"
+          src={img2}
+          placeholder="blur"
+          fill
+          quality={50}
+        />
+        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group">
+          {" "}
+          <a
+            onClick={toggleViewConsecuencias}
+            className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 "
+          >
+            <Button text="Consecuencias de las variantes en vacunas" />
+          </a>
+        </div>
       </div>
     </div>
   );

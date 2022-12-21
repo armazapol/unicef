@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
+import background from "../../public/img/bgModal.png";
 import img1 from "../../public/img/view1/variantes/img1.png";
 
 type Props = {
@@ -24,6 +25,14 @@ const ModalVarianteCovid = ({ toggleViewVarianteCovid }: Props) => {
       className="h-screen w-full z-60 bg-black/60 flex items-center justify-center fixed modal"
       onClick={toggleViewVarianteCovid}
     >
+      <Image
+        className="object-cover"
+        alt="background"
+        src={background}
+        placeholder="blur"
+        fill
+        quality={50}
+      />
       <div className="flex flex-col gap-5">
         {/* <h3 className="text-white text-xl text-center font-semibold">Aislamiento y Prevención del Riesgo:</h3> */}
         <div
@@ -37,7 +46,7 @@ const ModalVarianteCovid = ({ toggleViewVarianteCovid }: Props) => {
             infiniteLoop={true}
             autoPlay={false}
             stopOnHover={false}
-            className="  w-full h-full relative "
+            className="  w-full h-full relative carousel1"
           >
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
               <div className="w-[40rem] bg-white flex flex-col gap-2 p-5 relative component rounded-md">
@@ -63,7 +72,7 @@ const ModalVarianteCovid = ({ toggleViewVarianteCovid }: Props) => {
                     </li>
                     <li>* Variante de gran consecuencia: ninguna de las variantes tiene esta designación </li>
                   </ul>
-                  <p>Fuente: <a className="underline hover:text-blue-500 text-white" href="https://cdn.www.gob.pe/uploads/document/file/2773889/Anexo.pdf?v=1642770555">Clasificaciones y definiciones de las variantes del SARS-CoV-2 (cdc.gov)</a> </p>
+                  <p>Fuente: <a className="underline hover:text-blue-500 text-black" href="https://cdn.www.gob.pe/uploads/document/file/2773889/Anexo.pdf?v=1642770555">Clasificaciones y definiciones de las variantes del SARS-CoV-2 (cdc.gov)</a> </p>
                 </div>
               </div>
             </div>
@@ -84,7 +93,7 @@ const ModalVarianteCovid = ({ toggleViewVarianteCovid }: Props) => {
             onClick={toggleViewVarianteCovid}
             className="cursor-pointer absolute top-0 -right-5 text-white text-xl font-semibold"
           >
-            X
+              <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="" />
           </a>
         </div>
       </div>
