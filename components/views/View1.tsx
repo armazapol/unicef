@@ -15,6 +15,8 @@ type Props = {
   toggleViewImages: () => void;
   toggleViewAntecedentes: () => void;
   toggleViewDiagnostico: () => void;
+  toggleViewAlarmaPrevencion: () => void;
+  toggleViewVarianteCovid: () => void;
   keyCarrousel: number;
   index: number;
   stateSide: string;
@@ -25,6 +27,8 @@ const View1 = ({
   toggleViewImages,
   toggleViewAntecedentes,
   toggleViewDiagnostico,
+  toggleViewAlarmaPrevencion,
+  toggleViewVarianteCovid,
   keyCarrousel,
   index,
   stateSide,
@@ -107,7 +111,11 @@ const View1 = ({
               <a onClick={toggleViewAntecedentes} className="z-20 ">
                 <Button text="Antedecedentes" />
               </a>
+
+
+              <a onClick={toggleViewVarianteCovid} className="z-20 ">
               <Button text="Variantes del Covid" />
+              </a>
             </div>
           </div>
         </div>
@@ -124,7 +132,7 @@ const View1 = ({
           />
           <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group">
             <a
-              onClick={viewVideo}
+              onClick={toggleViewAlarmaPrevencion}
               className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 "
             >
               <Button text="Aislamiento y prevención del contagio" />

@@ -25,7 +25,23 @@ const ModalDiagnostico = ({ toggleViewDiagnostico }: Props) => {
         </a>
         <h2 className="font-semibold text-lg">Diagnóstico</h2>
         <p>
-        En la mayoría de los casos se utiliza una prueba molecular para detectar el SARS-CoV-2 y confirmar la infección. La prueba molecular más frecuentemente utilizada es la de la reacción en cadena de la polimerasa (RCP). Las muestras se recogen en la nariz o la garganta con un hisopo. Las pruebas moleculares detectan el virus en la muestra amplificando su material genético hasta niveles que permiten su detección. Por ello, las pruebas moleculares se utilizan para confirmar una infección activa, por lo general a los pocos días de la exposición y en torno al momento en que puede que empiecen los síntomas. <a className="underline hover:text-blue-500" href="https://www.who.int/es/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/coronavirus-disease-covid-19" target="blank">Información básica sobre la COVID-19 (who.int)</a>
+          En la mayoría de los casos se utiliza una prueba molecular para
+          detectar el SARS-CoV-2 y confirmar la infección. La prueba molecular
+          más frecuentemente utilizada es la de la reacción en cadena de la
+          polimerasa (RCP). Las muestras se recogen en la nariz o la garganta
+          con un hisopo. Las pruebas moleculares detectan el virus en la muestra
+          amplificando su material genético hasta niveles que permiten su
+          detección. Por ello, las pruebas moleculares se utilizan para
+          confirmar una infección activa, por lo general a los pocos días de la
+          exposición y en torno al momento en que puede que empiecen los
+          síntomas. 
+          <a
+            className="underline hover:text-blue-500"
+            href="https://www.who.int/es/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/coronavirus-disease-covid-19"
+            target="blank"
+          >
+            Información básica sobre la COVID-19 (who.int)
+          </a>
         </p>
       </div>
     </div>

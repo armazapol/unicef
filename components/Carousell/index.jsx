@@ -14,6 +14,8 @@ import View15 from "../views/View15";
 import ViewGeneral from "../ViewGeneral";
 import ModalAntecedentes from "../Modal/ModalAntecedentes";
 import ModalDiagnostico from "../Modal/ModalDiagnostico";
+import ModalAlarmaPrevencion from "../Modal/ModalAlarmaPrevencion";
+import ModalVarianteCovid from "../Modal/ModalVarianteCovid";
 
 const Carousell = (props) => {
   // const [stateModalVideo, setStateModalVideo] = useState<boolean>(false);
@@ -24,6 +26,8 @@ const Carousell = (props) => {
   const [stateModalImages, setStateModalImages] = useState(false);
   const [stateModalAntecedentes, setStateModalAntecedentes] = useState(false);
   const [stateModalDiagnostico, setStateModalDiagnostico] = useState(false);
+  const [stateModalAlarmaPrevencion, setStateModalAlarmaPrevencion] = useState(false);
+  const [stateModalVarianteCovid, setStateModalVarianteCovid] = useState(false);
   // const [stateMenu, setStateMenu] = useState(false);
   const [stateHamburger, setStateHamburger] = useState(false);
   const [stateCarousel, setStateCarousel] = useState(0);
@@ -45,6 +49,13 @@ const Carousell = (props) => {
   const toggleViewDiagnostico = () => {
     setStateModalDiagnostico(!stateModalDiagnostico);
   };
+
+  const toggleViewAlarmaPrevencion = () => {
+    setStateModalAlarmaPrevencion(!stateModalAlarmaPrevencion);
+  }
+  const toggleViewVarianteCovid = () => {
+    setStateModalVarianteCovid(!stateModalVarianteCovid);
+  }
 
   useEffect(() => {
     menuTimeline.current = gsap.timeline({ paused: true });
@@ -89,6 +100,8 @@ const Carousell = (props) => {
       {stateModalImages && <ViewImages toggleViewImages={toggleViewImages} />}
       {stateModalAntecedentes && <ModalAntecedentes toggleViewAntecedentes={toggleViewAntecedentes} />}
       {stateModalDiagnostico && <ModalDiagnostico toggleViewDiagnostico={toggleViewDiagnostico} />}
+      {stateModalAlarmaPrevencion && <ModalAlarmaPrevencion toggleViewAlarmaPrevencion={toggleViewAlarmaPrevencion} />}
+      {stateModalVarianteCovid && <ModalVarianteCovid toggleViewVarianteCovid={toggleViewVarianteCovid} />}
       <div className="absolute -bottom-14 -right-14 lg:-bottom-20 lg:-right-20 bg-blue-900/90 rounded-full w-32 h-32 lg:w-40 text-white z-40 background">
         <div className="contentMenu hidden">
           <Menu />
@@ -111,34 +124,63 @@ const Carousell = (props) => {
           toggleViewImages={toggleViewImages}
           toggleViewAntecedentes={toggleViewAntecedentes}
           toggleViewDiagnostico={toggleViewDiagnostico}
+          toggleViewAlarmaPrevencion={toggleViewAlarmaPrevencion}
+          toggleViewVarianteCovid={toggleViewVarianteCovid}
           keyCarrousel={0}
           index={stateCarousel}
           stateSide={stateSide}
         />
-          <View5
-          viewVideo={viewVideo}
-          toggleViewImages={toggleViewImages}
+         <ViewGeneral
           keyCarrousel={1}
           index={stateCarousel}
           stateSide={stateSide}
+          title={`curso lúdico a modo de videojuego.`}
+          text={`Creamos el personaje Salva y mini-juegos ligados a la política de salvaguarda y canales de atención al cuidado de los niños, niñas y adolescentes.`}
+          urlBackground="/img/trivia/fondo.png"
+          urlLogo="/img/view1/logo.png"
         />
-         <View15
+          <View5
           viewVideo={viewVideo}
           toggleViewImages={toggleViewImages}
           keyCarrousel={2}
           index={stateCarousel}
           stateSide={stateSide}
         />
+         <ViewGeneral
+          keyCarrousel={3}
+          index={stateCarousel}
+          stateSide={stateSide}
+          title={`curso lúdico a modo de videojuego.`}
+          text={`Creamos el personaje Salva y mini-juegos ligados a la política de salvaguarda y canales de atención al cuidado de los niños, niñas y adolescentes.`}
+          urlBackground="/img/trivia/fondo.png"
+          urlLogo="/img/view1/logo.png"
+        />
+         <View15
+          viewVideo={viewVideo}
+          toggleViewImages={toggleViewImages}
+          keyCarrousel={4}
+          index={stateCarousel}
+          stateSide={stateSide}
+        />
+         <ViewGeneral
+          keyCarrousel={5}
+          index={stateCarousel}
+          stateSide={stateSide}
+          title={`curso lúdico a modo de videojuego.`}
+          text={`Creamos el personaje Salva y mini-juegos ligados a la política de salvaguarda y canales de atención al cuidado de los niños, niñas y adolescentes.`}
+          urlBackground="/img/trivia/fondo.png"
+          urlLogo="/img/view1/logo.png"
+        />
          <View1
           viewVideo={viewVideo}
           toggleViewImages={toggleViewImages}
-          keyCarrousel={3}
+          keyCarrousel={6}
           index={stateCarousel}
           stateSide={stateSide}
         />
         {/* <View2 keyCarrousel={1} index={stateCarousel} stateSide={stateSide} />    */}
         <ViewGeneral
-          keyCarrousel={4}
+          keyCarrousel={7}
           index={stateCarousel}
           stateSide={stateSide}
           title={`curso lúdico a modo de videojuego.`}
