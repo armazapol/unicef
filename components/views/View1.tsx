@@ -188,7 +188,7 @@ const View1 = ({
           quality={50}
         />
         <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group">
-        <a onClick={toggleViewDiagnostico} className="z-20 ">
+        <a onClick={toggleViewDiagnostico} className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 ">
             <Button text="Diagnóstico" />
           </a>
         </div>
