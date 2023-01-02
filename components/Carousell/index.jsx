@@ -152,7 +152,7 @@ const Carousell = (props) => {
       {stateModalConsecuencias && <ModalConsecuencias toggleViewConsecuencias={toggleViewConsecuencias} />}
       <div className="absolute -bottom-14 -right-14 lg:-bottom-20 lg:-right-20 bg-blue-900/90 rounded-full w-32 h-32 lg:w-40 text-white z-40 background">
         <div className="contentMenu hidden">
-          <Menu />
+          <Menu toggleViewAntecedentes={toggleViewAntecedentes} toggleViewDiagnostico={toggleViewDiagnostico} toggleViewAlarmaPrevencion={toggleViewAlarmaPrevencion} toggleViewVarianteCovid={toggleViewVarianteCovid} toggleViewVacunas={toggleViewVacunas} toggleViewInmunidadColectiva={toggleViewInmunidadColectiva} toggleViewTiposVacunas={toggleViewTiposVacunas} toggleViewInocuidadEfectividad={toggleViewInocuidadEfectividad} toggleViewEmbarazoLactancia={toggleViewEmbarazoLactancia} toggleViewEfectosSecundarios={toggleViewEfectosSecundarios} toggleViewAvanceVacunacion={toggleViewAvanceVacunacion} toggleViewConsecuencias={toggleViewConsecuencias} viewVideo={viewVideo} />
         </div>
       </div>
 
