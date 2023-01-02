@@ -23,7 +23,7 @@ const ModalInmunidadColectiva = ({ toggleViewInmunidadColectiva }: Props) => {
   return (
     <div
       className="h-screen w-full z-60 bg-black/60 flex items-center justify-center fixed modal"
-      onClick={toggleViewInmunidadColectiva}
+      // onClick={toggleViewInmunidadColectiva}
     >
       <Image
         className="object-cover"

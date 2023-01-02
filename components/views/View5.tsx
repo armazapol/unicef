@@ -81,16 +81,16 @@ const View5 = ({
         />
         <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700"></div>
         <div className="flex flex-col z-20 relative items-center  gap-5">
-          <div
+          {/* <div
             className={`w-20  lg:w-52 opacity-0 animate_logo${keyCarrousel}`}
           >
             <Image alt="logo" src={logo} placeholder="empty" />
-          </div>
-          {/* <p
+          </div> */}
+          <p
             className={`uppercase font-bold text-sm  lg:text-3xl py-1  lg:py-5 animate_logo${keyCarrousel}`}
           >
-            unicef para cada infancia
-          </p> */}
+            MÓDULO X
+          </p>
           <div
             className={` opacity-0 flex items-center flex-col animate_component${keyCarrousel}  `}
           >
@@ -100,18 +100,8 @@ const View5 = ({
               </p> */}
               <div className="font_LatoRegular text-xs  lg:text-lg leading-tight bg-white/90 text-sky-500 p-4">
                 <p>
-                  UNICEF es conocido por la labor que realiza para la infancia
-                  en
+                Conceptos Básicos sobre el SARS-Cov-2 
                 </p>
-                <p>
-                  cualquier contexto y en cualquier lugar del mundo; porque
-                  salva
-                </p>
-                <p>
-                  vidas, protege los derechos de los niños y los adolescentes y
-                  les
-                </p>
-                <p>ayuda a desarrollar su potencial.</p>
               </div>
             </div>
             <div className="flex gap-10 mt-2 lg:mt-5">
@@ -129,12 +119,12 @@ const View5 = ({
               </a>
             </div>
             <div className="flex gap-10 mt-2 lg:mt-5">
-            <a
+            {/* <a
                 onClick={toggleViewAvanceVacunacion}
                 className="z-20"
               >
               <Button text="Avance de la vacunación" />
-              </a>
+              </a> */}
               <a
                 onClick={toggleViewEfectosSecundarios}
                 className="z-20"
@@ -155,11 +145,11 @@ const View5 = ({
             fill
             quality={50}
           />
-          <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group">
+          <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex group">
             {" "}
             <a
               onClick={toggleViewEmbarazoLactancia}
-              className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 "
+              className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
             >
               <Button text="Embarazo y lactancia materna" />
             </a>
@@ -175,12 +165,12 @@ const View5 = ({
           fill
           quality={50}
         />
-        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group">
+        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex  group">
           <a
-            onClick={toggleViewTiposVacunas}
-            className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 "
+            onClick={toggleViewAvanceVacunacion}
+            className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
           >
-            <Button text="Tipos de vacunas y Esquema de vacunación" />
+            <Button text="Tipos de Vacunas. Avance y Esquema de la vacunación." />
           </a>
         </div>
       </div>
@@ -193,9 +183,9 @@ const View5 = ({
           fill
           quality={50}
         />
-        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group">
+        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex group">
           <a
-            className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 "
+            className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
             onClick={toggleViewInocuidadEfectividad}
           >
             <Button text="Inocuidad y Efectividad de las vacunas" />
@@ -211,11 +201,11 @@ const View5 = ({
           fill
           quality={50}
         />
-        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group">
+        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex group">
           {" "}
           <a
             onClick={toggleViewConsecuencias}
-            className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 "
+            className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
           >
             <Button text="Consecuencias de las variantes en vacunas" />
           </a>

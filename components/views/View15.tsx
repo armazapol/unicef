@@ -66,29 +66,24 @@ const View15 = ({
         />
         <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700"></div>
         <div className="flex flex-col z-20 relative items-center  gap-5">
-          <div
+          {/* <div
             className={`w-20  lg:w-52 opacity-0 animate_logo${keyCarrousel}`}
           >
             <Image alt="logo" src={logo} placeholder="empty" />
-          </div>
+          </div> */}
+          <p
+            className={`uppercase font-bold text-sm  lg:text-3xl py-1  lg:py-5 animate_logo${keyCarrousel}`}
+          >
+            MÓDULO X
+          </p>
           <div
             className={` opacity-0 flex items-center flex-col animate_component${keyCarrousel}  `}
           >
             <div className=" ">
               <div className="font_LatoRegular text-xs  lg:text-lg leading-tight bg-white/90 text-sky-500 p-4">
                 <p>
-                  UNICEF es conocido por la labor que realiza para la infancia
-                  en
+                Conceptos Básicos sobre el SARS-Cov-2 
                 </p>
-                <p>
-                  cualquier contexto y en cualquier lugar del mundo; porque
-                  salva
-                </p>
-                <p>
-                  vidas, protege los derechos de los niños y los adolescentes y
-                  les
-                </p>
-                <p>ayuda a desarrollar su potencial.</p>
               </div>
             </div>
             <div className="flex gap-10 mt-2 lg:mt-5">
@@ -107,10 +102,15 @@ const View15 = ({
           fill
           quality={50}
         />
-        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700"></div>
-        <a onClick={toggleViewImages} className="z-20">
-          <Button text="Galería" />
-        </a>
+        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 group flex">
+          {" "}
+          <a
+            onClick={toggleViewImages}
+            className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
+          >
+            <Button text="Galería" />
+          </a>
+        </div>
       </div>
       <div className="col-span-4  flex items-center justify-center bg-pink-500 relative">
         <Image
@@ -121,10 +121,10 @@ const View15 = ({
           fill
           quality={50}
         />
-        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group">
+        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex  group">
           <a
             onClick={viewVideo}
-            className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 "
+            className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
           >
             <Button text="Ver Video" />
           </a>
@@ -139,9 +139,9 @@ const View15 = ({
           fill
           quality={50}
         />
-        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group">
+        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex group">
           <a
-            className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 "
+            className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
             href="https://www.unicef.org/peru/"
             target="_blank"
             rel="noreferrer"

@@ -23,7 +23,7 @@ const ModalEfectosSecundarios = ({ toggleViewEfectosSecundarios }: Props) => {
   return (
     <div
       className="h-screen w-full z-60 bg-black/60 flex items-center justify-center fixed modal"
-      onClick={toggleViewEfectosSecundarios}
+      // onClick={toggleViewEfectosSecundarios}
     >
       <Image
         className="object-cover"

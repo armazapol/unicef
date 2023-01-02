@@ -24,7 +24,7 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
   return (
     <div
       className="h-screen w-full z-60 bg-black/60 flex items-center justify-center fixed modal"
-      onClick={toggleViewTiposVacunas}
+      // onClick={toggleViewTiposVacunas}
     >
       <Image
         className="object-cover"

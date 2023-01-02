@@ -23,7 +23,7 @@ const ViewImages = ({ toggleViewImages }: Props) => {
   return (
     <div
       className="h-screen w-full z-60 bg-black/60 flex items-center justify-center fixed modal"
-      onClick={toggleViewImages}
+      // onClick={toggleViewImages}
     >
       <div
         className="flex img gap-2 w-10/12 h-auto xl:w-[70rem] items-center justify-center relative"

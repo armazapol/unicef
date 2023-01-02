@@ -7,7 +7,7 @@ const Menu = () => {
         <ul className="text-white text-center text-xl lg:text-3xl flex flex-col gap-5 ">
           <li className="hover:underline cursor-pointer">Galería</li>
           <li className="hover:underline cursor-pointer">Videos</li>
-          <li className="hover:underline cursor-pointer">Web</li>
+          <li className="hover:underline cursor-pointer"><a href="https://unicef.org.pe/">Web</a> </li>
           <li className="hover:underline cursor-pointer">Trivia</li>
           <li className="hover:underline cursor-pointer">Emparejar</li>
           <li className="hover:underline cursor-pointer">Clasificar</li>

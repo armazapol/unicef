@@ -16,7 +16,7 @@ const ModalDiagnostico = ({ toggleViewDiagnostico }: Props) => {
   return (
     <div
       className="h-screen w-full z-60 bg-black/60 flex items-center justify-center fixed modal"
-      onClick={toggleViewDiagnostico}
+      // onClick={toggleViewDiagnostico}
     >
       <Image
         className="object-cover"
