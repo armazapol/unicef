@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 import background from "../../public/img/bgModal.png";
-import img1 from "../../public/img/view1/variantes/img1.png";
+import img1 from "../../public/img/view2/vacunas/img1.png";
 
 type Props = {
   toggleViewVacunas: () => void;
@@ -82,6 +82,13 @@ const ModalVacunas = ({ toggleViewVacunas }: Props) => {
                     inmunitario a responder como lo hubiese hecho en su primera
                     reacción ante el patógeno real.
                   </p>
+                  <Image
+                  className="object-cover"
+                  alt="img2"
+                  src={img1}
+                  placeholder="blur"
+                  quality={50}
+                />
                   <p>
                     Fuente:{" "}
                     <a
