@@ -53,9 +53,9 @@ const ModalConsecuencias = ({ toggleViewConsecuencias }: Props) => {
                 <h3 className=" text-xl text-center font-semibold">Consecuencias de las nuevas variantes del virus del COVID-19 en las vacunas</h3>
                 <div className="text-left flex flex-col gap-2">
                   <p>
-                  Se espera que las vacunas contra la COVID-19 que están en fase de desarrollo o que ya se han 	autorizado proporcionen al menos cierta protección contra las nuevas variantes víricas, puesto 	que las personas a quienes se administran muestran una respuesta inmunitaria contra diversos 	anticuerpos y células. Por consiguiente, los cambios o las mutaciones en el virus no conllevan 	una pérdida completa de eficacia de las vacunas. Si se comprueba que alguna de estas vacunas 	es menos eficaz contra una o varias variantes, se podrá modificar su composición para que 	también protejan contra las nuevas variantes.
+                  Se espera que las vacunas contra la <span className="text-orange-600">COVID-19</span> que están en fase de desarrollo o que ya se han 	autorizado proporcionen al menos cierta protección contra las nuevas variantes víricas, puesto 	que las personas a quienes se administran muestran una respuesta inmunitaria contra diversos 	anticuerpos y células. Por consiguiente, los cambios o las mutaciones en el virus no conllevan 	una pérdida completa de eficacia de las vacunas. Si se comprueba que alguna de estas vacunas 	es menos eficaz contra una o varias variantes, se podrá modificar su composición para que 	también protejan contra las nuevas variantes.
                   </p>
-                  <p>Se continúan recogiendo y analizando datos sobre las nuevas variantes del virus que causa la 	COVID-19. La OMS mantiene una comunicación estrecha con investigadores, funcionarios de 	salud y científicos con el fin de conocer de qué manera estas variantes pueden afectar a las 	propiedades del virus y el grado en que ello podría afectar la eficacia de las vacunas.   </p>
+                  <p>Se continúan recogiendo y analizando datos sobre las nuevas variantes del virus que causa la <span className="text-orange-600">COVID-19</span>. La OMS mantiene una comunicación estrecha con investigadores, funcionarios de 	salud y científicos con el fin de conocer de qué manera estas variantes pueden afectar a las 	propiedades del virus y el grado en que ello podría afectar la eficacia de las vacunas.   </p>
                 </div>
               </div>
             </div>
@@ -65,8 +65,8 @@ const ModalConsecuencias = ({ toggleViewConsecuencias }: Props) => {
                   <p>
                   Mientras esperamos a disponer de más información, tenemos que continuar haciendo lo 	posible por frenar la propagación del virus a fin de evitar que aparezcan mutaciones que puedan 	reducir 	la eficacia de las vacunas disponibles. Además, los fabricantes y los programas que 	utilizan las vacunas deberán adaptarse a la evolución del virus; por ejemplo, puede ser necesario 	que, en su fase de desarrollo, las vacunas deban incluir más de una cepa durante la fase de 	desarrollo, que 	se deban administrar dosis de refuerzo o que sea preciso realizar algún otro tipo 	de modificación en las vacunas. Asimismo, los ensayos se deben estructurar y mantener de 	manera que se 	puedan evaluar las variaciones en la eficacia, y han de realizarse a la escala 	adecuada y ser 	suficientemente variados para que se puedan interpretar claramente los 	resultados. También es 	necesario estudiar el impacto de las vacunas a medida que se 		administran.
                   </p>
-                  <p>
-                    Fuente:{" "}
+                  <p className="text-xs">
+                  <span className="font-semibold"> Fuente:{" "}</span> 
                     <a
                       className="underline hover:text-blue-500 text-black"
                       href="https://www.who.int/es/news-room/feature-stories/detail/the-effects-of-virus-variants-on-covid-19-vaccines"

@@ -54,17 +54,20 @@ const ModalEmbarazoLactancia = ({ toggleViewEmbarazoLactancia }: Props) => {
                 <div className="text-left flex flex-col gap-2">
                   <p>
                     Las mujeres embarazadas pueden vacunarse. Si se contrae la
-                    COVID-19 durante el embarazo el riesgo de padecer una forma
-                    grave de la enfermedad es mayor. También se corre más riesgo
-                    de dar a luz prematuramente. Aunque hay menos datos sobre la
+                    <span className="text-orange-600"> COVID-19</span> durante
+                    el embarazo el riesgo de padecer una forma grave de la
+                    enfermedad es mayor. También se corre más riesgo de dar a
+                    luz prematuramente. Aunque hay menos datos sobre la
                     vacunación de las embarazadas, se han ido acumulando
                     evidencias sobre la seguridad de la vacuna contra la
-                    COVID-19 durante el embarazo y no se han detectado problemas
-                    que la pongan en entredicho. Las ventajas de vacunarse
-                    superan a los posibles riesgos, especialmente en países con
-                    alta transmisión o si se realizan trabajos en los que existe
-                    mayor riesgo de exposición a la enfermedad. No hay riesgo de
-                    contraer la COVID-19 por la vacuna.
+                    <span className="text-orange-600"> COVID-19</span> durante
+                    el embarazo y no se han detectado problemas que la pongan en
+                    entredicho. Las ventajas de vacunarse superan a los posibles
+                    riesgos, especialmente en países con alta transmisión o si
+                    se realizan trabajos en los que existe mayor riesgo de
+                    exposición a la enfermedad. No hay riesgo de contraer la{" "}
+                    <span className="text-orange-600"> COVID-19</span> por la
+                    vacuna.
                   </p>
                 </div>
               </div>
@@ -83,16 +86,20 @@ const ModalEmbarazoLactancia = ({ toggleViewEmbarazoLactancia }: Props) => {
                       otras infecciones y que se usan en las gestantes.
                     </li>
                     <li>
-                      * Las vacunas de ARN-m COVID-19 no son vacunas de virus
-                      vivos, por lo que no puede producir la enfermedad, ni usan
-                      coadyuvantes para mejorar su eficacia, tendrían el mismo
-                      perfil de seguridad y eficacia en las mujeres gestantes en
-                      comparación con las no gestantes. Además se observa en los
-                      recién nacidos IgG a COVID-19, por lo que ello estaría
-                      brindando protección también al recién nacido.
+                      * Las vacunas de ARN-m{" "}
+                      <span className="text-orange-600">COVID-19</span> no son
+                      vacunas de virus vivos, por lo que no puede producir la
+                      enfermedad, ni usan coadyuvantes para mejorar su eficacia,
+                      tendrían el mismo perfil de seguridad y eficacia en las
+                      mujeres gestantes en comparación con las no gestantes.
+                      Además se observa en los recién nacidos IgG a{" "}
+                      <span className="text-orange-600">COVID-19</span>, por lo
+                      que ello estaría brindando protección también al recién
+                      nacido.
                     </li>
                     <li>
-                      * Si la gestante ha presentado infección por COVID-19 se
+                      * Si la gestante ha presentado infección por{" "}
+                      <span className="text-orange-600">COVID-19</span> se
                       recomienda que la vacuna se realice 90 días luego de haber
                       recibido el diagnóstico.
                     </li>
@@ -122,15 +129,16 @@ const ModalEmbarazoLactancia = ({ toggleViewEmbarazoLactancia }: Props) => {
                 <div className="text-left flex flex-col gap-2">
                   <p>
                     Si está amamantando, conviene que se vacune contra la
-                    COVID-19 en cuanto le corresponda. Ninguna de las vacunas
-                    actuales contra la COVID-19 contiene virus vivos. Ello
-                    significa que no hay riesgo de transmitir la enfermedad a
-                    través de la leche materna debido a la vacuna. De hecho, los
-                    anticuerpos que se generan tras la vacunación pueden pasar a
-                    la leche materna y ayudar a proteger al bebé.
+                    <span className="text-orange-600"> COVID-19</span> en cuanto
+                    le corresponda. Ninguna de las vacunas actuales contra la
+                    <span className="text-orange-600"> COVID-19</span> contiene virus vivos. Ello significa que no hay
+                    riesgo de transmitir la enfermedad a través de la leche
+                    materna debido a la vacuna. De hecho, los anticuerpos que se
+                    generan tras la vacunación pueden pasar a la leche materna y
+                    ayudar a proteger al bebé.
                   </p>
-                  <p>
-                    Fuente:{" "}
+                  <p className="text-xs">
+                    <span className="font-semibold"> Fuente: </span>
                     <a
                       className="underline hover:text-blue-500 text-black"
                       href="https://www.who.int/es/news-room/feature-stories/detail/safety-of-covid-19-vaccines"
@@ -155,7 +163,7 @@ const ModalEmbarazoLactancia = ({ toggleViewEmbarazoLactancia }: Props) => {
             onClick={toggleViewEmbarazoLactancia}
             className="cursor-pointer absolute top-0 -right-5 text-white text-xl font-semibold"
           >
-              <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="" />
+            <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="" />
           </a>
         </div>
       </div>

@@ -83,7 +83,7 @@ const View1 = ({
           <p
             className={`uppercase font-bold text-sm  lg:text-3xl py-1  lg:py-5 animate_logo${keyCarrousel}`}
           >
-            MÓDULO X
+            MÓDULO 1
           </p>
           <div
             className={` opacity-0 flex items-center flex-col animate_component${keyCarrousel}  `}
@@ -93,16 +93,13 @@ const View1 = ({
                 unicef para cada infancia
               </p> */}
               <div className="font_LatoRegular text-xs  lg:text-lg leading-tight bg-white/90 text-sky-500 p-4">
-                <p>
-                Conceptos Básicos sobre el SARS-Cov-2 
-                </p>
+                <p>Conceptos Básicos sobre el SARS-Cov-2</p>
               </div>
             </div>
             <div className="flex gap-10 mt-2 lg:mt-5">
               <a onClick={toggleViewAntecedentes} className="z-20 ">
                 <Button text="Antedecedentes" />
               </a>
-
 
               {/* <a onClick={toggleViewVarianteCovid} className="z-20 ">
               <Button text="Variantes del Covid" />
@@ -121,7 +118,7 @@ const View1 = ({
             fill
             quality={50}
           />
-          <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex group">
+          <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex  group items-start">
             <a
               onClick={toggleViewAlarmaPrevencion}
               className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
@@ -139,7 +136,7 @@ const View1 = ({
             fill
             quality={50}
           />
-          <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex group">
+          <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex group items-start">
             <a
               className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
               href="https://www.unicef.org/peru/"
@@ -160,7 +157,7 @@ const View1 = ({
           fill
           quality={50}
         />
-        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex  group">
+        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex  group items-start">
           <a
             onClick={viewVideo}
             className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
@@ -178,8 +175,11 @@ const View1 = ({
           fill
           quality={50}
         />
-        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex  group">
-        <a onClick={toggleViewDiagnostico} className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2">
+        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-start group ">
+          <a
+            onClick={toggleViewDiagnostico}
+            className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2 flex-none"
+          >
             <Button text="Diagnóstico" />
           </a>
         </div>

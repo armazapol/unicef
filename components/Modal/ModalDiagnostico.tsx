@@ -36,7 +36,7 @@ const ModalDiagnostico = ({ toggleViewDiagnostico }: Props) => {
         <h2 className="font-semibold text-lg">Diagnóstico</h2>
         <p>
           En la mayoría de los casos se utiliza una prueba molecular para
-          detectar el SARS-CoV-2 y confirmar la infección. La prueba molecular
+          detectar el <span className="text-orange-600">SARS-CoV-2</span> y confirmar la infección. La prueba molecular
           más frecuentemente utilizada es la de la reacción en cadena de la
           polimerasa (RCP). Las muestras se recogen en la nariz o la garganta
           con un hisopo. Las pruebas moleculares detectan el virus en la muestra

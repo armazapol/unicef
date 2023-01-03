@@ -82,15 +82,8 @@ const ModalVacunas = ({ toggleViewVacunas }: Props) => {
                     inmunitario a responder como lo hubiese hecho en su primera
                     reacción ante el patógeno real.
                   </p>
-                  <Image
-                  className="object-cover"
-                  alt="img2"
-                  src={img1}
-                  placeholder="blur"
-                  quality={50}
-                />
-                  <p>
-                    Fuente:{" "}
+                  <p className="text-xs">
+                  <span className="font-semibold"> Fuente:{" "}</span> 
                     <a
                       className="underline hover:text-blue-500 text-black"
                       href="https://www.who.int/es/emergencies/diseases/novel-coronavirus-2019/covid-19-vaccines"

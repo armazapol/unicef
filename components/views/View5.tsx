@@ -145,7 +145,7 @@ const View5 = ({
             fill
             quality={50}
           />
-          <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex group">
+          <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex group items-start">
             {" "}
             <a
               onClick={toggleViewEmbarazoLactancia}
@@ -165,12 +165,12 @@ const View5 = ({
           fill
           quality={50}
         />
-        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex  group">
+        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex  group items-start">
           <a
-            onClick={toggleViewAvanceVacunacion}
+            onClick={toggleViewTiposVacunas}
             className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
           >
-            <Button text="Tipos de Vacunas. Avance y Esquema de la vacunación." />
+            <Button text="Tipos de Vacunas y Esquema de la vacunación." />
           </a>
         </div>
       </div>
@@ -183,7 +183,7 @@ const View5 = ({
           fill
           quality={50}
         />
-        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex group">
+        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex group items-start">
           <a
             className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
             onClick={toggleViewInocuidadEfectividad}
@@ -201,7 +201,7 @@ const View5 = ({
           fill
           quality={50}
         />
-        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex group">
+        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex group items-start">
           {" "}
           <a
             onClick={toggleViewConsecuencias}

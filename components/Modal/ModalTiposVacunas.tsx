@@ -5,6 +5,7 @@ import Image from "next/image";
 import background from "../../public/img/bgModal.png";
 import img1 from "../../public/img/view2/tiposvacunas/img1.png";
 import img2 from "../../public/img/view2/tiposvacunas/img2.png";
+import img3 from "../../public/img/view2/tiposvacunas/img3.png";
 
 type Props = {
   toggleViewTiposVacunas: () => void;
@@ -63,32 +64,32 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
                   <ul>
                     <li>
                       * Vacuna - virus inactivado: Contienen porciones inocuas
-                      de las proteínas del virus que causa el COVID-19. Al
+                      de las proteínas del virus que causa el <span className="text-orange-600">COVID-19</span>. Al
                       recibir la vacuna, nuestro organismo reconoce que esa
                       proteína no debería estar presente y crea linfocitos T y
                       anticuerpos que recordarán cómo defenderse del virus que
-                      causa el COVID-19 en caso de infección. Ejemplo:
+                      causa el <span className="text-orange-600">COVID-19</span> en caso de infección. Ejemplo:
                       Sinopharm.
                     </li>
                     <li>
                       * Vacuna - ARM mensajero: contienen material del virus que
-                      causa el COVID-19, el cual instruye a nuestras células a
+                      causa el <span className="text-orange-600">COVID-19</span>, el cual instruye a nuestras células a
                       crear una proteína inocua que es exclusiva del virus, de
                       esta manera el organismo reconoce que esa proteína no
                       debería estar presente y crea linfocitos T y B que
-                      recordarán cómo defenderse del virus que causa el COVID-19
+                      recordarán cómo defenderse del virus que causa el <span className="text-orange-600">COVID-19</span>
                       en caso de infección. Ejemplos: Pfizer – BioNTech.
                     </li>
                     <li>
                       * Vacuna con vector vírico: Contienen una versión
                       modificada de un virus diferente, que en su envoltura
                       contiene un vector viral (contiene material del virus que
-                      causa el COVID-19). Una vez que el vector viral entra en
+                      causa el <span className="text-orange-600">COVID-19</span>). Una vez que el vector viral entra en
                       las células, el material genético instruye la producción
                       de una proteína que es exclusiva del virus que causa el
-                      COVID-19, de esta manera nuestras células hacen copias de
+                      <span className="text-orange-600"> COVID-19</span>, de esta manera nuestras células hacen copias de
                       la proteína. Se producen linfocitos T y B que recordarán
-                      cómo defenderse del virus que causa COVID-19 en caso de
+                      cómo defenderse del virus que causa <span className="text-orange-600"> COVID-19</span> en caso de
                       infección. Ejemplos: AstraZeneca
                     </li>
                   </ul>
@@ -105,8 +106,8 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
                   quality={50}
                 />
               </div>
-              <p className="underline hover:text-blue-500 text-white">
-                Fuente:{" "}
+              <p className="underline hover:text-blue-500 text-white text-xs">
+              <span className="font-semibold"> Fuente:{" "}</span> 
                 <a
                   href="http://www.medicina.uanl.mx/noticias/coronavirus/covid-19-tipos-de-vacunas/"
                   target="blank"
@@ -166,7 +167,7 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-[40rem] bg-white flex flex-col gap-2 p-5 relative component rounded-md">
+              {/* <div className="w-[40rem] bg-white flex flex-col gap-2 p-5 relative component rounded-md">
                 <h3 className=" text-xl text-center font-semibold">
                   Esquemas según edades:
                 </h3>
@@ -219,6 +220,15 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
                     </div>
                   </div>
                 </div>
+              </div> */}
+               <div className="w-6/12 ">
+                <Image
+                  className="object-cover"
+                  alt="img3"
+                  src={img3}
+                  placeholder="blur"
+                  quality={50}
+                />
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
@@ -241,7 +251,7 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
                 <div className="text-left flex flex-col gap-2">
                   <p className="font-semibold">
                     Puedes recibir la aplicación de tu cuarta dosis de la vacuna
-                    contra la COVID-19:
+                    contra la <span className="text-orange-600">COVID-19</span>:
                   </p>
                   <ul>
                     <li>
@@ -275,8 +285,8 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
                     Actualmente, en el Perú se aplican las vacunas de los
                     laboratorios Pfizer, Sinopharm, AstraZeneca y Moderna.
                   </p>
-                  <p>
-                    Fuente:{" "}
+                  <p className="text-xs">
+                  <span className="font-semibold">  Fuente:{" "}</span>
                     <a
                       className="underline hover:text-blue-500 text-black"
                       href="https://www.gob.pe/21301"

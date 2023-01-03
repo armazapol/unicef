@@ -52,8 +52,8 @@ const ModalAvanceVacunacion = ({ toggleViewAvanceVacunacion }: Props) => {
             quality={50}
           />
         </div>
-        <p>
-          Fuente:{" "}
+        <p className="text-xs">
+        <span className="font-semibold"> Fuente:{" "}</span> 
           <a
             className="underline hover:text-blue-500 text-black"
             href="https://www.minsa.gob.pe/reunis/data/vacunas-covid19.asp"

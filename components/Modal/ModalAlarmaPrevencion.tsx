@@ -63,9 +63,9 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
                     la cuarentena, la cuarentena es la restricción del
                     desplazamiento fuera de su vivienda a la persona o personas
                     expuestas a un caso sospechoso, probable o confirmado de
-                    COVID-19. El aislamiento es el procedimiento por el cual una
+                    <span className="text-orange-600"> COVID-19</span>. El aislamiento es el procedimiento por el cual una
                     persona considerada sospechosa, probable o confirmada de
-                    COVID-19, y que no requiera hospitalización se le indica
+                    <span className="text-orange-600"> COVID-19</span>, y que no requiera hospitalización se le indica
                     aislamiento domiciliario. Durante el aislamiento se le
                     restringe el desplazamiento fuera de su vivienda o centro de
                     aislamiento.
@@ -118,7 +118,7 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
                 <div className="text-left flex flex-col gap-2">
                   <p>
                     En el caso de personas que habitan con personas positivas a
-                    COVID-19, se establecerán los días de aislamiento según lo
+                    <span className="text-orange-600"> COVID-19</span>, se establecerán los días de aislamiento según lo
                     siguiente:
                   </p>
                   <ul>
@@ -150,8 +150,8 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
                   quality={50}
                 />
               </div>
-              <p className="underline hover:text-blue-500 text-white">
-                Fuente:{" "}
+              <p className="underline hover:text-blue-500 text-white text-xs">
+              <span className="font-semibold"> Fuente:{" "}</span> 
                 <a
                   href="https://cdn.www.gob.pe/uploads/document/file/2773889/Anexo.pdf?v=1642770555"
                   target="blank"
@@ -167,8 +167,8 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
               <div className="w-[40rem] bg-white flex flex-col gap-2 p-5 relative component rounded-md">
                 <div className="text-left flex flex-col gap-2">
                   <p>
-                    Para prevenir la infección y frenar la transmisión de la
-                    COVID-19, haga lo siguiente:
+                    Para prevenir la infección y frenar la transmisión de la 
+                   <span className="text-orange-600"> COVID-19</span> , haga lo siguiente:
                   </p>
                   <ul>
                     <li>

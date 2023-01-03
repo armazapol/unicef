@@ -65,7 +65,7 @@ const ModalInocuidadEfectividad = ({
                   </p>
                   <p>
                     Miles de millones de personas se han vacunado de forma
-                    segura contra la COVID-19. Todas ellas se han sometido a
+                    segura contra la <span className="text-orange-600">COVID-19</span>. Todas ellas se han sometido a
                     ensayos rigurosos y continúan siendo evaluadas.{" "}
                   </p>
                 </div>
@@ -76,7 +76,7 @@ const ModalInocuidadEfectividad = ({
                 <div className="text-left flex flex-col gap-2">
                   <p>
                     Como se hace con todas las vacunas, las que se desarrollan
-                    contra la COVID-19 pasan por un proceso riguroso de varias
+                    contra la <span className="text-orange-600">COVID-19</span> pasan por un proceso riguroso de varias
                     fases que incluye, por ejemplo, la realización de amplios
                     ensayos clínicos con decenas de miles de personas. Estos
                     ensayos están específicamente diseñados para detectar
@@ -88,7 +88,7 @@ const ModalInocuidadEfectividad = ({
                     país autorizar o no el uso de cada vacuna en sus
                     jurisdicciones y elaborar políticas para administrarlas, a
                     partir de las recomendaciones de la OMS. Una vez introducida
-                    una vacuna contra la COVID-19, la OMS presta apoyo a la
+                    una vacuna contra la <span className="text-orange-600">COVID-19</span>, la OMS presta apoyo a la
                     labor de los fabricantes, los funcionarios sanitarios de
                     cada país y otros asociados para hacer un seguimiento
                     continuado de cualquier posible problema relativo a su
@@ -110,15 +110,15 @@ const ModalInocuidadEfectividad = ({
                   </p>
                   <ul>
                     <li>* Síndrome respiratorio agudo severo: 89.1%.</li>
-                    <li>* Hospitalización relacionada a COVID-19: 97.2%.</li>
+                    <li>* Hospitalización relacionada a <span className="text-orange-600">COVID-19</span>: 97.2%.</li>
                     <li>
                       * Ingreso a UCI (unidad de cuidados intensivos): 97.4%.
                     </li>
                     <li>* Fallecimiento: 99.0%.</li>
                   </ul>
                 </div>
-                <p className="text-left">
-                  Fuente:{" "}
+                <p className="text-left text-xs">
+                <span className="font-semibold"> Fuente:{" "}</span> 
                   <a
                     className="underline hover:text-blue-500 text-black"
                     href="google.com"
@@ -144,8 +144,8 @@ const ModalInocuidadEfectividad = ({
                     partir de los 6 meses luego de la última dosis, sugiriendo
                     la importancia del uso de dosis de refuerzo (booster).
                   </p>
-                  <p>
-                    Fuente:{" "}
+                  <p className="text-xs">
+                  <span className="font-semibold"> Fuente:{" "}</span> 
                     <a
                       className="underline hover:text-blue-500 text-black"
                       href="google.com"
@@ -165,10 +165,10 @@ const ModalInocuidadEfectividad = ({
               <div className="w-[40rem] bg-white flex flex-col gap-2 p-5 relative component rounded-md">
                 <div className="text-left flex flex-col gap-2">
                   <p>
-                  En otro estudio danés, se estimó la efectividad de la vacuna contra la infección y hospitalización.  Encontraron que contar con dos dosis de vacuna proveía una alta protección contra infección y hospitalización por COVID-19. Una tercera dosis incrementaba sustancialmente el nivel y la duración de la protección, especialmente en población mayor a 60 años.
+                  En otro estudio danés, se estimó la efectividad de la vacuna contra la infección y hospitalización.  Encontraron que contar con dos dosis de vacuna proveía una alta protección contra infección y hospitalización por <span className="text-orange-600">COVID-19</span>. Una tercera dosis incrementaba sustancialmente el nivel y la duración de la protección, especialmente en población mayor a 60 años.
                   </p>
-                  <p>
-                    Fuente:{" "}
+                  <p className="text-xs">
+                  <span className="font-semibold"> Fuente:{" "}</span> 
                     <a
                       className="underline hover:text-blue-500 text-black"
                       href="google.com"

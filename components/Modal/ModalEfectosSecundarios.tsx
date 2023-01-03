@@ -65,10 +65,10 @@ const ModalEfectosSecundarios = ({ toggleViewEfectosSecundarios }: Props) => {
                 <h3 className=" text-xl text-center font-semibold">Efectos secundarios habituales de las vacunas contra la COVID-19</h3>
                 <div className="text-left flex flex-col gap-2">
                   <p>
-                  Como cualquier vacuna, las que protegen contra la COVID-19 pueden causar efectos 		secundarios, la mayoría de los cuales son leves o moderados y desaparecen espontáneamente a 	los pocos días. Los resultados de los ensayos clínicos muestran que también pueden aparecer 	efectos secundarios más graves o duraderos. En cualquier caso, siempre se mantiene una 	vigilancia para detectar cualquier efecto adverso. 
+                  Como cualquier vacuna, las que protegen contra la <span className="text-orange-600">COVID-19</span> pueden causar efectos 		secundarios, la mayoría de los cuales son leves o moderados y desaparecen espontáneamente a 	los pocos días. Los resultados de los ensayos clínicos muestran que también pueden aparecer 	efectos secundarios más graves o duraderos. En cualquier caso, siempre se mantiene una 	vigilancia para detectar cualquier efecto adverso. 
                   </p>
                   <p>Algunos de los efectos secundarios típicos son dolor en el lugar de inyección, fiebre, cansancio, 	cefaleas, mialgias, escalofríos y diarrea. La probabilidad de que ocurran varía en función de cada 	vacuna.  </p>
-                  <p>Las vacunas contra la COVID-19 protegen solamente contra el virus SARS-CoV-2, por lo que es 	importante mantener también un buen estado de salud. .</p>
+                  <p>Las vacunas contra la <span className="text-orange-600">COVID-19</span> protegen solamente contra el virus <span className="text-orange-600">SARS-CoV-2</span>, por lo que es 	importante mantener también un buen estado de salud. .</p>
                 </div>
               </div>
             </div>
@@ -79,11 +79,11 @@ const ModalEfectosSecundarios = ({ toggleViewEfectosSecundarios }: Props) => {
                 </h3>
                 <div className="text-left flex flex-col gap-2">
                   <p>
-                  Cuando se vacuna a una persona, es posible que se le pida esperar de 15 a 30 minutos en el 	lugar de vacunación para que pueda ser atendida por trabajadores de la salud en caso de que 	presente alguna reacción inmediata. Las personas vacunadas deben avisar a los profesionales 	sanitarios de cualquier efecto secundario inesperado o de otros problemas de salud tras la 	vacunación, por ejemplo, los efectos secundarios que duren más de tres días. Uno de los efectos 	secundarios menos frecuentes que se han notificado con las vacunas contra la COVID-19 son las 	reacciones alérgicas graves (como casos de anafilaxia); sin embargo, esta reacción es muy 	infrecuente. 
+                  Cuando se vacuna a una persona, es posible que se le pida esperar de 15 a 30 minutos en el 	lugar de vacunación para que pueda ser atendida por trabajadores de la salud en caso de que 	presente alguna reacción inmediata. Las personas vacunadas deben avisar a los profesionales 	sanitarios de cualquier efecto secundario inesperado o de otros problemas de salud tras la 	vacunación, por ejemplo, los efectos secundarios que duren más de tres días. Uno de los efectos 	secundarios menos frecuentes que se han notificado con las vacunas contra la <span className="text-orange-600">COVID-19</span> son las 	reacciones alérgicas graves (como casos de anafilaxia); sin embargo, esta reacción es muy 	infrecuente. 
                   </p>
                   <p>Las autoridades nacionales y los organismos internacionales, entre ellos la OMS, hacen un 	seguimiento atento del uso de estas vacunas a fin de detectar posibles efectos adversos		inesperados.</p>
-                  <p>
-                    Fuente:{" "}
+                  <p className="text-xs">
+                  <span className="font-semibold"> Fuente:{" "}</span> 
                     <a
                       className="underline hover:text-blue-500 text-black"
                       href="https://www.who.int/es/news-room/feature-stories/detail/side-effects-of-covid-19-vaccines"

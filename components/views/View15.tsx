@@ -102,7 +102,7 @@ const View15 = ({
           fill
           quality={50}
         />
-        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 group flex">
+        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 group items-start flex">
           {" "}
           <a
             onClick={toggleViewImages}
@@ -121,7 +121,7 @@ const View15 = ({
           fill
           quality={50}
         />
-        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex  group">
+        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex  group items-start">
           <a
             onClick={viewVideo}
             className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
@@ -139,7 +139,7 @@ const View15 = ({
           fill
           quality={50}
         />
-        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex group">
+        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex group items-start">
           <a
             className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
             href="https://www.unicef.org/peru/"
@@ -158,7 +158,7 @@ const View15 = ({
           placeholder="blur"
           fill
         />
-        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group" />
+        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group items-start" />
       </div>
     </div>
   );
