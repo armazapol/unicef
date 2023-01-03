@@ -24,6 +24,7 @@ import ModalEmbarazoLactancia from "../Modal/ModalEmbarazoLactancia";
 import ModalEfectosSecundarios from "../Modal/ModalEfectosSecundarios";
 import ModalAvanceVacunacion from "../Modal/ModalAvanceVacunacion";
 import ModalConsecuencias from "../Modal/ModalConsecuencias";
+import ModalSintomas from "../Modal/ModalSintomas";
 
 const Carousell = (props) => {
   // const [stateModalVideo, setStateModalVideo] = useState<boolean>(false);
@@ -44,6 +45,7 @@ const Carousell = (props) => {
   const [stateModalEfectosSecundarios, setStateModalEfectosSecundarios] = useState(false);
   const [stateModalAvanceVacunacion, setStateModalAvanceVacunacion] = useState(false);
   const [stateModalConsecuencias, setStateModalConsecuencias] = useState(false);
+  const [stateModalSintomas, setStateModalSintomas] = useState(false);
   // const [stateMenu, setStateMenu] = useState(false);
   const [stateHamburger, setStateHamburger] = useState(false);
   const [stateCarousel, setStateCarousel] = useState(0);
@@ -95,6 +97,9 @@ const Carousell = (props) => {
   }
   const toggleViewConsecuencias = () => {
     setStateModalConsecuencias(!stateModalConsecuencias);
+  }
+  const toggleViewSintomas = () => {
+    setStateModalSintomas(!stateModalSintomas);
   }
 
   useEffect(() => {
@@ -150,9 +155,10 @@ const Carousell = (props) => {
       {stateModalEfectosSecundarios && <ModalEfectosSecundarios toggleViewEfectosSecundarios={toggleViewEfectosSecundarios} />}
       {stateModalAvanceVacunacion && <ModalAvanceVacunacion toggleViewAvanceVacunacion={toggleViewAvanceVacunacion} />}
       {stateModalConsecuencias && <ModalConsecuencias toggleViewConsecuencias={toggleViewConsecuencias} />}
+      {stateModalSintomas && <ModalSintomas toggleViewSintomas={toggleViewSintomas} />}
       <div className="absolute -bottom-14 -right-14 lg:-bottom-20 lg:-right-20 bg-blue-900/90 rounded-full w-32 h-32 lg:w-40 text-white z-40 background">
         <div className="contentMenu hidden">
-          <Menu toggleViewAntecedentes={toggleViewAntecedentes} toggleViewDiagnostico={toggleViewDiagnostico} toggleViewAlarmaPrevencion={toggleViewAlarmaPrevencion} toggleViewVarianteCovid={toggleViewVarianteCovid} toggleViewVacunas={toggleViewVacunas} toggleViewInmunidadColectiva={toggleViewInmunidadColectiva} toggleViewTiposVacunas={toggleViewTiposVacunas} toggleViewInocuidadEfectividad={toggleViewInocuidadEfectividad} toggleViewEmbarazoLactancia={toggleViewEmbarazoLactancia} toggleViewEfectosSecundarios={toggleViewEfectosSecundarios} toggleViewAvanceVacunacion={toggleViewAvanceVacunacion} toggleViewConsecuencias={toggleViewConsecuencias} viewVideo={viewVideo} />
+          <Menu toggleViewAntecedentes={toggleViewAntecedentes} toggleViewDiagnostico={toggleViewDiagnostico} toggleViewAlarmaPrevencion={toggleViewAlarmaPrevencion} toggleViewVarianteCovid={toggleViewVarianteCovid} toggleViewVacunas={toggleViewVacunas} toggleViewInmunidadColectiva={toggleViewInmunidadColectiva} toggleViewTiposVacunas={toggleViewTiposVacunas} toggleViewInocuidadEfectividad={toggleViewInocuidadEfectividad} toggleViewEmbarazoLactancia={toggleViewEmbarazoLactancia} toggleViewEfectosSecundarios={toggleViewEfectosSecundarios} toggleViewAvanceVacunacion={toggleViewAvanceVacunacion} toggleViewConsecuencias={toggleViewConsecuencias} toggleViewSintomas={toggleViewSintomas} />
         </div>
       </div>
 
@@ -168,7 +174,7 @@ const Carousell = (props) => {
         className="rounded-3xl text-white carousel1"
       >
         <View1
-          viewVideo={viewVideo}
+          toggleViewSintomas={toggleViewSintomas}
           toggleViewImages={toggleViewImages}
           toggleViewAntecedentes={toggleViewAntecedentes}
           toggleViewDiagnostico={toggleViewDiagnostico}

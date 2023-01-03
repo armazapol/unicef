@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
 import background from "../../public/img/bgModal.png";
+import ButtonLink from "../commons/button/ButtonLink";
 
 type Props = {
   toggleViewDiagnostico: () => void;
@@ -46,11 +47,12 @@ const ModalDiagnostico = ({ toggleViewDiagnostico }: Props) => {
           exposición y en torno al momento en que puede que empiecen los
           síntomas. 
           <a
-            className="underline hover:text-blue-500"
+            className=""
             href="https://www.who.int/es/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/coronavirus-disease-covid-19"
             target="blank"
           >
-            Información básica sobre la COVID-19 (who.int)
+            <ButtonLink text=" Información básica sobre la COVID-19 (who.int)" />
+           
           </a>
         </p>
       </div>

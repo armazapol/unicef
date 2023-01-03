@@ -7,6 +7,7 @@ import close from "../../public/img/closeModal.png";
 import img1 from "../../public/img/view1/alarma/img1.png";
 import img2 from "../../public/img/view1/alarma/img2.png";
 import img3 from "../../public/img/view1/alarma/img3.png";
+import ButtonLink from "../commons/button/ButtonLink";
 
 
 type Props = {
@@ -70,11 +71,11 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
                     restringe el desplazamiento fuera de su vivienda o centro de
                     aislamiento.
                     <a
-                      className="underline hover:text-blue-500"
+                      className=""
                       href="https://cdn.www.gob.pe/uploads/document/file/2733824/Anexo.pdf?v=1642137085"
                       target="blank"
                     >
-                      www.gob.pe
+                       <ButtonLink text="www.gob.pe" />
                     </a>
                   </p>
                   <p>
@@ -209,11 +210,12 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
                       lavado de manos: Importancia del lavado de manos -
                       Orientación - Ministerio de Salud - Gobierno del Perú{" "}
                       <a
-                        className="underline hover:text-blue-500"
+                        className=""
                         target="blank"
                         href="https://www.gob.pe/"
                       >
-                        www.gob.pe
+                      
+                        <ButtonLink text="www.gob.pe" />
                       </a>{" "}
                       )
                     </li>

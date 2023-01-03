@@ -12,7 +12,7 @@ import Button from "../commons/button/Button";
 // import video from '../../public/img/view1/video.mp4';
 
 type Props = {
-  viewVideo: () => void;
+  toggleViewSintomas: () => void;
   toggleViewImages: () => void;
   toggleViewAntecedentes: () => void;
   toggleViewDiagnostico: () => void;
@@ -24,8 +24,7 @@ type Props = {
 };
 
 const View1 = ({
-  viewVideo,
-  toggleViewImages,
+  toggleViewSintomas,
   toggleViewAntecedentes,
   toggleViewDiagnostico,
   toggleViewAlarmaPrevencion,
@@ -151,15 +150,15 @@ const View1 = ({
       <div className="flex items-center justify-center  relative">
         <Image
           className="object-cover"
-          alt="img7"
-          src={img7}
+          alt="img2"
+          src={img2}
           placeholder="blur"
           fill
           quality={50}
         />
         <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex  group items-start">
           <a
-            onClick={viewVideo}
+            onClick={toggleViewSintomas}
             className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
           >
             <Button text="Síntomas" />

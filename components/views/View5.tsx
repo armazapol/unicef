@@ -10,8 +10,6 @@ import img5 from "../../public/img/view1/img5.jpg";
 import logo from "../../public/img/view1/logo.png";
 
 type Props = {
-  viewVideo: () => void;
-  toggleViewImages: () => void;
   toggleViewVacunas: () => void;
   toggleViewInmunidadColectiva: () => void;
   toggleViewTiposVacunas: () => void;
@@ -26,8 +24,6 @@ type Props = {
 };
 
 const View5 = ({
-  viewVideo,
-  toggleViewImages,
   toggleViewVacunas,
   toggleViewInmunidadColectiva,
   toggleViewTiposVacunas,

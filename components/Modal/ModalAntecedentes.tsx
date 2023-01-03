@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
 import background from "../../public/img/bgModal.png";
+import ButtonLink from "../commons/button/ButtonLink";
 
 type Props = {
   toggleViewAntecedentes: () => void;
@@ -46,19 +47,19 @@ const ModalAntecedentes = ({ toggleViewAntecedentes }: Props) => {
           En nuestro país, se decretó el Estado de Emergencia Sanitaria a nivel
           nacional, con medidas de prevención y control del <span className="text-orange-600">COVID-19</span>, el 11 de
           marzo del 2020, mediante Decreto supremo N°008-2020-SA.
-         <a className="underline hover:text-blue-500" href="https://cdn.www.gob.pe/uploads/document/file/1206594/DS_N__008-2020-SA.pdf?v=1596682779" target="blank">(Normas_Legales_20200311_EXTRAORDINARIA.indd (www.gob.pe))</a> 
+         <a className="underline hover:text-blue-500" href="https://cdn.www.gob.pe/uploads/document/file/1206594/DS_N__008-2020-SA.pdf?v=1596682779" target="blank"><ButtonLink text="(Normas_Legales_20200311_EXTRAORDINARIA.indd (www.gob.pe))" /></a> 
         </p>
         <p>
           La enfermedad por coronavirus (<span className="text-orange-600">COVID-19</span>) es una enfermedad infecciosa
           causada por el virus <span className="text-orange-600">SARS-CoV-2</span> (severe acute respiratory syndrome
-          coronavirus 2). <a className="underline hover:text-blue-500" href="https://www.who.int/es/health-topics/coronavirus#tab=tab_1" target="blank">Coronavirus (who.int)</a> 
+          coronavirus 2). <a className="" href="https://www.who.int/es/health-topics/coronavirus#tab=tab_1" target="blank"> <ButtonLink text="Coronavirus (who.int)" /></a> 
         </p>
         <p>
           A nivel mundial, a la fecha se han registrado 649,247,184 casos
-          confirmados y 6,653,453 fallecidos <a className="underline hover:text-blue-500" href="https://coronavirus.jhu.edu/map.html" target="blank">(Fuente: COVID-19 Map - Johns
+          confirmados y 6,653,453 fallecidos <a className="underline hover:text-blue-500 text-xs" href="https://coronavirus.jhu.edu/map.html" target="blank"> (Fuente: COVID-19 Map - Johns
           Hopkins Coronavirus Resource Center (jhu.edu))</a> 
         </p>
-        <p>A diciembre del presente en nuestro país se tienen 4,304,745 casos confirmados de <span className="text-orange-600">COVID-19</span> y 217,519 fallecidos, según la sala situacional del Ministerio de Salud <a className="underline hover:text-blue-500" href="https://covid19.minsa.gob.pe/sala_situacional.asp" target="blank">(Covid 19 en el Perú - Ministerio del Salud (minsa.gob.pe)</a></p>
+        <p>A diciembre del presente en nuestro país se tienen 4,304,745 casos confirmados de <span className="text-orange-600">COVID-19</span> y 217,519 fallecidos, según la sala situacional del Ministerio de Salud <a className="underline hover:text-blue-500" href="https://covid19.minsa.gob.pe/sala_situacional.asp" target="blank"><ButtonLink text="(Covid 19 en el Perú - Ministerio del Salud (minsa.gob.pe)" /></a></p>
       </div>
     </div>
   );
