@@ -64,40 +64,46 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
                   <ul>
                     <li>
                       * Vacuna - virus inactivado: Contienen porciones inocuas
-                      de las proteínas del virus que causa el <span className="text-orange-600">COVID-19</span>. Al
+                      de las proteínas del virus que causa el{" "}
+                      <span className="text-orange-600">COVID-19</span>. Al
                       recibir la vacuna, nuestro organismo reconoce que esa
                       proteína no debería estar presente y crea linfocitos T y
                       anticuerpos que recordarán cómo defenderse del virus que
-                      causa el <span className="text-orange-600">COVID-19</span> en caso de infección. Ejemplo:
-                      Sinopharm.
+                      causa el <span className="text-orange-600">COVID-19</span>{" "}
+                      en caso de infección. Ejemplo: Sinopharm.
                     </li>
                     <li>
                       * Vacuna - ARM mensajero: contienen material del virus que
-                      causa el <span className="text-orange-600">COVID-19</span>, el cual instruye a nuestras células a
-                      crear una proteína inocua que es exclusiva del virus, de
-                      esta manera el organismo reconoce que esa proteína no
-                      debería estar presente y crea linfocitos T y B que
-                      recordarán cómo defenderse del virus que causa el <span className="text-orange-600">COVID-19</span>
+                      causa el <span className="text-orange-600">COVID-19</span>
+                      , el cual instruye a nuestras células a crear una proteína
+                      inocua que es exclusiva del virus, de esta manera el
+                      organismo reconoce que esa proteína no debería estar
+                      presente y crea linfocitos T y B que recordarán cómo
+                      defenderse del virus que causa el{" "}
+                      <span className="text-orange-600">COVID-19</span>
                       en caso de infección. Ejemplos: Pfizer – BioNTech.
                     </li>
                     <li>
                       * Vacuna con vector vírico: Contienen una versión
                       modificada de un virus diferente, que en su envoltura
                       contiene un vector viral (contiene material del virus que
-                      causa el <span className="text-orange-600">COVID-19</span>). Una vez que el vector viral entra en
-                      las células, el material genético instruye la producción
-                      de una proteína que es exclusiva del virus que causa el
-                      <span className="text-orange-600"> COVID-19</span>, de esta manera nuestras células hacen copias de
-                      la proteína. Se producen linfocitos T y B que recordarán
-                      cómo defenderse del virus que causa <span className="text-orange-600"> COVID-19</span> en caso de
-                      infección. Ejemplos: AstraZeneca
+                      causa el <span className="text-orange-600">COVID-19</span>
+                      ). Una vez que el vector viral entra en las células, el
+                      material genético instruye la producción de una proteína
+                      que es exclusiva del virus que causa el
+                      <span className="text-orange-600"> COVID-19</span>, de
+                      esta manera nuestras células hacen copias de la proteína.
+                      Se producen linfocitos T y B que recordarán cómo
+                      defenderse del virus que causa{" "}
+                      <span className="text-orange-600"> COVID-19</span> en caso
+                      de infección. Ejemplos: AstraZeneca
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-6/12 ">
+              <div className="w-6/12 relative group">
                 <Image
                   className="object-cover"
                   alt="img1"
@@ -105,9 +111,21 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
                   placeholder="blur"
                   quality={50}
                 />
+                <a
+                  onClick={() =>
+                    window.open("/img/view2/tiposvacunas/img1.png")
+                  }
+                  className="cursor-pointer absolute left-5 bottom-5 text-white text-xl font-semibold hidden group-hover:block"
+                >
+                  <img
+                    className="w_loop hidden lg:block "
+                    src="/img/lupa.png"
+                    alt=""
+                  />
+                </a>
               </div>
               <p className="underline hover:text-blue-500 text-white text-xs">
-              <span className="font-semibold"> Fuente:{" "}</span> 
+                <span className="font-semibold"> Fuente: </span>
                 <a
                   href="http://www.medicina.uanl.mx/noticias/coronavirus/covid-19-tipos-de-vacunas/"
                   target="blank"
@@ -221,7 +239,7 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
                   </div>
                 </div>
               </div> */}
-               <div className="w-6/12 ">
+              <div className="w-6/12 lg:w-[35rem] relative group">
                 <Image
                   className="object-cover"
                   alt="img3"
@@ -229,10 +247,23 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
                   placeholder="blur"
                   quality={50}
                 />
+                
+                <a
+                  onClick={() =>
+                    window.open("/img/view2/tiposvacunas/img3.png")
+                  }
+                  className="cursor-pointer absolute left-5 bottom-5 text-white text-xl font-semibold hidden group-hover:block"
+                >
+                  <img
+                    className="w_loop hidden lg:block "
+                    src="/img/lupa.png"
+                    alt=""
+                  />
+                </a>
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-6/12 ">
+              <div className="w-6/12 relative group">
                 <Image
                   className="object-cover"
                   alt="img1"
@@ -240,6 +271,18 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
                   placeholder="blur"
                   quality={50}
                 />
+                <a
+                  onClick={() =>
+                    window.open("/img/view2/tiposvacunas/img2.png")
+                  }
+                  className="cursor-pointer absolute left-5 bottom-5 text-white text-xl font-semibold hidden group-hover:block"
+                >
+                  <img
+                    className="w_loop hidden lg:block "
+                    src="/img/lupa.png"
+                    alt=""
+                  />
+                </a>
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
@@ -286,7 +329,7 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
                     laboratorios Pfizer, Sinopharm, AstraZeneca y Moderna.
                   </p>
                   <p className="text-xs">
-                  <span className="font-semibold">  Fuente:{" "}</span>
+                    <span className="font-semibold"> Fuente: </span>
                     <a
                       className="underline hover:text-blue-500 text-black"
                       href="https://www.gob.pe/21301"
@@ -306,7 +349,7 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
             onClick={toggleViewTiposVacunas}
             className="cursor-pointer absolute top-0 -right-5 text-white text-xl font-semibold"
           >
-              <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="" />
+            <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="" />
           </a>
         </div>
       </div>

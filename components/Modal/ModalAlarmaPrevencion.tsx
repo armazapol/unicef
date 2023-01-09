@@ -9,7 +9,6 @@ import img2 from "../../public/img/view1/alarma/img2.png";
 import img3 from "../../public/img/view1/alarma/img3.png";
 import ButtonLink from "../commons/button/ButtonLink";
 
-
 type Props = {
   toggleViewAlarmaPrevencion: () => void;
 };
@@ -64,18 +63,19 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
                     la cuarentena, la cuarentena es la restricción del
                     desplazamiento fuera de su vivienda a la persona o personas
                     expuestas a un caso sospechoso, probable o confirmado de
-                    <span className="text-orange-600"> COVID-19</span>. El aislamiento es el procedimiento por el cual una
-                    persona considerada sospechosa, probable o confirmada de
-                    <span className="text-orange-600"> COVID-19</span>, y que no requiera hospitalización se le indica
-                    aislamiento domiciliario. Durante el aislamiento se le
-                    restringe el desplazamiento fuera de su vivienda o centro de
-                    aislamiento.
+                    <span className="text-orange-600"> COVID-19</span>. El
+                    aislamiento es el procedimiento por el cual una persona
+                    considerada sospechosa, probable o confirmada de
+                    <span className="text-orange-600"> COVID-19</span>, y que no
+                    requiera hospitalización se le indica aislamiento
+                    domiciliario. Durante el aislamiento se le restringe el
+                    desplazamiento fuera de su vivienda o centro de aislamiento.
                     <a
                       className=""
                       href="https://cdn.www.gob.pe/uploads/document/file/2733824/Anexo.pdf?v=1642137085"
                       target="blank"
                     >
-                       <ButtonLink text="www.gob.pe" />
+                      <ButtonLink text="www.gob.pe" />
                     </a>
                   </p>
                   <p>
@@ -102,9 +102,9 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
               <h3 className=" text-xl text-center font-semibold text-white">
-                Flujo deAislamiento
+                Flujo de Aislamiento
               </h3>
-              <div className="w-10/12 ">
+              <div className="w-10/12 relative group">
                 <Image
                   className="object-cover"
                   alt="img2"
@@ -112,6 +112,16 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
                   placeholder="blur"
                   quality={50}
                 />
+                <a
+                  onClick={() => window.open("/img/view1/alarma/img1.png")}
+                  className="cursor-pointer absolute left-5 bottom-5 text-white text-xl font-semibold hidden group-hover:block"
+                >
+                  <img
+                    className="w_loop hidden lg:block "
+                    src="/img/lupa.png"
+                    alt=""
+                  />
+                </a>
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
@@ -119,8 +129,8 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
                 <div className="text-left flex flex-col gap-2">
                   <p>
                     En el caso de personas que habitan con personas positivas a
-                    <span className="text-orange-600"> COVID-19</span>, se establecerán los días de aislamiento según lo
-                    siguiente:
+                    <span className="text-orange-600"> COVID-19</span>, se
+                    establecerán los días de aislamiento según lo siguiente:
                   </p>
                   <ul>
                     <li>* Vacunación incompleta: 07 días</li>
@@ -142,7 +152,7 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
                 Flujo de Aislamiento de personas que habitan con personas
                 positivas a COVID-19
               </h3>
-              <div className="w-10/12 ">
+              <div className="w-10/12 relative group">
                 <Image
                   className="object-cover"
                   alt="img2"
@@ -150,9 +160,19 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
                   placeholder="blur"
                   quality={50}
                 />
+                 <a
+                  onClick={() => window.open("/img/view1/alarma/img2.png")}
+                  className="cursor-pointer absolute left-5 bottom-5 text-white text-xl font-semibold hidden group-hover:block"
+                >
+                  <img
+                    className="w_loop hidden lg:block "
+                    src="/img/lupa.png"
+                    alt=""
+                  />
+                </a>
               </div>
               <p className="underline hover:text-blue-500 text-white text-xs">
-              <span className="font-semibold"> Fuente:{" "}</span> 
+                <span className="font-semibold"> Fuente: </span>
                 <a
                   href="https://cdn.www.gob.pe/uploads/document/file/2773889/Anexo.pdf?v=1642770555"
                   target="blank"
@@ -168,8 +188,9 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
               <div className="w-[40rem] bg-white flex flex-col gap-2 p-5 relative component rounded-md">
                 <div className="text-left flex flex-col gap-2">
                   <p>
-                    Para prevenir la infección y frenar la transmisión de la 
-                   <span className="text-orange-600"> COVID-19</span> , haga lo siguiente:
+                    Para prevenir la infección y frenar la transmisión de la
+                    <span className="text-orange-600"> COVID-19</span> , haga lo
+                    siguiente:
                   </p>
                   <ul>
                     <li>
@@ -185,7 +206,7 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
                   </ul>
                 </div>
               </div>
-              <div className="w-[25rem] ">
+              <div className="w-[20rem] relative group">
                 <Image
                   className="object-cover"
                   alt="img2"
@@ -193,6 +214,16 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
                   placeholder="blur"
                   quality={50}
                 />
+                 <a
+                  onClick={() => window.open("/img/view1/alarma/img3.png")}
+                  className="cursor-pointer absolute left-5 bottom-5 text-white text-xl font-semibold hidden group-hover:block"
+                >
+                  <img
+                    className="w_loop hidden lg:block "
+                    src="/img/lupa.png"
+                    alt=""
+                  />
+                </a>
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
@@ -209,12 +240,7 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
                       (acá se puede ampliar una imagen sobre la importancia del
                       lavado de manos: Importancia del lavado de manos -
                       Orientación - Ministerio de Salud - Gobierno del Perú{" "}
-                      <a
-                        className=""
-                        target="blank"
-                        href="https://www.gob.pe/"
-                      >
-                      
+                      <a className="" target="blank" href="https://www.gob.pe/">
                         <ButtonLink text="www.gob.pe" />
                       </a>{" "}
                       )
