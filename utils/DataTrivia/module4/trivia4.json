@@ -1,0 +1,14 @@
+ {
+    "pregunta": "El nuevo coronavirus NO PUEDE transmitirse a través de picaduras de mosquitos",
+    "respuestas": [
+      {
+        "correcta": false,
+        "respuesta": "Sí"
+      },
+      {
+        "correcta": true,
+        "respuesta": "No"
+      }
+    ]
+}
+

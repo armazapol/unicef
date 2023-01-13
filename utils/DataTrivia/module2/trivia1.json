@@ -1,0 +1,22 @@
+ {
+    "pregunta": "Los principales tipos de vacunas disponibles contra la COVID-19 son, excepto:",
+    "respuestas": [
+      {
+        "correcta": false,
+        "respuesta": "Vacuna - virus inactivado"
+      },
+      {
+        "correcta": false,
+        "respuesta": "Vacuna - ARM mensajero"
+      },
+      {
+        "correcta": false,
+        "respuesta": "Vacuna con vector vírico"
+      },
+      {
+        "correcta": true,
+        "respuesta": "Vacuna - ADN mensajero"
+      }
+    ]
+}
+

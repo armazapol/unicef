@@ -1,0 +1,22 @@
+ {
+    "pregunta": "La vacuna contra el Virus de Papiloma Humano (VPH) previenen:",
+    "respuestas": [
+      {
+        "correcta": false,
+        "respuesta": "Cáncer cervical causado por el virus del papiloma humano (VPH) tipos 16 y 18"
+      },
+      {
+        "correcta": false,
+        "respuesta": "Neoplasia intraepitelial cervical (NIC) grado I y II"
+      },
+      {
+        "correcta": false,
+        "respuesta": "Verrugas genitales causadas por el VPH 6 y 11"
+      },
+      {
+        "correcta": true,
+        "respuesta": "Todas las anteriores"
+      }
+    ]
+}
+

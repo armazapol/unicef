@@ -1,0 +1,14 @@
+ {
+    "pregunta": "Una gestante, con más de 12 semanas de gestación, ¿puede recibir la vacuna contra COVID-19?",
+    "respuestas": [
+      {
+        "correcta": true,
+        "respuesta": "Sí"
+      },
+      {
+        "correcta": false,
+        "respuesta": "No"
+      }
+    ]
+}
+

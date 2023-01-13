@@ -1,0 +1,14 @@
+ {
+    "pregunta": "Una lactante, ¿puede recibir la vacuna contra COVID-19?",
+    "respuestas": [
+      {
+        "correcta": true,
+        "respuesta": "Sí"
+      },
+      {
+        "correcta": false,
+        "respuesta": "No"
+      }
+    ]
+}
+

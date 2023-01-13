@@ -1,0 +1,22 @@
+ {
+    "pregunta": "El Esquema nacional de vacunación actualizado cuenta con:",
+    "respuestas": [
+      {
+        "correcta": false,
+        "respuesta": "17 vacunas"
+      },
+      {
+        "correcta": false,
+        "respuesta": "19 vacunas"
+      },
+      {
+        "correcta": false,
+        "respuesta": "15 vacunas"
+      },
+      {
+        "correcta": true,
+        "respuesta": "18 vacunas"
+      }
+    ]
+}
+

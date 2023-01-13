@@ -1,0 +1,22 @@
+ {
+    "pregunta": "Son recomendaciones a seguir si debo realizar aislamiento en casa de tener COVID-19:",
+    "respuestas": [
+      {
+        "correcta": false,
+        "respuesta": "Salir con normalidad"
+      },
+      {
+        "correcta": false,
+        "respuesta": "Evitar usar mascarilla si tengo contacto con familiares"
+      },
+      {
+        "correcta": false,
+        "respuesta": "Evitar bañarme"
+      },
+      {
+        "correcta": true,
+        "respuesta": "Lavarme las manos con frecuencia, por un mínimo de 20 segundos"
+      }
+    ]
+}
+

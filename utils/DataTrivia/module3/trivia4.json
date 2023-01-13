@@ -1,0 +1,22 @@
+ {
+    "pregunta": "No es un síntoma de la Hepatitis A",
+    "respuestas": [
+      {
+        "correcta": false,
+        "respuesta": "Fiebre"
+      },
+      {
+        "correcta": false,
+        "respuesta": "Pérdida del apetito"
+      },
+      {
+        "correcta": false,
+        "respuesta": "Vómitos"
+      },
+      {
+        "correcta": true,
+        "respuesta": "Ojos rojos"
+      }
+    ]
+}
+

@@ -25,6 +25,42 @@ import ModalEfectosSecundarios from "../Modal/ModalEfectosSecundarios";
 import ModalAvanceVacunacion from "../Modal/ModalAvanceVacunacion";
 import ModalConsecuencias from "../Modal/ModalConsecuencias";
 import ModalSintomas from "../Modal/ModalSintomas";
+import ModalNuevasVacunas from "../Modal/ModalNuevasVacunas";
+import ModalVPH from "../Modal/ModalVPH";
+import ModalVacunacionHepatitisA from "../Modal/ModalVacunacionHepatitisA";
+import View4 from "../views/View4";
+import ModalQuest1 from "../Modal/ModalQuest1";
+import ModalQuest2 from "../Modal/ModalQuest2";
+import ModalQuest3 from "../Modal/ModalQuest3";
+import ModalQuest4 from "../Modal/ModalQuest4";
+import ModalQuest5 from "../Modal/ModalQuest5";
+import ModalQuest6 from "../Modal/ModalQuest6";
+import ModalQuest7 from "../Modal/ModalQuest7";
+import ModalQuest8 from "../Modal/ModalQuest8";
+import ModalQuest9 from "../Modal/ModalQuest9";
+import ModalQuest10 from "../Modal/ModalQuest10";
+
+//trivia
+import trivia1 from "../../utils/DataTrivia/module1/trivia1.json"
+import trivia2 from "../../utils/DataTrivia/module1/trivia2.json"
+import trivia3 from "../../utils/DataTrivia/module1/trivia3.json"
+import trivia4 from "../../utils/DataTrivia/module1/trivia4.json"
+import trivia5 from "../../utils/DataTrivia/module1/trivia5.json"
+import trivia6 from "../../utils/DataTrivia/module2/trivia1.json"
+import trivia7 from "../../utils/DataTrivia/module2/trivia2.json"
+import trivia8 from "../../utils/DataTrivia/module2/trivia3.json"
+import trivia9 from "../../utils/DataTrivia/module2/trivia4.json"
+import trivia10 from "../../utils/DataTrivia/module2/trivia5.json"
+import trivia11 from "../../utils/DataTrivia/module3/trivia1.json"
+import trivia12 from "../../utils/DataTrivia/module3/trivia2.json"
+import trivia13 from "../../utils/DataTrivia/module3/trivia3.json"
+import trivia14 from "../../utils/DataTrivia/module3/trivia4.json"
+import trivia15 from "../../utils/DataTrivia/module3/trivia5.json"
+import trivia16 from "../../utils/DataTrivia/module4/trivia1.json"
+import trivia17 from "../../utils/DataTrivia/module4/trivia2.json"
+import trivia18 from "../../utils/DataTrivia/module4/trivia3.json"
+import trivia19 from "../../utils/DataTrivia/module4/trivia4.json"
+import trivia20 from "../../utils/DataTrivia/module4/trivia5.json"
 
 const Carousell = (props) => {
   // const [stateModalVideo, setStateModalVideo] = useState<boolean>(false);
@@ -46,6 +82,19 @@ const Carousell = (props) => {
   const [stateModalAvanceVacunacion, setStateModalAvanceVacunacion] = useState(false);
   const [stateModalConsecuencias, setStateModalConsecuencias] = useState(false);
   const [stateModalSintomas, setStateModalSintomas] = useState(false);
+  const [stateModalNuevasVacunas, setStateModalNuevasVacunas] = useState(false);
+  const [stateModalVPH, setStateModalVPH] = useState(false);
+  const [stateModalVacunacionHepatitisA, setStateModalVacunacionHepatitisA] = useState(false);
+  const [stateModalQuest1, setStateModalQuest1] = useState(false);
+  const [stateModalQuest2, setStateModalQuest2] = useState(false);
+  const [stateModalQuest3, setStateModalQuest3] = useState(false);
+  const [stateModalQuest4, setStateModalQuest4] = useState(false);
+  const [stateModalQuest5, setStateModalQuest5] = useState(false);
+  const [stateModalQuest6, setStateModalQuest6] = useState(false);
+  const [stateModalQuest7, setStateModalQuest7] = useState(false);
+  const [stateModalQuest8, setStateModalQuest8] = useState(false);
+  const [stateModalQuest9, setStateModalQuest9] = useState(false);
+  const [stateModalQuest10, setStateModalQuest10] = useState(false);
   // const [stateMenu, setStateMenu] = useState(false);
   const [stateHamburger, setStateHamburger] = useState(false);
   const [stateCarousel, setStateCarousel] = useState(0);
@@ -100,6 +149,45 @@ const Carousell = (props) => {
   }
   const toggleViewSintomas = () => {
     setStateModalSintomas(!stateModalSintomas);
+  }
+  const toggleViewNuevasVacunas = () => {
+    setStateModalNuevasVacunas(!stateModalNuevasVacunas);
+  }
+  const toggleViewVPH = () => {
+    setStateModalVPH(!stateModalVPH);
+  }
+  const toggleViewVacunacionHepatitisA = () => {
+    setStateModalVacunacionHepatitisA(!stateModalVacunacionHepatitisA);
+  }
+  const toggleViewQuest1 = () => {
+    setStateModalQuest1(!stateModalQuest1);
+  }
+  const toggleViewQuest2 = () => {
+    setStateModalQuest2(!stateModalQuest2);
+  }
+  const toggleViewQuest3 = () => {
+    setStateModalQuest3(!stateModalQuest3);
+  }
+  const toggleViewQuest4 = () => {
+    setStateModalQuest4(!stateModalQuest4);
+  }
+  const toggleViewQuest5 = () => {
+    setStateModalQuest5(!stateModalQuest5);
+  }
+  const toggleViewQuest6 = () => {
+    setStateModalQuest6(!stateModalQuest6);
+  }
+  const toggleViewQuest7 = () => {
+    setStateModalQuest7(!stateModalQuest7);
+  }
+  const toggleViewQuest8 = () => {
+    setStateModalQuest8(!stateModalQuest8);
+  }
+  const toggleViewQuest9 = () => {
+    setStateModalQuest9(!stateModalQuest9);
+  }
+  const toggleViewQuest10 = () => {
+    setStateModalQuest10(!stateModalQuest10);
   }
 
   useEffect(() => {
@@ -156,6 +244,19 @@ const Carousell = (props) => {
       {stateModalAvanceVacunacion && <ModalAvanceVacunacion toggleViewAvanceVacunacion={toggleViewAvanceVacunacion} />}
       {stateModalConsecuencias && <ModalConsecuencias toggleViewConsecuencias={toggleViewConsecuencias} />}
       {stateModalSintomas && <ModalSintomas toggleViewSintomas={toggleViewSintomas} />}
+      {stateModalNuevasVacunas && <ModalNuevasVacunas toggleViewNuevasVacunas={toggleViewNuevasVacunas} />}
+      {stateModalVPH && <ModalVPH toggleViewVPH={toggleViewVPH} />}
+      {stateModalVacunacionHepatitisA && <ModalVacunacionHepatitisA toggleViewVacunacionHepatitisA={toggleViewVacunacionHepatitisA} />}
+      {stateModalQuest1 && <ModalQuest1 toggleViewQuest1={toggleViewQuest1} />}
+      {stateModalQuest2 && <ModalQuest2 toggleViewQuest2={toggleViewQuest2} />}
+      {stateModalQuest3 && <ModalQuest3 toggleViewQuest3={toggleViewQuest3} />}
+      {stateModalQuest4 && <ModalQuest4 toggleViewQuest4={toggleViewQuest4} />}
+      {stateModalQuest5 && <ModalQuest5 toggleViewQuest5={toggleViewQuest5} />}
+      {stateModalQuest6 && <ModalQuest6 toggleViewQuest6={toggleViewQuest6} />}
+      {stateModalQuest7 && <ModalQuest7 toggleViewQuest7={toggleViewQuest7} />}
+      {stateModalQuest8 && <ModalQuest8 toggleViewQuest8={toggleViewQuest8} />}
+      {stateModalQuest9 && <ModalQuest9 toggleViewQuest9={toggleViewQuest9} />}
+      {stateModalQuest10 && <ModalQuest10 toggleViewQuest10={toggleViewQuest10} />}
       <div className="absolute -bottom-14 -right-14 lg:-bottom-20 lg:-right-20 bg-blue-900/90 rounded-full w-32 h-32 lg:w-40 text-white z-40 background">
         <div className="contentMenu hidden">
           <Menu toggleViewAntecedentes={toggleViewAntecedentes} toggleViewDiagnostico={toggleViewDiagnostico} toggleViewAlarmaPrevencion={toggleViewAlarmaPrevencion} toggleViewVarianteCovid={toggleViewVarianteCovid} toggleViewVacunas={toggleViewVacunas} toggleViewInmunidadColectiva={toggleViewInmunidadColectiva} toggleViewTiposVacunas={toggleViewTiposVacunas} toggleViewInocuidadEfectividad={toggleViewInocuidadEfectividad} toggleViewEmbarazoLactancia={toggleViewEmbarazoLactancia} toggleViewEfectosSecundarios={toggleViewEfectosSecundarios} toggleViewAvanceVacunacion={toggleViewAvanceVacunacion} toggleViewConsecuencias={toggleViewConsecuencias} toggleViewSintomas={toggleViewSintomas} />
@@ -188,10 +289,40 @@ const Carousell = (props) => {
           keyCarrousel={1}
           index={stateCarousel}
           stateSide={stateSide}
-          title={`curso lúdico a modo de videojuego.`}
-          text={`Creamos el personaje Salva y mini-juegos ligados a la política de salvaguarda y canales de atención al cuidado de los niños, niñas y adolescentes.`}
-          urlBackground="/img/trivia/fondo.png"
-          urlLogo="/img/view1/logo.png"
+          trivia={trivia1}
+          counter={1}
+          // title={`curso lúdico a modo de videojuego.`}
+          // text={`Creamos el personaje Salva y mini-juegos ligados a la política de salvaguarda y canales de atención al cuidado de los niños, niñas y adolescentes.`}
+          // urlBackground="/img/trivia/fondo.png"
+          // urlLogo="/img/view1/logo.png"
+        />
+         <ViewGeneral
+          keyCarrousel={2}
+          index={stateCarousel}
+          stateSide={stateSide}
+          trivia={trivia2}
+          counter={2}
+        />
+         <ViewGeneral
+          keyCarrousel={3}
+          index={stateCarousel}
+          stateSide={stateSide}
+          trivia={trivia3}
+          counter={3}
+        />
+         <ViewGeneral
+          keyCarrousel={4}
+          index={stateCarousel}
+          stateSide={stateSide}
+          trivia={trivia4}
+          counter={4}
+        />
+         <ViewGeneral
+          keyCarrousel={5}
+          index={stateCarousel}
+          stateSide={stateSide}
+          trivia={trivia5}
+          counter={5}
         />
           <View5
           viewVideo={viewVideo}
@@ -204,53 +335,139 @@ const Carousell = (props) => {
           toggleViewEfectosSecundarios={toggleViewEfectosSecundarios}
           toggleViewAvanceVacunacion={toggleViewAvanceVacunacion}
           toggleViewConsecuencias={toggleViewConsecuencias}
-          keyCarrousel={2}
+          keyCarrousel={6}
           index={stateCarousel}
           stateSide={stateSide}
         />
          <ViewGeneral
-          keyCarrousel={3}
+          keyCarrousel={7}
           index={stateCarousel}
           stateSide={stateSide}
-          title={`curso lúdico a modo de videojuego.`}
-          text={`Creamos el personaje Salva y mini-juegos ligados a la política de salvaguarda y canales de atención al cuidado de los niños, niñas y adolescentes.`}
-          urlBackground="/img/trivia/fondo.png"
-          urlLogo="/img/view1/logo.png"
+          trivia={trivia6}
+          counter={1}
+        />
+         <ViewGeneral
+          keyCarrousel={8}
+          index={stateCarousel}
+          stateSide={stateSide}
+          trivia={trivia7}
+          counter={2}
+        />
+         <ViewGeneral
+          keyCarrousel={9}
+          index={stateCarousel}
+          stateSide={stateSide}
+          trivia={trivia8}
+          counter={3}
+        />
+         <ViewGeneral
+          keyCarrousel={10}
+          index={stateCarousel}
+          stateSide={stateSide}
+          trivia={trivia9}
+          counter={4}
+        />
+         <ViewGeneral
+          keyCarrousel={11}
+          index={stateCarousel}
+          stateSide={stateSide}
+          trivia={trivia10}
+          counter={5}
         />
          <View15
-          viewVideo={viewVideo}
-          toggleViewImages={toggleViewImages}
-          keyCarrousel={4}
+          toggleViewNuevasVacunas={toggleViewNuevasVacunas}
+          toggleViewVPH={toggleViewVPH}
+          toggleViewVacunacionHepatitisA={toggleViewVacunacionHepatitisA}
+          keyCarrousel={12}
           index={stateCarousel}
           stateSide={stateSide}
         />
          <ViewGeneral
-          keyCarrousel={5}
+          keyCarrousel={13}
           index={stateCarousel}
           stateSide={stateSide}
-          title={`curso lúdico a modo de videojuego.`}
-          text={`Creamos el personaje Salva y mini-juegos ligados a la política de salvaguarda y canales de atención al cuidado de los niños, niñas y adolescentes.`}
-          urlBackground="/img/trivia/fondo.png"
-          urlLogo="/img/view1/logo.png"
+          trivia={trivia11}
+          counter={1}
         />
-         <View1
-          viewVideo={viewVideo}
-          toggleViewImages={toggleViewImages}
-          keyCarrousel={6}
+         <ViewGeneral
+          keyCarrousel={14}
+          index={stateCarousel}
+          stateSide={stateSide}
+          trivia={trivia12}
+          counter={2}
+        />
+         <ViewGeneral
+          keyCarrousel={15}
+          index={stateCarousel}
+          stateSide={stateSide}
+          trivia={trivia13}
+          counter={3}
+        />
+         <ViewGeneral
+          keyCarrousel={16}
+          index={stateCarousel}
+          stateSide={stateSide}
+          trivia={trivia14}
+          counter={4}
+        />
+         <ViewGeneral
+          keyCarrousel={17}
+          index={stateCarousel}
+          stateSide={stateSide}
+          trivia={trivia15}
+          counter={5}
+        />
+         <View4
+         toggleViewQuest1={toggleViewQuest1}
+         toggleViewQuest2={toggleViewQuest2}
+         toggleViewQuest3={toggleViewQuest3}
+         toggleViewQuest4={toggleViewQuest4}
+         toggleViewQuest5={toggleViewQuest5}
+         toggleViewQuest6={toggleViewQuest6}
+         toggleViewQuest7={toggleViewQuest7}
+         toggleViewQuest8={toggleViewQuest8}
+         toggleViewQuest9={toggleViewQuest9}
+         toggleViewQuest10={toggleViewQuest10}
+          keyCarrousel={18}
           index={stateCarousel}
           stateSide={stateSide}
         />
         {/* <View2 keyCarrousel={1} index={stateCarousel} stateSide={stateSide} />    */}
         <ViewGeneral
-          keyCarrousel={7}
+          keyCarrousel={19}
           index={stateCarousel}
           stateSide={stateSide}
-          title={`curso lúdico a modo de videojuego.`}
-          text={`Creamos el personaje Salva y mini-juegos ligados a la política de salvaguarda y canales de atención al cuidado de los niños, niñas y adolescentes.`}
-          urlBackground="/img/trivia/fondo.png"
-          urlLogo="/img/view1/logo.png"
+          trivia={trivia16}
+          counter={1}
         />
-      
+       <ViewGeneral
+          keyCarrousel={20}
+          index={stateCarousel}
+          stateSide={stateSide}
+          trivia={trivia17}
+          counter={2}
+        />
+         <ViewGeneral
+          keyCarrousel={21}
+          index={stateCarousel}
+          stateSide={stateSide}
+          trivia={trivia18}
+          counter={3}
+        />
+         <ViewGeneral
+          keyCarrousel={22}
+          index={stateCarousel}
+          stateSide={stateSide}
+          trivia={trivia19}
+          counter={4}
+        />
+         <ViewGeneral
+          keyCarrousel={23}
+          index={stateCarousel}
+          stateSide={stateSide}
+          trivia={trivia20}
+          counter={5}
+        />
  
       </Carousel>
      <MenuBurguer stateHamburger={stateHamburger} toggleMenu={toggleMenu} />

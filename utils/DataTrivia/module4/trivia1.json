@@ -1,0 +1,14 @@
+ {
+    "pregunta": "¿Debería vacunarme si ya he pasado la COVID-19?",
+    "respuestas": [
+      {
+        "correcta": true,
+        "respuesta": "Sí"
+      },
+      {
+        "correcta": false,
+        "respuesta": "No"
+      }
+    ]
+}
+

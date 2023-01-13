@@ -1,0 +1,14 @@
+ {
+    "pregunta": "¿Puedo dejar de tomar precauciones después de haberme vacunado?",
+    "respuestas": [
+      {
+        "correcta": false,
+        "respuesta": "Sí"
+      },
+      {
+        "correcta": true,
+        "respuesta": "No"
+      }
+    ]
+}
+

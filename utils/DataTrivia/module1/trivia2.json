@@ -1,0 +1,22 @@
+ {
+    "pregunta": "Es una variante del virus, dentro de la categoría de preocupación:",
+    "respuestas": [
+      {
+        "correcta": false,
+        "respuesta": "Variante Delta"
+      },
+      {
+        "correcta": false,
+        "respuesta": "Variante Gamma"
+      },
+      {
+        "correcta": false,
+        "respuesta": "Variante Epsilon"
+      },
+      {
+        "correcta": true,
+        "respuesta": "Variante Ómicron"
+      }
+    ]
+}
+

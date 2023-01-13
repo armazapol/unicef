@@ -1,0 +1,22 @@
+ {
+    "pregunta": "La complicación más temida de la hepatitis A es:",
+    "respuestas": [
+      {
+        "correcta": true,
+        "respuesta": "Hepatitis fulminante"
+      },
+      {
+        "correcta": false,
+        "respuesta": "Cirrosis"
+      },
+      {
+        "correcta": false,
+        "respuesta": "Anemia"
+      },
+      {
+        "correcta": false,
+        "respuesta": "Cáncer "
+      }
+    ]
+}
+

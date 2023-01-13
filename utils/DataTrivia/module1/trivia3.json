@@ -1,0 +1,22 @@
+ {
+    "pregunta": "De los siguientes, cual no es un signo de alarma:",
+    "respuestas": [
+      {
+        "correcta": false,
+        "respuesta": "Dificultad para respirar"
+      },
+      {
+        "correcta": false,
+        "respuesta": "Fiebre persistente por más de 3 días"
+      },
+      {
+        "correcta": true,
+        "respuesta": "Dolor leve e intermitente en el pecho"
+      },
+      {
+        "correcta": false,
+        "respuesta": "Coloración azul de los labios (cianosis)"
+      }
+    ]
+}
+

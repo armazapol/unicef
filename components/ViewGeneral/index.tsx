@@ -13,65 +13,89 @@ type Props = {
   keyCarrousel: number;
   index: number;
   stateSide: string;
-  title: string;
-  urlLogo: string;
-  urlBackground: string;
-  text: string;
+  counter: number;
+  // title: string;
+  // urlLogo: string;
+  // urlBackground: string;
+  // text: string;
+  trivia: dataTrivia;
 };
+
+type dataTrivia ={
+  pregunta: string;
+  respuestas : [dataRespuesta];
+}
+
+type dataRespuesta = {
+  correcta: boolean;
+  respuesta: string;
+}
 
 //data trivia
-const trivia = [
-  {
-    pregunta: "Azul en inglés es igual a:",
-    respuestas: [
-      {
-        correcta: true,
-        respuesta: "Blue",
-      },
-      {
-        correcta: false,
-        respuesta:
-          "Green ",
-      },
-      {
-        correcta: false,
-        respuesta: "Black",
-      },
-      {
-        correcta: false,
-        respuesta: "Yellow",
-      },
-    ],
-  },
-];
-
+// const trivia = [
+//   {
+//     pregunta: "Azul en inglés es igual a:",
+//     respuestas: [
+//       {
+//         correcta: true,
+//         respuesta: "Blue",
+//       },
+//       {
+//         correcta: false,
+//         respuesta:
+//           "Green ",
+//       },
+//       {
+//         correcta: false,
+//         respuesta: "Black",
+//       },
+//       {
+//         correcta: false,
+//         respuesta: "Yellow",
+//       },
+//     ],
+//   },
+// ];
+// const trivia = {
+//   pregunta: "Azul en inglés es igual a:",
+//   respuestas: [
+//     {
+//       correcta: true,
+//       respuesta: "Blue",
+//     },
+//     {
+//       correcta: false,
+//       respuesta: "Green ",
+//     },
+//     {
+//       correcta: false,
+//       respuesta: "Black",
+//     },
+//     {
+//       correcta: false,
+//       respuesta: "Yellow",
+//     },
+//   ],
+// };
 //puntaje
 const Puntaje = 25;
-
-//explosion
-const canvasStyles = {
-  position: "fixed",
-  pointerEvents: "none",
-  width: "100%",
-  height: "100%",
-  top: 0,
-  left: 0,
-};
 
 const ViewGeneral = ({
   keyCarrousel,
   index,
   stateSide,
-  title,
-  urlLogo,
-  urlBackground,
-  text,
+  trivia,
+  counter,
+  // title,
+  // urlLogo,
+  // urlBackground,
+  // text,
 }: Props) => {
   const [count, setCount] = useState(100);
   const [finishTrivia, setFinishTrivia] = useState(false);
 
   //ref
-  const refAnimationInstance :any = useRef(null);
+  const refAnimationInstance: any = useRef(null);
 
   const actualizarFinTrivia = () => {
     setFinishTrivia(true);
@@ -82,11 +106,11 @@ const ViewGeneral = ({
     setCount(count - Puntaje);
   };
 
-  const getInstance = useCallback((instance:any) => {
+  const getInstance = useCallback((instance: any) => {
     refAnimationInstance.current = instance;
   }, []);
 
-  const makeShot = useCallback((particleRatio:any, opts:any) => {
+  const makeShot = useCallback((particleRatio: any, opts: any) => {
     refAnimationInstance.current &&
       refAnimationInstance.current({
         ...opts,
@@ -167,12 +191,12 @@ const ViewGeneral = ({
         fill
       />
       <div className="absolute left-5 top-5 px-10 py-6 bg-white">
-          <p className="text-sky-500 font-bold text-xl">Pregunta 2/4</p>
+        <p className="text-sky-500 font-bold text-xl">Pregunta {counter}/5</p>
       </div>
-      <div className="flex flex-col z-20 relative items-center w-[30rem]  p-5">
-        <div className="relative w-full flex items-center justify-center">
+      <div className="flex flex-col z-20 relative items-center w-[40rem]  ">
+        <div className="relative w-full flex items-center justify-center ">
           <Image className="" alt="quest" src={quest} placeholder="blur" />
-          <p className="absolute text-3xl px-5"> {trivia[0].pregunta} </p>
+          <p className="absolute text-3xl px-10"> {trivia.pregunta} </p>
         </div>
         <div className="h-20 text-5xl text-center text-shadow uppercase tracking-widest">
           {!finishTrivia ? (
@@ -182,7 +206,7 @@ const ViewGeneral = ({
           )}
         </div>
         <ul className="flex flex-col gap-2 w-full">
-          {trivia[0].respuestas.map((data, key) => {
+          {trivia.respuestas.map((data, key) => {
             return (
               <TriviaOpcion
                 key={key}

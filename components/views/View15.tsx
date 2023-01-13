@@ -10,16 +10,18 @@ import img5 from "../../public/img/view1/img5.jpg";
 import logo from "../../public/img/view1/logo.png";
 
 type Props = {
-  viewVideo: () => void;
-  toggleViewImages: () => void;
+  toggleViewNuevasVacunas: () => void;
+  toggleViewVPH: () => void;
+  toggleViewVacunacionHepatitisA: () => void;
   keyCarrousel: number;
   index: number;
   stateSide: string;
 };
 
 const View15 = ({
-  viewVideo,
-  toggleViewImages,
+  toggleViewNuevasVacunas,
+  toggleViewVPH,
+  toggleViewVacunacionHepatitisA,
   keyCarrousel,
   index,
   stateSide,
@@ -74,7 +76,7 @@ const View15 = ({
           <p
             className={`uppercase font-bold text-sm  lg:text-3xl py-1  lg:py-5 animate_logo${keyCarrousel}`}
           >
-            MÓDULO X
+            MÓDULO 3
           </p>
           <div
             className={` opacity-0 flex items-center flex-col animate_component${keyCarrousel}  `}
@@ -82,12 +84,14 @@ const View15 = ({
             <div className=" ">
               <div className="font_LatoRegular text-xs  lg:text-lg leading-tight bg-white/90 text-sky-500 p-4">
                 <p>
-                Conceptos Básicos sobre el SARS-Cov-2 
+                Actualización del esquema nacional de vacunación 
                 </p>
               </div>
             </div>
             <div className="flex gap-10 mt-2 lg:mt-5">
-              <Button text="Play" />
+              <a onClick={toggleViewNuevasVacunas}>
+              <Button text="Nuevas vacunas incluidas" />
+              </a>
               {/* <Button text="Compartir" /> */}
             </div>
           </div>
@@ -105,10 +109,10 @@ const View15 = ({
         <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 group items-start flex">
           {" "}
           <a
-            onClick={toggleViewImages}
+            onClick={toggleViewVPH}
             className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
           >
-            <Button text="Galería" />
+            <Button text="Vacuna contra el Virus Papiloma Humano (VPH)" />
           </a>
         </div>
       </div>
@@ -123,10 +127,10 @@ const View15 = ({
         />
         <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex  group items-start">
           <a
-            onClick={viewVideo}
+            onClick={toggleViewVacunacionHepatitisA}
             className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
           >
-            <Button text="Ver Video" />
+            <Button text="Vacunación hepatitis A" />
           </a>
         </div>
       </div>
@@ -146,7 +150,7 @@ const View15 = ({
             target="_blank"
             rel="noreferrer"
           >
-            <Button text="Web" />
+            {/* <Button text="Web" /> */}
           </a>
         </div>
       </div>
