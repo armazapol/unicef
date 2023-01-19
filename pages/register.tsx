@@ -99,7 +99,7 @@ const Register = () => {
       <Toaster />
       <div className="w-96">
         <h1 className="text-center text-xl font-semibold">Registro</h1>
-        {isLoading && <Loading />}
+        {isLoading && <Loading text="Cargando.." />}
         {/* {error && <p>Error al registrar: {error.error} </p>} */}
         <Input1 type="email" label="Email" {...register("email")} />
         <Input1 type="password" label="Contraseña" {...register("password")} />
