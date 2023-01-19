@@ -27,14 +27,15 @@ const ModalQuest5 = ({ toggleViewQuest5 }: Props) => {
         fill
         quality={50}
       />
-      <div className="w-[40rem] bg-white flex flex-col gap-2 p-5 relative component rounded-md">
         <a
-          onClick={toggleViewQuest5}
-          className="cursor-pointer absolute -right-10 text-white text-xl font-semibold"
-        >
-            <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="" />
-        </a>
-        <h2 className="font-semibold text-lg">¿Puedo dejar de tomar precauciones después de haberme vacunado?</h2>
+        onClick={toggleViewQuest5}
+        className="cursor-pointer absolute right-4 top-4 lg:right-10 lg:top-10 text-white text-xl font-semibold "
+      >
+        <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="" />
+      </a>
+      <div className="w-10/12 md:w-[40rem] bg-white flex flex-col gap-2 p-5 relative component rounded-md h-5/6 lg:h-auto overflow-x-hidden overflow-y-auto text-sm lg:text-base">
+
+        <h2 className="font-semibold text-base lg:text-lg">¿Puedo dejar de tomar precauciones después de haberme vacunado?</h2>
         <p>
         Sigue tomando precauciones para protegerte y proteger a tu familia y a tus amigos si todavía hay casos de COVID-19 en tu zona, incluso después de haberte vacunado. Las vacunas contra la COVID-19 son muy eficaces contra la enfermedad grave y la muerte, pero ninguna vacuna es un 100% eficaz.  
         </p>

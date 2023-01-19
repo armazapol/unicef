@@ -37,10 +37,16 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
         fill
         quality={50}
       />
-      <div className="flex flex-col gap-5">
+       <a
+        onClick={toggleViewAlarmaPrevencion}
+        className="cursor-pointer absolute right-4 top-4 lg:right-10 lg:top-10 text-white text-xl font-semibold z-50"
+      >
+        <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="" />
+      </a>
+      {/* <div className="flex flex-col gap-5"> */}
         {/* <h3 className="text-white text-xl text-center font-semibold">Aislamiento y Prevención del Riesgo:</h3> */}
         <div
-          className="flex img gap-2 w-10/12 h-auto xl:w-[70rem] items-center justify-center relative"
+          className="flex img gap-2 w-full h-auto xl:w-[70rem] items-center justify-center relative"
           onClick={(e) => handleChildElementClick(e)}
         >
           <Carousel
@@ -50,14 +56,14 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
             infiniteLoop={true}
             autoPlay={false}
             stopOnHover={false}
-            className="  w-full h-full relative carousel1"
+            className="  w-full h-full relative carousel1 "
           >
-            <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-[40rem] bg-white flex flex-col gap-2 p-5 relative component rounded-md">
-                <h3 className=" text-xl text-center font-semibold">
+            <div className=" flex items-center justify-center  relative h-full gap-5">
+              <div className="w-10/12 lg:w-[40rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto">
+                <h3 className="text-base lg:text-xl text-center font-semibold">
                   Aislamiento
                 </h3>
-                <div className="text-left flex flex-col gap-2">
+                <div className="text-sm lg:text-base text-left flex flex-col gap-2">
                   <p>
                     Es importante diferenciar en primer lugar el aislamiento de
                     la cuarentena, la cuarentena es la restricción del
@@ -100,11 +106,11 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
                 </div>
               </div>
             </div>
-            <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <h3 className=" text-xl text-center font-semibold text-white">
+            <div className=" flex items-center justify-center  relative flex-col h-full gap-5 ">
+              <h3 className=" text-base lg:text-xl text-center font-semibold text-white">
                 Flujo de Aislamiento
               </h3>
-              <div className="w-10/12 relative group">
+              <div className="w-7/12 lg:w-10/12 relative group">
                 <Image
                   className="object-cover"
                   alt="img2"
@@ -125,8 +131,8 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-[40rem] bg-white flex flex-col gap-2 p-5 relative component rounded-md">
-                <div className="text-left flex flex-col gap-2">
+              <div className="w-10/12 lg:w-[40rem] bg-white flex flex-col gap-2 p-5 relative component rounded-md">
+                <div className="text-sm lg:text-base text-left flex flex-col gap-2">
                   <p>
                     En el caso de personas que habitan con personas positivas a
                     <span className="text-orange-600"> COVID-19</span>, se
@@ -148,11 +154,11 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <h3 className=" text-xl text-center font-semibold text-white">
+              <h3 className="text-base lg:text-xl text-center font-semibold text-white">
                 Flujo de Aislamiento de personas que habitan con personas
                 positivas a COVID-19
               </h3>
-              <div className="w-10/12 relative group">
+              <div className="w-6/12 lg:w-10/12 relative group">
                 <Image
                   className="object-cover"
                   alt="img2"
@@ -181,12 +187,12 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
                 </a>
               </p>
             </div>
-            <div className=" flex items-center justify-center  relative flex-col h-full gap-5 ">
-              <h3 className=" text-xl text-center font-semibold text-white">
+            <div className=" flex items-center justify-center  relative flex-col h-full gap-2 lg:gap-5 ">
+              <h3 className="text-base lg:text-xl text-center font-semibold text-white">
                 Flujo de Aislamiento
               </h3>
-              <div className="w-[40rem] bg-white flex flex-col gap-2 p-5 relative component rounded-md">
-                <div className="text-left flex flex-col gap-2">
+              <div className="w-10/12 lg:w-[40rem] bg-white flex flex-col gap-2 p-3 lg:p-5 relative component rounded-md">
+                <div className=" text-sm lg:text-base text-left flex flex-col gap-2">
                   <p>
                     Para prevenir la infección y frenar la transmisión de la
                     <span className="text-orange-600"> COVID-19</span> , haga lo
@@ -206,7 +212,7 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
                   </ul>
                 </div>
               </div>
-              <div className="w-[20rem] relative group">
+              <div className="w-[8rem] lg:w-[20rem] relative group">
                 <Image
                   className="object-cover"
                   alt="img2"
@@ -227,7 +233,7 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-[40rem] bg-white flex flex-col gap-2 p-5 relative component rounded-md">
+              <div className="w-10/12 lg:w-[40rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto">
                 <div className="text-left flex flex-col gap-2">
                   <ul>
                     <li>
@@ -268,14 +274,8 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
               </div>
             </div>
           </Carousel>
-          <a
-            onClick={toggleViewAlarmaPrevencion}
-            className="cursor-pointer absolute top-0 -right-5 text-white text-xl font-semibold"
-          >
-            <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="" />
-          </a>
         </div>
-      </div>
+      {/* </div> */}
     </div>
   );
 };

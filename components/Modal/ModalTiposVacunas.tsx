@@ -35,10 +35,15 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
         fill
         quality={50}
       />
-      <div className="flex flex-col gap-5">
+     <a
+        onClick={toggleViewTiposVacunas}
+        className="cursor-pointer absolute right-4 top-4 lg:right-10 lg:top-10 text-white text-xl font-semibold z-50"
+      >
+        <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="" />
+      </a>
         {/* <h3 className="text-white text-xl text-center font-semibold">Aislamiento y Prevención del Riesgo:</h3> */}
         <div
-          className="flex img gap-2 w-10/12 h-auto xl:w-[70rem] items-center justify-center relative"
+          className="flex img gap-2 w-full h-auto xl:w-[70rem] items-center justify-center relative"
           onClick={(e) => handleChildElementClick(e)}
         >
           <Carousel
@@ -51,12 +56,12 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
             className="  w-full h-full relative carousel1"
           >
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-[40rem] bg-white flex flex-col gap-2 p-5 relative component rounded-md">
-                <h3 className=" text-xl text-center font-semibold">
+              <div className="w-10/12 lg:w-[40rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
+                <h3 className="text-base lg:text-xl text-center font-semibold">
                   Tipos de vacunas
                 </h3>
 
-                <div className="text-left flex flex-col gap-2">
+                <div className=" text-sm lg:text-base text-left flex flex-col gap-2">
                   <p className="font-semibold">
                     Actualmente los principales tipos de vacunas disponibles
                     son:
@@ -103,7 +108,7 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-6/12 relative group">
+              <div className="w-8/12 lg:w-6/12 relative group">
                 <Image
                   className="object-cover"
                   alt="img1"
@@ -136,8 +141,8 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
               </p>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-[40rem] bg-white flex flex-col gap-2 p-5 relative component rounded-md">
-                <h3 className=" text-xl text-center font-semibold">
+              <div className="w-10/12 lg:w-[40rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
+                <h3 className="text-base lg:text-xl text-center font-semibold">
                   Esquema de vacunación contra COVID-19
                 </h3>
 
@@ -185,61 +190,7 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              {/* <div className="w-[40rem] bg-white flex flex-col gap-2 p-5 relative component rounded-md">
-                <h3 className=" text-xl text-center font-semibold">
-                  Esquemas según edades:
-                </h3>
-
-                <div className="text-left flex flex-col gap-2">
-                  <div className="flex flex-col">
-                    <h4 className="font-semibold">
-                      Adolescentes de 12 a 17 años
-                    </h4>
-                    <p>Primera dosis con Pfizer: día 0.</p>
-                    <p>Segunda dosis será con Pfizer: día 21.</p>
-                    <p>
-                      Tercera dosis será con Pfizer o moderna: 5 meses después
-                      de aplicada la segunda dosis. Si el adolescente tiene
-                      comorbilidades, la aplicación de la tercera dosis será 3
-                      meses después de la segunda.
-                    </p>
-                  </div>
-                  <div className="flex flex-col">
-                    <h4 className="font-semibold">Mayores de 18 años</h4>
-                    <div className="flex flex-col gap-2">
-                      <div>
-                        <p>Si te vacunan con Sinopharm:</p>
-                        <p>Primera dosis: día 0.</p>
-                        <p>Segunda dosis será con Sinopharm: día 21.</p>
-                        <p>
-                          Tercera dosis será con AstraZeneca o Pfizer: 3 meses
-                          después de aplicada la segunda dosis.
-                        </p>
-                      </div>
-                      <div>
-                        <p>Si te vacunan con Pfizer:</p>
-                        <p>Primera dosis: día 0.</p>
-                        <p>Segunda dosis será con Pfizer: día 21.</p>
-                        <p>
-                          Tercera dosis será con AstraZeneca o Pfizer (Sujeto a
-                          disponibilidad de stock): 3 meses después de aplicada
-                          la segunda dosis.
-                        </p>
-                      </div>
-                      <div>
-                        <p>Si te vacunan con AstraZeneca:</p>
-                        <p>Primera dosis: día 0.</p>
-                        <p>Segunda dosis será con AstraZeneca: día 28.</p>
-                        <p>
-                          Tercera dosis será con Pfizer: 3 meses después de
-                          aplicada la segunda dosis.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
-              <div className="w-6/12 lg:w-[35rem] relative group">
+              <div className="w-9/12 lg:w-[35rem] relative group">
                 <Image
                   className="object-cover"
                   alt="img3"
@@ -263,7 +214,7 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-6/12 relative group">
+              <div className="w-8/12 relative group">
                 <Image
                   className="object-cover"
                   alt="img1"
@@ -286,8 +237,8 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-[40rem] bg-white flex flex-col gap-2 p-5 relative component rounded-md">
-                <h3 className=" text-xl text-center font-semibold">
+              <div className="w-10/12 lg:w-[40rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
+                <h3 className="text-base lg:text-xl text-center font-semibold">
                   Importante
                 </h3>
 
@@ -345,14 +296,8 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
               </div>
             </div>
           </Carousel>
-          <a
-            onClick={toggleViewTiposVacunas}
-            className="cursor-pointer absolute top-0 -right-5 text-white text-xl font-semibold"
-          >
-            <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="" />
-          </a>
         </div>
-      </div>
+    
     </div>
   );
 };

@@ -1,6 +1,11 @@
 import React from "react";
 
-const Loading = () => {
+interface Props {
+  // any props that come into the component
+  text: string;
+}
+
+const Loading = ({text}:Props) => {
   return (
     <div className="fixed w-full h-full bg-black opacity-60 flex items-center justify-center left-0 top-0">
       <svg
@@ -23,7 +28,7 @@ const Loading = () => {
           d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
         ></path>
       </svg>
-      Loading
+      {text}
     </div>
   );
 };

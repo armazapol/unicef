@@ -42,7 +42,7 @@ const TriviaOpcion = ({
 
   return (
     <li
-      className={` py-2 px-10 rounded-2xl h-14 leading-none text-left font-semibold text-lg border-b-4
+      className={` py-2 px-3 lg:px-10 rounded-2xl h-12 lg:h-14 leading-none text-left font-semibold text-sm lg:text-lg border-b-4
       ${state && "hover:bg-zinc-300 cursor-pointer bg-white text-black border-sky-500 "} 
        ${
          state === false

@@ -19,17 +19,18 @@ type Props = {
   // urlBackground: string;
   // text: string;
   trivia: dataTrivia;
+  numberTrivia: number;
 };
 
-type dataTrivia ={
+type dataTrivia = {
   pregunta: string;
-  respuestas : [dataRespuesta];
-}
+  respuestas: [dataRespuesta];
+};
 
 type dataRespuesta = {
   correcta: boolean;
   respuesta: string;
-}
+};
 
 //data trivia
 // const trivia = [
@@ -86,11 +87,12 @@ const ViewGeneral = ({
   stateSide,
   trivia,
   counter,
-  // title,
-  // urlLogo,
-  // urlBackground,
-  // text,
-}: Props) => {
+  numberTrivia,
+}: // title,
+// urlLogo,
+// urlBackground,
+// text,
+Props) => {
   const [count, setCount] = useState(100);
   const [finishTrivia, setFinishTrivia] = useState(false);
 
@@ -190,22 +192,27 @@ const ViewGeneral = ({
         placeholder="blur"
         fill
       />
-      <div className="absolute left-5 top-5 px-10 py-6 bg-white">
-        <p className="text-sky-500 font-bold text-xl">Pregunta {counter}/5</p>
+      <div className="absolute left-3 lg:left-5 top-3 lg:top-5 px-3 lg:px-10 py-2 lg:py-6 bg-white">
+        <p className="text-sky-500 font-bold text-base lg:text-xl flex">
+          <span className="hidden lg:block">Pregunta</span> {counter}/5
+        </p>
       </div>
-      <div className="flex flex-col z-20 relative items-center w-[40rem]  ">
+      <div className="flex flex-col z-20 relative items-center w-8/12 lg:w-[40rem]  ">
         <div className="relative w-full flex items-center justify-center ">
           <Image className="" alt="quest" src={quest} placeholder="blur" />
-          <p className="absolute text-3xl px-10"> {trivia.pregunta} </p>
+          <p className="absolute text-base lg:text-3xl px-10">
+            {" "}
+            {trivia.pregunta}{" "}
+          </p>
         </div>
-        <div className="h-20 text-5xl text-center text-shadow uppercase tracking-widest">
+        <div className="h-10 lg:h-20 text-lg lg:text-5xl text-center text-shadow uppercase tracking-widest">
           {!finishTrivia ? (
             count < 100 && <p className="bold text-red-700">¡Incorrecto!</p>
           ) : (
             <p className="bold text-green-700">¡Correcto!</p>
           )}
         </div>
-        <ul className="flex flex-col gap-2 w-full">
+        <ul className="grid grid-cols-2 lg:grid-cols-1 gap-2 w-full ">
           {trivia.respuestas.map((data, key) => {
             return (
               <TriviaOpcion

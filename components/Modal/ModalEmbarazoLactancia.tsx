@@ -33,10 +33,15 @@ const ModalEmbarazoLactancia = ({ toggleViewEmbarazoLactancia }: Props) => {
         fill
         quality={50}
       />
-      <div className="flex flex-col gap-5">
+      <a
+        onClick={toggleViewEmbarazoLactancia}
+        className="cursor-pointer absolute right-4 top-4 lg:right-10 lg:top-10 text-white text-xl font-semibold z-50"
+      >
+        <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="" />
+      </a>
         {/* <h3 className="text-white text-xl text-center font-semibold">Aislamiento y Prevención del Riesgo:</h3> */}
         <div
-          className="flex img gap-2 w-10/12 h-auto xl:w-[70rem] items-center justify-center relative"
+          className="flex img gap-2 w-full h-auto xl:w-[70rem] items-center justify-center relative"
           onClick={(e) => handleChildElementClick(e)}
         >
           <Carousel
@@ -49,9 +54,9 @@ const ModalEmbarazoLactancia = ({ toggleViewEmbarazoLactancia }: Props) => {
             className="  w-full h-full relative carousel1"
           >
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-[40rem] bg-white flex flex-col gap-2 p-5 relative component rounded-md">
-                <h3 className=" text-xl text-center font-semibold">Embarazo</h3>
-                <div className="text-left flex flex-col gap-2">
+              <div className="w-10/12 lg:w-[40rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto">
+                <h3 className="text-base lg:text-xl text-center font-semibold">Embarazo</h3>
+                <div className="text-sm lg:text-base text-left flex flex-col gap-2">
                   <p>
                     Las mujeres embarazadas pueden vacunarse. Si se contrae la
                     <span className="text-orange-600"> COVID-19</span> durante
@@ -73,8 +78,8 @@ const ModalEmbarazoLactancia = ({ toggleViewEmbarazoLactancia }: Props) => {
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-[40rem] bg-white flex flex-col gap-2 p-5 relative component rounded-md">
-                <div className="text-left flex flex-col gap-2">
+              <div className="w-10/12 lg:w-[40rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto">
+                <div className="text-sm lg:text-base text-left flex flex-col gap-2">
                   <p className="font-semibold">Consideraciones generales:</p>
                   <ul>
                     <li>
@@ -122,11 +127,11 @@ const ModalEmbarazoLactancia = ({ toggleViewEmbarazoLactancia }: Props) => {
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-[40rem] bg-white flex flex-col gap-2 p-5 relative component rounded-md">
-                <h3 className=" text-xl text-center font-semibold">
+              <div className="w-10/12 lg:w-[40rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto">
+                <h3 className="text-base lg:text-xl text-center font-semibold">
                   Lactancia materna
                 </h3>
-                <div className="text-left flex flex-col gap-2">
+                <div className="text-sm lg:text-base text-left flex flex-col gap-2">
                   <p>
                     Si está amamantando, conviene que se vacune contra la
                     <span className="text-orange-600"> COVID-19</span> en cuanto
@@ -159,14 +164,8 @@ const ModalEmbarazoLactancia = ({ toggleViewEmbarazoLactancia }: Props) => {
               </div>
             </div>
           </Carousel>
-          <a
-            onClick={toggleViewEmbarazoLactancia}
-            className="cursor-pointer absolute top-0 -right-5 text-white text-xl font-semibold"
-          >
-            <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="" />
-          </a>
         </div>
-      </div>
+   
     </div>
   );
 };

@@ -1,4 +1,8 @@
 import React from "react";
+import { useSelector,useDispatch } from "react-redux";
+import { selectCurrentUser } from "./../../pages/api/features/auth/authSlice";
+import { useRouter } from "next/router";
+import { logOut } from "./../../pages/api/features/auth/authSlice";
 
 type Props = {
   toggleViewAntecedentes: () => void;
@@ -31,10 +35,19 @@ const Menu = ({
   toggleViewConsecuencias,
   viewVideo
 }: Props) => {
+  const user = useSelector(selectCurrentUser);
+  const dispatch = useDispatch();
+  const router = useRouter();
+
+  const logoutSession = () => {
+    router.push("/login");
+    dispatch(logOut(null));
+  };
+
   return (
-    <div className="flex fixed w-screen h-screen items-center justify-center text-white top-0 left-0 gap-10">
+    <div className="flex fixed w-screen h-screen items-center justify-center text-white top-0 left-0 gap-10 ">
       <div className="flex">
-        <ul className="text-white text-center text-xl lg:text-2xl flex flex-col gap-5 ">
+        <ul className="text-white text-center text-base lg:text-2xl flex flex-col gap-3 lg:gap-5 ">
           <li className="hover:underline cursor-pointer" onClick={toggleViewAntecedentes}>Antecedentes</li>
           <li className="hover:underline cursor-pointer" onClick={toggleViewAlarmaPrevencion}>
             Aislamiento y prevención del contagio
@@ -72,6 +85,12 @@ const Menu = ({
           </li>
         </ul>
       </div>
+      <p className="absolute top-5 left-5 font-semibold cursor-pointer text-xs md:text-base">
+        Bienvenido, <span className="uppercase ">{user.firstName}</span> 
+      </p>
+      <p className="absolute bottom-5 left-5 font-semibold cursor-pointer text-xs md:text-base" onClick={logoutSession}>
+        Cerrar Sesión
+      </p>
     </div>
   );
 };

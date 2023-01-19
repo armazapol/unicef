@@ -10,10 +10,7 @@ import {
   useLoginUserMutation,
   useLazyGetUserQuery,
 } from "./api/services/auth/apiSlice";
-import {
-  setToken,
-  setUser,
-} from "./api/features/auth/authSlice";
+import { setToken, setUser } from "./api/features/auth/authSlice";
 import Loading from "../components/Loading/Loading";
 import Link from "next/link";
 
@@ -24,7 +21,8 @@ type Form = {
 
 const Login = () => {
   const [loginUser, { isLoading, error }] = useLoginUserMutation();
-  const [trigger, { data }] = useLazyGetUserQuery();
+  const [trigger, { isLoading: isTriggerLoading, data }] =
+    useLazyGetUserQuery();
   const dispatch = useDispatch();
   const router = useRouter();
 
@@ -46,7 +44,7 @@ const Login = () => {
       try {
         const user = await trigger(idUser);
         dispatch(setUser(user.data));
-        router.push("/user");
+        router.push("/main");
       } catch (e: any) {
         return console.log(e);
       }
@@ -58,7 +56,10 @@ const Login = () => {
   return (
     <div className="h-screen flex items-center justify-center bg-black text-white">
       <Toaster />
-      {isLoading && <Loading />}
+      {isLoading && <Loading text="Cargando.." />}
+      {isTriggerLoading && (
+        <Loading text="Obteniendo información de usuario.." />
+      )}
       <div className="w-96">
         <h1 className="text-center text-xl font-semibold">Login</h1>
         <Input1 type="email" label="Email" {...register("email")} />
@@ -71,14 +72,13 @@ const Login = () => {
           Ingresar
         </div>
         <Link href="/register">
-        <div
-          className="text-center bg-blue-500 text-white p-2 mt-5"
-          role="button"
-        >
-          registrar
-        </div>
+          <div
+            className="text-center bg-blue-500 text-white p-2 mt-5"
+            role="button"
+          >
+            registrar
+          </div>
         </Link>
-       
       </div>
     </div>
   );

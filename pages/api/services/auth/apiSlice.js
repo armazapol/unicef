@@ -5,17 +5,17 @@ export const apiSlice = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "https://zdxyw38bz6.execute-api.us-east-1.amazonaws.com",
     prepareHeaders: (headers, { getState }) => {
-      const token =  getState().auth.authState.token
+      const token = getState().auth.authState.token; //posiblemente se tenga que cambiar donde se encuentre el token
       // If we have a token set in state, let's assume that we should be passing it.
       if (token) {
-        headers.set('authorization', `${token}`)
+        headers.set("authorization", `${token}`);
       }
-  
-      return headers
+
+      return headers;
     },
   }),
   tagTypes: ["Auth"],
-  endpoints: (builder) => ({ 
+  endpoints: (builder) => ({
     getUser: builder.query({
       query: (userId) => ({
         url: `/test/users/${userId}`,
@@ -37,6 +37,14 @@ export const apiSlice = createApi({
         url: "/test/users/login",
         method: "POST",
         body: user,
+      }),
+      // invalidatesTags: ["Auth"],
+    }),
+    updateScore: builder.mutation({
+      query: (userId, questNumber, data) => ({
+        url: `/test/questionNumbers/${questNumber}/highestScores/${userId}`,
+        method: "PUT",
+        body: data,
       }),
       // invalidatesTags: ["Auth"],
     }),
@@ -62,7 +70,8 @@ export const {
   useGetUserQuery,
   useCreateUserMutation,
   useLoginUserMutation,
-  useLazyGetUserQuery
+  useLazyGetUserQuery,
+  useUpdateScoreMutation
   // useUpdateTaskMutation,
   // useDeleteTaskMutation,
 } = apiSlice;
