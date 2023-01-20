@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const apiSlice = createApi({
-  reducerPath: "api",
+  reducerPath: "apiSlice",
   baseQuery: fetchBaseQuery({
     baseUrl: "https://zdxyw38bz6.execute-api.us-east-1.amazonaws.com",
     prepareHeaders: (headers, { getState }) => {
@@ -40,14 +40,7 @@ export const apiSlice = createApi({
       }),
       // invalidatesTags: ["Auth"],
     }),
-    updateScore: builder.mutation({
-      query: (userId, questNumber, data) => ({
-        url: `/test/questionNumbers/${questNumber}/highestScores/${userId}`,
-        method: "PUT",
-        body: data,
-      }),
-      // invalidatesTags: ["Auth"],
-    }),
+
     // updateTask: builder.mutation({
     //   query: (updatedTask) => ({
     //     url: `/tasks/${updatedTask.id}`,
@@ -71,7 +64,6 @@ export const {
   useCreateUserMutation,
   useLoginUserMutation,
   useLazyGetUserQuery,
-  useUpdateScoreMutation
   // useUpdateTaskMutation,
   // useDeleteTaskMutation,
 } = apiSlice;

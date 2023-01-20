@@ -2,12 +2,12 @@ import React from "react";
 
 interface Props {
   // any props that come into the component
-  text: string;
+  text: string ;
 }
 
 const Loading = ({text}:Props) => {
   return (
-    <div className="fixed w-full h-full bg-black opacity-60 flex items-center justify-center left-0 top-0">
+    <div className="fixed w-full h-full bg-black opacity-60 flex items-center justify-center left-0 top-0 z-50 text-white">
       <svg
         className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
         xmlns="http://www.w3.org/2000/svg"

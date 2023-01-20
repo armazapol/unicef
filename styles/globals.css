@@ -19,6 +19,7 @@
 @layer utilities {
   :root {
     --input-color: #2f4475;
+    --first-color : #01afea;
     --BwModelica: BwModelica, sans-serif;
     --LatoRegular: LatoRegular, sans-serif;
     --MilkyNiceClean: MilkyNiceClean, sans-serif;
@@ -33,6 +34,11 @@
   }
   .font_MilkyNiceClean {
     font-family: var(--MilkyNiceClean);
+  }
+
+  /* text color */
+  .first_color{
+    color: var(--first-color)
   }
 
   /* carousel1 */

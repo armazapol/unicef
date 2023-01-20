@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useForm, SubmitHandler } from "react-hook-form";
-import Spinner from "../components/spinner/Spinner";
+
 import Input1 from "../components/commons/input/Input1";
+import ButtonForm from "../components/commons/button/ButtonForm";
 import { useCreateUserMutation } from "./api/services/auth/apiSlice";
 import Loading from "../components/Loading/Loading";
-import Link from 'next/link';
+import Link from "next/link";
+
+import Image from "next/image";
+import background from "../public/img/bgModal.png";
+import logo from "../public/img/view1/logo.png";
 
 type Form = {
   email: string;
@@ -89,18 +94,67 @@ const Register = () => {
       cleanForm();
       return toast.success("Cuenta creada con éxito!");
     } catch (error) {
-      return toast.error(
-        "Ocurrió un error."
-      );
+      return toast.error("Ocurrió un error.");
     }
   };
   return (
-    <div className="min-h-screen flex items-center justify-center bg-black text-white">
+    <div className="min-h-screen flex items-center justify-center bg-white text-white">
+         {isLoading && <Loading text="Cargando.." />}
+      <div className="absolute h-1/2 top-0 w-full bg-black">
+        <Image
+          className="object-cover"
+          alt="background"
+          src={background}
+          placeholder="blur"
+          fill
+          quality={50}
+        />
+      </div>
       <Toaster />
-      <div className="w-96">
+      <div className="flex-col flex items-center gap-5">
+        <div className="w-6/12 md:w-8/12 relative">
+          <Image
+            // className="object-cover"
+            alt="background"
+            src={logo}
+            placeholder="blur"
+            // fill
+            quality={50}
+          />
+        </div>
+        <div className="w-10/12 md:w-96 z-10 bg-white rounded-xl py-8 md:py-5 px-5 md:px-10 shadow-md gap-5 md:gap-4   flex flex-col">
+          <h1 className="text-center text-2xl md:text-3xl font-semibold first_color ">
+            Registro
+          </h1>
+          <div>
+            <Input1 type="email" placeholder="Email" {...register("email")} />
+            <Input1
+              type="password"
+              placeholder="Contraseña"
+              {...register("password")}
+            />
+            <Input1 type="password" placeholder="Repetir Contraseña" {...register("repeatPassword")} />
+            <Input1 type="text" placeholder="Nombre"  {...register("firstName")} />
+        <Input1 type="text" placeholder="Apellido"  {...register("lastName")} />
+        {stateRegex && (
+          <p>
+            La contraseña debe tener 6 caracteres, símbolos, números, letra
+            mayúscula y minúscula.
+          </p>
+        )}
+        {stateIgualdad && <p>Las contraseñas son diferentes.</p>}
+          </div>
+          <div className="flex flex-col gap-5">
+            <ButtonForm text="Registrar" onClick={handleSubmit(onSubmit)} />
+            <Link href="/login">
+              <ButtonForm text="Login" />
+            </Link>
+          </div>
+        </div>
+      </div>
+      {/* <div className="w-96">
         <h1 className="text-center text-xl font-semibold">Registro</h1>
         {isLoading && <Loading text="Cargando.." />}
-        {/* {error && <p>Error al registrar: {error.error} </p>} */}
         <Input1 type="email" label="Email" {...register("email")} />
         <Input1 type="password" label="Contraseña" {...register("password")} />
         <Input1
@@ -117,21 +171,6 @@ const Register = () => {
           </p>
         )}
         {stateIgualdad && <p>Las contraseñas son diferentes.</p>}
-        {/* {stateIgualdad || stateRegex ? (
-             <button
-             className="text-center bg-blue-500 text-white p-2 mt-5 w-full"
-             disabled
-           >
-             Registrar
-           </button>
-        ) : (
-          <button
-            onClick={handleSubmit(onSubmit)}
-            className="text-center bg-blue-500 text-white p-2 mt-5 w-full"
-          >
-            Registrar
-          </button>
-        )} */}
         <button
           onClick={handleSubmit(onSubmit)}
           className="text-center bg-blue-500 text-white p-2 mt-5 w-full"
@@ -139,14 +178,11 @@ const Register = () => {
           Registrar
         </button>
         <Link href="login">
-        <button
-          className="text-center bg-blue-500 text-white p-2 mt-5 w-full"
-        >
-          Login
-        </button>
+          <button className="text-center bg-blue-500 text-white p-2 mt-5 w-full">
+            Login
+          </button>
         </Link>
-      
-      </div>
+      </div> */}
     </div>
   );
 };

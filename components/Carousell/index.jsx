@@ -290,6 +290,8 @@ const Carousell = (props) => {
           index={stateCarousel}
           stateSide={stateSide}
           trivia={trivia1}
+          numberTrivia={1}
+          moduleTrivia="1"
           counter={1}
           // title={`curso lúdico a modo de videojuego.`}
           // text={`Creamos el personaje Salva y mini-juegos ligados a la política de salvaguarda y canales de atención al cuidado de los niños, niñas y adolescentes.`}
@@ -301,6 +303,8 @@ const Carousell = (props) => {
           index={stateCarousel}
           stateSide={stateSide}
           trivia={trivia2}
+          numberTrivia={2}
+          moduleTrivia="1"
           counter={2}
         />
          <ViewGeneral
@@ -308,6 +312,8 @@ const Carousell = (props) => {
           index={stateCarousel}
           stateSide={stateSide}
           trivia={trivia3}
+          numberTrivia={3}
+          moduleTrivia="1"
           counter={3}
         />
          <ViewGeneral
@@ -315,6 +321,8 @@ const Carousell = (props) => {
           index={stateCarousel}
           stateSide={stateSide}
           trivia={trivia4}
+          numberTrivia={4}
+          moduleTrivia="1"
           counter={4}
         />
          <ViewGeneral
@@ -322,6 +330,8 @@ const Carousell = (props) => {
           index={stateCarousel}
           stateSide={stateSide}
           trivia={trivia5}
+          numberTrivia={5}
+          moduleTrivia="1"
           counter={5}
         />
           <View5
@@ -344,6 +354,8 @@ const Carousell = (props) => {
           index={stateCarousel}
           stateSide={stateSide}
           trivia={trivia6}
+          numberTrivia={6}
+          moduleTrivia="2"
           counter={1}
         />
          <ViewGeneral
@@ -351,6 +363,8 @@ const Carousell = (props) => {
           index={stateCarousel}
           stateSide={stateSide}
           trivia={trivia7}
+          numberTrivia={7}
+          moduleTrivia="2"
           counter={2}
         />
          <ViewGeneral
@@ -358,6 +372,8 @@ const Carousell = (props) => {
           index={stateCarousel}
           stateSide={stateSide}
           trivia={trivia8}
+          numberTrivia={8}
+          moduleTrivia="2"
           counter={3}
         />
          <ViewGeneral
@@ -365,6 +381,8 @@ const Carousell = (props) => {
           index={stateCarousel}
           stateSide={stateSide}
           trivia={trivia9}
+          numberTrivia={9}
+          moduleTrivia="2"
           counter={4}
         />
          <ViewGeneral
@@ -372,6 +390,8 @@ const Carousell = (props) => {
           index={stateCarousel}
           stateSide={stateSide}
           trivia={trivia10}
+          numberTrivia={10}
+          moduleTrivia="2"
           counter={5}
         />
          <View15
@@ -387,6 +407,8 @@ const Carousell = (props) => {
           index={stateCarousel}
           stateSide={stateSide}
           trivia={trivia11}
+          numberTrivia={11}
+          moduleTrivia="3"
           counter={1}
         />
          <ViewGeneral
@@ -394,6 +416,8 @@ const Carousell = (props) => {
           index={stateCarousel}
           stateSide={stateSide}
           trivia={trivia12}
+          numberTrivia={12}
+          moduleTrivia="3"
           counter={2}
         />
          <ViewGeneral
@@ -401,6 +425,8 @@ const Carousell = (props) => {
           index={stateCarousel}
           stateSide={stateSide}
           trivia={trivia13}
+          numberTrivia={13}
+          moduleTrivia="3"
           counter={3}
         />
          <ViewGeneral
@@ -408,6 +434,8 @@ const Carousell = (props) => {
           index={stateCarousel}
           stateSide={stateSide}
           trivia={trivia14}
+          numberTrivia={14}
+          moduleTrivia="3"
           counter={4}
         />
          <ViewGeneral
@@ -415,6 +443,8 @@ const Carousell = (props) => {
           index={stateCarousel}
           stateSide={stateSide}
           trivia={trivia15}
+          numberTrivia={15}
+          moduleTrivia="3"
           counter={5}
         />
          <View4
@@ -438,6 +468,8 @@ const Carousell = (props) => {
           index={stateCarousel}
           stateSide={stateSide}
           trivia={trivia16}
+          numberTrivia={16}
+          moduleTrivia="4"
           counter={1}
         />
        <ViewGeneral
@@ -445,6 +477,8 @@ const Carousell = (props) => {
           index={stateCarousel}
           stateSide={stateSide}
           trivia={trivia17}
+          numberTrivia={17}
+          moduleTrivia="4"
           counter={2}
         />
          <ViewGeneral
@@ -452,6 +486,8 @@ const Carousell = (props) => {
           index={stateCarousel}
           stateSide={stateSide}
           trivia={trivia18}
+          numberTrivia={18}
+          moduleTrivia="4"
           counter={3}
         />
          <ViewGeneral
@@ -459,6 +495,8 @@ const Carousell = (props) => {
           index={stateCarousel}
           stateSide={stateSide}
           trivia={trivia19}
+          numberTrivia={19}
+          moduleTrivia="4"
           counter={4}
         />
          <ViewGeneral
@@ -466,6 +504,8 @@ const Carousell = (props) => {
           index={stateCarousel}
           stateSide={stateSide}
           trivia={trivia20}
+          numberTrivia={20}
+          moduleTrivia="4"
           counter={5}
         />
  

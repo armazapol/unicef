@@ -3,8 +3,18 @@ import { gsap } from "gsap";
 import ReactCanvasConfetti from "react-canvas-confetti";
 // import img1 from "../../public/img/view1/img1.png";
 import Image from "next/image";
+import { useSelector } from "react-redux";
+import {
+  useUpdateScoreMutation,
+  useGetQuestScoreQuery,
+} from "./../../pages/api/services/scores/scoreApiSlice";
+import {
+  selectCurrentUser,
+  selectCurrentToken,
+} from "../../pages/api/features/auth/authSlice";
 // import logo from "../../public/img/view1/logo.png";
-import Button from "../commons/button/Button";
+// import Button from "../commons/button/Button";
+import Loading from "../../components/Loading/Loading";
 import TriviaOpcion from "../commons/TriviaOpcion";
 import quest from "../../public/img/trivia/quest.png";
 import background from "../../public/img/trivia/fondo.png";
@@ -20,6 +30,7 @@ type Props = {
   // text: string;
   trivia: dataTrivia;
   numberTrivia: number;
+  moduleTrivia: string;
 };
 
 type dataTrivia = {
@@ -32,52 +43,6 @@ type dataRespuesta = {
   respuesta: string;
 };
 
-//data trivia
-// const trivia = [
-//   {
-//     pregunta: "Azul en inglés es igual a:",
-//     respuestas: [
-//       {
-//         correcta: true,
-//         respuesta: "Blue",
-//       },
-//       {
-//         correcta: false,
-//         respuesta:
-//           "Green ",
-//       },
-//       {
-//         correcta: false,
-//         respuesta: "Black",
-//       },
-//       {
-//         correcta: false,
-//         respuesta: "Yellow",
-//       },
-//     ],
-//   },
-// ];
-// const trivia = {
-//   pregunta: "Azul en inglés es igual a:",
-//   respuestas: [
-//     {
-//       correcta: true,
-//       respuesta: "Blue",
-//     },
-//     {
-//       correcta: false,
-//       respuesta: "Green ",
-//     },
-//     {
-//       correcta: false,
-//       respuesta: "Black",
-//     },
-//     {
-//       correcta: false,
-//       respuesta: "Yellow",
-//     },
-//   ],
-// };
 //puntaje
 const Puntaje = 25;
 
@@ -88,6 +53,7 @@ const ViewGeneral = ({
   trivia,
   counter,
   numberTrivia,
+  moduleTrivia,
 }: // title,
 // urlLogo,
 // urlBackground,
@@ -95,6 +61,17 @@ const ViewGeneral = ({
 Props) => {
   const [count, setCount] = useState(100);
   const [finishTrivia, setFinishTrivia] = useState(false);
+  // const [triviaComplete, setTriviaComplete] = useState(false);
+
+  const { id: userId } = useSelector(selectCurrentUser);
+  const [
+    updateScore,
+    { isLoading: isLoadingUpdateScore, error: errorUpdateScore },
+  ] = useUpdateScoreMutation();
+  const { data, error, isLoading } = useGetQuestScoreQuery({
+    userId,
+    numberTrivia,
+  });
 
   //ref
   const refAnimationInstance: any = useRef(null);
@@ -150,6 +127,17 @@ Props) => {
     });
   }, [makeShot]);
 
+  const addScore = async (count: number) => {
+    await updateScore({
+      userId: userId,
+      numberTrivia: numberTrivia,
+      data: {
+        moduleNumber: "",
+        value: count,
+      },
+    }).unwrap();
+  };
+
   useEffect(() => {
     // console.log(keyCarrousel, index)
     if (keyCarrousel === index) {
@@ -181,10 +169,17 @@ Props) => {
     }
   }, [index]);
 
+  useEffect(() => {
+    if (finishTrivia) {
+      addScore(count);
+    }
+  }, [finishTrivia]);
+
   return (
     <div
       className={`w-full h-screen flex items-center justify-center z-10 bg-fixed bg-no-repeat animate_background relative`}
     >
+      {/* {isLoading && <Loading text="Cargando.." />} */}
       <Image
         className="object-cover"
         alt="background"
@@ -197,38 +192,45 @@ Props) => {
           <span className="hidden lg:block">Pregunta</span> {counter}/5
         </p>
       </div>
-      <div className="flex flex-col z-20 relative items-center w-8/12 lg:w-[40rem]  ">
-        <div className="relative w-full flex items-center justify-center ">
-          <Image className="" alt="quest" src={quest} placeholder="blur" />
-          <p className="absolute text-base lg:text-3xl px-10">
-            {" "}
-            {trivia.pregunta}{" "}
-          </p>
+      {!isLoading && data.value === 0 ? (
+        <div className="flex flex-col z-20 relative items-center w-8/12 lg:w-[40rem]  ">
+          <div className="relative w-full flex items-center justify-center ">
+            <Image className="" alt="quest" src={quest} placeholder="blur" />
+            <p className="absolute text-base lg:text-3xl px-10">
+              {" "}
+              {trivia.pregunta}{" "}
+            </p>
+          </div>
+          <div className="h-10 lg:h-20 text-lg lg:text-5xl text-center text-shadow uppercase tracking-widest">
+            {!finishTrivia ? (
+              count < 100 && <p className="bold text-red-700">¡Incorrecto!</p>
+            ) : (
+              <p className="bold text-green-700">¡Correcto!</p>
+            )}
+          </div>
+          <ul className="grid grid-cols-2 lg:grid-cols-1 gap-2 w-full ">
+            {trivia.respuestas.map((data, key) => {
+              return (
+                <TriviaOpcion
+                  key={key}
+                  data={data}
+                  actualizarFinTrivia={actualizarFinTrivia}
+                  actualizarPuntaje={actualizarPuntaje}
+                  finishTrivia={finishTrivia}
+                />
+              );
+            })}
+          </ul>
+          {/* {finishTrivia && (
+            <p className="text-green-800">Tu puntaje es: {count} </p>
+          )} */}
         </div>
-        <div className="h-10 lg:h-20 text-lg lg:text-5xl text-center text-shadow uppercase tracking-widest">
-          {!finishTrivia ? (
-            count < 100 && <p className="bold text-red-700">¡Incorrecto!</p>
-          ) : (
-            <p className="bold text-green-700">¡Correcto!</p>
-          )}
+      ) : (
+        <div className="bg-white text-center z-20 w-7/12 lg:w-[36rem] h-[10rem] lg:h-[20rem] flex items-center justify-center rounded-3xl">
+          <p className="z-10 text-sky-800 text-2xl lg:text-4xl font-bold" >¡Pregunta Completada!</p>
         </div>
-        <ul className="grid grid-cols-2 lg:grid-cols-1 gap-2 w-full ">
-          {trivia.respuestas.map((data, key) => {
-            return (
-              <TriviaOpcion
-                key={key}
-                data={data}
-                actualizarFinTrivia={actualizarFinTrivia}
-                actualizarPuntaje={actualizarPuntaje}
-                finishTrivia={finishTrivia}
-              />
-            );
-          })}
-        </ul>
-        {/* {finishTrivia && (
-          <p className="text-green-800">Tu puntaje es: {count} </p>
-        )} */}
-      </div>
+      )}
+
       <ReactCanvasConfetti
         refConfetti={getInstance}
         className="fixed z-20 pointer-events-none w-full h-full"

@@ -4,8 +4,10 @@ import toast, { Toaster } from "react-hot-toast";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { decodeToken } from "react-jwt";
+import Image from "next/image";
 
 import Input1 from "../components/commons/input/Input1";
+import ButtonForm from "../components/commons/button/ButtonForm";
 import {
   useLoginUserMutation,
   useLazyGetUserQuery,
@@ -13,6 +15,8 @@ import {
 import { setToken, setUser } from "./api/features/auth/authSlice";
 import Loading from "../components/Loading/Loading";
 import Link from "next/link";
+import background from "../public/img/bgModal.png";
+import logo from "../public/img/view1/logo.png";
 
 type Form = {
   email: string;
@@ -54,31 +58,67 @@ const Login = () => {
     }
   };
   return (
-    <div className="h-screen flex items-center justify-center bg-black text-white">
+    <div className="h-screen flex items-center justify-center bg-white text-black">
+      <div className="absolute h-1/2 top-0 w-full bg-black">
+        <Image
+          className="object-cover"
+          alt="background"
+          src={background}
+          placeholder="blur"
+          fill
+          quality={50}
+        />
+      </div>
       <Toaster />
       {isLoading && <Loading text="Cargando.." />}
       {isTriggerLoading && (
         <Loading text="Obteniendo información de usuario.." />
       )}
-      <div className="w-96">
-        <h1 className="text-center text-xl font-semibold">Login</h1>
-        <Input1 type="email" label="Email" {...register("email")} />
-        <Input1 type="password" label="Contraseña" {...register("password")} />
-        <div
-          onClick={handleSubmit(onSubmit)}
-          className="text-center bg-blue-500 text-white p-2 mt-5"
-          role="button"
-        >
-          Ingresar
+      <div className="flex-col flex items-center gap-10">
+        <div className="w-6/12 md:w-8/12 relative">
+          <Image
+            // className="object-cover"
+            alt="background"
+            src={logo}
+            placeholder="blur"
+            // fill
+            quality={50}
+          />
         </div>
-        <Link href="/register">
-          <div
-            className="text-center bg-blue-500 text-white p-2 mt-5"
-            role="button"
-          >
-            registrar
+        <div className="w-10/12 md:w-96 z-10 bg-white rounded-xl py-8 md:py-14 px-5 md:px-10 shadow-md gap-5 md:gap-10 flex flex-col">
+          <h1 className="text-center text-2xl md:text-3xl font-semibold first_color ">
+            Login
+          </h1>
+          <div>
+            <Input1 type="email" placeholder="Email" {...register("email")} />
+            <Input1
+              type="password"
+              placeholder="Contraseña"
+              {...register("password")}
+            />
           </div>
-        </Link>
+          <div className="flex flex-col gap-5">
+            <ButtonForm text="Ingresar" onClick={handleSubmit(onSubmit)} />
+            <Link href="/register">
+              <ButtonForm text="registrar" />
+            </Link>
+            {/* <div
+              onClick={handleSubmit(onSubmit)}
+              className="text-center bg-blue-500 text-white p-2 mt-5"
+              role="button"
+            >
+              Ingresar
+            </div> */}
+            {/* <Link href="/register">
+              <div
+                className="text-center bg-blue-500 text-white p-2 mt-5"
+                role="button"
+              >
+                registrar
+              </div>
+            </Link> */}
+          </div>
+        </div>
       </div>
     </div>
   );
