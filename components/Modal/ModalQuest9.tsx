@@ -56,6 +56,26 @@ const ModalQuest9 = ({ toggleViewQuest9 }: Props) => {
             infiniteLoop={true}
             autoPlay={false}
             stopOnHover={false}
+            renderArrowPrev={(onClickHandler, hasNext, label) =>
+              hasNext && (
+                <div
+                  className="absolute z-10 cursor-pointer top-[calc(50%-1.25rem)] lg:top-[calc(50%-1.8rem)] left-1 lg:left-2 w-10 lg:w-14"
+                  onClick={onClickHandler}
+                >
+                  <img src="/img/arrow.png" className="rotate-180" />
+                </div>
+              )
+            }
+            renderArrowNext={(onClickHandler, hasNext, label) =>
+              hasNext && (
+                <div
+                className="absolute z-10 cursor-pointer top-[calc(50%-1.25rem)] lg:top-[calc(50%-1.8rem)] right-1 lg:right-2 w-10 lg:w-14"
+                onClick={onClickHandler}
+                >
+                  <img src="/img/arrow.png" className="" />
+                </div>
+              )
+            }
             className="  w-full h-full relative carousel1"
           >
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">

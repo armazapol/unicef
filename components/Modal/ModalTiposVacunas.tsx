@@ -6,6 +6,9 @@ import background from "../../public/img/bgModal.png";
 import img1 from "../../public/img/view2/tiposvacunas/img1.png";
 import img2 from "../../public/img/view2/tiposvacunas/img2.png";
 import img3 from "../../public/img/view2/tiposvacunas/img3.png";
+import img4 from "../../public/img/view2/newModal6.png";
+import img5 from "../../public/img/view2/newModal6.png"; //cambiar
+import img6 from "../../public/img/view2/newModal8.png";
 
 type Props = {
   toggleViewTiposVacunas: () => void;
@@ -35,28 +38,49 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
         fill
         quality={50}
       />
-     <a
+      <a
         onClick={toggleViewTiposVacunas}
         className="cursor-pointer absolute right-4 top-4 lg:right-10 lg:top-10 text-white text-xl font-semibold z-50"
       >
         <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="" />
       </a>
-        {/* <h3 className="text-white text-xl text-center font-semibold">Aislamiento y Prevención del Riesgo:</h3> */}
-        <div
-          className="flex img gap-2 w-full h-auto xl:w-[70rem] items-center justify-center relative"
-          onClick={(e) => handleChildElementClick(e)}
+      {/* <h3 className="text-white text-xl text-center font-semibold">Aislamiento y Prevención del Riesgo:</h3> */}
+      <div
+        className="flex img gap-2 w-full h-auto xl:w-[70rem] items-center justify-center relative"
+        onClick={(e) => handleChildElementClick(e)}
+      >
+        <Carousel
+          showThumbs={false}
+          showStatus={false}
+          showIndicators={false}
+          infiniteLoop={true}
+          autoPlay={false}
+          stopOnHover={false}
+          renderArrowPrev={(onClickHandler, hasNext, label) =>
+            hasNext && (
+              <div
+                className="absolute z-10 cursor-pointer top-[calc(50%-1.25rem)] lg:top-[calc(50%-1.8rem)] left-1 lg:left-2 w-10 lg:w-14"
+                onClick={onClickHandler}
+              >
+                <img src="/img/arrow.png" className="rotate-180" />
+              </div>
+            )
+          }
+          renderArrowNext={(onClickHandler, hasNext, label) =>
+            hasNext && (
+              <div
+              className="absolute z-10 cursor-pointer top-[calc(50%-1.25rem)] lg:top-[calc(50%-1.8rem)] right-1 lg:right-2 w-10 lg:w-14"
+              onClick={onClickHandler}
+              >
+                <img src="/img/arrow.png" className="" />
+              </div>
+            )
+          }
+          className="  w-full h-full relative carousel1"
         >
-          <Carousel
-            showThumbs={false}
-            showStatus={false}
-            showIndicators={false}
-            infiniteLoop={true}
-            autoPlay={false}
-            stopOnHover={false}
-            className="  w-full h-full relative carousel1"
-          >
-            <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[40rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
+          <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
+            <div className="w-10/12 lg:w-[60rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
+              <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   Tipos de vacunas
                 </h3>
@@ -106,42 +130,63 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
                   </ul>
                 </div>
               </div>
-            </div>
-            <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-8/12 lg:w-6/12 relative group">
+
+              <div className="relative flex-1">
                 <Image
-                  className="object-cover"
+                  className="object-cover rounded-md"
                   alt="img1"
-                  src={img1}
+                  src={img4}
                   placeholder="blur"
+                  fill
                   quality={50}
                 />
                 <a
-                  onClick={() =>
-                    window.open("/img/view2/tiposvacunas/img1.png")
-                  }
-                  className="cursor-pointer absolute left-5 bottom-5 text-white text-xl font-semibold hidden group-hover:block"
+                  onClick={() => window.open("/img/view2/newModal6.png")}
+                  className="absolute left-5 bottom-5 z-20 cursor-pointer"
                 >
                   <img
-                    className="w_loop hidden lg:block "
+                    className="w_loop hidden lg:block"
                     src="/img/lupa.png"
                     alt=""
                   />
                 </a>
               </div>
-              <p className="underline hover:text-blue-500 text-white text-xs">
-                <span className="font-semibold"> Fuente: </span>
-                <a
-                  href="http://www.medicina.uanl.mx/noticias/coronavirus/covid-19-tipos-de-vacunas/"
-                  target="blank"
-                >
-                  Anexo de RM N°239-2022-MINSA.pdf (www.gob.pe) y COVID-19:
-                  Tipos de vacunas | Facultad de Medicina UANL
-                </a>
-              </p>
             </div>
-            <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[40rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
+          </div>
+          <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
+            <div className="w-8/12 lg:w-6/12 relative group">
+              <Image
+                className="object-cover"
+                alt="img1"
+                src={img1}
+                placeholder="blur"
+                quality={50}
+              />
+              <a
+                onClick={() => window.open("/img/view2/tiposvacunas/img1.png")}
+                className="cursor-pointer absolute left-5 bottom-5 text-white text-xl font-semibold hidden group-hover:block"
+              >
+                <img
+                  className="w_loop hidden lg:block "
+                  src="/img/lupa.png"
+                  alt=""
+                />
+              </a>
+            </div>
+            <p className="underline hover:text-blue-500 text-white text-xs">
+              <span className="font-semibold"> Fuente: </span>
+              <a
+                href="http://www.medicina.uanl.mx/noticias/coronavirus/covid-19-tipos-de-vacunas/"
+                target="blank"
+              >
+                Anexo de RM N°239-2022-MINSA.pdf (www.gob.pe) y COVID-19: Tipos
+                de vacunas | Facultad de Medicina UANL
+              </a>
+            </p>
+          </div>
+          <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
+            <div className="w-10/12 lg:w-[55rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
+              <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   Esquema de vacunación contra COVID-19
                 </h3>
@@ -188,56 +233,75 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-9/12 lg:w-[35rem] relative group">
+
+              <div className="relative flex-1">
                 <Image
-                  className="object-cover"
-                  alt="img3"
-                  src={img3}
-                  placeholder="blur"
-                  quality={50}
-                />
-                
-                <a
-                  onClick={() =>
-                    window.open("/img/view2/tiposvacunas/img3.png")
-                  }
-                  className="cursor-pointer absolute left-5 bottom-5 text-white text-xl font-semibold hidden group-hover:block"
-                >
-                  <img
-                    className="w_loop hidden lg:block "
-                    src="/img/lupa.png"
-                    alt=""
-                  />
-                </a>
-              </div>
-            </div>
-            <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-8/12 relative group">
-                <Image
-                  className="object-cover"
+                  className="object-cover rounded-md"
                   alt="img1"
-                  src={img2}
+                  src={img5}
                   placeholder="blur"
+                  fill
                   quality={50}
                 />
                 <a
-                  onClick={() =>
-                    window.open("/img/view2/tiposvacunas/img2.png")
-                  }
-                  className="cursor-pointer absolute left-5 bottom-5 text-white text-xl font-semibold hidden group-hover:block"
+                  onClick={() => window.open("/img/view2/newModal6.png")}
+                  className="absolute left-5 bottom-5 z-20 cursor-pointer"
                 >
                   <img
-                    className="w_loop hidden lg:block "
+                    className="w_loop hidden lg:block"
                     src="/img/lupa.png"
                     alt=""
                   />
                 </a>
               </div>
             </div>
-            <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[40rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
+          </div>
+          <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
+            <div className="w-9/12 lg:w-[35rem] relative group">
+              <Image
+                className="object-cover"
+                alt="img3"
+                src={img3}
+                placeholder="blur"
+                quality={50}
+              />
+
+              <a
+                onClick={() => window.open("/img/view2/tiposvacunas/img3.png")}
+                className="cursor-pointer absolute left-5 bottom-5 text-white text-xl font-semibold hidden group-hover:block"
+              >
+                <img
+                  className="w_loop hidden lg:block "
+                  src="/img/lupa.png"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+          <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
+            <div className="w-8/12 relative group">
+              <Image
+                className="object-cover"
+                alt="img1"
+                src={img2}
+                placeholder="blur"
+                quality={50}
+              />
+              <a
+                onClick={() => window.open("/img/view2/tiposvacunas/img2.png")}
+                className="cursor-pointer absolute left-5 bottom-5 text-white text-xl font-semibold hidden group-hover:block"
+              >
+                <img
+                  className="w_loop hidden lg:block "
+                  src="/img/lupa.png"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+          <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
+            <div className="w-10/12 lg:w-[60rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
+              <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   Importante
                 </h3>
@@ -294,10 +358,30 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
                   </p>
                 </div>
               </div>
+              <div className="relative flex-1">
+                <Image
+                  className="object-cover rounded-md"
+                  alt="img1"
+                  src={img6}
+                  placeholder="blur"
+                  fill
+                  quality={50}
+                />
+                <a
+                  onClick={() => window.open("/img/view2/newModal8.png")}
+                  className="absolute left-5 bottom-5 z-20 cursor-pointer"
+                >
+                  <img
+                    className="w_loop hidden lg:block"
+                    src="/img/lupa.png"
+                    alt=""
+                  />
+                </a>
+              </div>
             </div>
-          </Carousel>
-        </div>
-    
+          </div>
+        </Carousel>
+      </div>
     </div>
   );
 };

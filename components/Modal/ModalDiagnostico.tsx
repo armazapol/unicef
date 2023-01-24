@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import Image from "next/image";
 import background from "../../public/img/bgModal.png";
 import ButtonLink from "../commons/button/ButtonLink";
+import img1 from "../../public/img/view1/newModal1.png";
 
 type Props = {
   toggleViewDiagnostico: () => void;
@@ -33,7 +34,8 @@ const ModalDiagnostico = ({ toggleViewDiagnostico }: Props) => {
       >
         <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="" />
       </a>
-      <div className="w-10/12 md:w-[40rem] bg-white flex flex-col gap-2 p-5 relative component rounded-md h-5/6 lg:h-auto overflow-x-hidden overflow-y-auto">
+      <div className="w-10/12 md:w-[55rem] bg-white flex  gap-2 p-5 relative component rounded-md h-5/6 lg:h-auto overflow-x-hidden overflow-y-auto">
+        <div className="flex-1 overflow-y-auto">
         <h2 className="font-semibold text-base lg:text-lg">Diagnóstico</h2>
         <p className="text-sm lg:text-base">
           En la mayoría de los casos se utiliza una prueba molecular para
@@ -55,6 +57,27 @@ const ModalDiagnostico = ({ toggleViewDiagnostico }: Props) => {
            
           </a>
         </p>
+        </div>
+      <div className="relative flex-1">
+      <Image
+          className="object-cover rounded-md"
+          alt="img1"
+          src={img1}
+          placeholder="blur"
+          fill
+          quality={50}
+        />
+           <a
+                  onClick={() => window.open("/img/view1/newModal1.png")}
+                  className="absolute left-5 bottom-5 z-20 cursor-pointer"
+                >
+                 <img
+                    className="w_loop hidden lg:block"
+                    src="/img/lupa.png"
+                    alt=""
+                  />
+                </a>
+      </div>
       </div>
     </div>
   );

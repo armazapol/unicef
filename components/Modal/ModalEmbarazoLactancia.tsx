@@ -3,7 +3,9 @@ import { gsap } from "gsap";
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 import background from "../../public/img/bgModal.png";
-import img1 from "../../public/img/view1/variantes/img1.png";
+import img1 from "../../public/img/view2/newModal9.png";
+import img2 from "../../public/img/view2/newModal11.png";
+import img3 from "../../public/img/view2/newModal7.png";
 
 type Props = {
   toggleViewEmbarazoLactancia: () => void;
@@ -50,11 +52,33 @@ const ModalEmbarazoLactancia = ({ toggleViewEmbarazoLactancia }: Props) => {
             showIndicators={false}
             infiniteLoop={true}
             autoPlay={false}
+
             stopOnHover={false}
+            renderArrowPrev={(onClickHandler, hasNext, label) =>
+              hasNext && (
+                <div
+                  className="absolute z-10 cursor-pointer top-[calc(50%-1.25rem)] lg:top-[calc(50%-1.8rem)] left-1 lg:left-2 w-10 lg:w-14"
+                  onClick={onClickHandler}
+                >
+                  <img src="/img/arrow.png" className="rotate-180" />
+                </div>
+              )
+            }
+            renderArrowNext={(onClickHandler, hasNext, label) =>
+              hasNext && (
+                <div
+                className="absolute z-10 cursor-pointer top-[calc(50%-1.25rem)] lg:top-[calc(50%-1.8rem)] right-1 lg:right-2 w-10 lg:w-14"
+                onClick={onClickHandler}
+                >
+                  <img src="/img/arrow.png" className="" />
+                </div>
+              )
+            }
             className="  w-full h-full relative carousel1"
           >
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[40rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto">
+              <div className="w-10/12 lg:w-[50rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
+                <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">Embarazo</h3>
                 <div className="text-sm lg:text-base text-left flex flex-col gap-2">
                   <p>
@@ -75,10 +99,33 @@ const ModalEmbarazoLactancia = ({ toggleViewEmbarazoLactancia }: Props) => {
                     vacuna.
                   </p>
                 </div>
+                </div>
+             
+                <div className="relative flex-1">
+                <Image
+                  className="object-cover rounded-md"
+                  alt="img1"
+                  src={img1}
+                  placeholder="blur"
+                  fill
+                  quality={50}
+                />
+                <a
+                  onClick={() => window.open("/img/view2/newModal9.png")}
+                  className="absolute left-5 bottom-5 z-20 cursor-pointer"
+                >
+                  <img
+                    className="w_loop hidden lg:block"
+                    src="/img/lupa.png"
+                    alt=""
+                  />
+                </a>
+              </div>
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[40rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto">
+              <div className="w-10/12 lg:w-[50rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex  gap-2 p-5 relative component rounded-md overflow-auto">
+                <div className="flex-1 overflow-y-auto">
                 <div className="text-sm lg:text-base text-left flex flex-col gap-2">
                   <p className="font-semibold">Consideraciones generales:</p>
                   <ul>
@@ -110,24 +157,32 @@ const ModalEmbarazoLactancia = ({ toggleViewEmbarazoLactancia }: Props) => {
                     </li>
                   </ul>
                 </div>
-                {/* <p className="text-left">
-                  Fuente:{" "}
+                </div>
+                <div className="relative flex-1">
+                  <Image
+                    className="object-cover rounded-md"
+                    alt="img1"
+                    src={img2}
+                    placeholder="blur"
+                    fill
+                    quality={50}
+                  />
                   <a
-                    className="underline hover:text-blue-500 text-black"
-                    href="google.com"
-                    target="blank"
+                    onClick={() => window.open("/img/view2/newModal11.png")}
+                    className="absolute left-5 bottom-5 z-20 cursor-pointer"
                   >
-                    Zheng C, Shao W, Chen X, Zhang B, Wang G, Zhang W.
-                    Real-world effectiveness of COVID-19 vaccines: a literature
-                    review and meta-analysis. Int J Infect Dis. 2022
-                    Jan;114:252-260. doi: 10.1016/j.ijid.2021.11.009. Epub 2021
-                    Nov 17. PMID: 34800687; PMCID: PMC8595975.
-                  </a>{" "}
-                </p> */}
+                    <img
+                      className="w_loop hidden lg:block"
+                      src="/img/lupa.png"
+                      alt=""
+                    />
+                  </a>
+                </div>
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[40rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto">
+              <div className="w-10/12 lg:w-[50rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
+                <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   Lactancia materna
                 </h3>
@@ -161,6 +216,28 @@ const ModalEmbarazoLactancia = ({ toggleViewEmbarazoLactancia }: Props) => {
                     </a>{" "}
                   </p>
                 </div>
+                </div>
+             
+                <div className="relative flex-1">
+                <Image
+                  className="object-cover rounded-md"
+                  alt="img1"
+                  src={img3}
+                  placeholder="blur"
+                  fill
+                  quality={50}
+                />
+                <a
+                  onClick={() => window.open("/img/view2/newModal7.png")}
+                  className="absolute left-5 bottom-5 z-20 cursor-pointer"
+                >
+                  <img
+                    className="w_loop hidden lg:block"
+                    src="/img/lupa.png"
+                    alt=""
+                  />
+                </a>
+              </div>
               </div>
             </div>
           </Carousel>

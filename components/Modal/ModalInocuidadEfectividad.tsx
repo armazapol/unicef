@@ -3,7 +3,11 @@ import { gsap } from "gsap";
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 import background from "../../public/img/bgModal.png";
-import img1 from "../../public/img/view1/variantes/img1.png";
+import img1 from "../../public/img/view2/newModal1.png"; //cambiar
+import img2 from "../../public/img/view2/newModal14.png"; 
+import img3 from "../../public/img/view2/newModal13.png"; 
+import img4 from "../../public/img/view2/newModal4.png"; 
+import img5 from "../../public/img/view2/newModal15.png"; 
 
 type Props = {
   toggleViewInocuidadEfectividad: () => void;
@@ -53,10 +57,31 @@ const ModalInocuidadEfectividad = ({
             infiniteLoop={true}
             autoPlay={false}
             stopOnHover={false}
+            renderArrowPrev={(onClickHandler, hasNext, label) =>
+              hasNext && (
+                <div
+                  className="absolute z-10 cursor-pointer top-[calc(50%-1.25rem)] lg:top-[calc(50%-1.8rem)] left-1 lg:left-2 w-10 lg:w-14"
+                  onClick={onClickHandler}
+                >
+                  <img src="/img/arrow.png" className="rotate-180" />
+                </div>
+              )
+            }
+            renderArrowNext={(onClickHandler, hasNext, label) =>
+              hasNext && (
+                <div
+                className="absolute z-10 cursor-pointer top-[calc(50%-1.25rem)] lg:top-[calc(50%-1.8rem)] right-1 lg:right-2 w-10 lg:w-14"
+                onClick={onClickHandler}
+                >
+                  <img src="/img/arrow.png" className="" />
+                </div>
+              )
+            }
             className="  w-full h-full relative  carousel1"
           >
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[40rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto">
+              <div className="w-10/12 lg:w-[50rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
+                <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   Inocuidad de las vacunas
                 </h3>
@@ -74,11 +99,33 @@ const ModalInocuidadEfectividad = ({
                     ensayos rigurosos y continúan siendo evaluadas.{" "}
                   </p>
                 </div>
+                </div>
+                <div className="relative flex-1">
+                  <Image
+                    className="object-cover rounded-md"
+                    alt="img1"
+                    src={img1}
+                    placeholder="blur"
+                    fill
+                    quality={50}
+                  />
+                  <a
+                    onClick={() => window.open("/img/view2/newModal1.png")}
+                    className="absolute left-5 bottom-5 z-20 cursor-pointer"
+                  >
+                    <img
+                      className="w_loop hidden lg:block"
+                      src="/img/lupa.png"
+                      alt=""
+                    />
+                  </a>
+                </div>
+           
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[40rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto">
-                <div className="text-sm lg:text-base text-left flex flex-col gap-2">
+              <div className="w-10/12 lg:w-[55rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
+                <div className="text-sm lg:text-base text-left flex flex-col gap-2 flex-1 overflow-y-auto">
                   <p>
                     Como se hace con todas las vacunas, las que se desarrollan
                     contra la <span className="text-orange-600">COVID-19</span> pasan por un proceso riguroso de varias
@@ -100,10 +147,31 @@ const ModalInocuidadEfectividad = ({
                     seguridad.
                   </p>
                 </div>
+                <div className="relative flex-1">
+                  <Image
+                    className="object-cover rounded-md"
+                    alt="img1"
+                    src={img2}
+                    placeholder="blur"
+                    fill
+                    quality={50}
+                  />
+                  <a
+                    onClick={() => window.open("/img/view2/newModal14.png")}
+                    className="absolute left-5 bottom-5 z-20 cursor-pointer"
+                  >
+                    <img
+                      className="w_loop hidden lg:block"
+                      src="/img/lupa.png"
+                      alt=""
+                    />
+                  </a>
+                </div>
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[40rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto">
+              <div className="w-10/12 lg:w-[50rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex  gap-2 p-5 relative component rounded-md overflow-auto">
+                <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   Efectividad de las vacunas
                 </h3>
@@ -136,11 +204,32 @@ const ModalInocuidadEfectividad = ({
                     Nov 17. PMID: 34800687; PMCID: PMC8595975.
                   </a>{" "}
                 </p>
+                </div>
+                <div className="relative flex-1">
+                  <Image
+                    className="object-cover rounded-md"
+                    alt="img1"
+                    src={img3}
+                    placeholder="blur"
+                    fill
+                    quality={50}
+                  />
+                  <a
+                    onClick={() => window.open("/img/view2/newModal13.png")}
+                    className="absolute left-5 bottom-5 z-20 cursor-pointer"
+                  >
+                    <img
+                      className="w_loop hidden lg:block"
+                      src="/img/lupa.png"
+                      alt=""
+                    />
+                  </a>
+                </div>
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[40rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto">
-                <div className="text-sm lg:text-base text-left flex flex-col gap-2">
+              <div className="w-10/12 lg:w-[50rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
+                <div className="text-sm lg:text-base text-left flex flex-col gap-2 flex-1 overflow-y-auto">
                   <p>
                     En otro metaanálisis publicado en julio del 2022, se
                     encontró que tener un esquema completo de vacunas mostró una
@@ -164,11 +253,31 @@ const ModalInocuidadEfectividad = ({
                     </a>{" "}
                   </p>
                 </div>
+                <div className="relative flex-1">
+                  <Image
+                    className="object-cover rounded-md"
+                    alt="img1"
+                    src={img4}
+                    placeholder="blur"
+                    fill
+                    quality={50}
+                  />
+                  <a
+                    onClick={() => window.open("/img/view2/newModal4.png")}
+                    className="absolute left-5 bottom-5 z-20 cursor-pointer"
+                  >
+                    <img
+                      className="w_loop hidden lg:block"
+                      src="/img/lupa.png"
+                      alt=""
+                    />
+                  </a>
+                </div>
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[40rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto">
-                <div className="text-sm lg:text-base text-left flex flex-col gap-2">
+              <div className="w-10/12 lg:w-[50rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex  gap-2 p-5 relative component rounded-md overflow-auto">
+                <div className="text-sm lg:text-base text-left flex flex-col gap-2 flex-1 overflow-y-auto">
                   <p>
                   En otro estudio danés, se estimó la efectividad de la vacuna contra la infección y hospitalización.  Encontraron que contar con dos dosis de vacuna proveía una alta protección contra infección y hospitalización por <span className="text-orange-600">COVID-19</span>. Una tercera dosis incrementaba sustancialmente el nivel y la duración de la protección, especialmente en población mayor a 60 años.
                   </p>
@@ -183,15 +292,29 @@ const ModalInocuidadEfectividad = ({
                     </a>{" "}
                   </p>
                 </div>
+                <div className="relative flex-1">
+                  <Image
+                    className="object-cover rounded-md"
+                    alt="img1"
+                    src={img5}
+                    placeholder="blur"
+                    fill
+                    quality={50}
+                  />
+                  <a
+                    onClick={() => window.open("/img/view2/newModal15.png")}
+                    className="absolute left-5 bottom-5 z-20 cursor-pointer"
+                  >
+                    <img
+                      className="w_loop hidden lg:block"
+                      src="/img/lupa.png"
+                      alt=""
+                    />
+                  </a>
+                </div>
               </div>
             </div>
           </Carousel>
-          <a
-            onClick={toggleViewInocuidadEfectividad}
-            className="cursor-pointer absolute top-0 -right-5 text-white text-xl font-semibold"
-          >
-              <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="" />
-          </a>
         </div>
      
     </div>

@@ -7,7 +7,7 @@ import img2 from "../../public/img/view1/img2.jpg";
 import img3 from "../../public/img/view1/img3.jpg";
 import img4 from "../../public/img/view1/img4.jpg";
 import img5 from "../../public/img/view1/img5.jpg";
-import logo from "../../public/img/view1/logo.png";
+// import logo from "../../public/img/view1/logo.png";
 
 type Props = {
   toggleViewVacunas: () => void;
