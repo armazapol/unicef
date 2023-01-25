@@ -98,7 +98,7 @@ const Register = () => {
     }
   };
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white text-white">
+    <div className="min-h-screen flex items-center justify-center bg-white text-black">
          {isLoading && <Loading text="Cargando.." />}
       <div className="absolute h-1/2 top-0 w-full bg-black">
         <Image
@@ -137,12 +137,12 @@ const Register = () => {
             <Input1 type="text" placeholder="Nombre"  {...register("firstName")} />
         <Input1 type="text" placeholder="Apellido"  {...register("lastName")} />
         {stateRegex && (
-          <p>
+          <p className="text-sm">
             La contraseña debe tener 6 caracteres, símbolos, números, letra
             mayúscula y minúscula.
           </p>
         )}
-        {stateIgualdad && <p>Las contraseñas son diferentes.</p>}
+        {stateIgualdad && <p className="text-sm">Las contraseñas son diferentes.</p>}
           </div>
           <div className="flex flex-col gap-5">
             <ButtonForm text="Registrar" onClick={handleSubmit(onSubmit)} />
