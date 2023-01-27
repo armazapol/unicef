@@ -27,7 +27,6 @@ export const scoreApiSlice = createApi({
       },
     }),
     updateScore: builder.mutation({
-
       query: (args) => {
         // Destructuring Object
         const { userId, numberTrivia, data } = args;
@@ -42,4 +41,4 @@ export const scoreApiSlice = createApi({
   }),
 });
 
-export const { useGetQuestScoreQuery, useUpdateScoreMutation } = scoreApiSlice;
+export const { useGetQuestScoreQuery, useUpdateScoreMutation, useLazyGetQuestScoreQuery } = scoreApiSlice;

@@ -20,6 +20,8 @@
   :root {
     --input-color: #2f4475;
     --first-color : #01afea;
+    --second-color: #223877;
+    --third-color: #354e9f;
     --BwModelica: BwModelica, sans-serif;
     --LatoRegular: LatoRegular, sans-serif;
     --MilkyNiceClean: MilkyNiceClean, sans-serif;
@@ -39,6 +41,17 @@
   /* text color */
   .first_color{
     color: var(--first-color)
+  }
+  .third_color{
+    color: var(--third-color)
+  }
+
+  /* bg color */
+  .bg_color_first{
+    background: var(--input-color);
+  }
+  .bg_color_third{
+    background: var(--third-color);
   }
 
   /* carousel1 */
@@ -79,6 +92,10 @@
   .text-shadow {
     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
       1px 1px 0 #fff;
+  }
+  /* shadow */
+  .shadow_card_results{
+    box-shadow: 0 15px 0 0 var(--second-color);
   }
   /* width */
   .w_loop{

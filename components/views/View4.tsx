@@ -12,32 +12,24 @@ import Button from "../commons/button/Button";
 // import video from '../../public/img/view1/video.mp4';
 
 type Props = {
-  toggleViewQuest1: () => void;
-  toggleViewQuest2: () => void;
-  toggleViewQuest3: () => void;
-  toggleViewQuest4: () => void;
-  toggleViewQuest5: () => void;
-  toggleViewQuest6: () => void;
-  toggleViewQuest7: () => void;
-  toggleViewQuest8: () => void;
-  toggleViewQuest9: () => void;
-  toggleViewQuest10: () => void;
+  toggleViewQuestSlide1: () => void;
+  toggleViewQuestSlide2: () => void;
+  toggleViewQuestSlide3: () => void;
+  toggleViewQuestSlide4: () => void;
+  toggleViewQuestSlide5: () => void;
+  toggleViewQuestSlide6: () => void;
   keyCarrousel: number;
   index: number;
   stateSide: string;
 };
 
 const View4 = ({
-  toggleViewQuest1,
-  toggleViewQuest2,
-  toggleViewQuest3,
-  toggleViewQuest4,
-  toggleViewQuest5,
-  toggleViewQuest6,
-  toggleViewQuest7,
-  toggleViewQuest8,
-  toggleViewQuest9,
-  toggleViewQuest10,
+  toggleViewQuestSlide1,
+  toggleViewQuestSlide2,
+  toggleViewQuestSlide3,
+  toggleViewQuestSlide4,
+  toggleViewQuestSlide5,
+  toggleViewQuestSlide6,
   keyCarrousel,
   index,
   stateSide,
@@ -105,14 +97,17 @@ const View4 = ({
               </div>
             </div>
             <div className="flex gap-10 mt-2 lg:mt-5">
-              <a onClick={toggleViewQuest1} className="z-20 ">
+               <a onClick={toggleViewQuestSlide1} className="z-20 ">
+                <Button text="¿Qué hacer si ya tuviste COVID o si ya te vacunaste?" />
+              </a>
+              {/* <a onClick={toggleViewQuest1} className="z-20 ">
                 <Button text="¿Cuánto tiempo tardan en aparecer los síntomas?" />
-              </a>
-              <a onClick={toggleViewQuest2} className="z-20 ">
+              </a> */}
+              {/* <a onClick={toggleViewQuest2} className="z-20 ">
                 <Button text="¿Son eficaces los antibióticos para prevenir o tratar la COVID-19?" />
-              </a>
+              </a> */}
             </div>
-            <div className="flex gap-10 mt-2 lg:mt-5">
+            {/* <div className="flex gap-10 mt-2 lg:mt-5">
               <a onClick={toggleViewQuest3} className="z-20 ">
                 <Button text="¿Debería vacunarme si ya he pasado la COVID-19?" />
               </a>
@@ -127,7 +122,7 @@ const View4 = ({
               <a onClick={toggleViewQuest9} className="z-20 ">
                 <Button text="¿Pueden los zapatos propagar el virus de la COVID-19?" />
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -142,11 +137,17 @@ const View4 = ({
             quality={50}
           />
           <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex  group items-start">
-            <a
+            {/* <a
               onClick={toggleViewQuest6}
               className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
             >
               <Button text="¿Cuánto dura la protección de las vacunas contra la COVID-19?" />
+            </a> */}
+              <a
+              onClick={toggleViewQuestSlide2}
+              className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
+            >
+              <Button text="¿Que sirve frente al COVID? ¿El frío, los antibióticos o las vacunas?" />
             </a>
           </div>
         </div>
@@ -160,11 +161,17 @@ const View4 = ({
             quality={50}
           />
           <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex group items-start">
-            <a
+            {/* <a
               className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
               onClick={toggleViewQuest7}
             >
               <Button text="Estoy embarazada. ¿Puedo vacunarme contra la COVID-19?" />
+            </a> */}
+             <a
+              className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
+              onClick={toggleViewQuestSlide3}
+            >
+              <Button text="¿Pueden las vacunas afectar la fertilidad o tu ADN? ¿Me puedo vacunar si estoy embarazada?" />
             </a>
           </div>
         </div>
@@ -179,11 +186,17 @@ const View4 = ({
           quality={50}
         />
         <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex  group items-start">
-          <a
+          {/* <a
             onClick={toggleViewQuest8}
             className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
           >
             <Button text="¿Pueden las vacunas contra la COVID-19 afectar la fertilidad?" />
+          </a> */}
+           <a
+            onClick={toggleViewQuestSlide4}
+            className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
+          >
+            <Button text="Tiempo de aparición de síntomas y duración de protección" />
           </a>
         </div>
       </div>
@@ -196,12 +209,18 @@ const View4 = ({
           fill
           quality={50}
         />
-        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-start group ">
-          <a
+      <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex  group items-start">
+          {/* <a
             onClick={toggleViewQuest10}
             className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2 flex-none"
           >
             <Button text="¿Pueden las vacunas de la COVID-19 afectar tu ADN?" />
+          </a> */}
+          <a
+            onClick={toggleViewQuestSlide5}
+            className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
+          >
+            <Button text="¿Los zapatos, las mascarillas y los mosquitos propagan el COVID?" />
           </a>
         </div>
       </div>
