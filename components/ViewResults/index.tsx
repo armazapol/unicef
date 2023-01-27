@@ -95,7 +95,7 @@ const ViewResults = ({
   const getScoreQuest = async (trivia: number, index: number) => {
     const { data } = await trigger({ userId, numberTrivia: trivia });
     console.log(data, trivia)
-    setDataTable((prev) => [
+    await setDataTable((prev) => [
       ...prev,
       { quest: arrQuest[index], score: data.value },
     ]);
@@ -105,9 +105,27 @@ const ViewResults = ({
     // console.log(arr[1])
     // console.log(arrNumberQuest)
     // console.log(arrQuest)
-    arrNumberQuest.map((x,index) => {
-      getScoreQuest(x,index);
-    });
+    // const fetchData = async () => {
+    //   await Promise.all(
+    //     arrNumberQuest.map(async (x, index) => {
+    //       return await getScoreQuest(x, index)
+    //     })
+    //   )
+    // }
+    // fetchData()
+    // arrNumberQuest.map((x,index) => {
+    //   getScoreQuest(x,index);
+    // });
+
+    const fetchData = async () => {
+      for (const [index, value] of arrNumberQuest.entries()) {
+        //  await getScoreQuest(numberQuest)
+        await getScoreQuest(value,index)
+      }
+    }
+    fetchData()
+  
+
   }, []);
 
   return (

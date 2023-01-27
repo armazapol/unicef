@@ -7,7 +7,7 @@ import img1 from "../../public/img/view2/tiposvacunas/img1.png";
 import img2 from "../../public/img/view2/tiposvacunas/img2.png";
 import img3 from "../../public/img/view2/tiposvacunas/img3.png";
 import img4 from "../../public/img/view2/newModal6.png";
-import img5 from "../../public/img/view2/newModal6.png"; //cambiar
+import img5 from "../../public/img/view2/newModal17.png"; //cambiar
 import img6 from "../../public/img/view2/newModal8.png";
 
 type Props = {

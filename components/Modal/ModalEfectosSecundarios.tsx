@@ -4,7 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 import background from "../../public/img/bgModal.png";
 import img1 from "../../public/img/view2/newModal5.png";
-import img2 from "../../public/img/view2/newModal6.png"; //cambiar
+import img2 from "../../public/img/view2/newModal16.png"; //cambiar
 import img3 from "../../public/img/view2/newModal10.png";
 
 type Props = {

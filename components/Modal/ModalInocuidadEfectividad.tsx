@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 import background from "../../public/img/bgModal.png";
-import img1 from "../../public/img/view2/newModal1.png"; //cambiar
+import img1 from "../../public/img/view2/newModal18.jpg"; //cambiar
 import img2 from "../../public/img/view2/newModal14.png"; 
 import img3 from "../../public/img/view2/newModal13.png"; 
 import img4 from "../../public/img/view2/newModal4.png"; 
