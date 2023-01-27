@@ -123,7 +123,7 @@ const ViewResults = ({
         await getScoreQuest(value,index)
       }
     }
-    fetchData()
+    // fetchData()
   
 
   }, []);

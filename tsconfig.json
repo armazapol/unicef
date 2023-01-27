@@ -1,8 +1,17 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "downlevelIteration": true,
-    "lib": ["dom", "dom.iterable", "esnext"],
+    // "target": "es5",
+    // "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "es5", //agregado para iteracion es5+
+    "downlevelIteration": true, //agregado para iteracion es5+
+    "importHelpers": true, //agregado para iteracion es5+
+    "lib": [
+      "dom",
+      "es5",
+      "es2015.collection",
+      "es2015.iterable",
+      "esnext"
+    ], //agregado para iteracion es5+
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
