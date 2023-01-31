@@ -9,10 +9,11 @@ import background from "../../public/img/bgModal.png";
 type Props = {
   keyCarrousel: number;
   index: number;
+  toggleViewInit:()=>void;
   stateSide: string;
 };
 
-const ViewInit = ({ keyCarrousel, index, stateSide }: Props) => {
+const ViewInit = ({ keyCarrousel, index, stateSide,toggleViewInit }: Props) => {
   //ref
 
   useEffect(() => {
@@ -71,12 +72,13 @@ const ViewInit = ({ keyCarrousel, index, stateSide }: Props) => {
           <p className="leading-snug">PARA LOS <span className="text-white">MEDIOS DE COMUNICACIÓN</span> </p>
         
         </h1>
-        <p className="text-sm lg:text-2xl font-semibold text-left">
+        <p className="text-sm  lg:text-2xl font-semibold text-left">
           Curso auto formativo, asíncrono, de naturaleza teórica, que brinda
           conocimientos básicos sobre la COVID-19, la vacunación actualizado,
           dirigido al personal que labora en los distintos medios de
           comunicación en el país.
         </p>
+        <div className='bg-blue-900 rounded-md py-2 px-12 text-white font-bold text-md  lg:text-3xl cursor-pointer z-20 shadow-md shadow-black' onClick={toggleViewInit}>Iniciar</div>
       </div>
     </div>
   );

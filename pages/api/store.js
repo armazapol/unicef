@@ -4,6 +4,7 @@ import { setupListeners } from "@reduxjs/toolkit/query/react";
 import { apiSlice } from "./services/auth/apiSlice";
 import { scoreApiSlice } from "./services/scores/scoreApiSlice";
 import authReducer from "./features/auth/authSlice";
+import extraReducer from "./features/extra/extraSlice";
 
 import storage from "redux-persist/lib/storage";
 import { combineReducers } from "@reduxjs/toolkit";
@@ -13,7 +14,7 @@ import thunk from "redux-thunk";
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: ["authState"],
+  whitelist: ["authState", "extraReducer"],
 };
 
 const rootReducer = combineReducers({
@@ -29,6 +30,7 @@ export const store = configureStore({
     [apiSlice.reducerPath]: apiSlice.reducer,
     [scoreApiSlice.reducerPath]: scoreApiSlice.reducer,
     // auth: authReducer,
+    extra: extraReducer,
     auth: persistedReducer,
   },
   // Adding the api middleware enables caching, invalidation, polling,

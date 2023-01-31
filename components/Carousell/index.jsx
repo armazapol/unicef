@@ -59,6 +59,7 @@ import ModalQuestSlide5 from "../Modal/ModalQuestSlide5";
 import ModalQuestSlide6 from "../Modal/ModalQuestSlide6";
 import ViewResults from "../ViewResults";
 import ViewInit from "../ViewInit";
+import ModalInit from "../Modal/Modalnit";
 
 const Carousell = (props) => {
   // const [stateModalVideo, setStateModalVideo] = useState<boolean>(false);
@@ -96,6 +97,7 @@ const Carousell = (props) => {
   const [stateModalQuestSlide4, setStateModalQuestSlide4] = useState(false);
   const [stateModalQuestSlide5, setStateModalQuestSlide5] = useState(false);
   const [stateModalQuestSlide6, setStateModalQuestSlide6] = useState(false);
+  const [stateModalInit, setStateModalInit] = useState(false);
   // const [stateMenu, setStateMenu] = useState(false);
   const [stateHamburger, setStateHamburger] = useState(false);
   const [stateCarousel, setStateCarousel] = useState(0);
@@ -177,6 +179,9 @@ const Carousell = (props) => {
   };
   const toggleViewQuestSlide6 = () => {
     setStateModalQuestSlide6(!stateModalQuestSlide6);
+  };
+  const toggleViewInit = () => {
+    setStateModalInit(!stateModalInit);
   };
 
   useEffect(() => {
@@ -298,6 +303,7 @@ const Carousell = (props) => {
       {stateModalQuestSlide6 && (
         <ModalQuestSlide6 toggleViewQuestSlide6={toggleViewQuestSlide6} />
       )}
+      {stateModalInit && <ModalInit toggleViewInit={toggleViewInit} />}
       <div className="absolute -bottom-14 -right-14 lg:-bottom-20 lg:-right-20 bg-blue-900/90 rounded-full w-32 h-32 lg:w-40 text-white z-40 background">
         <div className="contentMenu hidden">
           <Menu
@@ -331,6 +337,7 @@ const Carousell = (props) => {
       >
         <ViewInit
           keyCarrousel={0}
+          toggleViewInit={toggleViewInit}
           index={stateCarousel}
           stateSide={stateSide}
         />
@@ -463,7 +470,7 @@ const Carousell = (props) => {
           moduleTrivia="2"
           counter={5}
         />
-         <ViewResults
+        <ViewResults
           keyCarrousel={14}
           arrNumberQuest={[6, 7, 8, 9, 10]}
           arrQuest={[
@@ -529,7 +536,7 @@ const Carousell = (props) => {
           moduleTrivia="3"
           counter={5}
         />
-         <ViewResults
+        <ViewResults
           keyCarrousel={21}
           arrNumberQuest={[11, 12, 13, 14, 15]}
           arrQuest={[
@@ -599,7 +606,7 @@ const Carousell = (props) => {
           moduleTrivia="4"
           counter={5}
         />
-         <ViewResults
+        <ViewResults
           keyCarrousel={28}
           arrNumberQuest={[16, 17, 18, 19, 20]}
           arrQuest={[

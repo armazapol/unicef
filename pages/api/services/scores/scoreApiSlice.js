@@ -13,7 +13,8 @@ export const scoreApiSlice = createApi({
       return headers;
     },
   }),
-  tagTypes: ["Auth"],
+  // refetchOnFocus:true,
+  tagTypes: ["Scores"],
   endpoints: (builder) => ({
     getQuestScore: builder.query({
       query: (args) => {
@@ -25,6 +26,7 @@ export const scoreApiSlice = createApi({
           method: "GET",
         };
       },
+      // invalidatesTags: ["Scores"]
     }),
     updateScore: builder.mutation({
       query: (args) => {
@@ -37,6 +39,7 @@ export const scoreApiSlice = createApi({
           body: data
         };
       },
+      // invalidatesTags: ["Scores"]
     }),
   }),
 });

@@ -3,18 +3,19 @@ import { gsap } from "gsap";
 import ReactCanvasConfetti from "react-canvas-confetti";
 // import img1 from "../../public/img/view1/img1.png";
 import Image from "next/image";
-import { useSelector } from "react-redux";
+import { useSelector,useDispatch } from "react-redux";
 import {
   useUpdateScoreMutation,
   useGetQuestScoreQuery,
 } from "./../../pages/api/services/scores/scoreApiSlice";
 import {
   selectCurrentUser,
-  selectCurrentToken,
+  // selectCurrentToken,
 } from "../../pages/api/features/auth/authSlice";
+import { setUpdateScore } from "../../pages/api/features/extra/extraSlice";
 // import logo from "../../public/img/view1/logo.png";
 // import Button from "../commons/button/Button";
-import Loading from "../../components/Loading/Loading";
+// import Loading from "../../components/Loading/Loading";
 import TriviaOpcion from "../commons/TriviaOpcion";
 import quest from "../../public/img/trivia/quest.png";
 import background from "../../public/img/trivia/fondo.png";
@@ -61,8 +62,9 @@ const ViewGeneral = ({
 Props) => {
   const [count, setCount] = useState(100);
   const [finishTrivia, setFinishTrivia] = useState(false);
-  // const [triviaComplete, setTriviaComplete] = useState(false);
+  // const [stateViewComplete, setstateViewComplete] = useState(true)
 
+  const dispatch = useDispatch();
   const { id: userId } = useSelector(selectCurrentUser);
   const [
     updateScore,
@@ -168,10 +170,10 @@ Props) => {
       });
     }
   }, [index]);
-
   useEffect(() => {
     if (finishTrivia) {
       addScore(count);
+      dispatch(setUpdateScore(null));
     }
   }, [finishTrivia]);
 
@@ -192,6 +194,7 @@ Props) => {
           <span className="hidden lg:block">Pregunta</span> {counter}/5
         </p>
       </div>
+      {/* {!isLoading && data.value === 0 ? ( */}
       {!isLoading && data.value === 0 ? (
         <div className="flex flex-col z-20 relative items-center w-8/12 lg:w-[40rem]  ">
           <div className="relative w-full flex items-center justify-center ">

@@ -28,14 +28,13 @@ const ModalSintomas = ({ toggleViewSintomas }: Props) => {
         fill
         quality={50}
       />
-       <a
+      <a
         onClick={toggleViewSintomas}
         className="cursor-pointer absolute right-4 top-4 lg:right-10 lg:top-10 text-white text-xl font-semibold z-50"
       >
         <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="" />
       </a>
       <div className="w-9/12 lg:w-[60rem] flex flex-col gap-2 p-5 relative component rounded-md ">
-
         <div className=" relative group ">
           <Image
             className="object-cover"
@@ -46,10 +45,10 @@ const ModalSintomas = ({ toggleViewSintomas }: Props) => {
           />
           <a
             onClick={() => window.open("/img/view1/img7.png")}
-            className="cursor-pointer absolute left-10 bottom-10 text-white text-xl font-semibold hidden group-hover:block"
+            className="absolute left-5 bottom-5 z-20 cursor-pointer"
           >
             <img
-              className="w-4 lg:w-6 hidden lg:block"
+              className="w_loop hidden lg:block"
               src="/img/lupa.png"
               alt=""
             />

@@ -1,21 +1,13 @@
-import React, {
-  useEffect,
-  useState,
-  useRef,
-  useCallback,
-  useLayoutEffect,
-} from "react";
+import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
 // import img1 from "../../public/img/view1/img1.png";
 import Image from "next/image";
-import { useSelector } from "react-redux";
-import {
-  useLazyGetQuestScoreQuery,
-} from "../../pages/api/services/scores/scoreApiSlice";
-import {
-  selectCurrentUser,
-} from "../../pages/api/features/auth/authSlice";
-import Loading from "../Loading/Loading";
+import { useSelector, useDispatch } from "react-redux";
+import { useLazyGetQuestScoreQuery } from "../../pages/api/services/scores/scoreApiSlice";
+import { selectCurrentUser } from "../../pages/api/features/auth/authSlice";
+import { selectCurrentData } from "../../pages/api/features/extra/extraSlice";
+import { setUpdateScore } from "../../pages/api/features/extra/extraSlice";
+// import Loading from "../Loading/Loading";
 
 import background from "../../public/img/bgModal.png";
 
@@ -43,13 +35,16 @@ const ViewResults = ({
 }: Props) => {
   const [dataTable, setDataTable] = useState<DataTable[] | []>([]);
   const { id: userId } = useSelector(selectCurrentUser);
+  const extraState = useSelector(selectCurrentData);
   // const { data, error, isLoading } = useGetQuestScoreQuery({
   //   userId,
   //   numberTrivia,
   // });
 
-  const [trigger, { isLoading: isTriggerLoading }] =
-    useLazyGetQuestScoreQuery();
+  const [trigger, { isLoading: isTriggerLoading,  }] = useLazyGetQuestScoreQuery({
+    // refetchOnMountOrArgChange: true,
+    // refetchOnFocus:true,
+  });
 
   //ref
 
@@ -94,39 +89,23 @@ const ViewResults = ({
 
   const getScoreQuest = async (trivia: number, index: number) => {
     const { data } = await trigger({ userId, numberTrivia: trivia });
-    console.log(data, trivia)
-    await setDataTable((prev) => [
+    // console.log(data, trivia)
+    setDataTable((prev) => [
       ...prev,
       { quest: arrQuest[index], score: data.value },
     ]);
   };
 
   useEffect(() => {
-    // console.log(arr[1])
-    // console.log(arrNumberQuest)
-    // console.log(arrQuest)
-    // const fetchData = async () => {
-    //   await Promise.all(
-    //     arrNumberQuest.map(async (x, index) => {
-    //       return await getScoreQuest(x, index)
-    //     })
-    //   )
-    // }
-    // fetchData()
-    // arrNumberQuest.map((x,index) => {
-    //   getScoreQuest(x,index);
-    // });
-
+    setDataTable([])
     const fetchData = async () => {
       for (const [index, value] of arrNumberQuest.entries()) {
         //  await getScoreQuest(numberQuest)
-        await getScoreQuest(value,index)
+        await getScoreQuest(value, index);
       }
-    }
-    // fetchData()
-  
-
-  }, []);
+    };
+    fetchData();
+  }, [extraState]);
 
   return (
     <div
@@ -142,7 +121,9 @@ const ViewResults = ({
       />
 
       <div className="z-20 w-10/12 lg:w-[60rem] flex flex-col gap-3 lg:gap-5">
-        <h1 className=" text-xl lg:text-4xl text-white font-bold ">Resultados</h1>
+        <h1 className=" text-xl lg:text-4xl text-white font-bold ">
+          Resultados
+        </h1>
         <div className="bg_color_third  rounded-xl border-t-[0.5rem] border-gray-300 shadow_card_results py-4 px-10">
           <div className="flex text-base lg:text-xl font-semibold">
             <div className="flex-1"># de pregunta</div>
@@ -158,7 +139,7 @@ const ViewResults = ({
                   className="flex bg-white rounded-md third_color py-1 lg:py-2 font-bold min-h-[4rem] lg:min-h-[5rem] "
                 >
                   <div className="flex-1 flex items-center justify-center text-sky-400 text-2xl">
-                    #{index+1}{" "}
+                    #{index + 1}{" "}
                   </div>
                   <div className="w-8/12 lg:w-6/12 flex items-center justify-center text-sm lg:text-lg leading-tight">
                     {data.quest}{" "}

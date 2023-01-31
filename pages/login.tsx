@@ -53,6 +53,8 @@ const Login = () => {
         return console.log(e);
       }
     } catch (e: any) {
+      if (e.data.message === "User not fount or not authorized")
+        return toast.error("Usuario no encontrado o no autorizado");
       return toast.error(e.data.message);
       // console.log(error)
     }
