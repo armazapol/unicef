@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import Button from "../commons/button/Button";
 import { gsap } from "gsap";
-import img1 from "../../public/img/view1/img1.png";
-import img2 from "../../public/img/view1/img2.jpg";
-import img3 from "../../public/img/view1/img3.jpg";
-import img4 from "../../public/img/view1/img4.jpg";
-import img5 from "../../public/img/view1/img5.jpg";
+import img1 from "../../public/img/view3/img1.png";
+import img2 from "../../public/img/view3/img2.png";
+import img3 from "../../public/img/view3/img3.png";
+import img4 from "../../public/img/view3/img4.png";
+import img5 from "../../public/img/view3/img5.png";
 import logo from "../../public/img/view1/logo.png";
 
 type Props = {
@@ -61,7 +61,7 @@ const View15 = ({
         <Image
           className="object-cover"
           alt="img1"
-          src={img5}
+          src={img1}
           placeholder="blur"
           fill
           quality={50}
@@ -101,7 +101,7 @@ const View15 = ({
         <Image
           className="object-cover"
           alt="img5"
-          src={img3}
+          src={img2}
           placeholder="blur"
           fill
           quality={50}
@@ -120,7 +120,7 @@ const View15 = ({
         <Image
           className="object-cover"
           alt="img2"
-          src={img4}
+          src={img3}
           placeholder="blur"
           fill
           quality={50}
@@ -138,7 +138,7 @@ const View15 = ({
         <Image
           className="object-cover"
           alt="img3"
-          src={img2}
+          src={img4}
           placeholder="blur"
           fill
           quality={50}
@@ -158,11 +158,11 @@ const View15 = ({
         <Image
           className="object-cover"
           alt="img4"
-          src={img1}
+          src={img5}
           placeholder="blur"
           fill
         />
-        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group items-start" />
+        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-center justify-center  group" />
       </div>
     </div>
   );

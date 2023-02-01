@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
-import img1 from "../../public/img/view1/img1.png";
-import img2 from "../../public/img/view1/img2.jpg";
-import img3 from "../../public/img/view1/img3.jpg";
-import img4 from "../../public/img/view1/img4.jpg";
-import img5 from "../../public/img/view1/img5.jpg";
-import img7 from "../../public/img/view1/img7.png";
+import img1 from "../../public/img/view4/img1.png";
+import img2 from "../../public/img/view4/img2.png";
+import img3 from "../../public/img/view4/img3.png";
+import img4 from "../../public/img/view4/img4.png";
+import img5 from "../../public/img/view4/img5.png";
+import img7 from "../../public/img/view4/img7.png";
 import logo from "../../public/img/view1/logo.png";
 import Button from "../commons/button/Button";
 // import video from '../../public/img/view1/video.mp4';
@@ -68,7 +68,7 @@ const View4 = ({
         <Image
           className="object-cover"
           alt="img1"
-          src={img5}
+          src={img1}
           placeholder="blur"
           fill
           quality={50}
@@ -155,7 +155,7 @@ const View4 = ({
           <Image
             className="object-cover"
             alt="img5"
-            src={img1}
+            src={img4}
             placeholder="blur"
             fill
             quality={50}
@@ -180,7 +180,7 @@ const View4 = ({
         <Image
           className="object-cover"
           alt="img2"
-          src={img2}
+          src={img5}
           placeholder="blur"
           fill
           quality={50}
@@ -204,7 +204,7 @@ const View4 = ({
         <Image
           className="object-cover"
           alt="img2"
-          src={img4}
+          src={img2}
           placeholder="blur"
           fill
           quality={50}
