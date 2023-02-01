@@ -43,7 +43,7 @@ const Login = () => {
     try {
       const { IdToken } = await loginUser(data).unwrap();
       const datajwt: any = decodeToken(IdToken);
-      const idUser = Object.values(datajwt)[2];
+      const idUser = Object.values(datajwt)[3];
       dispatch(setToken({ accesstoken: IdToken }));
       try {
         const user = await trigger(idUser);
@@ -53,10 +53,10 @@ const Login = () => {
         return console.log(e);
       }
     } catch (e: any) {
-      if (e.data.message === "User not fount or not authorized")
+      if (e.data.message === "User credentials not found or not authorized")
         return toast.error("Usuario no encontrado o no autorizado");
-      return toast.error(e.data.message);
-      // console.log(error)
+        return toast.error(e.data.message);
+      // console.log(e)
     }
   };
   return (

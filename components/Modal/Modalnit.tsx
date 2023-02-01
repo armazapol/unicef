@@ -214,8 +214,8 @@ const ModalInit = ({ toggleViewInit }: Props) => {
                     podrás avanzar a las preguntas de Trivia, las cuales pondrán
                     a prueba tus recién adquiridos conocimientos. En cada
                     pregunta, si se pudo responder correctamente al primer
-                    intento, se obtendrán 100 puntos, pero si no, cada intento
-                    fallido restará 25 puntos de este.
+                    intento, se obtendrán 20 puntos, pero si no, cada intento
+                    fallido restará 5 puntos de este.
                   </p>
                 </div>
               </div>

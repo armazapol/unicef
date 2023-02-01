@@ -1,9 +1,12 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
+const urlAuth = "https://twox1syzri.execute-api.us-east-1.amazonaws.com"
+const urlGetAuth = "https://zdxyw38bz6.execute-api.us-east-1.amazonaws.com"
+
 export const apiSlice = createApi({
   reducerPath: "apiSlice",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://zdxyw38bz6.execute-api.us-east-1.amazonaws.com",
+    baseUrl: "",
     prepareHeaders: (headers, { getState }) => {
       const token = getState().auth.authState.token; //posiblemente se tenga que cambiar donde se encuentre el token
       // If we have a token set in state, let's assume that we should be passing it.
@@ -18,7 +21,7 @@ export const apiSlice = createApi({
   endpoints: (builder) => ({
     getUser: builder.query({
       query: (userId) => ({
-        url: `/test/users/${userId}`,
+        url: `${urlGetAuth}/test/users/${userId}`,
         method: "GET",
       }),
       // providesTags: ["Auth"],
@@ -26,7 +29,7 @@ export const apiSlice = createApi({
     }),
     createUser: builder.mutation({
       query: (newUser) => ({
-        url: "/test/users",
+        url: `${urlAuth}/test/userCredentials`,
         method: "POST",
         body: newUser,
       }),
@@ -34,7 +37,7 @@ export const apiSlice = createApi({
     }),
     loginUser: builder.mutation({
       query: (user) => ({
-        url: "/test/users/login",
+        url: `${urlAuth}/test/userCredentials/login`,
         method: "POST",
         body: user,
       }),

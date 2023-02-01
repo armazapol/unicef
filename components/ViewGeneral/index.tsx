@@ -45,7 +45,8 @@ type dataRespuesta = {
 };
 
 //puntaje
-const Puntaje = 25;
+const Puntaje = 5;
+const TotalPuntaje = 20
 
 const ViewGeneral = ({
   keyCarrousel,
@@ -60,7 +61,7 @@ const ViewGeneral = ({
 // urlBackground,
 // text,
 Props) => {
-  const [count, setCount] = useState(100);
+  const [count, setCount] = useState(TotalPuntaje);
   const [finishTrivia, setFinishTrivia] = useState(false);
   // const [stateViewComplete, setstateViewComplete] = useState(true)
 
@@ -206,7 +207,7 @@ Props) => {
           </div>
           <div className="h-10 lg:h-20 text-lg lg:text-5xl text-center text-shadow uppercase tracking-widest">
             {!finishTrivia ? (
-              count < 100 && <p className="bold text-red-700">¡Incorrecto!</p>
+              count < 20 && <p className="bold text-red-700">¡Incorrecto!</p>
             ) : (
               <p className="bold text-green-700">¡Correcto!</p>
             )}

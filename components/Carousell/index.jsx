@@ -103,6 +103,10 @@ const Carousell = (props) => {
   const [stateCarousel, setStateCarousel] = useState(0);
   const [stateSide, setStateSide] = useState("left");
 
+  const [stateViewModule2, setStateViewModule2] = useState(false)
+  const [stateViewModule3, setStateViewModule3] = useState(false)
+  const [stateViewModule4, setStateViewModule4] = useState(false)
+
   const menuTimeline = useRef();
 
   const viewVideo = () => {
@@ -410,7 +414,7 @@ const Carousell = (props) => {
           index={stateCarousel}
           stateSide={stateSide}
         />
-        <View5
+     <View5
           viewVideo={viewVideo}
           toggleViewImages={toggleViewImages}
           toggleViewVacunas={toggleViewVacunas}
@@ -425,6 +429,7 @@ const Carousell = (props) => {
           index={stateCarousel}
           stateSide={stateSide}
         />
+        
         <ViewGeneral
           keyCarrousel={9}
           index={stateCarousel}

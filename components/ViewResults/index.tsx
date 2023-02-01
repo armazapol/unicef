@@ -34,6 +34,7 @@ const ViewResults = ({
   arrQuest,
 }: Props) => {
   const [dataTable, setDataTable] = useState<DataTable[] | []>([]);
+  const [totalScore, setTotalScore] = useState<number>(0);
   const { id: userId } = useSelector(selectCurrentUser);
   const extraState = useSelector(selectCurrentData);
   // const { data, error, isLoading } = useGetQuestScoreQuery({
@@ -41,7 +42,7 @@ const ViewResults = ({
   //   numberTrivia,
   // });
 
-  const [trigger, { isLoading: isTriggerLoading,  }] = useLazyGetQuestScoreQuery({
+  const [trigger, { isLoading: isTriggerLoading }] = useLazyGetQuestScoreQuery({
     // refetchOnMountOrArgChange: true,
     // refetchOnFocus:true,
   });
@@ -97,7 +98,7 @@ const ViewResults = ({
   };
 
   useEffect(() => {
-    setDataTable([])
+    setDataTable([]);
     const fetchData = async () => {
       for (const [index, value] of arrNumberQuest.entries()) {
         //  await getScoreQuest(numberQuest)
@@ -106,6 +107,13 @@ const ViewResults = ({
     };
     fetchData();
   }, [extraState]);
+
+  useEffect(() => {
+    if (dataTable.length === 5) {
+      const valor = dataTable.reduce((a, b) => a + b.score, 0);
+      setTotalScore(valor);
+    }
+  }, [dataTable]);
 
   return (
     <div
@@ -150,6 +158,17 @@ const ViewResults = ({
                 </div>
               );
             })}
+            {dataTable.length === 5 && (
+              <div>
+                {totalScore >= 80 ? (
+                  <h2>FELICIDADES, PASASTE EL MÓDULO</h2> 
+                ) : (
+                  <div className="bg-blue-900 rounded-md py-2 px-12 text-white font-bold text-md  lg:text-3xl cursor-pointer z-20 shadow-md ">
+                    VOLVER A DAR EL MÓDULO
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </div>
