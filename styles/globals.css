@@ -27,6 +27,12 @@
     --MilkyNiceClean: MilkyNiceClean, sans-serif;
   }
 
+  /*fix h screen in mobile*/
+
+  html,boby{
+    height: -webkit-fill-available;
+  }
+
   /* fonts */
   .font_BwModelica {
     font-family: var(--BwModelica);
