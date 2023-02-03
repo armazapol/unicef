@@ -1,0 +1,551 @@
+[
+  {
+    "type": "ViewInit"
+  },
+  {
+    "type": "ViewModule1"
+  },
+  {
+    "type": "ViewGeneral",
+    "numberTrivia": 1,
+    "moduleTrivia": "1",
+    "counter": 1,
+    "trivia": {
+      "pregunta": "La enfermedad por coronavirus (COVID-19) es una enfermedad infecciosa causada por:",
+      "respuestas": [
+        {
+          "correcta": false,
+          "respuesta": "El virus SARS-CoV-1"
+        },
+        {
+          "correcta": false,
+          "respuesta": "El virus VRS"
+        },
+        {
+          "correcta": true,
+          "respuesta": "El virus SARS-CoV-2"
+        },
+        {
+          "correcta": false,
+          "respuesta": "El virus MERS-CoV-2"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ViewGeneral",
+    "numberTrivia": 2,
+    "moduleTrivia": "1",
+    "counter": 2,
+    "trivia": {
+      "pregunta": "Es una variante del virus, dentro de la categoría de preocupación:",
+      "respuestas": [
+        {
+          "correcta": false,
+          "respuesta": "Variante Delta"
+        },
+        {
+          "correcta": false,
+          "respuesta": "Variante Gamma"
+        },
+        {
+          "correcta": false,
+          "respuesta": "Variante Epsilon"
+        },
+        {
+          "correcta": true,
+          "respuesta": "Variante Ómicron"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ViewGeneral",
+    "numberTrivia": 3,
+    "moduleTrivia": "1",
+    "counter": 3,
+    "trivia": {
+      "pregunta": "De los siguientes, cual no es un signo de alarma:",
+      "respuestas": [
+        {
+          "correcta": false,
+          "respuesta": "Dificultad para respirar"
+        },
+        {
+          "correcta": false,
+          "respuesta": "Fiebre persistente por más de 3 días"
+        },
+        {
+          "correcta": true,
+          "respuesta": "Dolor leve e intermitente en el pecho"
+        },
+        {
+          "correcta": false,
+          "respuesta": "Coloración azul de los labios (cianosis)"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ViewGeneral",
+    "numberTrivia": 4,
+    "moduleTrivia": "1",
+    "counter": 4,
+    "trivia": {
+      "pregunta": "Un paciente menor de 60 años, sin comorbilidades y vacunación completa, realizará aislamiento de salir positivo el resultado de COVID-19 por: ",
+      "respuestas": [
+        {
+          "correcta": true,
+          "respuesta": "7 días"
+        },
+        {
+          "correcta": false,
+          "respuesta": "5 días"
+        },
+        {
+          "correcta": false,
+          "respuesta": "10 días"
+        },
+        {
+          "correcta": false,
+          "respuesta": "14 días"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ViewGeneral",
+    "numberTrivia": 5,
+    "moduleTrivia": "1",
+    "counter": 5,
+    "trivia": {
+      "pregunta": "Son recomendaciones a seguir si debo realizar aislamiento en casa de tener COVID-19:",
+      "respuestas": [
+        {
+          "correcta": false,
+          "respuesta": "Salir con normalidad"
+        },
+        {
+          "correcta": false,
+          "respuesta": "Evitar usar mascarilla si tengo contacto con familiares"
+        },
+        {
+          "correcta": false,
+          "respuesta": "Evitar bañarme"
+        },
+        {
+          "correcta": true,
+          "respuesta": "Lavarme las manos con frecuencia, por un mínimo de 20 segundos"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ViewResult",
+    "arrNumberQuest": [1, 2, 3, 4, 5],
+    "arrQuest": [
+      "La enfermedad por coronavirus (COVID-19) es una enfermedad infecciosa causada por",
+      "Es una variante del virus, dentro de la categoría de preocupación",
+      "De los siguientes, cual no es un signo de alarma",
+      "Un paciente menor de 60 años, sin comorbilidades y vacunación completa, realizará aislamiento de salir positivo el resultado de COVID-19 por",
+      "Son recomendaciones a seguir si debo realizar aislamiento en casa de tener COVID-19"
+    ],
+    "moduleTrivia": "1"
+  },
+  {
+    "type": "ViewModule2"
+  },
+  {
+    "type": "ViewGeneral",
+    "numberTrivia": 6,
+    "moduleTrivia": "2",
+    "counter": 1,
+    "trivia": {
+      "pregunta": "Los principales tipos de vacunas disponibles contra la COVID-19 son, excepto:",
+      "respuestas": [
+        {
+          "correcta": false,
+          "respuesta": "Vacuna - virus inactivado"
+        },
+        {
+          "correcta": false,
+          "respuesta": "Vacuna - ARM mensajero"
+        },
+        {
+          "correcta": false,
+          "respuesta": "Vacuna con vector vírico"
+        },
+        {
+          "correcta": true,
+          "respuesta": "Vacuna - ADN mensajero"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ViewGeneral",
+    "numberTrivia": 7,
+    "moduleTrivia": "2",
+    "counter": 2,
+    "trivia": {
+      "pregunta": "Son efectos de leves secundarios a recibir la vacuna contra COVID-19:",
+      "respuestas": [
+        {
+          "correcta": false,
+          "respuesta": "Febrícula"
+        },
+        {
+          "correcta": false,
+          "respuesta": "Dolores en el sitio de inyección"
+        },
+        {
+          "correcta": false,
+          "respuesta": "Malestar general"
+        },
+        {
+          "correcta": true,
+          "respuesta": "Dificultad para respirar"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ViewGeneral",
+    "numberTrivia": 8,
+    "moduleTrivia": "2",
+    "counter": 3,
+    "trivia": {
+      "pregunta": "Una gestante, con más de 12 semanas de gestación, ¿puede recibir la vacuna contra COVID-19?",
+      "respuestas": [
+        {
+          "correcta": true,
+          "respuesta": "Sí"
+        },
+        {
+          "correcta": false,
+          "respuesta": "No"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ViewGeneral",
+    "numberTrivia": 9,
+    "moduleTrivia": "2",
+    "counter": 4,
+    "trivia": {
+      "pregunta": "Se puede recibir la cuarta dosis contra la COVID-19 si:",
+      "respuestas": [
+        {
+          "correcta": false,
+          "respuesta": "Si tienes 18 años a más y 5 meses desde tu tercera dosis."
+        },
+        {
+          "correcta": false,
+          "respuesta": "Si tienes 60 años a más y 4 meses desde tu tercera dosis."
+        },
+        {
+          "correcta": false,
+          "respuesta": "Si eres paciente inmunosuprimido y tienes 5 meses desde tu tercera dosis."
+        },
+        {
+          "correcta": true,
+          "respuesta": "Todas las anteriores"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ViewGeneral",
+    "numberTrivia": 10,
+    "moduleTrivia": "2",
+    "counter": 5,
+    "trivia": {
+      "pregunta": "Una lactante, ¿puede recibir la vacuna contra COVID-19?",
+      "respuestas": [
+        {
+          "correcta": true,
+          "respuesta": "Sí"
+        },
+        {
+          "correcta": false,
+          "respuesta": "No"
+        }
+      ]
+    }
+  },
+
+  {
+    "type": "ViewResult",
+    "arrNumberQuest": [6, 7, 8, 9, 10],
+    "arrQuest": [
+      "Los principales tipos de vacunas disponibles contra la COVID-19 son, excepto",
+      "Son efectos de leves secundarios a recibir la vacuna contra COVID-19",
+      "Una gestante, con más de 12 semanas de gestación, ¿puede recibir la vacuna contra COVID-19?",
+      "Se puede recibir la cuarta dosis contra la COVID-19 si",
+      "Una lactante, ¿puede recibir la vacuna contra COVID-19?"
+    ],
+    "moduleTrivia": "2"
+  },
+  {
+    "type": "ViewModule3"
+  },
+  {
+    "type": "ViewGeneral",
+    "numberTrivia": 11,
+    "moduleTrivia": "3",
+    "counter": 1,
+    "trivia": {
+      "pregunta": "El Esquema nacional de vacunación actualizado cuenta con:",
+      "respuestas": [
+        {
+          "correcta": false,
+          "respuesta": "17 vacunas"
+        },
+        {
+          "correcta": false,
+          "respuesta": "19 vacunas"
+        },
+        {
+          "correcta": false,
+          "respuesta": "15 vacunas"
+        },
+        {
+          "correcta": true,
+          "respuesta": "18 vacunas"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ViewGeneral",
+    "numberTrivia": 12,
+    "moduleTrivia": "3",
+    "counter": 2,
+    "trivia": {
+      "pregunta": "Las nuevas vacunas incluídas en el Esquema nacional de vacunación son:",
+      "respuestas": [
+        {
+          "correcta": false,
+          "respuesta": "Hepatitis B y TBC"
+        },
+        {
+          "correcta": false,
+          "respuesta": "COVID-19 y hepatitis A"
+        },
+        {
+          "correcta": true,
+          "respuesta": "Hepatitis A y VPH en niños"
+        },
+        {
+          "correcta": false,
+          "respuesta": "VPH en niños y COVID-19"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ViewGeneral",
+    "numberTrivia": 13,
+    "moduleTrivia": "3",
+    "counter": 3,
+    "trivia": {
+      "pregunta": "La vacuna contra el Virus de Papiloma Humano (VPH) previenen:",
+      "respuestas": [
+        {
+          "correcta": false,
+          "respuesta": "Cáncer cervical causado por el virus del papiloma humano (VPH) tipos 16 y 18"
+        },
+        {
+          "correcta": false,
+          "respuesta": "Neoplasia intraepitelial cervical (NIC) grado I y II"
+        },
+        {
+          "correcta": false,
+          "respuesta": "Verrugas genitales causadas por el VPH 6 y 11"
+        },
+        {
+          "correcta": true,
+          "respuesta": "Todas las anteriores"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ViewGeneral",
+    "numberTrivia": 14,
+    "moduleTrivia": "3",
+    "counter": 4,
+    "trivia": {
+      "pregunta": "No es un síntoma de la Hepatitis A",
+      "respuestas": [
+        {
+          "correcta": false,
+          "respuesta": "Fiebre"
+        },
+        {
+          "correcta": false,
+          "respuesta": "Pérdida del apetito"
+        },
+        {
+          "correcta": false,
+          "respuesta": "Vómitos"
+        },
+        {
+          "correcta": true,
+          "respuesta": "Ojos rojos"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ViewGeneral",
+    "numberTrivia": 15,
+    "moduleTrivia": "3",
+    "counter": 5,
+    "trivia": {
+      "pregunta": "La complicación más temida de la hepatitis A es:",
+      "respuestas": [
+        {
+          "correcta": true,
+          "respuesta": "Hepatitis fulminante"
+        },
+        {
+          "correcta": false,
+          "respuesta": "Cirrosis"
+        },
+        {
+          "correcta": false,
+          "respuesta": "Anemia"
+        },
+        {
+          "correcta": false,
+          "respuesta": "Cáncer "
+        }
+      ]
+    }
+  },
+  {
+    "type": "ViewResult",
+    "arrNumberQuest": [11, 12, 13, 14, 15],
+    "arrQuest": [
+      "El Esquema nacional de vacunación actualizado cuenta con",
+      "Las nuevas vacunas incluídas en el Esquema nacional de vacunación son",
+      "La vacuna contra el Virus de Papiloma Humano (VPH) previenen",
+      "No es un síntoma de la Hepatitis A",
+      "La complicación más temida de la hepatitis A es"
+    ],
+    "moduleTrivia": "3"
+  },
+  {
+    "type": "ViewModule4"
+  },
+  {
+    "type": "ViewGeneral",
+    "numberTrivia": 16,
+    "moduleTrivia": "4",
+    "counter": 1,
+    "trivia": {
+      "pregunta": "¿Debería vacunarme si ya he pasado la COVID-19?",
+      "respuestas": [
+        {
+          "correcta": true,
+          "respuesta": "Sí"
+        },
+        {
+          "correcta": false,
+          "respuesta": "No"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ViewGeneral",
+    "numberTrivia": 17,
+    "moduleTrivia": "4",
+    "counter": 2,
+    "trivia": {
+      "pregunta": "¿Pueden las vacunas contra la COVID-19 afectar la fertilidad?",
+      "respuestas": [
+        {
+          "correcta": false,
+          "respuesta": "Sí"
+        },
+        {
+          "correcta": true,
+          "respuesta": "No"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ViewGeneral",
+    "numberTrivia": 18,
+    "moduleTrivia": "4",
+    "counter": 3,
+    "trivia": {
+      "pregunta": "El uso prolongado de las mascarillas, cuando se llevan puestas correctamente, NO PROVOCA intoxicación por CO2 ni hipoxia",
+      "respuestas": [
+        {
+          "correcta": false,
+          "respuesta": "Sí"
+        },
+        {
+          "correcta": true,
+          "respuesta": "No"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ViewGeneral",
+    "numberTrivia": 19,
+    "moduleTrivia": "4",
+    "counter": 4,
+    "trivia": {
+      "pregunta": "El nuevo coronavirus NO PUEDE transmitirse a través de picaduras de mosquitos",
+      "respuestas": [
+        {
+          "correcta": false,
+          "respuesta": "Sí"
+        },
+        {
+          "correcta": true,
+          "respuesta": "No"
+        }
+      ]
+    }
+  },
+  {
+    "type": "ViewGeneral",
+    "numberTrivia": 20,
+    "moduleTrivia": "4",
+    "counter": 5,
+    "trivia": {
+      "pregunta": "¿Puedo dejar de tomar precauciones después de haberme vacunado?",
+      "respuestas": [
+        {
+          "correcta": false,
+          "respuesta": "Sí"
+        },
+        {
+          "correcta": true,
+          "respuesta": "No"
+        }
+      ]
+    }
+  },
+
+  {
+    "type": "ViewResult",
+    "arrNumberQuest": [16, 17, 18, 19, 20],
+    "arrQuest": [
+      "¿Debería vacunarme si ya he pasado la COVID-19?",
+      "¿Pueden las vacunas contra la COVID-19 afectar la fertilidad?",
+      "El uso prolongado de las mascarillas, cuando se llevan puestas correctamente, NO PROVOCA intoxicación por CO2 ni hipoxia",
+      "El nuevo coronavirus NO PUEDE transmitirse a través de picaduras de mosquitos",
+      "¿Puedo dejar de tomar precauciones después de haberme vacunado?"
+    ],
+    "moduleTrivia": "4"
+  }
+]

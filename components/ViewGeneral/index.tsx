@@ -13,12 +13,15 @@ import {
   // selectCurrentToken,
 } from "../../pages/api/features/auth/authSlice";
 import { setUpdateScore } from "../../pages/api/features/extra/extraSlice";
+import { selectCurrentData2 } from "../../pages/api/features/extra/extraSlice";
 // import logo from "../../public/img/view1/logo.png";
 // import Button from "../commons/button/Button";
 // import Loading from "../../components/Loading/Loading";
 import TriviaOpcion from "../commons/TriviaOpcion";
 import quest from "../../public/img/trivia/quest.png";
 import background from "../../public/img/trivia/fondo.png";
+import { useRouter } from "next/router";
+import { logOut } from "./../../pages/api/features/auth/authSlice";
 
 type Props = {
   keyCarrousel: number;
@@ -63,15 +66,18 @@ const ViewGeneral = ({
 Props) => {
   const [count, setCount] = useState(TotalPuntaje);
   const [finishTrivia, setFinishTrivia] = useState(false);
+  const router = useRouter();
   // const [stateViewComplete, setstateViewComplete] = useState(true)
 
   const dispatch = useDispatch();
+  const extraState2 = useSelector(selectCurrentData2);
   const { id: userId } = useSelector(selectCurrentUser);
   const [
     updateScore,
     { isLoading: isLoadingUpdateScore, error: errorUpdateScore },
   ] = useUpdateScoreMutation();
-  const { data, error, isLoading } = useGetQuestScoreQuery({
+
+  const { data, error, isLoading, isFetching } = useGetQuestScoreQuery({
     userId,
     numberTrivia,
   });
@@ -135,54 +141,72 @@ Props) => {
       userId: userId,
       numberTrivia: numberTrivia,
       data: {
-        moduleNumber: "",
+        moduleNumber: moduleTrivia,
         value: count,
       },
     }).unwrap();
   };
 
-  useEffect(() => {
-    // console.log(keyCarrousel, index)
-    if (keyCarrousel === index) {
-      if (stateSide === "left") {
-        gsap.fromTo(
-          ".animate_background",
-          { backgroundPosition: `40%` },
-          { backgroundPosition: 0, duration: 2 }
-        );
-      } else {
-        gsap.fromTo(
-          ".animate_background",
-          { backgroundPosition: `-40%` },
-          { backgroundPosition: 0, duration: 2 }
-        );
-      }
-    }
-    if (keyCarrousel + 1 === index) {
-      gsap.to(".animate_background", {
-        backgroundPosition: "10%",
-        duration: 2,
-      });
-    }
-    if (keyCarrousel - 1 === index) {
-      gsap.to(".animate_background", {
-        backgroundPosition: "10%",
-        duration: 2,
-      });
-    }
-  }, [index]);
+  const logoutSession = () => {
+    router.push("/login");
+    dispatch(logOut(null));
+  };
+
+  // useEffect(() => {
+  //   // console.log(keyCarrousel, index)
+  //   if (keyCarrousel === index) {
+  //     if (stateSide === "left") {
+  //       gsap.fromTo(
+  //         ".animate_background",
+  //         { backgroundPosition: `40%` },
+  //         { backgroundPosition: 0, duration: 2 }
+  //       );
+  //     } else {
+  //       gsap.fromTo(
+  //         ".animate_background",
+  //         { backgroundPosition: `-40%` },
+  //         { backgroundPosition: 0, duration: 2 }
+  //       );
+  //     }
+  //   }
+  //   if (keyCarrousel + 1 === index) {
+  //     gsap.to(".animate_background", {
+  //       backgroundPosition: "10%",
+  //       duration: 2,
+  //     });
+  //   }
+  //   if (keyCarrousel - 1 === index) {
+  //     gsap.to(".animate_background", {
+  //       backgroundPosition: "10%",
+  //       duration: 2,
+  //     });
+  //   }
+  // }, [index]);
   useEffect(() => {
     if (finishTrivia) {
       addScore(count);
       dispatch(setUpdateScore(null));
+      setFinishTrivia(false)
     }
   }, [finishTrivia]);
+
+  useEffect(()=>{
+   
+    if(!isLoading){
+      const {value} = data
+      if(typeof value === 'undefined') logoutSession()
+    }
+    // console.log(data)
+  },[])
+
+  // useEffect(()=>{
+  //   setFinishTrivia(false)
+  // },[extraState2])
 
   return (
     <div
       className={`w-full h-screen flex items-center justify-center z-10 bg-fixed bg-no-repeat animate_background relative`}
     >
-      {/* {isLoading && <Loading text="Cargando.." />} */}
       <Image
         className="object-cover"
         alt="background"
@@ -196,7 +220,7 @@ Props) => {
         </p>
       </div>
       {/* {!isLoading && data.value === 0 ? ( */}
-      {!isLoading && data.value === 0 ? (
+      {!isLoading && data?.value === 0 ? (
         <div className="flex flex-col z-20 relative items-center w-8/12 lg:w-[40rem]  ">
           <div className="relative w-full flex items-center justify-center ">
             <Image className="" alt="quest" src={quest} placeholder="blur" />
@@ -209,7 +233,8 @@ Props) => {
             {!finishTrivia ? (
               count < 20 && <p className="bold text-red-700">¡Incorrecto!</p>
             ) : (
-              <p className="bold text-green-700">¡Correcto!</p>
+              // <p className="bold text-green-700">¡Correcto!</p>
+              ""
             )}
           </div>
           <ul className="grid grid-cols-2 lg:grid-cols-1 gap-2 w-full ">

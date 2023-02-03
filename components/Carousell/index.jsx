@@ -2,6 +2,7 @@ import React, { useEffect, useLayoutEffect, useState, useRef } from "react";
 import "react-responsive-carousel/lib/styles/carousel.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import { gsap } from "gsap";
+import slides from "./../../utils/SlidesCarrousel/slides.json";
 
 import View1 from "../views/View1";
 import Modal from "../Modal";
@@ -103,9 +104,9 @@ const Carousell = (props) => {
   const [stateCarousel, setStateCarousel] = useState(0);
   const [stateSide, setStateSide] = useState("left");
 
-  const [stateViewModule2, setStateViewModule2] = useState(false)
-  const [stateViewModule3, setStateViewModule3] = useState(false)
-  const [stateViewModule4, setStateViewModule4] = useState(false)
+  const [stateViewModule2, setStateViewModule2] = useState(false);
+  const [stateViewModule3, setStateViewModule3] = useState(false);
+  const [stateViewModule4, setStateViewModule4] = useState(false);
 
   const menuTimeline = useRef();
 
@@ -186,6 +187,15 @@ const Carousell = (props) => {
   };
   const toggleViewInit = () => {
     setStateModalInit(!stateModalInit);
+  };
+  const activateView2 = () => {
+    setStateViewModule2(true);
+  };
+  const activateView3 = () => {
+    setStateViewModule3(true);
+  };
+  const activateView4 = () => {
+    setStateViewModule4(true);
   };
 
   useEffect(() => {
@@ -339,13 +349,243 @@ const Carousell = (props) => {
         // stopOnHover={false}
         className="rounded-3xl text-white carousel1"
       >
-        <ViewInit
+        {/* {slides.map((data) => {
+          if (data.type === "ViewInit")
+            return (
+              <ViewInit
+                keyCarrousel={0}
+                toggleViewInit={toggleViewInit}
+                index={stateCarousel}
+                stateSide={stateSide}
+              />
+            );
+        }).filter(x => x !== null)} */}
+        {slides
+          .map((data, index) => {
+            if (data.type === "ViewInit")
+              return (
+                <ViewInit
+                key={index}
+                  keyCarrousel={index}
+                  toggleViewInit={toggleViewInit}
+                  index={stateCarousel}
+                  stateSide={stateSide}
+                />
+              );
+            if (data.type === "ViewModule1") {
+              return (
+                <View1
+                key={index}
+                  toggleViewSintomas={toggleViewSintomas}
+                  toggleViewImages={toggleViewImages}
+                  toggleViewAntecedentes={toggleViewAntecedentes}
+                  toggleViewDiagnostico={toggleViewDiagnostico}
+                  toggleViewAlarmaPrevencion={toggleViewAlarmaPrevencion}
+                  toggleViewVarianteCovid={toggleViewVarianteCovid}
+                  keyCarrousel={index}
+                  index={stateCarousel}
+                  stateSide={stateSide}
+                />
+              );
+            }
+            if (data.type === "ViewGeneral" && data.moduleTrivia === "1") {
+              return (
+                <ViewGeneral
+                key={index}
+                  keyCarrousel={index}
+                  index={stateCarousel}
+                  stateSide={stateSide}
+                  trivia={data.trivia}
+                  numberTrivia={data.numberTrivia}
+                  moduleTrivia={data.moduleTrivia}
+                  counter={data.counter}
+                />
+              );
+            }
+            if (data.type === "ViewResult" && data.moduleTrivia === "1") {
+              return (
+                <ViewResults
+                  key={index}
+                  keyCarrousel={index}
+                  arrNumberQuest={data.arrNumberQuest}
+                  arrQuest={data.arrQuest}
+                  index={stateCarousel}
+                  stateSide={stateSide}
+                  activateNewView={activateView2}
+                  moduleTrivia={data.moduleTrivia}
+                />
+              );
+            }
+            if (data.type === "ViewModule2" && stateViewModule2) {
+              return (
+                <View5
+                key={index}
+                  viewVideo={viewVideo}
+                  toggleViewImages={toggleViewImages}
+                  toggleViewVacunas={toggleViewVacunas}
+                  toggleViewInmunidadColectiva={toggleViewInmunidadColectiva}
+                  toggleViewTiposVacunas={toggleViewTiposVacunas}
+                  toggleViewInocuidadEfectividad={
+                    toggleViewInocuidadEfectividad
+                  }
+                  toggleViewEmbarazoLactancia={toggleViewEmbarazoLactancia}
+                  toggleViewEfectosSecundarios={toggleViewEfectosSecundarios}
+                  toggleViewAvanceVacunacion={toggleViewAvanceVacunacion}
+                  toggleViewConsecuencias={toggleViewConsecuencias}
+                  keyCarrousel={index}
+                  index={stateCarousel}
+                  stateSide={stateSide}
+                />
+              );
+            }
+            if (
+              data.type === "ViewGeneral" &&
+              data.moduleTrivia === "2" &&
+              stateViewModule2
+            ) {
+              return (
+                <ViewGeneral
+                key={index}
+                  keyCarrousel={index}
+                  index={stateCarousel}
+                  stateSide={stateSide}
+                  trivia={data.trivia}
+                  numberTrivia={data.numberTrivia}
+                  moduleTrivia={data.moduleTrivia}
+                  counter={data.counter}
+                />
+              );
+            }
+            if (
+              data.type === "ViewResult" &&
+              data.moduleTrivia === "2" &&
+              stateViewModule2
+            ) {
+              return (
+                <ViewResults
+                key={index}
+                  keyCarrousel={index}
+                  arrNumberQuest={data.arrNumberQuest}
+                  arrQuest={data.arrQuest}
+                  index={stateCarousel}
+                  stateSide={stateSide}
+                  activateNewView={activateView3}
+                  moduleTrivia={data.moduleTrivia}
+                />
+              );
+            }
+            if (data.type === "ViewModule3" && stateViewModule3) {
+              return (
+                <View15
+                key={index}
+                  toggleViewNuevasVacunas={toggleViewNuevasVacunas}
+                  toggleViewVPH={toggleViewVPH}
+                  toggleViewVacunacionHepatitisA={
+                    toggleViewVacunacionHepatitisA
+                  }
+                  keyCarrousel={index}
+                  index={stateCarousel}
+                  stateSide={stateSide}
+                />
+              );
+            }
+            if (
+              data.type === "ViewGeneral" &&
+              data.moduleTrivia === "3" &&
+              stateViewModule3
+            ) {
+              return (
+                <ViewGeneral
+                key={index}
+                  keyCarrousel={index}
+                  index={stateCarousel}
+                  stateSide={stateSide}
+                  trivia={data.trivia}
+                  numberTrivia={data.numberTrivia}
+                  moduleTrivia={data.moduleTrivia}
+                  counter={data.counter}
+                />
+              );
+            }
+            if (
+              data.type === "ViewResult" &&
+              data.moduleTrivia === "3" &&
+              stateViewModule3
+            ) {
+              return (
+                <ViewResults
+                key={index}
+                  keyCarrousel={index}
+                  arrNumberQuest={data.arrNumberQuest}
+                  arrQuest={data.arrQuest}
+                  index={stateCarousel}
+                  stateSide={stateSide}
+                  activateNewView={activateView4}
+                  moduleTrivia={data.moduleTrivia}
+                />
+              );
+            }
+            if (data.type === "ViewModule4" && stateViewModule4) {
+              return (
+                <View4
+                key={index}
+                  toggleViewQuestSlide1={toggleViewQuestSlide1}
+                  toggleViewQuestSlide2={toggleViewQuestSlide2}
+                  toggleViewQuestSlide3={toggleViewQuestSlide3}
+                  toggleViewQuestSlide4={toggleViewQuestSlide4}
+                  toggleViewQuestSlide5={toggleViewQuestSlide5}
+                  toggleViewQuestSlide6={toggleViewQuestSlide6}
+                  keyCarrousel={index}
+                  index={stateCarousel}
+                  stateSide={stateSide}
+                />
+              );
+            }
+            if (
+              data.type === "ViewGeneral" &&
+              data.moduleTrivia === "4" &&
+              stateViewModule4
+            ) {
+              return (
+                <ViewGeneral
+                key={index}
+                  keyCarrousel={index}
+                  index={stateCarousel}
+                  stateSide={stateSide}
+                  trivia={data.trivia}
+                  numberTrivia={data.numberTrivia}
+                  moduleTrivia={data.moduleTrivia}
+                  counter={data.counter}
+                />
+              );
+            }
+            if (
+              data.type === "ViewResult" &&
+              data.moduleTrivia === "4" &&
+              stateViewModule4
+            ) {
+              return (
+                <ViewResults
+                key={index}
+                  keyCarrousel={index}
+                  arrNumberQuest={data.arrNumberQuest}
+                  arrQuest={data.arrQuest}
+                  index={stateCarousel}
+                  stateSide={stateSide}
+                  activateNewView={activateView4}
+                  moduleTrivia={data.moduleTrivia}
+                />
+              );
+            } else return null;
+          })
+          .filter((x) => x !== null)}
+        {/* <ViewInit
           keyCarrousel={0}
           toggleViewInit={toggleViewInit}
           index={stateCarousel}
           stateSide={stateSide}
-        />
-        <View1
+        /> */}
+        {/* <View1
           toggleViewSintomas={toggleViewSintomas}
           toggleViewImages={toggleViewImages}
           toggleViewAntecedentes={toggleViewAntecedentes}
@@ -355,8 +595,8 @@ const Carousell = (props) => {
           keyCarrousel={1}
           index={stateCarousel}
           stateSide={stateSide}
-        />
-        <ViewGeneral
+        /> */}
+        {/* <ViewGeneral
           keyCarrousel={2}
           index={stateCarousel}
           stateSide={stateSide}
@@ -400,8 +640,8 @@ const Carousell = (props) => {
           numberTrivia={5}
           moduleTrivia="1"
           counter={5}
-        />
-        <ViewResults
+        /> */}
+        {/* <ViewResults
           keyCarrousel={7}
           arrNumberQuest={[1, 2, 3, 4, 5]}
           arrQuest={[
@@ -414,7 +654,7 @@ const Carousell = (props) => {
           index={stateCarousel}
           stateSide={stateSide}
         />
-     <View5
+        <View5
           viewVideo={viewVideo}
           toggleViewImages={toggleViewImages}
           toggleViewVacunas={toggleViewVacunas}
@@ -428,9 +668,9 @@ const Carousell = (props) => {
           keyCarrousel={8}
           index={stateCarousel}
           stateSide={stateSide}
-        />
-        
-        <ViewGeneral
+        /> */}
+
+        {/* <ViewGeneral
           keyCarrousel={9}
           index={stateCarousel}
           stateSide={stateSide}
@@ -565,7 +805,6 @@ const Carousell = (props) => {
           index={stateCarousel}
           stateSide={stateSide}
         />
-        {/* <View2 keyCarrousel={1} index={stateCarousel} stateSide={stateSide} />    */}
         <ViewGeneral
           keyCarrousel={23}
           index={stateCarousel}
@@ -623,7 +862,7 @@ const Carousell = (props) => {
           ]}
           index={stateCarousel}
           stateSide={stateSide}
-        />
+        /> */}
       </Carousel>
       <MenuBurguer stateHamburger={stateHamburger} toggleMenu={toggleMenu} />
     </div>
