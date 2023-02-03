@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 
 import { store } from "./api/store";
 
+
 const persistor = persistStore(store);
 
 function MyApp({ Component, pageProps }: AppProps) {
