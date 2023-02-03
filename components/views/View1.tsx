@@ -64,7 +64,7 @@ const View1 = ({
     }
   }, [index]);
   return (
-    <div className="w-full h-screen grid grid-cols-3 grid-rows-3 z-20 gap-1 border-[0.25rem] ">
+    <div className="w-full fullvh lg:h-screen grid grid-cols-3 grid-rows-3 z-20 gap-1 border-[0.25rem] ">
       <div className="row-span-2 col-span-2 flex items-center justify-center  relative">
         <Image
           className="object-cover"
