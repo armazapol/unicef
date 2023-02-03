@@ -60,7 +60,7 @@ const Login = () => {
     }
   };
   return (
-    <div className="h-screen flex items-center justify-center bg-white text-black">
+    <div className="fullvh lg:h-screen flex items-center justify-center bg-white text-black">
       <div className="absolute h-1/2 top-0 w-full bg-black">
         <Image
           className="object-cover"

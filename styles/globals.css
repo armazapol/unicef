@@ -101,4 +101,7 @@
   .w_loop{
     width: 2rem !important;
   }
+  .fullvh{
+    height: calc(var(--vh, 1vh) * 100);
+  }
 }
