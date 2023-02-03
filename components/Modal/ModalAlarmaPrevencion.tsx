@@ -155,7 +155,7 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
             <h3 className=" text-base lg:text-xl text-center font-semibold text-white">
               Flujo de Aislamiento
             </h3>
-            <div className="w-7/12 lg:w-10/12 relative group">
+            <div className="w-7/12 lg:w-[50rem] relative group">
               <Image
                 className="object-cover"
                 alt="img2"
@@ -223,7 +223,7 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
               Flujo de Aislamiento de personas que habitan con personas
               positivas a COVID-19
             </h3>
-            <div className="w-6/12 lg:w-10/12 relative group">
+            <div className="w-6/12 lg:w-[50rem] relative group">
               <Image
                 className="object-cover"
                 alt="img2"
@@ -277,7 +277,7 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
                 </ul>
               </div>
             </div>
-            <div className="w-[8rem] lg:w-[20rem] relative group">
+            <div className="w-[8rem] lg:w-[25rem] relative group">
               <Image
                 className="object-cover"
                 alt="img2"

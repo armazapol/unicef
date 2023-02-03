@@ -32,26 +32,26 @@ import ModalVacunacionHepatitisA from "../Modal/ModalVacunacionHepatitisA";
 import View4 from "../views/View4";
 
 //trivia
-import trivia1 from "../../utils/DataTrivia/module1/trivia1.json";
-import trivia2 from "../../utils/DataTrivia/module1/trivia2.json";
-import trivia3 from "../../utils/DataTrivia/module1/trivia3.json";
-import trivia4 from "../../utils/DataTrivia/module1/trivia4.json";
-import trivia5 from "../../utils/DataTrivia/module1/trivia5.json";
-import trivia6 from "../../utils/DataTrivia/module2/trivia1.json";
-import trivia7 from "../../utils/DataTrivia/module2/trivia2.json";
-import trivia8 from "../../utils/DataTrivia/module2/trivia3.json";
-import trivia9 from "../../utils/DataTrivia/module2/trivia4.json";
-import trivia10 from "../../utils/DataTrivia/module2/trivia5.json";
-import trivia11 from "../../utils/DataTrivia/module3/trivia1.json";
-import trivia12 from "../../utils/DataTrivia/module3/trivia2.json";
-import trivia13 from "../../utils/DataTrivia/module3/trivia3.json";
-import trivia14 from "../../utils/DataTrivia/module3/trivia4.json";
-import trivia15 from "../../utils/DataTrivia/module3/trivia5.json";
-import trivia16 from "../../utils/DataTrivia/module4/trivia1.json";
-import trivia17 from "../../utils/DataTrivia/module4/trivia2.json";
-import trivia18 from "../../utils/DataTrivia/module4/trivia3.json";
-import trivia19 from "../../utils/DataTrivia/module4/trivia4.json";
-import trivia20 from "../../utils/DataTrivia/module4/trivia5.json";
+// import trivia1 from "../../utils/DataTrivia/module1/trivia1.json";
+// import trivia2 from "../../utils/DataTrivia/module1/trivia2.json";
+// import trivia3 from "../../utils/DataTrivia/module1/trivia3.json";
+// import trivia4 from "../../utils/DataTrivia/module1/trivia4.json";
+// import trivia5 from "../../utils/DataTrivia/module1/trivia5.json";
+// import trivia6 from "../../utils/DataTrivia/module2/trivia1.json";
+// import trivia7 from "../../utils/DataTrivia/module2/trivia2.json";
+// import trivia8 from "../../utils/DataTrivia/module2/trivia3.json";
+// import trivia9 from "../../utils/DataTrivia/module2/trivia4.json";
+// import trivia10 from "../../utils/DataTrivia/module2/trivia5.json";
+// import trivia11 from "../../utils/DataTrivia/module3/trivia1.json";
+// import trivia12 from "../../utils/DataTrivia/module3/trivia2.json";
+// import trivia13 from "../../utils/DataTrivia/module3/trivia3.json";
+// import trivia14 from "../../utils/DataTrivia/module3/trivia4.json";
+// import trivia15 from "../../utils/DataTrivia/module3/trivia5.json";
+// import trivia16 from "../../utils/DataTrivia/module4/trivia1.json";
+// import trivia17 from "../../utils/DataTrivia/module4/trivia2.json";
+// import trivia18 from "../../utils/DataTrivia/module4/trivia3.json";
+// import trivia19 from "../../utils/DataTrivia/module4/trivia4.json";
+// import trivia20 from "../../utils/DataTrivia/module4/trivia5.json";
 import ModalQuestSlide1 from "../Modal/ModalQuestSlide1";
 import ModalQuestSlide2 from "../Modal/ModalQuestSlide2";
 import ModalQuestSlide3 from "../Modal/ModalQuestSlide3";
@@ -61,15 +61,17 @@ import ModalQuestSlide6 from "../Modal/ModalQuestSlide6";
 import ViewResults from "../ViewResults";
 import ViewInit from "../ViewInit";
 import ModalInit from "../Modal/Modalnit";
+import ModalSignosAlarma from "../Modal/ModalSignosAlarma";
 
 const Carousell = (props) => {
   // const [stateModalVideo, setStateModalVideo] = useState<boolean>(false);
   // const [stateModalImages, setStateModalImages] = useState<boolean>(false);
   // const [stateMenu, setStateMenu] = useState<boolean>(false);
   // const [stateHamburger, setStateHamburger] = useState<boolean>(false);
-  const [stateModalVideo, setStateModalVideo] = useState(false);
-  const [stateModalImages, setStateModalImages] = useState(false);
+  // const [stateModalVideo, setStateModalVideo] = useState(false);
+  // const [stateModalImages, setStateModalImages] = useState(false);
   const [stateModalAntecedentes, setStateModalAntecedentes] = useState(false);
+  const [stateModalSignosAlarma, setStateModalSignosAlarma] = useState(false);
   const [stateModalDiagnostico, setStateModalDiagnostico] = useState(false);
   const [stateModalAlarmaPrevencion, setStateModalAlarmaPrevencion] =
     useState(false);
@@ -99,7 +101,6 @@ const Carousell = (props) => {
   const [stateModalQuestSlide5, setStateModalQuestSlide5] = useState(false);
   const [stateModalQuestSlide6, setStateModalQuestSlide6] = useState(false);
   const [stateModalInit, setStateModalInit] = useState(false);
-  // const [stateMenu, setStateMenu] = useState(false);
   const [stateHamburger, setStateHamburger] = useState(false);
   const [stateCarousel, setStateCarousel] = useState(0);
   const [stateSide, setStateSide] = useState("left");
@@ -110,21 +111,15 @@ const Carousell = (props) => {
 
   const menuTimeline = useRef();
 
-  const viewVideo = () => {
-    setStateModalVideo(!stateModalVideo);
-  };
-
-  const toggleViewImages = () => {
-    setStateModalImages(!stateModalImages);
-  };
-
   const toggleViewAntecedentes = () => {
     setStateModalAntecedentes(!stateModalAntecedentes);
   };
   const toggleViewDiagnostico = () => {
     setStateModalDiagnostico(!stateModalDiagnostico);
   };
-
+  const toggleViewSignosAlarma = () => {
+    setStateModalSignosAlarma(!stateModalSignosAlarma);
+  };
   const toggleViewAlarmaPrevencion = () => {
     setStateModalAlarmaPrevencion(!stateModalAlarmaPrevencion);
   };
@@ -237,10 +232,13 @@ const Carousell = (props) => {
 
   return (
     <div {...props} className="relative overflow-hidden">
-      {stateModalVideo && <Modal viewVideo={viewVideo} />}
-      {stateModalImages && <ViewImages toggleViewImages={toggleViewImages} />}
+      {/* {stateModalVideo && <Modal viewVideo={viewVideo} />}
+      {stateModalImages && <ViewImages toggleViewImages={toggleViewImages} />} */}
       {stateModalAntecedentes && (
         <ModalAntecedentes toggleViewAntecedentes={toggleViewAntecedentes} />
+      )}
+          {stateModalSignosAlarma && (
+        <ModalSignosAlarma toggleViewSignosAlarma={toggleViewSignosAlarma} />
       )}
       {stateModalDiagnostico && (
         <ModalDiagnostico toggleViewDiagnostico={toggleViewDiagnostico} />
@@ -377,7 +375,7 @@ const Carousell = (props) => {
                 <View1
                 key={index}
                   toggleViewSintomas={toggleViewSintomas}
-                  toggleViewImages={toggleViewImages}
+                  toggleViewSignosAlarma={toggleViewSignosAlarma}
                   toggleViewAntecedentes={toggleViewAntecedentes}
                   toggleViewDiagnostico={toggleViewDiagnostico}
                   toggleViewAlarmaPrevencion={toggleViewAlarmaPrevencion}
@@ -420,8 +418,6 @@ const Carousell = (props) => {
               return (
                 <View5
                 key={index}
-                  viewVideo={viewVideo}
-                  toggleViewImages={toggleViewImages}
                   toggleViewVacunas={toggleViewVacunas}
                   toggleViewInmunidadColectiva={toggleViewInmunidadColectiva}
                   toggleViewTiposVacunas={toggleViewTiposVacunas}

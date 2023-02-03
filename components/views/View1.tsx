@@ -18,6 +18,7 @@ type Props = {
   toggleViewDiagnostico: () => void;
   toggleViewAlarmaPrevencion: () => void;
   toggleViewVarianteCovid: () => void;
+  toggleViewSignosAlarma: () => void;
   keyCarrousel: number;
   index: number;
   stateSide: string;
@@ -29,6 +30,7 @@ const View1 = ({
   toggleViewDiagnostico,
   toggleViewAlarmaPrevencion,
   toggleViewVarianteCovid,
+  toggleViewSignosAlarma,
   keyCarrousel,
   index,
   stateSide,
@@ -137,10 +139,8 @@ const View1 = ({
           />
           <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex group items-start">
             <a
+              onClick={toggleViewSignosAlarma}
               className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
-              href="https://www.unicef.org/peru/"
-              target="_blank"
-              rel="noreferrer"
             >
               <Button text="Signos de alarma y Factores de riesgo" />
             </a>
