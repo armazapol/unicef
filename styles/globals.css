@@ -29,7 +29,7 @@
 
   /*fix h screen in mobile*/
 
-  html,boby{
+  html,body{
     height: -webkit-fill-available;
   }
 
