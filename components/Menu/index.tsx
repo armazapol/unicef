@@ -45,7 +45,7 @@ const Menu = ({
   };
 
   return (
-    <div className="flex fixed w-screen h-screen items-center justify-center text-white top-0 left-0 gap-10 ">
+    <div className="flex fixed w-screen fullvh lg:h-screen items-center justify-center text-white top-0 left-0 gap-10 ">
       <div className="flex">
         <ul className="text-white text-center text-base lg:text-2xl flex flex-col gap-3 lg:gap-5 ">
           <li className="hover:underline cursor-pointer" onClick={toggleViewAntecedentes}>Antecedentes</li>

@@ -17,7 +17,7 @@ const ModalSintomas = ({ toggleViewSintomas }: Props) => {
 
   return (
     <div
-      className="h-screen w-full z-60 bg-black/60 flex items-center justify-center fixed modal"
+      className="fullvh lg:h-screen w-full z-60 bg-black/60 flex items-center justify-center fixed modal"
       // onClick={toggleViewAntecedentes}
     >
       <Image

@@ -156,7 +156,7 @@ const ViewResults = ({
 
   return (
     <div
-      className={`w-full h-screen flex items-center justify-center z-10 bg-fixed bg-no-repeat animate_background relative`}
+      className={`w-full fullvh lg:h-screen flex items-center justify-center z-10 bg-fixed bg-no-repeat animate_background relative`}
     >
         { dataTable.length <5 &&  <Loading2 text="Cargando.." /> }
       <Image

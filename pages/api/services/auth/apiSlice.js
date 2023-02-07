@@ -43,6 +43,14 @@ export const apiSlice = createApi({
       }),
       // invalidatesTags: ["Auth"],
     }),
+    verifiedCredentials: builder.mutation({
+      query: (data) => ({
+        url: `${urlAuth}/test/userCredentials/isVerified`,
+        method: "PUT",
+        body: data,
+      }),
+      // invalidatesTags: ["Auth"],
+    }),
 
     // updateTask: builder.mutation({
     //   query: (updatedTask) => ({
@@ -67,6 +75,7 @@ export const {
   useCreateUserMutation,
   useLoginUserMutation,
   useLazyGetUserQuery,
+  useVerifiedCredentialsMutation,
   // useUpdateTaskMutation,
   // useDeleteTaskMutation,
 } = apiSlice;

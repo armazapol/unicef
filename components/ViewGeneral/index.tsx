@@ -193,8 +193,8 @@ Props) => {
   useEffect(()=>{
    
     if(!isLoading){
-      const {value} = data
-      if(typeof value === 'undefined') logoutSession()
+      // const {value} = data
+      if(typeof data === 'undefined') logoutSession()
     }
     // console.log(data)
   },[])
@@ -205,7 +205,7 @@ Props) => {
 
   return (
     <div
-      className={`w-full h-screen flex items-center justify-center z-10 bg-fixed bg-no-repeat animate_background relative`}
+      className={`w-full fullvh lg:h-screen flex items-center justify-center z-10 bg-fixed bg-no-repeat animate_background relative`}
     >
       <Image
         className="object-cover"

@@ -49,7 +49,7 @@ const ViewInit = ({ keyCarrousel, index, stateSide,toggleViewInit }: Props) => {
 
   return (
     <div
-      className={`w-full h-screen flex items-center justify-center z-10 bg-fixed bg-no-repeat animate_background relative`}
+      className={`w-full fullvh lg:h-screen flex items-center justify-center z-10 bg-fixed bg-no-repeat animate_background relative`}
     >
       {/* {isLoading && <Loading text="Cargando.." />} */}
       <Image
