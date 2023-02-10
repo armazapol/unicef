@@ -73,8 +73,8 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
           renderArrowNext={(onClickHandler, hasNext, label) =>
             hasNext && (
               <div
-              className="absolute z-10 cursor-pointer top-[calc(50%-1.25rem)] lg:top-[calc(50%-1.8rem)] right-1 lg:right-2 w-10 lg:w-14"
-              onClick={onClickHandler}
+                className="absolute z-10 cursor-pointer top-[calc(50%-1.25rem)] lg:top-[calc(50%-1.8rem)] right-1 lg:right-2 w-10 lg:w-14"
+                onClick={onClickHandler}
               >
                 <img src="/img/arrow.png" className="" />
               </div>
@@ -219,88 +219,95 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
               </div>
             </div>
           </div>
-          <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-            <h3 className="text-base lg:text-xl text-center font-semibold text-white">
-              Flujo de Aislamiento de personas que habitan con personas
-              positivas a COVID-19
-            </h3>
-            <div className="w-6/12 lg:w-[50rem] relative group">
-              <Image
-                className="object-cover"
-                alt="img2"
-                src={img2}
-                placeholder="blur"
-                quality={50}
-              />
-              <a
-                onClick={() => window.open("/img/view1/alarma/img2.png")}
-                className="cursor-pointer absolute left-5 bottom-5 text-white text-xl font-semibold hidden group-hover:block"
-              >
-                <img
-                  className="w_loop hidden lg:block "
-                  src="/img/lupa.png"
-                  alt=""
+          <div className=" flex items-center justify-center  relative flex-col h-full ">
+            <div className="w-7/12 lg:w-[50rem] h-[14rem] sm:h-[15rem] lg:h-auto flex flex-col gap-2 lg:gap-5 items-center overflow-auto">
+              <h3 className="text-base lg:text-xl text-center font-semibold text-white">
+                Flujo de Aislamiento de personas que habitan con personas
+                positivas a COVID-19
+              </h3>
+              <div className=" relative group">
+                <Image
+                  className="object-cover"
+                  alt="img2"
+                  src={img2}
+                  placeholder="blur"
+                  quality={50}
                 />
-              </a>
-            </div>
-            <p className="underline hover:text-blue-500 text-white text-xs">
-              <span className="font-semibold"> Fuente: </span>
-              <a
-                href="https://cdn.www.gob.pe/uploads/document/file/2773889/Anexo.pdf?v=1642770555"
-                target="blank"
-              >
-                https://cdn.www.gob.pe/uploads/document/file/2773889/Anexo.pdf?v=1642770555{" "}
-              </a>
-            </p>
-          </div>
-          <div className=" flex items-center justify-center  relative flex-col h-full gap-2 lg:gap-5 ">
-            <h3 className="text-base lg:text-xl text-center font-semibold text-white">
-              Flujo de Aislamiento
-            </h3>
-            <div className="w-10/12 lg:w-[40rem] bg-white flex flex-col gap-2 p-3 lg:p-5 relative component rounded-md">
-              <div className=" text-sm lg:text-base text-left flex flex-col gap-2">
-                <p>
-                  Para prevenir la infección y frenar la transmisión de la
-                  <span className="text-orange-600"> COVID-19</span> , haga lo
-                  siguiente:
-                </p>
-                <ul>
-                  <li>
-                    * Vacúnese cuando haya una vacuna disponible para usted.
-                  </li>
-                  <li>
-                    * Manténgase al menos a 1 metro de distancia de los demás.
-                  </li>
-                  <li>
-                    * Utilice una mascarilla bien ajustada, según las
-                    recomendaciones actualizadas del Ministerio de salud.
-                  </li>
-                </ul>
+                <a
+                  onClick={() => window.open("/img/view1/alarma/img2.png")}
+                  className="cursor-pointer absolute left-5 bottom-5 text-white text-xl font-semibold hidden group-hover:block"
+                >
+                  <img
+                    className="w_loop hidden lg:block "
+                    src="/img/lupa.png"
+                    alt=""
+                  />
+                </a>
               </div>
+              <p className="underline hover:text-blue-500 text-white text-xs">
+                <span className="font-semibold"> Fuente: </span>
+                <a
+                  href="https://cdn.www.gob.pe/uploads/document/file/2773889/Anexo.pdf?v=1642770555"
+                  target="blank"
+                >
+                  https://cdn.www.gob.pe/uploads/Anexo.pdf?v=1642770555
+                </a>
+              </p>
             </div>
-            <div className="w-[8rem] lg:w-[25rem] relative group">
-              <Image
-                className="object-cover"
-                alt="img2"
-                src={img3}
-                placeholder="blur"
-                quality={50}
-              />
-              <a
-                onClick={() => window.open("/img/view1/alarma/img3.png")}
-                className="cursor-pointer absolute left-5 bottom-5 text-white text-xl font-semibold hidden group-hover:block"
-              >
-                <img
-                  className="w_loop hidden lg:block "
-                  src="/img/lupa.png"
-                  alt=""
-                />
-              </a>
+          </div>
+          <div className=" flex items-center justify-center  relative h-full  ">
+            <div className="flex flex-col items-center gap-2 lg:gap-5 w-10/12 lg:w-[40rem] h-[14rem] sm:h-[15rem] lg:h-auto overflow-auto">
+              <h3 className="text-base lg:text-xl text-center font-semibold text-white">
+                Flujo de Aislamiento
+              </h3>
+              <div className="flex flex-row lg:flex-col items-center gap-2 lg:gap-5">
+                <div className=" bg-white flex flex-col gap-2 p-3 lg:p-5 relative component rounded-md">
+                  <div className=" text-sm lg:text-base text-left flex flex-col gap-2">
+                    <p>
+                      Para prevenir la infección y frenar la transmisión de la
+                      <span className="text-orange-600"> COVID-19</span> , haga
+                      lo siguiente:
+                    </p>
+                    <ul>
+                      <li>
+                        * Vacúnese cuando haya una vacuna disponible para usted.
+                      </li>
+                      <li>
+                        * Manténgase al menos a 1 metro de distancia de los
+                        demás.
+                      </li>
+                      <li>
+                        * Utilice una mascarilla bien ajustada, según las
+                        recomendaciones actualizadas del Ministerio de salud.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="w-[8rem] lg:w-[25rem] relative group">
+                  <Image
+                    className="object-cover"
+                    alt="img2"
+                    src={img3}
+                    placeholder="blur"
+                    quality={50}
+                  />
+                  <a
+                    onClick={() => window.open("/img/view1/alarma/img3.png")}
+                    className="cursor-pointer absolute left-5 bottom-5 text-white text-xl font-semibold hidden group-hover:block"
+                  >
+                    <img
+                      className="w_loop hidden lg:block "
+                      src="/img/lupa.png"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
           <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
             <div className="w-10/12 lg:w-[50rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
-              <div className="text-left flex flex-col gap-2 flex-1 overflow-y-auto">
+              <div className="text-left flex flex-col gap-2 flex-1 overflow-y-auto text-sm lg:text-base">
                 <ul>
                   <li>
                     * Elija los espacios abiertos y bien ventilados en lugar de
