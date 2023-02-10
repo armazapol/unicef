@@ -82,8 +82,8 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
           }
           className="  w-full h-full relative carousel1 "
         >
-          <div className=" flex items-center justify-center  relative h-screen gap-5">
-            <div className="w-10/12 lg:w-[60rem] h-[14rem] sm:h-[14rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
+          <div className=" flex items-center justify-center  relative h-full gap-5">
+            <div className="w-10/12 lg:w-[60rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
               <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   Aislamiento
