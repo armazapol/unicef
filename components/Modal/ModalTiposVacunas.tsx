@@ -154,7 +154,7 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
               </div>
             </div>
           </div>
-          <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
+          <div className=" flex items-center justify-center  relative flex-col h-full gap-2 lg:gap-5">
             <div className="w-8/12 lg:w-6/12 relative group">
               <Image
                 className="object-cover"
@@ -181,7 +181,7 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
                 target="blank"
               >
                 Anexo de RM N°239-2022-MINSA.pdf (www.gob.pe) y COVID-19: Tipos
-                de vacunas | Facultad de Medicina UANL
+                de vacunas
               </a>
             </p>
           </div>
@@ -258,7 +258,7 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
             </div>
           </div>
           <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-            <div className="w-9/12 lg:w-[35rem] relative group">
+            <div className="w-8/12 lg:w-[35rem] relative group">
               <Image
                 className="object-cover"
                 alt="img3"
@@ -280,7 +280,7 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
             </div>
           </div>
           <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-            <div className="w-8/12 relative group">
+            <div className="w-6/12 relative group">
               <Image
                 className="object-cover"
                 alt="img1"

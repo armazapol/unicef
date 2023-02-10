@@ -41,7 +41,7 @@ const ModalVacunas = ({ toggleViewVacunas }: Props) => {
       >
         <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="" />
       </a>
-      <div className="flex flex-col gap-5">
+ 
         {/* <h3 className="text-white text-xl text-center font-semibold">Aislamiento y Prevención del Riesgo:</h3> */}
         <div
           className="flex img gap-2 w-full h-auto xl:w-[70rem] items-center justify-center relative"
@@ -78,7 +78,7 @@ const ModalVacunas = ({ toggleViewVacunas }: Props) => {
             className="  w-full h-full relative carousel1"
           >
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 md:w-[50rem] bg-white flex gap-2 p-5 relative component rounded-md">
+              <div className="w-10/12 md:w-[50rem] h-[14rem] sm:h-[15rem] bg-white flex gap-2 p-5 relative component rounded-md">
                 <div className="flex-1 overflow-y-auto">
                   <h3 className="text-base lg:text-xl text-center font-semibold">
                     ¿Cómo actúan las vacunas?
@@ -119,7 +119,7 @@ const ModalVacunas = ({ toggleViewVacunas }: Props) => {
               </div>
             </div>
             <div className=" flex items-center justify-center  relative  h-full gap-5">
-              <div className="w-10/12 md:w-[50rem] bg-white flex  gap-2 p-5 relative component rounded-md">
+              <div className="w-10/12 md:w-[50rem] h-[14rem] sm:h-[15rem] bg-white flex  gap-2 p-5 relative component rounded-md">
                 <div className="text-sm lg:text-base text-left flex flex-col gap-2 flex-1 overflow-y-auto">
                   <p>
                     Las vacunas contienen partes atenuadas o inactivadas de un
@@ -168,7 +168,7 @@ const ModalVacunas = ({ toggleViewVacunas }: Props) => {
             </div>
           </Carousel>
         </div>
-      </div>
+  
     </div>
   );
 };

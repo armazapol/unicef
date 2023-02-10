@@ -86,7 +86,7 @@ const ModalInocuidadEfectividad = ({
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   Inocuidad de las vacunas
                 </h3>
-                <div className="text-left flex flex-col gap-2">
+                <div className="text-left flex flex-col gap-2 text-sm lg:text-base">
                   <p>
                     La inocuidad de las vacunas es una cuestión que interesa a
                     todos y una de las máximas prioridades para la OMS. Nuestra
