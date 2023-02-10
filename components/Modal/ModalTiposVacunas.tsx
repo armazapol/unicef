@@ -80,7 +80,7 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
           className="  w-full h-full relative carousel1"
         >
           <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-            <div className="w-10/12 lg:w-[60rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
+            <div className="w-10/12 lg:w-[60rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
               <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   Tipos de vacunas
@@ -186,7 +186,7 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
             </p>
           </div>
           <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-            <div className="w-10/12 lg:w-[55rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
+            <div className="w-10/12 lg:w-[55rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
               <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   Esquema de vacunación contra COVID-19
@@ -301,7 +301,7 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
             </div>
           </div>
           <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-            <div className="w-10/12 lg:w-[60rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
+            <div className="w-10/12 lg:w-[60rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
               <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   Importante

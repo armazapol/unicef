@@ -83,7 +83,7 @@ const ModalQuestSlide6 = ({ toggleViewQuestSlide6 }: Props) => {
           className="  w-full h-full relative carousel1 "
         >
           <div className=" flex items-center justify-center  relative h-full gap-5">
-            <div className="w-10/12 lg:w-[60rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
+            <div className="w-10/12 lg:w-[60rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
               <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   Aislamiento
@@ -299,7 +299,7 @@ const ModalQuestSlide6 = ({ toggleViewQuestSlide6 }: Props) => {
             </div>
           </div>
           <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-            <div className="w-10/12 lg:w-[50rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
+            <div className="w-10/12 lg:w-[50rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
               <div className="text-left flex flex-col gap-2 flex-1 overflow-y-auto">
                 <ul>
                   <li>

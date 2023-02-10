@@ -76,7 +76,7 @@ const ModalQuestSlide3 = ({ toggleViewQuestSlide3 }: Props) => {
           className="  w-full h-full relative carousel1 "
         >
           <div className=" flex items-center justify-center  relative h-full gap-5">
-            <div className="w-10/12 lg:w-[60rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
+            <div className="w-10/12 lg:w-[60rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
               <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                 ¿Pueden las vacunas contra la COVID-19 afectar la fertilidad?
@@ -113,7 +113,7 @@ const ModalQuestSlide3 = ({ toggleViewQuestSlide3 }: Props) => {
             </div>
           </div>
           <div className=" flex items-center justify-center  relative h-full gap-5">
-            <div className="w-10/12 lg:w-[60rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
+            <div className="w-10/12 lg:w-[60rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
               <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                 ¿Pueden las vacunas de la COVID-19 afectar tu ADN?
@@ -154,7 +154,7 @@ const ModalQuestSlide3 = ({ toggleViewQuestSlide3 }: Props) => {
             </div>
           </div>
           <div className=" flex items-center justify-center  relative h-full gap-5">
-            <div className="w-10/12 lg:w-[60rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
+            <div className="w-10/12 lg:w-[60rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
               <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                 Estoy embarazada. ¿Puedo vacunarme contra la COVID-19?

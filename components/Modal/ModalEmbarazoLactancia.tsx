@@ -77,7 +77,7 @@ const ModalEmbarazoLactancia = ({ toggleViewEmbarazoLactancia }: Props) => {
             className="  w-full h-full relative carousel1"
           >
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[50rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
+              <div className="w-10/12 lg:w-[50rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
                 <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">Embarazo</h3>
                 <div className="text-sm lg:text-base text-left flex flex-col gap-2">
@@ -124,7 +124,7 @@ const ModalEmbarazoLactancia = ({ toggleViewEmbarazoLactancia }: Props) => {
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[50rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex  gap-2 p-5 relative component rounded-md overflow-auto">
+              <div className="w-10/12 lg:w-[50rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex  gap-2 p-5 relative component rounded-md overflow-auto">
                 <div className="flex-1 overflow-y-auto">
                 <div className="text-sm lg:text-base text-left flex flex-col gap-2">
                   <p className="font-semibold">Consideraciones generales:</p>
@@ -181,7 +181,7 @@ const ModalEmbarazoLactancia = ({ toggleViewEmbarazoLactancia }: Props) => {
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[50rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
+              <div className="w-10/12 lg:w-[50rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
                 <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   Lactancia materna

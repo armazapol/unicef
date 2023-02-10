@@ -84,7 +84,7 @@ const ModalInit = ({ toggleViewInit }: Props) => {
           className="  w-full h-full relative carousel1 "
         >
           <div className=" flex items-center justify-center  relative h-full gap-5">
-            <div className="w-10/12 lg:w-[70rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex gap-2 p-10 relative component rounded-md overflow-auto ">
+            <div className="w-10/12 lg:w-[70rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-10 relative component rounded-md overflow-auto ">
               <div className="absolute right-5 top-0 w-10 lg:w-32">
                 <Image className="" alt="quest" src={logo} placeholder="blur" />
               </div>
@@ -137,115 +137,129 @@ const ModalInit = ({ toggleViewInit }: Props) => {
               </div>
             </div>
           </div>
-          <div className=" flex items-center justify-center  relative flex-col h-full gap-5 ">
-            <h3 className=" text-base lg:text-4xl text-center font-semibold text-white">
-              <span className="text-blue-700">Pantallas</span> Interactivas
-            </h3>
-            <div className="w-10/12 lg:w-[70rem] bg-white flex gap-2 p-10 relative rounded-md justify-evenly overflow-y-auto h-[15rem] sm:h-[18rem] lg:h-auto">
-              <div className=" w-5/12 lg:w-3/12">
-                <div className="text-sm lg:text-base flex flex-col gap-3">
-                  <div className="relative">
-                    <Image
-                      className=""
-                      alt="quest"
-                      src={img2}
-                      placeholder="blur"
-                    />
+          <div className=" flex items-center justify-center  relative  h-full  ">
+            <div className="h-[13rem] sm:h-[14rem] lg:h-auto flex flex-col gap-2 lg:gap-5 items-center">
+              <h3 className=" text-base lg:text-4xl text-center font-semibold text-white">
+                <span className="text-blue-700">Pantallas</span> Interactivas
+              </h3>
+              <div className="w-10/12 lg:w-[70rem] bg-white flex gap-2 p-10 relative rounded-md justify-evenly overflow-y-auto h-[15rem] sm:h-[18rem] lg:h-auto">
+                <div className=" w-5/12 lg:w-3/12">
+                  <div className="text-sm lg:text-base flex flex-col gap-3">
+                    <div className="relative">
+                      <Image
+                        className=""
+                        alt="quest"
+                        src={img2}
+                        placeholder="blur"
+                      />
+                    </div>
+                    <h3 className="text-sm lg:text-xl  font-bold text-orange-600 text-center">
+                      Pantallas de módulo
+                    </h3>
+                    <p>
+                      Son las pantallas en las que se mostrará todo el contenido
+                      del Módulo, a través de botones. En PC, sólo tienes que
+                      pasar el ratón por las distintas imágenes para que
+                      aparezcan los botones correspondientes. En móviles, estos
+                      aparecerán automáticamente.
+                    </p>
                   </div>
-                  <h3 className="text-sm lg:text-xl  font-bold text-orange-600 text-center">
-                    Pantallas de módulo
-                  </h3>
-                  <p>
-                    Son las pantallas en las que se mostrará todo el contenido
-                    del Módulo, a través de botones. En PC, sólo tienes que
-                    pasar el ratón por las distintas imágenes para que
-                    aparezcan los botones correspondientes. En móviles, estos
-                    aparecerán automáticamente.
-                  </p>
                 </div>
-              </div>
-              <div className=" w-5/12 lg:w-3/12">
-                <div className="text-sm lg:text-base flex flex-col gap-3">
-                  <div className="relative">
-                    <Image
-                      className=""
-                      alt="quest"
-                      src={img1}
-                      placeholder="blur"
-                    />
+                <div className=" w-5/12 lg:w-3/12">
+                  <div className="text-sm lg:text-base flex flex-col gap-3">
+                    <div className="relative">
+                      <Image
+                        className=""
+                        alt="quest"
+                        src={img1}
+                        placeholder="blur"
+                      />
+                    </div>
+                    <h3 className="text-sm lg:text-xl  font-bold text-orange-600 text-center">
+                      Pantallas de contenido
+                    </h3>
+                    <p>
+                      Son las pantallas que aparecerán encima al hacer clic a un
+                      botón en las pantallas de Módulo. Estas contendrán todo el
+                      detalle en texto, imagen y enlaces de interés. Usa las
+                      flechas laterales, según cada caso, para pasar a la
+                      siguiente pantalla, o usa la lupa para agrandar las
+                      imágenes y cuadros.
+                    </p>
                   </div>
-                  <h3 className="text-sm lg:text-xl  font-bold text-orange-600 text-center">
-                    Pantallas de contenido
-                  </h3>
-                  <p>
-                    Son las pantallas que aparecerán encima al hacer clic a un
-                    botón en las pantallas de Módulo. Estas contendrán todo el
-                    detalle en texto, imagen y enlaces de interés. Usa las
-                    flechas laterales, según cada caso, para pasar a la
-                    siguiente pantalla, o usa la lupa para agrandar las imágenes
-                    y cuadros.
-                  </p>
                 </div>
-              </div>
-              <div className="absolute right-5 top-0 w-10 lg:w-32">
-                <Image className="" alt="quest" src={logo} placeholder="blur" />
+                <div className="absolute right-5 top-0 w-10 lg:w-32">
+                  <Image
+                    className=""
+                    alt="quest"
+                    src={logo}
+                    placeholder="blur"
+                  />
+                </div>
               </div>
             </div>
           </div>
-          <div className=" flex items-center justify-center  relative flex-col h-full gap-5 ">
-            <h3 className=" text-base lg:text-4xl text-center font-semibold text-white">
-              <span className="text-blue-700">Pantallas</span> Evaluativas
-            </h3>
-            <div className="w-10/12 lg:w-[70rem] bg-white flex gap-2 p-10 relative rounded-md justify-evenly overflow-y-auto h-[15rem] sm:h-[18rem] lg:h-auto">
-              <div className="w-5/12 lg:w-3/12">
-                <div className="text-sm lg:text-base flex flex-col gap-3">
-                  <div className="relative">
-                    <Image
-                      className=""
-                      alt="quest"
-                      src={img3}
-                      placeholder="blur"
-                    />
+          <div className=" flex items-center justify-center  relative h-full  ">
+            <div className="h-[13rem] sm:h-[14rem] lg:h-auto flex flex-col gap-2 lg:gap-5 items-center">
+              <h3 className=" text-base lg:text-4xl text-center font-semibold text-white">
+                <span className="text-blue-700">Pantallas</span> Evaluativas
+              </h3>
+              <div className="w-10/12 lg:w-[70rem] bg-white flex gap-2 p-10 relative rounded-md justify-evenly overflow-y-auto h-[15rem] sm:h-[18rem] lg:h-auto">
+                <div className="w-5/12 lg:w-3/12">
+                  <div className="text-sm lg:text-base flex flex-col gap-3">
+                    <div className="relative">
+                      <Image
+                        className=""
+                        alt="quest"
+                        src={img3}
+                        placeholder="blur"
+                      />
+                    </div>
+                    <h3 className="text-sm lg:text-xl  font-bold text-orange-600 text-center">
+                      Pantallas de Trivia
+                    </h3>
+                    <p>
+                      Tras revisar todo el contenido de cada pantalla de Módulo,
+                      podrás avanzar a las preguntas de Trivia, las cuales
+                      pondrán a prueba tus recién adquiridos conocimientos. En
+                      cada pregunta, si se pudo responder correctamente al
+                      primer intento, se obtendrán 20 puntos, pero si no, cada
+                      intento fallido restará 5 puntos de este.
+                    </p>
                   </div>
-                  <h3 className="text-sm lg:text-xl  font-bold text-orange-600 text-center">
-                    Pantallas de Trivia
-                  </h3>
-                  <p>
-                    Tras revisar todo el contenido de cada pantalla de Módulo,
-                    podrás avanzar a las preguntas de Trivia, las cuales pondrán
-                    a prueba tus recién adquiridos conocimientos. En cada
-                    pregunta, si se pudo responder correctamente al primer
-                    intento, se obtendrán 20 puntos, pero si no, cada intento
-                    fallido restará 5 puntos de este.
-                  </p>
                 </div>
-              </div>
-              <div className="w-5/12 lg:w-3/12">
-                <div className="text-sm lg:text-base flex flex-col gap-3">
-                  <div className="relative">
-                    <Image
-                      className=""
-                      alt="quest"
-                      src={img3}
-                      placeholder="blur"
-                    />
+                <div className="w-5/12 lg:w-3/12">
+                  <div className="text-sm lg:text-base flex flex-col gap-3">
+                    <div className="relative">
+                      <Image
+                        className=""
+                        alt="quest"
+                        src={img3}
+                        placeholder="blur"
+                      />
+                    </div>
+                    <h3 className="text-sm lg:text-xl  font-bold text-orange-600 text-center">
+                      Pantallas de Resultados
+                    </h3>
+                    <p>
+                      Son 5 las preguntas por cada módulo, y al responder todas,
+                      aparecerá la pantalla de Resultados, la cual dará un
+                      resumen de cómo fue el desempeño en cada pregunta del
+                      Módulo. Podrás volver a las pantallas interactivas para
+                      repasar contenido, pero una vez hayas respondido las
+                      preguntas, así obtengas 25 o 100 puntos, no podrás volver
+                      a responderlas y tu puntaje quedará guardado.
+                    </p>
                   </div>
-                  <h3 className="text-sm lg:text-xl  font-bold text-orange-600 text-center">
-                    Pantallas de Resultados
-                  </h3>
-                  <p>
-                    Son 5 las preguntas por cada módulo, y al responder todas,
-                    aparecerá la pantalla de Resultados, la cual dará un resumen
-                    de cómo fue el desempeño en cada pregunta del Módulo. Podrás
-                    volver a las pantallas interactivas para repasar contenido,
-                    pero una vez hayas respondido las preguntas, así obtengas 25
-                    o 100 puntos, no podrás volver a responderlas y tu puntaje
-                    quedará guardado.
-                  </p>
                 </div>
-              </div>
-              <div className="absolute right-5 top-0 w-10 lg:w-32">
-                <Image className="" alt="quest" src={logo} placeholder="blur" />
+                <div className="absolute right-5 top-0 w-10 lg:w-32">
+                  <Image
+                    className=""
+                    alt="quest"
+                    src={logo}
+                    placeholder="blur"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -260,10 +274,11 @@ const ModalInit = ({ toggleViewInit }: Props) => {
                     Eso es todo.
                   </h3>
                   <p>
-                  Por un periodismo bien informado, disfruta la experiencia, responde las preguntas y difunde información de calidad. 
+                    Por un periodismo bien informado, disfruta la experiencia,
+                    responde las preguntas y difunde información de calidad.
                   </p>
                   <p className="text-orange-600 font-bold text-xl lg:text-4xl text-center">
-                  ¡Empecemos! 
+                    ¡Empecemos!
                   </p>
                   <div className="flex items-center justify-center mt-0 lg:mt-20">
                     <div

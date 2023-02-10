@@ -77,7 +77,7 @@ const ModalConsecuencias = ({ toggleViewConsecuencias }: Props) => {
           }
         >
           <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-            <div className="w-10/12 lg:w-[60rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
+            <div className="w-10/12 lg:w-[60rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
               <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   Consecuencias de las nuevas variantes del virus del COVID-19
@@ -133,7 +133,7 @@ const ModalConsecuencias = ({ toggleViewConsecuencias }: Props) => {
             </div>
           </div>
           <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-            <div className="w-10/12 lg:w-[55rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
+            <div className="w-10/12 lg:w-[55rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
               <div className="text-left flex flex-col gap-2 flex-1 overflow-y-auto">
                 <p>
                   Mientras esperamos a disponer de más información, tenemos que

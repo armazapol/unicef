@@ -77,7 +77,7 @@ const ModalVPH = ({ toggleViewVPH }: Props) => {
             className="  w-full h-full relative carousel1"
           >
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[40rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
+              <div className="w-10/12 lg:w-[40rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   Vacuna contra el Virus Papiloma Humano (VPH)
                 </h3>
@@ -101,7 +101,7 @@ const ModalVPH = ({ toggleViewVPH }: Props) => {
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[40rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
+              <div className="w-10/12 lg:w-[40rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
                 <div className="text-left flex flex-col gap-2">
                   <p className="font-semibold">
                     Se aplican dos dosis a niñas, según las siguientes

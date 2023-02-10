@@ -81,7 +81,7 @@ const ModalInocuidadEfectividad = ({
             className="  w-full h-full relative  carousel1"
           >
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[50rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
+              <div className="w-10/12 lg:w-[50rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
                 <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   Inocuidad de las vacunas
@@ -125,7 +125,7 @@ const ModalInocuidadEfectividad = ({
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[55rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
+              <div className="w-10/12 lg:w-[55rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
                 <div className="text-sm lg:text-base text-left flex flex-col gap-2 flex-1 overflow-y-auto">
                   <p>
                     Como se hace con todas las vacunas, las que se desarrollan
@@ -171,7 +171,7 @@ const ModalInocuidadEfectividad = ({
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[50rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex  gap-2 p-5 relative component rounded-md overflow-auto">
+              <div className="w-10/12 lg:w-[50rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex  gap-2 p-5 relative component rounded-md overflow-auto">
                 <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   Efectividad de las vacunas
@@ -229,7 +229,7 @@ const ModalInocuidadEfectividad = ({
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[50rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
+              <div className="w-10/12 lg:w-[50rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
                 <div className="text-sm lg:text-base text-left flex flex-col gap-2 flex-1 overflow-y-auto">
                   <p>
                     En otro metaanálisis publicado en julio del 2022, se
@@ -277,7 +277,7 @@ const ModalInocuidadEfectividad = ({
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[50rem] h-[18rem] sm:h-[22rem] lg:h-auto bg-white flex  gap-2 p-5 relative component rounded-md overflow-auto">
+              <div className="w-10/12 lg:w-[50rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex  gap-2 p-5 relative component rounded-md overflow-auto">
                 <div className="text-sm lg:text-base text-left flex flex-col gap-2 flex-1 overflow-y-auto">
                   <p>
                   En otro estudio danés, se estimó la efectividad de la vacuna contra la infección y hospitalización.  Encontraron que contar con dos dosis de vacuna proveía una alta protección contra infección y hospitalización por <span className="text-orange-600">COVID-19</span>. Una tercera dosis incrementaba sustancialmente el nivel y la duración de la protección, especialmente en población mayor a 60 años.

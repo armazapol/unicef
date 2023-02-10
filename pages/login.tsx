@@ -117,7 +117,7 @@ const Login = () => {
           <div className="flex flex-col gap-5">
             <ButtonForm text="Ingresar" onClick={handleSubmit(onSubmit)} />
             <Link href="/register">
-              <ButtonForm text="registrar" />
+              <ButtonForm text="Registrar" />
             </Link>
             {/* <div
               onClick={handleSubmit(onSubmit)}
