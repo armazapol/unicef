@@ -145,7 +145,7 @@ const View5 = ({
             {" "}
             <a
               onClick={toggleViewEmbarazoLactancia}
-              className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
+              className="z-20 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 p-1 lg:p-2"
             >
               <Button text="Embarazo y lactancia materna" />
             </a>
@@ -164,7 +164,7 @@ const View5 = ({
         <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex  group items-start">
           <a
             onClick={toggleViewTiposVacunas}
-            className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
+            className="z-20 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 p-1 lg:p-2"
           >
             <Button text="Tipos de Vacunas y Esquema de la vacunación." />
           </a>
@@ -181,7 +181,7 @@ const View5 = ({
         />
         <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex group items-start">
           <a
-            className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
+            className="z-20 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 p-1 lg:p-2"
             onClick={toggleViewInocuidadEfectividad}
           >
             <Button text="Inocuidad y Efectividad de las vacunas" />
@@ -201,7 +201,7 @@ const View5 = ({
           {" "}
           <a
             onClick={toggleViewConsecuencias}
-            className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
+            className="z-20 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 p-1 lg:p-2"
           >
             <Button text="Consecuencias de las variantes en vacunas" />
           </a>

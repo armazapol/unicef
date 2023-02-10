@@ -122,7 +122,7 @@ const View1 = ({
           <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex  group items-start">
             <a
               onClick={toggleViewAlarmaPrevencion}
-              className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
+              className="z-20 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 p-1 lg:p-2"
             >
               <Button text="Aislamiento y prevención del contagio" />
             </a>
@@ -140,7 +140,7 @@ const View1 = ({
           <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex group items-start">
             <a
               onClick={toggleViewSignosAlarma}
-              className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
+              className="z-20 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 p-1 lg:p-2"
             >
               <Button text="Signos de alarma y Factores de riesgo" />
             </a>
@@ -159,7 +159,7 @@ const View1 = ({
         <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex  group items-start">
           <a
             onClick={toggleViewSintomas}
-            className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
+            className="z-20 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 p-1 lg:p-2"
           >
             <Button text="Síntomas" />
           </a>
@@ -177,7 +177,7 @@ const View1 = ({
         <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex items-start group ">
           <a
             onClick={toggleViewDiagnostico}
-            className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2 flex-none"
+            className="z-20 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 p-1 lg:p-2 flex-none"
           >
             <Button text="Diagnóstico" />
           </a>

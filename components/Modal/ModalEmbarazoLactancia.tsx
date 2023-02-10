@@ -52,7 +52,7 @@ const ModalEmbarazoLactancia = ({ toggleViewEmbarazoLactancia }: Props) => {
             showIndicators={false}
             infiniteLoop={true}
             autoPlay={false}
-
+            swipeable={false}
             stopOnHover={false}
             renderArrowPrev={(onClickHandler, hasNext, label) =>
               hasNext && (

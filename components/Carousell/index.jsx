@@ -341,8 +341,9 @@ const Carousell = (props) => {
         showStatus={false}
         showIndicators={false}
         // infiniteLoop={true}
-        autoPlay={false}
+        autoPlay={false}    
         transitionTime={2000}
+        swipeable={false}
         onChange={(index) => updateState(index)}
         // stopOnHover={false}
         className="rounded-3xl text-white carousel1"

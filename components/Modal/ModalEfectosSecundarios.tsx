@@ -53,6 +53,7 @@ const ModalEfectosSecundarios = ({ toggleViewEfectosSecundarios }: Props) => {
           infiniteLoop={true}
           autoPlay={false}
           stopOnHover={false}
+          swipeable={false}
           renderArrowPrev={(onClickHandler, hasNext, label) =>
             hasNext && (
               <div

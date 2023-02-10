@@ -145,7 +145,7 @@ const View4 = ({
             </a> */}
               <a
               onClick={toggleViewQuestSlide2}
-              className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
+              className="z-20 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 p-1 lg:p-2"
             >
               <Button text="¿Que sirve frente al COVID? ¿El frío, los antibióticos o las vacunas?" />
             </a>
@@ -168,7 +168,7 @@ const View4 = ({
               <Button text="Estoy embarazada. ¿Puedo vacunarme contra la COVID-19?" />
             </a> */}
              <a
-              className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
+              className="z-20 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 p-1 lg:p-2"
               onClick={toggleViewQuestSlide3}
             >
               <Button text="¿Pueden las vacunas afectar la fertilidad o tu ADN? ¿Me puedo vacunar si estoy embarazada?" />
@@ -194,7 +194,7 @@ const View4 = ({
           </a> */}
            <a
             onClick={toggleViewQuestSlide4}
-            className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
+            className="z-20 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 p-1 lg:p-2"
           >
             <Button text="Tiempo de aparición de síntomas y duración de protección" />
           </a>
@@ -218,7 +218,7 @@ const View4 = ({
           </a> */}
           <a
             onClick={toggleViewQuestSlide5}
-            className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
+            className="z-20 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 p-1 lg:p-2"
           >
             <Button text="¿Los zapatos, las mascarillas y los mosquitos propagan el COVID?" />
           </a>

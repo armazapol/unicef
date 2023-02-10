@@ -52,6 +52,7 @@ const ModalQuestSlide2 = ({ toggleViewQuestSlide2 }: Props) => {
           infiniteLoop={true}
           autoPlay={false}
           stopOnHover={false}
+          swipeable={false}
           renderArrowPrev={(onClickHandler, hasNext, label) =>
             hasNext && (
               <div

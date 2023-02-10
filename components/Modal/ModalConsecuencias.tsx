@@ -53,6 +53,7 @@ const ModalConsecuencias = ({ toggleViewConsecuencias }: Props) => {
           infiniteLoop={true}
           autoPlay={false}
           stopOnHover={false}
+          swipeable={false}
           className="  w-full h-full relative carousel1"
           renderArrowPrev={(onClickHandler, hasNext, label) =>
             hasNext && (
