@@ -107,7 +107,7 @@ const Register = () => {
           src={background}
           placeholder="blur"
           fill
-          quality={50}
+          // quality={50}
         />
       </div>
       <Toaster />

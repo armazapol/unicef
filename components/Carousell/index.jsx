@@ -5,8 +5,6 @@ import { gsap } from "gsap";
 import slides from "./../../utils/SlidesCarrousel/slides.json";
 
 import View1 from "../views/View1";
-import Modal from "../Modal";
-import ViewImages from "../Modal/ViewImages";
 import Menu from "../Menu";
 import MenuBurguer from "../MenuBurguer";
 
@@ -64,12 +62,6 @@ import ModalInit from "../Modal/Modalnit";
 import ModalSignosAlarma from "../Modal/ModalSignosAlarma";
 
 const Carousell = (props) => {
-  // const [stateModalVideo, setStateModalVideo] = useState<boolean>(false);
-  // const [stateModalImages, setStateModalImages] = useState<boolean>(false);
-  // const [stateMenu, setStateMenu] = useState<boolean>(false);
-  // const [stateHamburger, setStateHamburger] = useState<boolean>(false);
-  // const [stateModalVideo, setStateModalVideo] = useState(false);
-  // const [stateModalImages, setStateModalImages] = useState(false);
   const [stateModalAntecedentes, setStateModalAntecedentes] = useState(false);
   const [stateModalSignosAlarma, setStateModalSignosAlarma] = useState(false);
   const [stateModalDiagnostico, setStateModalDiagnostico] = useState(false);
@@ -340,25 +332,12 @@ const Carousell = (props) => {
         showThumbs={false}
         showStatus={false}
         showIndicators={false}
-        // infiniteLoop={true}
         autoPlay={false}    
         transitionTime={2000}
         swipeable={false}
         onChange={(index) => updateState(index)}
-        // stopOnHover={false}
         className="rounded-3xl text-white carousel1"
       >
-        {/* {slides.map((data) => {
-          if (data.type === "ViewInit")
-            return (
-              <ViewInit
-                keyCarrousel={0}
-                toggleViewInit={toggleViewInit}
-                index={stateCarousel}
-                stateSide={stateSide}
-              />
-            );
-        }).filter(x => x !== null)} */}
         {slides
           .map((data, index) => {
             if (data.type === "ViewInit")

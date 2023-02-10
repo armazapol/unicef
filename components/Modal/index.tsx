@@ -24,7 +24,7 @@ const Modal = ({ viewVideo }: Props) => {
         src={background}
         placeholder="blur"
         fill
-        quality={50}
+        // quality={50}
       />
       <div className="flex video gap-2 h-5/6 w-10/12 xl:w-[1020px] xl:h-[630px] relative">
         <iframe

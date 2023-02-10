@@ -32,8 +32,8 @@ const ModalEmbarazoLactancia = ({ toggleViewEmbarazoLactancia }: Props) => {
         alt="background"
         src={background}
         placeholder="blur"
-        fill
-        quality={50}
+        // fill
+        // quality={50}
       />
       <a
         onClick={toggleViewEmbarazoLactancia}

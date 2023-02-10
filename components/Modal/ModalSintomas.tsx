@@ -26,7 +26,7 @@ const ModalSintomas = ({ toggleViewSintomas }: Props) => {
         src={background}
         placeholder="blur"
         fill
-        quality={50}
+        // quality={50}
       />
       <a
         onClick={toggleViewSintomas}
@@ -34,7 +34,7 @@ const ModalSintomas = ({ toggleViewSintomas }: Props) => {
       >
         <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="" />
       </a>
-      <div className="w-9/12 lg:w-[60rem] flex flex-col gap-2 p-5 relative component rounded-md ">
+      <div className="w-7/12 lg:w-[60rem] flex flex-col gap-2 p-5 relative component rounded-md ">
         <div className=" relative group ">
           <Image
             className="object-cover"

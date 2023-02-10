@@ -38,7 +38,7 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
         src={background}
         placeholder="blur"
         fill
-        quality={50}
+        // quality={50}
       />
       <a
         onClick={toggleViewAlarmaPrevencion}
@@ -152,11 +152,11 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
               </div>
             </div>
           </div>
-          <div className=" flex items-center justify-center  relative flex-col h-full gap-5 ">
+          <div className=" flex items-center justify-center  relative flex-col h-full gap-2 lg:gap-5 ">
             <h3 className=" text-base lg:text-xl text-center font-semibold text-white">
               Flujo de Aislamiento
             </h3>
-            <div className="w-7/12 lg:w-[50rem] relative group">
+            <div className="w-5/12 lg:w-[50rem] relative group">
               <Image
                 className="object-cover"
                 alt="img2"
@@ -177,7 +177,7 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
             </div>
           </div>
           <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-            <div className="w-10/12 lg:w-[50rem] bg-white flex gap-2 p-5 relative component rounded-md">
+            <div className="w-10/12 lg:w-[50rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md">
               <div className="text-sm lg:text-base text-left flex flex-col gap-2 flex-1 overflow-y-auto">
                 <p>
                   En el caso de personas que habitan con personas positivas a

@@ -25,7 +25,7 @@ const ModalAvanceVacunacion = ({ toggleViewAvanceVacunacion }: Props) => {
         src={background}
         placeholder="blur"
         fill
-        quality={50}
+        // quality={50}
       />
       <div className="w-[40rem] bg-white flex flex-col gap-2 p-5 relative component rounded-md">
         <a

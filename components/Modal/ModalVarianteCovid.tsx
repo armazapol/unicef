@@ -31,7 +31,7 @@ const ModalVarianteCovid = ({ toggleViewVarianteCovid }: Props) => {
         src={background}
         placeholder="blur"
         fill
-        quality={50}
+        // quality={50}
       />
       <div className="flex flex-col gap-5">
         {/* <h3 className="text-white text-xl text-center font-semibold">Aislamiento y Prevención del Riesgo:</h3> */}

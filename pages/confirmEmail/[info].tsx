@@ -31,7 +31,7 @@ const ConfirmEmail = () => {
         src={background}
         placeholder="blur"
         fill
-        quality={50}
+        // quality={50}
       />
       <div className="w-10/12 lg:w-[70rem] h-[16rem] sm:h-[18rem] lg:h-[30rem] bg-white flex gap-2 p-5 lg:p-10 relative component rounded-md overflow-auto items-center justify-center">
         <div className="absolute right-5 top-0 w-10 lg:w-32">

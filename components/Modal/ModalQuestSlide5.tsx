@@ -38,7 +38,7 @@ const ModalQuestSlide5 = ({ toggleViewQuestSlide5 }: Props) => {
         src={background}
         placeholder="blur"
         fill
-        quality={50}
+        // quality={50}
       />
       <a
         onClick={toggleViewQuestSlide5}

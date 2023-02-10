@@ -39,7 +39,7 @@ const ModalInit = ({ toggleViewInit }: Props) => {
         src={background}
         placeholder="blur"
         fill
-        quality={50}
+        // quality={50}
       />
       <a
         onClick={toggleViewInit}
@@ -264,7 +264,7 @@ const ModalInit = ({ toggleViewInit }: Props) => {
             </div>
           </div>
           <div className=" flex items-center justify-center  relative h-full gap-5">
-            <div className="w-10/12 lg:w-[70rem] h-[16rem] sm:h-[18rem] lg:h-[30rem] bg-white flex gap-2 p-10 relative component rounded-md overflow-auto items-center ">
+            <div className="w-10/12 lg:w-[70rem] h-[14rem] sm:h-[15rem] lg:h-[30rem] bg-white flex gap-2 p-10 relative component rounded-md overflow-auto items-center ">
               <div className="absolute right-5 top-0 w-10 lg:w-32">
                 <Image className="" alt="quest" src={logo} placeholder="blur" />
               </div>

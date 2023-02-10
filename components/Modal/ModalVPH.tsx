@@ -33,7 +33,7 @@ const ModalVPH = ({ toggleViewVPH }: Props) => {
         src={background}
         placeholder="blur"
         fill
-        quality={50}
+        // quality={50}
       />
        <a
         onClick={toggleViewVPH}
