@@ -100,29 +100,7 @@ const View4 = ({
                <a onClick={toggleViewQuestSlide1} className="z-20 ">
                 <Button text="¿Qué hacer si ya tuviste COVID o si ya te vacunaste?" />
               </a>
-              {/* <a onClick={toggleViewQuest1} className="z-20 ">
-                <Button text="¿Cuánto tiempo tardan en aparecer los síntomas?" />
-              </a> */}
-              {/* <a onClick={toggleViewQuest2} className="z-20 ">
-                <Button text="¿Son eficaces los antibióticos para prevenir o tratar la COVID-19?" />
-              </a> */}
             </div>
-            {/* <div className="flex gap-10 mt-2 lg:mt-5">
-              <a onClick={toggleViewQuest3} className="z-20 ">
-                <Button text="¿Debería vacunarme si ya he pasado la COVID-19?" />
-              </a>
-              <a onClick={toggleViewQuest4} className="z-20 ">
-                <Button text="¿Son seguras las vacunas contra la COVID-19?" />
-              </a>
-            </div>
-            <div className="flex gap-10 mt-2 lg:mt-5">
-              <a onClick={toggleViewQuest5} className="z-20 ">
-                <Button text="¿Puedo dejar de tomar precauciones después de haberme vacunado?" />
-              </a>
-              <a onClick={toggleViewQuest9} className="z-20 ">
-                <Button text="¿Pueden los zapatos propagar el virus de la COVID-19?" />
-              </a>
-            </div> */}
           </div>
         </div>
       </div>
@@ -137,12 +115,6 @@ const View4 = ({
             quality={50}
           />
           <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex  group items-start">
-            {/* <a
-              onClick={toggleViewQuest6}
-              className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
-            >
-              <Button text="¿Cuánto dura la protección de las vacunas contra la COVID-19?" />
-            </a> */}
               <a
               onClick={toggleViewQuestSlide2}
               className="z-20 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 p-1 lg:p-2"
@@ -161,12 +133,6 @@ const View4 = ({
             quality={50}
           />
           <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex group items-start">
-            {/* <a
-              className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
-              onClick={toggleViewQuest7}
-            >
-              <Button text="Estoy embarazada. ¿Puedo vacunarme contra la COVID-19?" />
-            </a> */}
              <a
               className="z-20 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 p-1 lg:p-2"
               onClick={toggleViewQuestSlide3}
@@ -186,12 +152,6 @@ const View4 = ({
           quality={50}
         />
         <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex  group items-start">
-          {/* <a
-            onClick={toggleViewQuest8}
-            className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2"
-          >
-            <Button text="¿Pueden las vacunas contra la COVID-19 afectar la fertilidad?" />
-          </a> */}
            <a
             onClick={toggleViewQuestSlide4}
             className="z-20 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 p-1 lg:p-2"
@@ -210,12 +170,6 @@ const View4 = ({
           quality={50}
         />
       <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex  group items-start">
-          {/* <a
-            onClick={toggleViewQuest10}
-            className="z-20 opacity-0 group-hover:opacity-100 transition-all duration-500 p-2 flex-none"
-          >
-            <Button text="¿Pueden las vacunas de la COVID-19 afectar tu ADN?" />
-          </a> */}
           <a
             onClick={toggleViewQuestSlide5}
             className="z-20 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 p-1 lg:p-2"

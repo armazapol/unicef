@@ -223,13 +223,15 @@ Props) => {
       {!isLoading && data?.value === 0 ? (
         <div className="flex flex-col z-20 relative items-center w-8/12 lg:w-[40rem]  ">
           <div className="relative w-full flex items-center justify-center ">
+            <div className="relative w-10/12 flex items-center justify-center ">
             <Image className="" alt="quest" src={quest} placeholder="blur" />
-            <p className="absolute text-base lg:text-3xl px-10">
+            <p className="absolute text-sm lg:text-3xl px-10">
               {" "}
               {trivia.pregunta}{" "}
             </p>
+            </div>  
           </div>
-          <div className="h-10 lg:h-20 text-lg lg:text-5xl text-center text-shadow uppercase tracking-widest">
+          <div className="h-10 lg:h-20 text-lg lg:text-5xl text-center text-shadow uppercase tracking-widest hidden lg:block">
             {!finishTrivia ? (
               count < 20 && <p className="bold text-red-700">¡Incorrecto!</p>
             ) : (

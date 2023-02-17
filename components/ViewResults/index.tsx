@@ -180,7 +180,7 @@ const ViewResults = ({
             <div className="flex-1">Puntaje</div>
           </div>
 
-          <div className="mt-3 lg:mt-5 flex flex-col gap-2 lg:gap-3 h-48 lg:h-auto overflow-auto">
+          <div className="mt-3 lg:mt-5 flex flex-col gap-2 lg:gap-3 h-auto">
             {dataTable.length === 5 &&
               dataTable.map((data, index) => {
                 return (

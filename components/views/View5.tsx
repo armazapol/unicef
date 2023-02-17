@@ -166,7 +166,7 @@ const View5 = ({
             onClick={toggleViewTiposVacunas}
             className="z-20 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 p-1 lg:p-2"
           >
-            <Button text="Tipos de Vacunas y Esquema de la vacunación." />
+            <Button text="Tipos de Vacunas y Esquema de la vacunación" />
           </a>
         </div>
       </div>

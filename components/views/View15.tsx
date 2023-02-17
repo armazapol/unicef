@@ -92,7 +92,6 @@ const View15 = ({
               <a onClick={toggleViewNuevasVacunas}>
               <Button text="Nuevas vacunas incluidas" />
               </a>
-              {/* <Button text="Compartir" /> */}
             </div>
           </div>
         </div>
