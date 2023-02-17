@@ -324,6 +324,15 @@ const Carousell = (props) => {
             toggleViewAvanceVacunacion={toggleViewAvanceVacunacion}
             toggleViewConsecuencias={toggleViewConsecuencias}
             toggleViewSintomas={toggleViewSintomas}
+            toggleViewSignosAlarma={toggleViewSignosAlarma}
+            toggleViewNuevasVacunas={toggleViewNuevasVacunas}
+            toggleViewVPH={toggleViewVPH}
+            toggleViewVacunacionHepatitisA={toggleViewVacunacionHepatitisA}
+            toggleViewQuestSlide1={toggleViewQuestSlide1}
+            toggleViewQuestSlide2={toggleViewQuestSlide2}
+            toggleViewQuestSlide3={toggleViewQuestSlide3}
+            toggleViewQuestSlide4={toggleViewQuestSlide4}
+            toggleViewQuestSlide5={toggleViewQuestSlide5}
           />
         </div>
       </div>

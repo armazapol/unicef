@@ -143,14 +143,14 @@ const View15 = ({
           quality={50}
         />
         <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex group items-start">
-          <a
+          {/* <a
             className="z-20 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 p-1 lg:p-2"
             href="https://www.unicef.org/peru/"
             target="_blank"
             rel="noreferrer"
           >
-            {/* <Button text="Web" /> */}
-          </a>
+         
+          </a> */}
         </div>
       </div>
       <div className="col-span-4 flex items-center justify-center bg-violet-500 relative">
