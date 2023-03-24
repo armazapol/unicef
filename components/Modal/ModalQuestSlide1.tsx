@@ -3,7 +3,8 @@ import { gsap } from "gsap";
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 import background from "../../public/img/bgModal.png";
-import img4 from "../../public/img/view1/newModal3.jpg";
+import img3 from "../../public/img/view4/quest/quest3.jpg";
+import img5 from "../../public/img/view4/quest/quest5.jpg";
 // import ButtonLink from "../commons/button/ButtonLink";
 
 type Props = {
@@ -77,7 +78,7 @@ const ModalQuestSlide1 = ({ toggleViewQuestSlide1 }: Props) => {
           className="  w-full h-full relative carousel1 "
         >
           <div className=" flex items-center justify-center  relative h-full gap-5">
-            <div className="w-10/12 lg:w-[60rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
+            <div className="w-10/12 lg:w-[50rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
               <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   ¿Debería vacunarme si ya he pasado la COVID-19?
@@ -97,14 +98,14 @@ const ModalQuestSlide1 = ({ toggleViewQuestSlide1 }: Props) => {
               <div className="relative flex-1">
                 <Image
                   className="object-cover rounded-md"
-                  alt="img1"
-                  src={img4}
+                  alt="img3"
+                  src={img3}
                   placeholder="blur"
                   fill
                   quality={50}
                 />
                 <a
-                  onClick={() => window.open("/img/view1/newModal3.jpg")}
+                  onClick={() => window.open("/img/view4/quest/quest3.jpg")}
                   className="absolute left-5 bottom-5 z-20 cursor-pointer"
                 >
                   <img
@@ -146,13 +147,13 @@ const ModalQuestSlide1 = ({ toggleViewQuestSlide1 }: Props) => {
                 <Image
                   className="object-cover rounded-md"
                   alt="img1"
-                  src={img4}
+                  src={img5}
                   placeholder="blur"
                   fill
                   quality={50}
                 />
                 <a
-                  onClick={() => window.open("/img/view1/newModal3.jpg")}
+                  onClick={() => window.open("/img/view4/quest/quest5.jpg")}
                   className="absolute left-5 bottom-5 z-20 cursor-pointer"
                 >
                   <img

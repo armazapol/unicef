@@ -3,7 +3,9 @@ import { gsap } from "gsap";
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 import background from "../../public/img/bgModal.png";
-import img4 from "../../public/img/view1/newModal3.jpg";
+import img2 from "../../public/img/view4/quest/quest2.jpg";
+import img4 from "../../public/img/view4/quest/quest4.jpg";
+import img3 from "../../public/img/view4/quest/quest2.jpg";//cambiar
 
 type Props = {
   toggleViewQuestSlide2: () => void;
@@ -76,7 +78,7 @@ const ModalQuestSlide2 = ({ toggleViewQuestSlide2 }: Props) => {
           className="  w-full h-full relative carousel1 "
         >
           <div className=" flex items-center justify-center  relative h-full gap-5">
-            <div className="w-10/12 lg:w-[60rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
+            <div className="w-10/12 lg:w-[50rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
               <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   ¿Son eficaces los antibióticos para prevenir o tratar la
@@ -96,13 +98,13 @@ const ModalQuestSlide2 = ({ toggleViewQuestSlide2 }: Props) => {
                 <Image
                   className="object-cover rounded-md"
                   alt="img1"
-                  src={img4}
+                  src={img2}
                   placeholder="blur"
                   fill
                   quality={50}
                 />
                 <a
-                  onClick={() => window.open("/img/view1/newModal3.jpg")}
+                  onClick={() => window.open("/img/view4/quest/quest2.jpg")}
                   className="absolute left-5 bottom-5 z-20 cursor-pointer"
                 >
                   <img
@@ -137,53 +139,14 @@ const ModalQuestSlide2 = ({ toggleViewQuestSlide2 }: Props) => {
               <div className="relative flex-1">
                 <Image
                   className="object-cover rounded-md"
-                  alt="img1"
+                  alt="img4"
                   src={img4}
                   placeholder="blur"
                   fill
                   quality={50}
                 />
                 <a
-                  onClick={() => window.open("/img/view1/newModal3.jpg")}
-                  className="absolute left-5 bottom-5 z-20 cursor-pointer"
-                >
-                  <img
-                    className="w_loop hidden lg:block"
-                    src="/img/lupa.png"
-                    alt=""
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className=" flex items-center justify-center  relative h-full gap-5">
-            <div className="w-10/12 lg:w-[60rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
-              <div className="flex-1 overflow-y-auto">
-                <div className="text-sm lg:text-base text-left flex flex-col gap-2">
-                  <p>
-                    El frío y la nieve NO PUEDEN matar el nuevo coronavirus
-                    (2019-nCoV) La temperatura normal del cuerpo humano se
-                    mantiene en torno a 36,5° y 37°, con independencia de la
-                    temperatura exterior o de las condiciones meteorológicas.
-                    Por lo tanto, no hay razón para creer que el frío pueda
-                    matar el nuevo coronavirus o acabar con otras enfermedades.
-                    La forma más eficaz de protegerse contra el 2019-nCoV es
-                    limpiarse las manos frecuentemente con un desinfectante a
-                    base de alcohol o con agua y jabón.
-                  </p>
-                </div>
-              </div>
-              <div className="relative flex-1">
-                <Image
-                  className="object-cover rounded-md"
-                  alt="img1"
-                  src={img4}
-                  placeholder="blur"
-                  fill
-                  quality={50}
-                />
-                <a
-                  onClick={() => window.open("/img/view1/newModal3.jpg")}
+                  onClick={() => window.open("/img/view4/quest/quest4.jpg")}
                   className="absolute left-5 bottom-5 z-20 cursor-pointer"
                 >
                   <img

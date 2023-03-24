@@ -8,6 +8,7 @@ type Props = {
   actualizarFinTrivia: () => void;
   actualizarPuntaje: () => void;
   finishTrivia: boolean;
+  isFetching:boolean;
 };
 
 type Data = {
@@ -20,12 +21,13 @@ const TriviaOpcion = ({
   actualizarFinTrivia,
   actualizarPuntaje,
   finishTrivia,
+  isFetching
 }: Props) => {
   const [state, setState] = useState(true);
   const [stateRespuesta, setStateRespuesta] = useState(false);
 
   const responder = (data: Data) => {
-    if (!finishTrivia) {
+    if (!finishTrivia && !isFetching) {
       if (state) {
         setState(false);
         if (data.correcta) {
@@ -42,7 +44,7 @@ const TriviaOpcion = ({
 
   return (
     <li
-      className={` py-1 px-3 lg:px-10 rounded-2xl h-12 lg:h-14 leading-none text-left font-semibold text-xs lg:text-lg border-b-4
+      className={` py-1 px-3 lg:px-10 rounded-2xl h-12 lg:h-14 leading-none lg:leading-tight text-left font-semibold text-xs lg:text-lg border-b-4
       ${state && "hover:bg-zinc-300 cursor-pointer bg-white text-black border-sky-500 "} 
        ${
          state === false

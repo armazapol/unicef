@@ -47,6 +47,8 @@ const ViewInit = ({ keyCarrousel, index, stateSide,toggleViewInit }: Props) => {
     }
   }, [index]);
 
+  
+
   return (
     <div
       className={`w-full fullvh lg:h-screen flex items-center justify-center z-10 bg-fixed bg-no-repeat animate_background relative`}

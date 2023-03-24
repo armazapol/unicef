@@ -199,9 +199,9 @@ Props) => {
     // console.log(data)
   },[])
 
-  // useEffect(()=>{
-  //   setFinishTrivia(false)
-  // },[extraState2])
+  useEffect(()=>{
+    setCount(TotalPuntaje)
+  },[isFetching])
 
   return (
     <div
@@ -248,6 +248,7 @@ Props) => {
                   actualizarFinTrivia={actualizarFinTrivia}
                   actualizarPuntaje={actualizarPuntaje}
                   finishTrivia={finishTrivia}
+                  isFetching={isFetching}
                 />
               );
             })}
@@ -257,7 +258,7 @@ Props) => {
           )} */}
         </div>
       ) : (
-        <div className="bg-white text-center z-20 w-7/12 lg:w-[36rem] h-[10rem] lg:h-[20rem] flex items-center justify-center rounded-3xl">
+        <div className="bg-white text-center z-20 w-7/12 lg:w-[36rem] h-[10rem] lg:h-[20rem] flex items-center justify-center rounded-3xl" >
           <p className="z-10 text-sky-800 text-2xl lg:text-4xl font-bold" >¡Pregunta Completada!</p>
         </div>
       )}

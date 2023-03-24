@@ -91,7 +91,7 @@ const ModalInit = ({ toggleViewInit }: Props) => {
               <div className="overflow-y-auto w-12/12 lg:w-9/12">
                 <div className="text-sm lg:text-xl text-left flex flex-col gap-3">
                   <h3 className="text-base lg:text-2xl  font-bold text-orange-600 text-left">
-                    ¡Bienvenid@!
+                    ¡Bienvenidos y bienvenidas!
                   </h3>
                   <p>
                     Este curso tiene como objetivos definir las principales
