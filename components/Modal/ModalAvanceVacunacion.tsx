@@ -52,7 +52,7 @@ const ModalAvanceVacunacion = ({ toggleViewAvanceVacunacion }: Props) => {
             quality={50}
           />
         </div>
-        <p className="text-xs">
+        <p className="text-sm">
         <span className="font-semibold"> Fuente:{" "}</span> 
           <a
             className="underline hover:text-blue-500 text-black"

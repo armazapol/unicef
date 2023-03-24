@@ -203,7 +203,7 @@ const ViewResults = ({
             {dataTable.length === 5 && (
               <div>
                 {totalScore >= 80 ? (
-                  <h2>FELICIDADES, PASASTE EL MÓDULO</h2>
+                  <h2>FELICIDADES, PASASTE EL MÓDULO / TU PUNTAJE TOTAL ES: {totalScore} </h2>
                 ) : totalScore === 0 ? (
                   <h2>Ninguna pregunta respondida</h2>
                 ) : (
@@ -211,7 +211,7 @@ const ViewResults = ({
                     className="bg-blue-900 rounded-md py-2 px-12 text-white font-bold text-md  lg:text-xl cursor-pointer z-20 shadow-md "
                     onClick={() => resetScore()}
                   >
-                    VOLVER A DAR EL MÓDULO
+                    VOLVER A DAR EL MÓDULO / TU PUNTAJE TOTAL ES: {totalScore}
                   </div>
                 )}
               </div>

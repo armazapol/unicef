@@ -29,27 +29,6 @@ import ModalVPH from "../Modal/ModalVPH";
 import ModalVacunacionHepatitisA from "../Modal/ModalVacunacionHepatitisA";
 import View4 from "../views/View4";
 
-//trivia
-// import trivia1 from "../../utils/DataTrivia/module1/trivia1.json";
-// import trivia2 from "../../utils/DataTrivia/module1/trivia2.json";
-// import trivia3 from "../../utils/DataTrivia/module1/trivia3.json";
-// import trivia4 from "../../utils/DataTrivia/module1/trivia4.json";
-// import trivia5 from "../../utils/DataTrivia/module1/trivia5.json";
-// import trivia6 from "../../utils/DataTrivia/module2/trivia1.json";
-// import trivia7 from "../../utils/DataTrivia/module2/trivia2.json";
-// import trivia8 from "../../utils/DataTrivia/module2/trivia3.json";
-// import trivia9 from "../../utils/DataTrivia/module2/trivia4.json";
-// import trivia10 from "../../utils/DataTrivia/module2/trivia5.json";
-// import trivia11 from "../../utils/DataTrivia/module3/trivia1.json";
-// import trivia12 from "../../utils/DataTrivia/module3/trivia2.json";
-// import trivia13 from "../../utils/DataTrivia/module3/trivia3.json";
-// import trivia14 from "../../utils/DataTrivia/module3/trivia4.json";
-// import trivia15 from "../../utils/DataTrivia/module3/trivia5.json";
-// import trivia16 from "../../utils/DataTrivia/module4/trivia1.json";
-// import trivia17 from "../../utils/DataTrivia/module4/trivia2.json";
-// import trivia18 from "../../utils/DataTrivia/module4/trivia3.json";
-// import trivia19 from "../../utils/DataTrivia/module4/trivia4.json";
-// import trivia20 from "../../utils/DataTrivia/module4/trivia5.json";
 import ModalQuestSlide1 from "../Modal/ModalQuestSlide1";
 import ModalQuestSlide2 from "../Modal/ModalQuestSlide2";
 import ModalQuestSlide3 from "../Modal/ModalQuestSlide3";
@@ -60,6 +39,7 @@ import ViewResults from "../ViewResults";
 import ViewInit from "../ViewInit";
 import ModalInit from "../Modal/Modalnit";
 import ModalSignosAlarma from "../Modal/ModalSignosAlarma";
+import ViewCompleted from "../views/ViewCompleted";
 
 const Carousell = (props) => {
   const [stateModalAntecedentes, setStateModalAntecedentes] = useState(false);
@@ -100,6 +80,7 @@ const Carousell = (props) => {
   const [stateViewModule2, setStateViewModule2] = useState(false);
   const [stateViewModule3, setStateViewModule3] = useState(false);
   const [stateViewModule4, setStateViewModule4] = useState(false);
+  const [stateViewModuleEnd, setStateViewEnd] = useState(false);
 
   const menuTimeline = useRef();
 
@@ -183,6 +164,9 @@ const Carousell = (props) => {
   };
   const activateView4 = () => {
     setStateViewModule4(true);
+  };
+  const activateViewEnd = () => {
+    setStateViewEnd(true);
   };
 
   useEffect(() => {
@@ -557,297 +541,22 @@ const Carousell = (props) => {
                   arrQuest={data.arrQuest}
                   index={stateCarousel}
                   stateSide={stateSide}
-                  activateNewView={activateView4}
+                  activateNewView={activateViewEnd}
                   moduleTrivia={data.moduleTrivia}
+                />
+              );
+            }    if (  data.type === "ViewEnd" && stateViewModuleEnd) {
+              return (
+                <ViewCompleted
+                  key={index}
+                  keyCarrousel={index}
+                  index={stateCarousel}
+                  stateSide={stateSide}
                 />
               );
             } else return null;
           })
           .filter((x) => x !== null)}
-        {/* <ViewInit
-          keyCarrousel={0}
-          toggleViewInit={toggleViewInit}
-          index={stateCarousel}
-          stateSide={stateSide}
-        /> */}
-        {/* <View1
-          toggleViewSintomas={toggleViewSintomas}
-          toggleViewImages={toggleViewImages}
-          toggleViewAntecedentes={toggleViewAntecedentes}
-          toggleViewDiagnostico={toggleViewDiagnostico}
-          toggleViewAlarmaPrevencion={toggleViewAlarmaPrevencion}
-          toggleViewVarianteCovid={toggleViewVarianteCovid}
-          keyCarrousel={1}
-          index={stateCarousel}
-          stateSide={stateSide}
-        /> */}
-        {/* <ViewGeneral
-          keyCarrousel={2}
-          index={stateCarousel}
-          stateSide={stateSide}
-          trivia={trivia1}
-          numberTrivia={1}
-          moduleTrivia="1"
-          counter={1}
-        />
-        <ViewGeneral
-          keyCarrousel={3}
-          index={stateCarousel}
-          stateSide={stateSide}
-          trivia={trivia2}
-          numberTrivia={2}
-          moduleTrivia="1"
-          counter={2}
-        />
-        <ViewGeneral
-          keyCarrousel={4}
-          index={stateCarousel}
-          stateSide={stateSide}
-          trivia={trivia3}
-          numberTrivia={3}
-          moduleTrivia="1"
-          counter={3}
-        />
-        <ViewGeneral
-          keyCarrousel={5}
-          index={stateCarousel}
-          stateSide={stateSide}
-          trivia={trivia4}
-          numberTrivia={4}
-          moduleTrivia="1"
-          counter={4}
-        />
-        <ViewGeneral
-          keyCarrousel={6}
-          index={stateCarousel}
-          stateSide={stateSide}
-          trivia={trivia5}
-          numberTrivia={5}
-          moduleTrivia="1"
-          counter={5}
-        /> */}
-        {/* <ViewResults
-          keyCarrousel={7}
-          arrNumberQuest={[1, 2, 3, 4, 5]}
-          arrQuest={[
-            "La enfermedad por coronavirus (COVID-19) es una enfermedad infecciosa causada por",
-            "Es una variante del virus, dentro de la categoría de preocupación",
-            "De los siguientes, cual no es un signo de alarma",
-            "Un paciente menor de 60 años, sin comorbilidades y vacunación completa, realizará aislamiento de salir positivo el resultado de COVID-19 por",
-            "Son recomendaciones a seguir si debo realizar aislamiento en casa de tener COVID-19",
-          ]}
-          index={stateCarousel}
-          stateSide={stateSide}
-        />
-        <View5
-          viewVideo={viewVideo}
-          toggleViewImages={toggleViewImages}
-          toggleViewVacunas={toggleViewVacunas}
-          toggleViewInmunidadColectiva={toggleViewInmunidadColectiva}
-          toggleViewTiposVacunas={toggleViewTiposVacunas}
-          toggleViewInocuidadEfectividad={toggleViewInocuidadEfectividad}
-          toggleViewEmbarazoLactancia={toggleViewEmbarazoLactancia}
-          toggleViewEfectosSecundarios={toggleViewEfectosSecundarios}
-          toggleViewAvanceVacunacion={toggleViewAvanceVacunacion}
-          toggleViewConsecuencias={toggleViewConsecuencias}
-          keyCarrousel={8}
-          index={stateCarousel}
-          stateSide={stateSide}
-        /> */}
-
-        {/* <ViewGeneral
-          keyCarrousel={9}
-          index={stateCarousel}
-          stateSide={stateSide}
-          trivia={trivia6}
-          numberTrivia={6}
-          moduleTrivia="2"
-          counter={1}
-        />
-        <ViewGeneral
-          keyCarrousel={10}
-          index={stateCarousel}
-          stateSide={stateSide}
-          trivia={trivia7}
-          numberTrivia={7}
-          moduleTrivia="2"
-          counter={2}
-        />
-        <ViewGeneral
-          keyCarrousel={11}
-          index={stateCarousel}
-          stateSide={stateSide}
-          trivia={trivia8}
-          numberTrivia={8}
-          moduleTrivia="2"
-          counter={3}
-        />
-        <ViewGeneral
-          keyCarrousel={12}
-          index={stateCarousel}
-          stateSide={stateSide}
-          trivia={trivia9}
-          numberTrivia={9}
-          moduleTrivia="2"
-          counter={4}
-        />
-        <ViewGeneral
-          keyCarrousel={13}
-          index={stateCarousel}
-          stateSide={stateSide}
-          trivia={trivia10}
-          numberTrivia={10}
-          moduleTrivia="2"
-          counter={5}
-        />
-        <ViewResults
-          keyCarrousel={14}
-          arrNumberQuest={[6, 7, 8, 9, 10]}
-          arrQuest={[
-            "Los principales tipos de vacunas disponibles contra la COVID-19 son, excepto",
-            "Son efectos de leves secundarios a recibir la vacuna contra COVID-19",
-            "Una gestante, con más de 12 semanas de gestación, ¿puede recibir la vacuna contra COVID-19?",
-            "Se puede recibir la cuarta dosis contra la COVID-19 si",
-            "Una lactante, ¿puede recibir la vacuna contra COVID-19?",
-          ]}
-          index={stateCarousel}
-          stateSide={stateSide}
-        />
-        <View15
-          toggleViewNuevasVacunas={toggleViewNuevasVacunas}
-          toggleViewVPH={toggleViewVPH}
-          toggleViewVacunacionHepatitisA={toggleViewVacunacionHepatitisA}
-          keyCarrousel={15}
-          index={stateCarousel}
-          stateSide={stateSide}
-        />
-        <ViewGeneral
-          keyCarrousel={16}
-          index={stateCarousel}
-          stateSide={stateSide}
-          trivia={trivia11}
-          numberTrivia={11}
-          moduleTrivia="3"
-          counter={1}
-        />
-        <ViewGeneral
-          keyCarrousel={17}
-          index={stateCarousel}
-          stateSide={stateSide}
-          trivia={trivia12}
-          numberTrivia={12}
-          moduleTrivia="3"
-          counter={2}
-        />
-        <ViewGeneral
-          keyCarrousel={18}
-          index={stateCarousel}
-          stateSide={stateSide}
-          trivia={trivia13}
-          numberTrivia={13}
-          moduleTrivia="3"
-          counter={3}
-        />
-        <ViewGeneral
-          keyCarrousel={19}
-          index={stateCarousel}
-          stateSide={stateSide}
-          trivia={trivia14}
-          numberTrivia={14}
-          moduleTrivia="3"
-          counter={4}
-        />
-        <ViewGeneral
-          keyCarrousel={20}
-          index={stateCarousel}
-          stateSide={stateSide}
-          trivia={trivia15}
-          numberTrivia={15}
-          moduleTrivia="3"
-          counter={5}
-        />
-        <ViewResults
-          keyCarrousel={21}
-          arrNumberQuest={[11, 12, 13, 14, 15]}
-          arrQuest={[
-            "El Esquema nacional de vacunación actualizado cuenta con",
-            "Las nuevas vacunas incluídas en el Esquema nacional de vacunación son",
-            "La vacuna contra el Virus de Papiloma Humano (VPH) previenen",
-            "No es un síntoma de la Hepatitis A",
-            "La complicación más temida de la hepatitis A es",
-          ]}
-          index={stateCarousel}
-          stateSide={stateSide}
-        />
-        <View4
-          toggleViewQuestSlide1={toggleViewQuestSlide1}
-          toggleViewQuestSlide2={toggleViewQuestSlide2}
-          toggleViewQuestSlide3={toggleViewQuestSlide3}
-          toggleViewQuestSlide4={toggleViewQuestSlide4}
-          toggleViewQuestSlide5={toggleViewQuestSlide5}
-          toggleViewQuestSlide6={toggleViewQuestSlide6}
-          keyCarrousel={22}
-          index={stateCarousel}
-          stateSide={stateSide}
-        />
-        <ViewGeneral
-          keyCarrousel={23}
-          index={stateCarousel}
-          stateSide={stateSide}
-          trivia={trivia16}
-          numberTrivia={16}
-          moduleTrivia="4"
-          counter={1}
-        />
-        <ViewGeneral
-          keyCarrousel={24}
-          index={stateCarousel}
-          stateSide={stateSide}
-          trivia={trivia17}
-          numberTrivia={17}
-          moduleTrivia="4"
-          counter={2}
-        />
-        <ViewGeneral
-          keyCarrousel={25}
-          index={stateCarousel}
-          stateSide={stateSide}
-          trivia={trivia18}
-          numberTrivia={18}
-          moduleTrivia="4"
-          counter={3}
-        />
-        <ViewGeneral
-          keyCarrousel={26}
-          index={stateCarousel}
-          stateSide={stateSide}
-          trivia={trivia19}
-          numberTrivia={19}
-          moduleTrivia="4"
-          counter={4}
-        />
-        <ViewGeneral
-          keyCarrousel={27}
-          index={stateCarousel}
-          stateSide={stateSide}
-          trivia={trivia20}
-          numberTrivia={20}
-          moduleTrivia="4"
-          counter={5}
-        />
-        <ViewResults
-          keyCarrousel={28}
-          arrNumberQuest={[16, 17, 18, 19, 20]}
-          arrQuest={[
-            "¿Debería vacunarme si ya he pasado la COVID-19?",
-            "¿Pueden las vacunas contra la COVID-19 afectar la fertilidad?",
-            "El uso prolongado de las mascarillas, cuando se llevan puestas correctamente, NO PROVOCA intoxicación por CO2 ni hipoxia",
-            "El nuevo coronavirus NO PUEDE transmitirse a través de picaduras de mosquitos",
-            "¿Puedo dejar de tomar precauciones después de haberme vacunado?",
-          ]}
-          index={stateCarousel}
-          stateSide={stateSide}
-        /> */}
       </Carousel>
       <MenuBurguer stateHamburger={stateHamburger} toggleMenu={toggleMenu} />
     </div>

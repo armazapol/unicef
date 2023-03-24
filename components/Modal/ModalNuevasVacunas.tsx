@@ -156,7 +156,7 @@ const ModalNuevasVacunas = ({ toggleViewNuevasVacunas }: Props) => {
                   />
                 </a>
               </div>
-              <p className="underline hover:text-blue-500 text-white text-xs">
+              <p className="underline hover:text-blue-500 text-white text-sm">
                 <span className="font-semibold"> Fuente: </span>
                 <a
                   href="https://busquedas.elperuano.pe/normaslegales/aprueban-la-nts-n-196-minsadgiesp-2022-norma-tecnica-de-resolucion-ministerial-no-884-2022minsa-2122942-1/"

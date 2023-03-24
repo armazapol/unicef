@@ -223,7 +223,7 @@ Props) => {
       {!isLoading && data?.value === 0 ? (
         <div className="flex flex-col z-20 relative items-center w-8/12 lg:w-[40rem]  ">
           <div className="relative w-full flex items-center justify-center ">
-            <div className="relative w-10/12 flex items-center justify-center ">
+            <div className="relative w-full flex items-center justify-center ">
             <Image className="" alt="quest" src={quest} placeholder="blur" />
             <p className="absolute text-sm lg:text-3xl px-10">
               {" "}

@@ -133,7 +133,7 @@ const ModalVacunas = ({ toggleViewVacunas }: Props) => {
                     inmunitario a responder como lo hubiese hecho en su primera
                     reacción ante el patógeno real.
                   </p>
-                  <p className="text-xs">
+                  <p className="text-sm">
                     <span className="font-semibold"> Fuente: </span>
                     <a
                       className="underline hover:text-blue-500 text-black"

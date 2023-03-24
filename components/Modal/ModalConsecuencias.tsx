@@ -153,7 +153,7 @@ const ModalConsecuencias = ({ toggleViewConsecuencias }: Props) => {
                   También es necesario estudiar el impacto de las vacunas a
                   medida que se administran.
                 </p>
-                <p className="text-xs">
+                <p className="text-sm">
                   <span className="font-semibold"> Fuente: </span>
                   <a
                     className="underline hover:text-blue-500 text-black"

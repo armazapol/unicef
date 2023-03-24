@@ -197,7 +197,7 @@ const ModalEmbarazoLactancia = ({ toggleViewEmbarazoLactancia }: Props) => {
                     generan tras la vacunación pueden pasar a la leche materna y
                     ayudar a proteger al bebé.
                   </p>
-                  <p className="text-xs">
+                  <p className="text-sm">
                     <span className="font-semibold"> Fuente: </span>
                     <a
                       className="underline hover:text-blue-500 text-black"

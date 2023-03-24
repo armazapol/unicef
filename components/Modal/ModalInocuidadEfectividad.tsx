@@ -191,7 +191,7 @@ const ModalInocuidadEfectividad = ({
                     <li>* Fallecimiento: 99.0%.</li>
                   </ul>
                 </div>
-                <p className="text-left text-xs">
+                <p className="text-left text-sm">
                 <span className="font-semibold"> Fuente:{" "}</span> 
                   <a
                     className="underline hover:text-blue-500 text-black"
@@ -239,7 +239,7 @@ const ModalInocuidadEfectividad = ({
                     partir de los 6 meses luego de la última dosis, sugiriendo
                     la importancia del uso de dosis de refuerzo (booster).
                   </p>
-                  <p className="text-xs">
+                  <p className="text-sm">
                   <span className="font-semibold"> Fuente:{" "}</span> 
                     <a
                       className="underline hover:text-blue-500 text-black"
@@ -282,7 +282,7 @@ const ModalInocuidadEfectividad = ({
                   <p>
                   En otro estudio danés, se estimó la efectividad de la vacuna contra la infección y hospitalización.  Encontraron que contar con dos dosis de vacuna proveía una alta protección contra infección y hospitalización por <span className="text-orange-600">COVID-19</span>. Una tercera dosis incrementaba sustancialmente el nivel y la duración de la protección, especialmente en población mayor a 60 años.
                   </p>
-                  <p className="text-xs">
+                  <p className="text-sm">
                   <span className="font-semibold"> Fuente:{" "}</span> 
                     <a
                       className="underline hover:text-blue-500 text-black"

@@ -244,7 +244,7 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
                   />
                 </a>
               </div>
-              <p className="underline hover:text-blue-500 text-white text-xs">
+              <p className="underline hover:text-blue-500 text-white text-sm">
                 <span className="font-semibold"> Fuente: </span>
                 <a
                   href="https://cdn.www.gob.pe/uploads/document/file/2773889/Anexo.pdf?v=1642770555"
@@ -272,10 +272,10 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
                       <li>
                         * Vacúnese cuando haya una vacuna disponible para usted.
                       </li>
-                      <li>
+                      {/* <li>
                         * Manténgase al menos a 1 metro de distancia de los
                         demás.
-                      </li>
+                      </li> */}
                       <li>
                         * Utilice una mascarilla bien ajustada, según las
                         recomendaciones actualizadas del Ministerio de salud.
@@ -333,7 +333,7 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
                 <p>
                   Fuente:{" "}
                   <a
-                    className="underline hover:text-blue-500"
+                    className="underline hover:text-blue-500 text-sm"
                     target="blank"
                     href="https://www.gob.pe/"
                   >

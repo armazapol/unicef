@@ -117,7 +117,7 @@ const ModalInmunidadColectiva = ({ toggleViewInmunidadColectiva }: Props) => {
                   Esto es especialmente importante no solo para las personas que no pueden vacunarse, sino también para las que pueden ser más susceptibles a las enfermedades contra las que vacunamos. Ninguna vacuna proporciona por sí sola una protección del 100%, y la inmunidad colectiva no ofrece protección total a quienes no pueden vacunarse con seguridad. No obstante, la inmunidad colectiva ofrece a esas personas un grado sustancial de protección, gracias a que las personas de su entorno están vacunadas.
                   </p>
                   <p>La vacunación no solo lo protege a usted, sino también a las personas de la comunidad que no se pueden vacunar. Si usted puede vacunarse, hágalo.</p>
-                  <p className="text-xs">
+                  <p className="text-sm">
                   <span className="font-semibold"> Fuente:{" "}</span> 
                     <a
                       className="underline hover:text-blue-500 text-black"

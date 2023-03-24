@@ -109,7 +109,7 @@ const ModalSignosAlarma = ({ toggleViewSignosAlarma }: Props) => {
                     <li>* Coloración azul de los labios (cianosis)</li>
                   </ul>
                   <a
-                    className="underline hover:text-blue-500 text-xs"
+                    className="underline hover:text-blue-500 text-sm"
                     href="https://cdn.www.gob.pe/uploads/document/file/2007441/Documento%20T%C3%A9cnico%3A%20Manejo%20Ambulatorio%20de%20Personas%20Afectadas%20por%20la%20COVID-19%20en%20el%20Per%C3%BA.pdf?v=1625853483"
                     target="blank"
                   >
@@ -159,7 +159,7 @@ const ModalSignosAlarma = ({ toggleViewSignosAlarma }: Props) => {
                     </li>
                   </ul>
                   <a
-                    className="underline hover:text-blue-500 text-xs"
+                    className="underline hover:text-blue-500 text-sm"
                     href="https://cdn.www.gob.pe/uploads/document/file/582549/RM_193-2020-MINSA.PDF"
                     target="blank"
                   >

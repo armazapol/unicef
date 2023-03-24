@@ -77,7 +77,7 @@ const ModalAntecedentes = ({ toggleViewAntecedentes }: Props) => {
             A nivel mundial, a la fecha se han registrado 649,247,184 casos
             confirmados y 6,653,453 fallecidos{" "}
             <a
-              className="underline hover:text-blue-500 text-xs"
+              className="underline hover:text-blue-500 text-sm"
               href="https://coronavirus.jhu.edu/map.html"
               target="blank"
             >

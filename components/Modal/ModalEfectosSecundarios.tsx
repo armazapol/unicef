@@ -216,7 +216,7 @@ const ModalEfectosSecundarios = ({ toggleViewEfectosSecundarios }: Props) => {
                   estas vacunas a fin de detectar posibles efectos adversos
                   inesperados.
                 </p>
-                <p className="text-xs">
+                <p className="text-sm">
                   <span className="font-semibold"> Fuente: </span>
                   <a
                     className="underline hover:text-blue-500 text-black"

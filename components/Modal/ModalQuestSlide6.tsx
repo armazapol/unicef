@@ -243,7 +243,7 @@ const ModalQuestSlide6 = ({ toggleViewQuestSlide6 }: Props) => {
                 />
               </a>
             </div>
-            <p className="underline hover:text-blue-500 text-white text-xs">
+            <p className="underline hover:text-blue-500 text-white text-sm">
               <span className="font-semibold"> Fuente: </span>
               <a
                 href="https://cdn.www.gob.pe/uploads/document/file/2773889/Anexo.pdf?v=1642770555"
@@ -326,7 +326,7 @@ const ModalQuestSlide6 = ({ toggleViewQuestSlide6 }: Props) => {
                 <p>
                   Fuente:{" "}
                   <a
-                    className="underline hover:text-blue-500"
+                    className="underline hover:text-blue-500 text-sm"
                     target="blank"
                     href="https://www.gob.pe/"
                   >

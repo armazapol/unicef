@@ -547,5 +547,8 @@
       "¿Puedo dejar de tomar precauciones después de haberme vacunado?"
     ],
     "moduleTrivia": "4"
+  },
+  {
+    "type": "ViewEnd"
   }
 ]

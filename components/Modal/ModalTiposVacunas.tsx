@@ -174,7 +174,7 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
                 />
               </a>
             </div>
-            <p className="underline hover:text-blue-500 text-white text-xs">
+            <p className="underline hover:text-blue-500 text-white text-sm">
               <span className="font-semibold"> Fuente: </span>
               <a
                 href="http://www.medicina.uanl.mx/noticias/coronavirus/covid-19-tipos-de-vacunas/"
@@ -344,7 +344,7 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas }: Props) => {
                     Actualmente, en el Perú se aplican las vacunas de los
                     laboratorios Pfizer, Sinopharm, AstraZeneca y Moderna.
                   </p>
-                  <p className="text-xs">
+                  <p className="text-sm">
                     <span className="font-semibold"> Fuente: </span>
                     <a
                       className="underline hover:text-blue-500 text-black"

@@ -171,7 +171,7 @@ const ModalVPH = ({ toggleViewVPH }: Props) => {
                   />
                 </a>
               </div>
-              <p className="underline hover:text-blue-500  text-xs text-white">
+              <p className="underline hover:text-blue-500  text-sm text-white">
                 <span className="font-semibold"> Fuente: </span>
                 <a
                   href="https://www.gob.pe/21473"

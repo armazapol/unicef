@@ -143,7 +143,7 @@ const ModalVacunacionHepatitisA = ({
                   <p>
                   El esquema contempla una sola dosis a los 15 meses de edad. Las probables reacciones luego de la administración son leves e incluyen dolor local y, con menor frecuencia, induración en el sitio de la inyección, pérdida de apetito, somnolencia, cefalea o febrícula.
                   </p>
-                  <p className="underline hover:text-blue-500  text-xs">
+                  <p className="underline hover:text-blue-500  text-sm">
                     <span className="font-semibold"> Fuente: </span>
                     <a href="https://www.cdc.gov/vaccines/parents/diseases/hepa-sp.html" target="blank">
                     Vacunas infantiles contra la hepatitis A | CDC, Hepatitis A (scielo.sa.cr), Norma Técnica de Salud - NTS N° 196-MINSA/DGIESP-2022zyxwvutsrqponmlkjihgfedcbaZYXWVUTS I. II. - Studocu	
