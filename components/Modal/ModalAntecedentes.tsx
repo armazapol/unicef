@@ -63,7 +63,7 @@ const ModalAntecedentes = ({ toggleViewAntecedentes }: Props) => {
             <span className="text-orange-600">COVID-19</span>) es una enfermedad
             infecciosa causada por el virus{" "}
             <span className="text-orange-600">SARS-CoV-2</span> (severe acute
-            respiratory syndrome coronavirus 2).{" "}
+            respiratory syndrome coronavirus 2).{" "}<br></br>
             <a
               className=""
               href="https://www.who.int/es/health-topics/coronavirus#tab=tab_1"

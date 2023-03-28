@@ -195,7 +195,7 @@ const ModalInocuidadEfectividad = ({
                 <span className="font-semibold"> Fuente:{" "}</span> 
                   <a
                     className="underline hover:text-blue-500 text-black"
-                    href="google.com"
+                    href="https://pubmed.ncbi.nlm.nih.gov/34800687/"
                     target="blank"
                   >
                     Zheng C, Shao W, Chen X, Zhang B, Wang G, Zhang W.
@@ -243,7 +243,7 @@ const ModalInocuidadEfectividad = ({
                   <span className="font-semibold"> Fuente:{" "}</span> 
                     <a
                       className="underline hover:text-blue-500 text-black"
-                      href="google.com"
+                      href="https://pubmed.ncbi.nlm.nih.gov/35910897/"
                       target="blank"
                     >
                       Zou Y, Huang D, Jiang Q, Guo Y, Chen C. The Vaccine
@@ -286,7 +286,7 @@ const ModalInocuidadEfectividad = ({
                   <span className="font-semibold"> Fuente:{" "}</span> 
                     <a
                       className="underline hover:text-blue-500 text-black"
-                      href="google.com"
+                      href="https://pubmed.ncbi.nlm.nih.gov/36048766/"
                       target="blank"
                     >
                      Gram MA, Emborg HD, Schelde AB, Friis NU, Nielsen KF, Moustsen-Helms IR, Legarth R, Lam JUH, Chaine M, Malik AZ, Rasmussen M, Fonager J, Sieber RN, Stegger M, Ethelberg S, Valentiner-Branth P, Hansen CH. Vaccine effectiveness against SARS-CoV-2 infection or COVID-19 hospitalization with the Alpha, Delta, or Omicron SARS-CoV-2 variant: A nationwide Danish cohort study. PLoS Med. 2022 Sep 1;19(9):e1003992. doi: 10.1371/journal.pmed.1003992. PMID: 36048766; PMCID: PMC9436060.
