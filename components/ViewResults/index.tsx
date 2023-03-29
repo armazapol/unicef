@@ -169,7 +169,7 @@ const ViewResults = ({
       <div className="absolute z-50 -right-[20rem] top-5 bg_color_third rounded-xl p-4 shadow-xl toast_format opacity-0">
         <p className="text-base">Se ha formateado correctamente!</p>
       </div>
-      <div className="z-20 w-10/12 lg:w-[60rem] h-[14rem] sm:h-[15rem] lg:h-auto flex flex-col gap-3 lg:gap-5 overflow-auto">
+      <div className="z-20 w-10/12 lg:w-[60rem] h-[14rem] sm:h-[15rem] lg:h-auto flex flex-col gap-3 lg:gap-5 overflow-auto rounded-xl">
         <h1 className=" text-xl lg:text-4xl text-white font-bold ">
           Resultados
         </h1>
@@ -200,10 +200,21 @@ const ViewResults = ({
                   </div>
                 );
               })}
+               {dataTable.length === 5 && (
+              <div>
+
+                  <div
+                    className="bg-blue-900 rounded-md py-2 px-12 text-white font-bold text-md  lg:text-xl z-20 shadow-md "
+                  >
+                     TU PUNTAJE TOTAL ES: <span className="text-orange-600">{totalScore}</span> 
+                  </div>
+                
+              </div>
+            )}
             {dataTable.length === 5 && (
               <div>
                 {totalScore >= 80 ? (
-                  <h2>FELICIDADES, PASASTE EL MÓDULO / TU PUNTAJE TOTAL ES: {totalScore} </h2>
+                  <h2>FELICIDADES, PASASTE EL MÓDULO </h2>
                 ) : totalScore === 0 ? (
                   <h2>Ninguna pregunta respondida</h2>
                 ) : (
@@ -211,7 +222,7 @@ const ViewResults = ({
                     className="bg-blue-900 rounded-md py-2 px-12 text-white font-bold text-md  lg:text-xl cursor-pointer z-20 shadow-md "
                     onClick={() => resetScore()}
                   >
-                    VOLVER A DAR EL MÓDULO / TU PUNTAJE TOTAL ES: {totalScore}
+                    VOLVER A DAR EL MÓDULO 
                   </div>
                 )}
               </div>
