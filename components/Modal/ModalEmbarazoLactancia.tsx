@@ -49,7 +49,7 @@ const ModalEmbarazoLactancia = ({ toggleViewEmbarazoLactancia }: Props) => {
           <Carousel
             showThumbs={false}
             showStatus={false}
-            showIndicators={false}
+            showIndicators={true}
             infiniteLoop={true}
             autoPlay={false}
             swipeable={false}

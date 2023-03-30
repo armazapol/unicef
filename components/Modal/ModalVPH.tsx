@@ -49,7 +49,7 @@ const ModalVPH = ({ toggleViewVPH }: Props) => {
           <Carousel
             showThumbs={false}
             showStatus={false}
-            showIndicators={false}
+            showIndicators={true}
             infiniteLoop={true}
             autoPlay={false}
             stopOnHover={false}
@@ -104,15 +104,12 @@ const ModalVPH = ({ toggleViewVPH }: Props) => {
               <div className="w-10/12 lg:w-[40rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
                 <div className="text-left flex flex-col gap-2">
                   <p className="font-semibold">
-                    Se aplican dos dosis a niñas, según las siguientes
-                    indicaciones:{" "}
+                  En el Esquema Nacional de Vacunación, para el presente año 2023, se tienen las siguientes indicaciones:
                   </p>
                   <ul>
                     <li>
-                      * En niñas del 5to grado de primaria regular de
-                      Instituciones Educativas Públicas y Privadas y niñas que
-                      por alguna razón no estén estudiando que tengan de 9 a 13
-                      años de edad.
+                      * Una dosis para niñas y niños del 5to grado de primaria regular de Instituciones Educativas públicas y
+privadas y niñas y niños que por alguna razón no estén estudiando que tengan de 9 a 13 años de edad.
                     </li>
                     <li>
                       * La 1ra dosis se aplicará al primer contacto con el

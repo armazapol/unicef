@@ -50,8 +50,7 @@ const Menu = ({
   toggleViewQuestSlide3,
   toggleViewQuestSlide4,
   toggleViewQuestSlide5,
-  toggleViewQuestSlide1
-
+  toggleViewQuestSlide1,
 }: Props) => {
   const user = useSelector(selectCurrentUser);
   const dispatch = useDispatch();
@@ -67,82 +66,141 @@ const Menu = ({
       <div className="grid grid-cols-2 grid-rows-2 h-full w-full">
         <div className="flex items-center py-1 lg:py-10 gap-0 lg:gap-2 flex-col">
           <h2 className="text-white text-base lg:text-xl">Módulo 1</h2>
-          <p className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden" onClick={toggleViewAntecedentes}>
+          <p
+            className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden"
+            onClick={toggleViewAntecedentes}
+          >
             Antecedentes
           </p>
-          <p className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden" onClick={toggleViewAlarmaPrevencion}>
+          <p
+            className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden"
+            onClick={toggleViewAlarmaPrevencion}
+          >
             Aislamiento y prevención del contagio
           </p>
-          <p className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden" onClick={toggleViewSintomas}>
+          <p
+            className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden"
+            onClick={toggleViewSintomas}
+          >
             Síntomas
           </p>
-          <p className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden" onClick={toggleViewDiagnostico}>
+          <p
+            className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden"
+            onClick={toggleViewDiagnostico}
+          >
             Diagnóstico
           </p>
-          <p className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden" onClick={toggleViewSignosAlarma}>
+          <p
+            className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden"
+            onClick={toggleViewSignosAlarma}
+          >
             Signos de Alarma y Factores de riesgo
           </p>
         </div>
         <div className="flex items-center py-1 lg:py-10 gap-0 lg:gap-2 flex-col">
           <h2 className="text-white text-base lg:text-xl">Módulo 2</h2>
-          <div className="grid grid-cols-2 gap-0 lg:gap-2 items-center">
-          <p className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden" onClick={toggleViewVacunas}>
-            ¿Cómo actuan las vacunas?
-          </p>
-          <p className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden" onClick={toggleViewInmunidadColectiva}>
-            Inmunidad Colectiva
-          </p>
-          <p className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden" onClick={toggleViewEfectosSecundarios}>
-            Efectos secundarios
-          </p>
-          <p className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden" onClick={toggleViewEmbarazoLactancia}>
-            Embarazo y lactancia materna
-          </p>
-          <p className="hover:underline cursor-pointer text-xs lg:text-base  whitespace-nowrap text-ellipsis overflow-hidden" onClick={toggleViewTiposVacunas}>
-            Tipos de Vacunas y Esquema de la vacunación
-          </p>
-          <p className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden" onClick={toggleViewInocuidadEfectividad}>
-            Inocuidad y Efectividad de las vacunas
-          </p>
-          <p className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden" onClick={toggleViewConsecuencias}>
-            Consecuencias de las variantes en vacunas
-          </p>
+          <div className="grid grid-cols-2 lg:grid-cols-1 lg:text-center gap-0 lg:gap-2 items-center">
+            <p
+              className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden"
+              onClick={toggleViewVacunas}
+            >
+              ¿Cómo actuan las vacunas?
+            </p>
+            <p
+              className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden"
+              onClick={toggleViewInmunidadColectiva}
+            >
+              Inmunidad Colectiva
+            </p>
+            <p
+              className="hover:underline cursor-pointer text-xs lg:text-base  whitespace-nowrap text-ellipsis overflow-hidden"
+              onClick={toggleViewTiposVacunas}
+            >
+              Tipos de Vacunas y Esquema de la vacunación
+            </p>
+            <p
+              className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden"
+              onClick={toggleViewInocuidadEfectividad}
+            >
+              Inocuidad y Efectividad de las vacunas
+            </p>
+            <p
+              className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden"
+              onClick={toggleViewEfectosSecundarios}
+            >
+              Efectos secundarios
+            </p>
+            <p
+              className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden"
+              onClick={toggleViewConsecuencias}
+            >
+              Consecuencias de las variantes en vacunas
+            </p>
+            <p
+              className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden"
+              onClick={toggleViewEmbarazoLactancia}
+            >
+              Embarazo y lactancia materna
+            </p>
           </div>
-        
         </div>
         <div className="flex items-center py-1 lg:py-10 gap-0 lg:gap-2 flex-col">
           <h2 className="text-white text-base lg:text-xl">Módulo 3</h2>
-          <p className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden" onClick={toggleViewNuevasVacunas}>
+          <p
+            className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden"
+            onClick={toggleViewNuevasVacunas}
+          >
             Nuevas vacunas incluidas
           </p>
-          <p className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden" onClick={toggleViewVPH}>
+          <p
+            className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden"
+            onClick={toggleViewVPH}
+          >
             Vacuna contra el Virus Papiloma Humano (VPH)
           </p>
-          <p className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden" onClick={toggleViewVacunacionHepatitisA}>
+          <p
+            className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden"
+            onClick={toggleViewVacunacionHepatitisA}
+          >
             Vacunación hepatitis A
           </p>
         </div>
         <div className="flex items-center py-1 lg:py-10 gap-0 lg:gap-2 flex-col">
           <h2 className="text-white text-base lg:text-xl">Módulo 4</h2>
           <div className="grid grid-cols-1 gap-0 lg:gap-2 items-center text-center">
-          <p className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden" onClick={toggleViewQuestSlide1}>
-            ¿Qué hacer si ya tuviste COVID o si ya te vacunaste?
-          </p>
-          <p className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden " onClick={toggleViewQuestSlide2}>
-            ¿Que sirve frente al COVID? ¿El frío, los antibióticos o las
-            vacunas?
-          </p>
-          <p className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden" onClick={toggleViewQuestSlide3}>
-            ¿Pueden las vacunas afectar la fertilidad o tu ADN? ¿Me puedo
-            vacunar si estoy embarazada?
-          </p>
-          <p className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden" onClick={toggleViewQuestSlide4}>
-            Tiempo de aparición de síntomas y duración de protección
-          </p>
-          <p className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden" onClick={toggleViewQuestSlide5}>
-            ¿Los zapatos, las mascarillas y los mosquitos propagan el COVID?
-          </p>
-       </div>
+            <p
+              className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden"
+              onClick={toggleViewQuestSlide1}
+            >
+              ¿Qué hacer si ya tuviste COVID o si ya te vacunaste?
+            </p>
+            <p
+              className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden "
+              onClick={toggleViewQuestSlide2}
+            >
+              ¿Que sirve frente al COVID? ¿El frío, los antibióticos o las
+              vacunas?
+            </p>
+            <p
+              className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden"
+              onClick={toggleViewQuestSlide3}
+            >
+              ¿Pueden las vacunas afectar la fertilidad o tu ADN? ¿Me puedo
+              vacunar si estoy embarazada?
+            </p>
+            <p
+              className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden"
+              onClick={toggleViewQuestSlide4}
+            >
+              Tiempo de aparición de síntomas y duración de protección
+            </p>
+            <p
+              className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden"
+              onClick={toggleViewQuestSlide5}
+            >
+              ¿Los zapatos, las mascarillas y los mosquitos propagan el COVID?
+            </p>
+          </div>
         </div>
       </div>
       <p className="absolute top-5 left-5 font-semibold cursor-pointer text-xs md:text-base hidden lg:block">

@@ -50,55 +50,56 @@ const ModalAntecedentes = ({ toggleViewAntecedentes }: Props) => {
             nivel nacional, con medidas de prevención y control del{" "}
             <span className="text-orange-600">COVID-19</span>, el 11 de marzo
             del 2020, mediante Decreto supremo N°008-2020-SA.
-            <a
-              className="underline hover:text-blue-500"
-              href="https://cdn.www.gob.pe/uploads/document/file/1206594/DS_N__008-2020-SA.pdf?v=1596682779"
-              target="blank"
-            >
-              <ButtonLink text="(Normas_Legales_20200311_EXTRAORDINARIA.indd (www.gob.pe))" />
-            </a>
           </p>
           <p>
             La enfermedad por coronavirus (
             <span className="text-orange-600">COVID-19</span>) es una enfermedad
             infecciosa causada por el virus{" "}
             <span className="text-orange-600">SARS-CoV-2</span> (severe acute
-            respiratory syndrome coronavirus 2).{" "}<br></br>
-            <a
-              className=""
-              href="https://www.who.int/es/health-topics/coronavirus#tab=tab_1"
-              target="blank"
-            >
-              {" "}
-              <ButtonLink text="Coronavirus (who.int)" />
-            </a>
+            respiratory syndrome coronavirus 2). <br></br>
           </p>
           <p>
             A nivel mundial, a la fecha se han registrado 649,247,184 casos
             confirmados y 6,653,453 fallecidos{" "}
-            <a
-              className="underline hover:text-blue-500 text-sm"
-              href="https://coronavirus.jhu.edu/map.html"
-              target="blank"
-            >
-              {" "}
-              (Fuente: COVID-19 Map - Johns Hopkins Coronavirus Resource Center
-              (jhu.edu))
-            </a>
           </p>
           <p>
             A diciembre del presente en nuestro país se tienen 4,304,745 casos
             confirmados de <span className="text-orange-600">COVID-19</span> y
             217,519 fallecidos, según la sala situacional del Ministerio de
             Salud{" "}
+          </p>
+          <div>
+            <h3 className="font-semibold">Fuentes:</h3>
             <a
-              className="underline hover:text-blue-500"
+              className="hover:underline hover:text-blue-500 text-sm block"
+              href="https://cdn.www.gob.pe/uploads/document/file/1206594/DS_N__008-2020-SA.pdf?v=1596682779"
+              target="blank"
+            >
+              1. (Normas_Legales_20200311_EXTRAORDINARIA.indd (www.gob.pe))
+            </a>
+            <a
+              className="hover:underline hover:text-blue-500 text-sm block"
+              href="https://www.who.int/es/health-topics/coronavirus#tab=tab_1"
+              target="blank"
+            >
+              2. Coronavirus (who.int)
+            </a>
+            <a
+              className="hover:underline hover:text-blue-500 text-sm block"
+              href="https://coronavirus.jhu.edu/map.html"
+              target="blank"
+            >
+              3. (COVID-19 Map - Johns Hopkins Coronavirus Resource Center
+              (jhu.edu))
+            </a>
+            <a
+             className="hover:underline hover:text-blue-500 text-sm block"
               href="https://covid19.minsa.gob.pe/sala_situacional.asp"
               target="blank"
             >
-              <ButtonLink text="(Covid 19 en el Perú - Ministerio del Salud (minsa.gob.pe)" />
+              4. (Covid 19 en el Perú - Ministerio del Salud (minsa.gob.pe)
             </a>
-          </p>
+          </div>
         </div>
         <div className="relative flex-1">
           <Image
@@ -109,16 +110,16 @@ const ModalAntecedentes = ({ toggleViewAntecedentes }: Props) => {
             fill
             quality={50}
           />
-             <a
-                  onClick={() => window.open("/img/view1/newModal2.jpg")}
-                  className="absolute left-5 bottom-5 z-20 cursor-pointer"
-                >
-                 <img
-                    className="w_loop hidden lg:block"
-                    src="/img/lupa.png"
-                    alt=""
-                  />
-                </a>
+          <a
+            onClick={() => window.open("/img/view1/newModal2.jpg")}
+            className="absolute left-5 bottom-5 z-20 cursor-pointer"
+          >
+            <img
+              className="w_loop hidden lg:block"
+              src="/img/lupa.png"
+              alt=""
+            />
+          </a>
         </div>
       </div>
     </div>

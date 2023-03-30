@@ -200,6 +200,11 @@ const Carousell = (props) => {
     setStateHamburger(!stateHamburger);
   };
 
+
+  const handleNext =() => {
+    setStateCarousel((prevIndex) => prevIndex + 1);
+  }
+
   useEffect(() => {
     stateHamburger
       ? menuTimeline.current.play()
@@ -291,7 +296,7 @@ const Carousell = (props) => {
       {stateModalQuestSlide6 && (
         <ModalQuestSlide6 toggleViewQuestSlide6={toggleViewQuestSlide6} />
       )}
-      {stateModalInit && <ModalInit toggleViewInit={toggleViewInit} />}
+      {stateModalInit && <ModalInit toggleViewInit={toggleViewInit} handleNext={handleNext} />}
       <div className="absolute -bottom-14 -right-14 lg:-bottom-20 lg:-right-20 bg-blue-900/90 rounded-full w-32 h-32 lg:w-40 text-white z-40 background">
         <div className="contentMenu hidden">
           <Menu
@@ -330,6 +335,7 @@ const Carousell = (props) => {
         swipeable={false}
         onChange={(index) => updateState(index)}
         className="rounded-3xl text-white carousel1"
+        selectedItem={stateCarousel}
       >
         {slides
           .map((data, index) => {

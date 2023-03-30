@@ -15,13 +15,19 @@ import ButtonLink from "../commons/button/ButtonLink";
 
 type Props = {
   toggleViewInit: () => void;
+  handleNext: () => void;
 };
 
-const ModalInit = ({ toggleViewInit }: Props) => {
+const ModalInit = ({ toggleViewInit, handleNext }: Props) => {
   const handleChildElementClick = (e: any) => {
     e.stopPropagation();
     // Do other stuff here
   };
+
+  const handleFinalizar = () => {
+    toggleViewInit()
+    handleNext()
+  }
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -57,7 +63,7 @@ const ModalInit = ({ toggleViewInit }: Props) => {
           showThumbs={false}
           showStatus={false}
           // showIndicators={false}
-          infiniteLoop={true}
+          infiniteLoop={false}
           autoPlay={false}
           stopOnHover={false}
           swipeable={false}
@@ -95,9 +101,7 @@ const ModalInit = ({ toggleViewInit }: Props) => {
                   </h3>
                   <p>
                     Este curso tiene como objetivos definir las principales
-                    características de la COVID-19, así como reconocer la
-                    importancia y disponibilidad de las vacunas, y por último,
-                    identificar los principales cambios en el{" "}
+                    características de la COVID-19, así como conocer la importancia de las vacunas e identificar los principales cambios en el{" "}
                     <span className="text-orange-600">
                       esquema nacional de vacunación.
                     </span>
@@ -283,7 +287,7 @@ const ModalInit = ({ toggleViewInit }: Props) => {
                   <div className="flex items-center justify-center mt-0 lg:mt-20">
                     <div
                       className="bg-blue-900 rounded-md py-2 px-12 text-white font-bold text-md  lg:text-3xl cursor-pointer z-20 shadow-md shadow-black"
-                      onClick={toggleViewInit}
+                      onClick={handleFinalizar}
                     >
                       Finalizar
                     </div>

@@ -55,7 +55,7 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
         <Carousel
           showThumbs={false}
           showStatus={false}
-          showIndicators={false}
+          showIndicators={true}
           infiniteLoop={true}
           autoPlay={false}
           stopOnHover={false}
@@ -101,13 +101,6 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
                     requiera hospitalización se le indica aislamiento
                     domiciliario. Durante el aislamiento se le restringe el
                     desplazamiento fuera de su vivienda o centro de aislamiento.
-                    <a
-                      className=""
-                      href="https://cdn.www.gob.pe/uploads/document/file/2733824/Anexo.pdf?v=1642137085"
-                      target="blank"
-                    >
-                      <ButtonLink text="www.gob.pe" />
-                    </a>
                   </p>
                   <p>
                     Para el caso de pacientes con síntomas respiratorios, y en
@@ -128,6 +121,16 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
                       por 7 días.
                     </li>
                   </ul>
+                </div>
+                <div className="text-left">
+                  <h3 className="font-semibold">Fuentes:</h3>
+                  <a
+                    className="hover:underline hover:text-blue-500 text-sm block"
+                    href="https://cdn.www.gob.pe/uploads/document/file/2733824/Anexo.pdf?v=1642137085"
+                    target="blank"
+                  >
+                    1. www.gob.pe
+                  </a>
                 </div>
               </div>
               <div className="relative flex-1">
@@ -318,11 +321,7 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
                     con un desinfectante de manos a base de alcohol. (acá se
                     puede ampliar una imagen sobre la importancia del lavado de
                     manos: Importancia del lavado de manos - Orientación -
-                    Ministerio de Salud - Gobierno del Perú{" "}
-                    <a className="" target="blank" href="https://www.gob.pe/">
-                      <ButtonLink text="www.gob.pe" />
-                    </a>{" "}
-                    )
+                    Ministerio de Salud - Gobierno del Perú )
                   </li>
                   <li>* Cúbrase la boca y la nariz al toser o estornudar.</li>
                   <li>
@@ -331,14 +330,21 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion }: Props) => {
                   </li>
                 </ul>
                 <p>
-                  Fuente:{" "}
+               
+                  <h3 className="font-semibold">   Fuentes:{" "}</h3>
                   <a
-                    className="underline hover:text-blue-500 text-sm"
+                    className="hover:underline hover:text-blue-500 text-sm block"
                     target="blank"
                     href="https://www.gob.pe/"
                   >
-                    {" "}
-                    Coronavirus (who.int) y Campaña de prevención contra la
+                    1. www.gob.pe
+                  </a>{" "}
+                  <a
+                    className="hover:underline hover:text-blue-500 text-sm block"
+                    target="blank"
+                    href="https://www.gob.pe/institucion/minsa/campa%C3%B1as/4332-campana-de-prevencion-contra-la-covid-19"
+                  >
+                    2. Coronavirus (who.int) y Campaña de prevención contra la
                     COVID-19 - Campañas - Ministerio de Salud - Gobierno del
                     Perú (www.gob.pe){" "}
                   </a>

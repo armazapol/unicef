@@ -50,7 +50,7 @@ const ModalQuestSlide3 = ({ toggleViewQuestSlide3 }: Props) => {
         <Carousel
           showThumbs={false}
           showStatus={false}
-          showIndicators={false}
+          showIndicators={true}
           infiniteLoop={true}
           autoPlay={false}
           stopOnHover={false}
