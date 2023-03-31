@@ -76,7 +76,7 @@ const ViewInit = ({ keyCarrousel, index, stateSide,toggleViewInit }: Props) => {
         </h1>
         <p className="text-sm  lg:text-2xl font-semibold text-left">
           Curso auto formativo, asíncrono, de naturaleza teórica, que brinda
-          conocimientos básicos sobre la COVID-19 y el esquema nacional de vacunación actualizado,
+          conocimientos básicos sobre la COVID-19, la vacunación contra la COVID-19 y el esquema nacional de vacunación actualizado,
           dirigido al personal que labora en los distintos medios de
           comunicación en el país.
         </p>

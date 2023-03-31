@@ -100,8 +100,7 @@ const ModalInit = ({ toggleViewInit, handleNext }: Props) => {
                     ¡Bienvenidos y bienvenidas!
                   </h3>
                   <p>
-                    Este curso tiene como objetivos definir las principales
-                    características de la COVID-19, así como conocer la importancia de las vacunas e identificar los principales cambios en el{" "}
+                    Este curso tiene como objetivos conocer la importancia de las vacunas e identificar los principales cambios en el{" "}
                     <span className="text-orange-600">
                       esquema nacional de vacunación.
                     </span>
