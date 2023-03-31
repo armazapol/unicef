@@ -6,9 +6,15 @@ import background from "../../public/img/bgModal.png";
 
 type Props = {
   toggleViewAvanceVacunacion: () => void;
+  nextViewModule: () => void;
 };
 
-const ModalAvanceVacunacion = ({ toggleViewAvanceVacunacion }: Props) => {
+const ModalAvanceVacunacion = ({ toggleViewAvanceVacunacion, nextViewModule }: Props) => {
+  const nextModule = () => {
+    nextViewModule()
+    toggleViewAvanceVacunacion()
+  }
+
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(".modal", { opacity: 0.1 }, { opacity: 1, duration: 1.5 });
@@ -28,6 +34,12 @@ const ModalAvanceVacunacion = ({ toggleViewAvanceVacunacion }: Props) => {
         // quality={50}
       />
       <div className="w-[40rem] bg-white flex flex-col gap-2 p-5 relative component rounded-md">
+      <a
+        onClick={nextModule}
+        className="cursor-pointer absolute right-14 top-4 lg:right-20 lg:top-10 text-white text-xl font-semibold "
+      >
+        <img className="w-4 lg:w-6" src="/img/arrowNext.png" alt="Siguiente módulo" />
+      </a>
         <a
           onClick={toggleViewAvanceVacunacion}
           className="cursor-pointer absolute -right-10 text-white text-xl font-semibold"

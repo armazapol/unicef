@@ -9,9 +9,16 @@ import img3 from "../../public/img/view4/quest/quest2.jpg";//cambiar
 
 type Props = {
   toggleViewQuestSlide2: () => void;
+  nextViewModule: () => void;
 };
 
-const ModalQuestSlide2 = ({ toggleViewQuestSlide2 }: Props) => {
+const ModalQuestSlide2 = ({ toggleViewQuestSlide2 , nextViewModule}: Props) => {
+
+  const nextModule = () => {
+    nextViewModule()
+    toggleViewQuestSlide2()
+  }
+
   const handleChildElementClick = (e: any) => {
     e.stopPropagation();
     // Do other stuff here
@@ -35,6 +42,12 @@ const ModalQuestSlide2 = ({ toggleViewQuestSlide2 }: Props) => {
         fill
         // quality={50}
       />
+        <a
+        onClick={nextModule}
+        className="cursor-pointer absolute right-14 top-4 lg:right-20 lg:top-10 text-white text-xl font-semibold "
+      >
+        <img className="w-4 lg:w-6" src="/img/arrowNext.png" alt="Siguiente módulo" />
+      </a>
       <a
         onClick={toggleViewQuestSlide2}
         className="cursor-pointer absolute right-4 top-4 lg:right-10 lg:top-10 text-white text-xl font-semibold z-50"

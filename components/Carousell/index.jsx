@@ -34,7 +34,6 @@ import ModalQuestSlide2 from "../Modal/ModalQuestSlide2";
 import ModalQuestSlide3 from "../Modal/ModalQuestSlide3";
 import ModalQuestSlide4 from "../Modal/ModalQuestSlide4";
 import ModalQuestSlide5 from "../Modal/ModalQuestSlide5";
-import ModalQuestSlide6 from "../Modal/ModalQuestSlide6";
 import ViewResults from "../ViewResults";
 import ViewInit from "../ViewInit";
 import ModalInit from "../Modal/Modalnit";
@@ -71,7 +70,6 @@ const Carousell = (props) => {
   const [stateModalQuestSlide3, setStateModalQuestSlide3] = useState(false);
   const [stateModalQuestSlide4, setStateModalQuestSlide4] = useState(false);
   const [stateModalQuestSlide5, setStateModalQuestSlide5] = useState(false);
-  const [stateModalQuestSlide6, setStateModalQuestSlide6] = useState(false);
   const [stateModalInit, setStateModalInit] = useState(false);
   const [stateHamburger, setStateHamburger] = useState(false);
   const [stateCarousel, setStateCarousel] = useState(0);
@@ -150,9 +148,6 @@ const Carousell = (props) => {
   const toggleViewQuestSlide5 = () => {
     setStateModalQuestSlide5(!stateModalQuestSlide5);
   };
-  const toggleViewQuestSlide6 = () => {
-    setStateModalQuestSlide6(!stateModalQuestSlide6);
-  };
   const toggleViewInit = () => {
     setStateModalInit(!stateModalInit);
   };
@@ -200,10 +195,9 @@ const Carousell = (props) => {
     setStateHamburger(!stateHamburger);
   };
 
-
-  const handleNext =() => {
+  const handleNext = () => {
     setStateCarousel((prevIndex) => prevIndex + 1);
-  }
+  };
 
   useEffect(() => {
     stateHamburger
@@ -216,87 +210,105 @@ const Carousell = (props) => {
       {/* {stateModalVideo && <Modal viewVideo={viewVideo} />}
       {stateModalImages && <ViewImages toggleViewImages={toggleViewImages} />} */}
       {stateModalAntecedentes && (
-        <ModalAntecedentes toggleViewAntecedentes={toggleViewAntecedentes} />
+        <ModalAntecedentes
+          toggleViewAntecedentes={toggleViewAntecedentes}
+          nextViewModule={toggleViewSignosAlarma}
+        />
       )}
-          {stateModalSignosAlarma && (
-        <ModalSignosAlarma toggleViewSignosAlarma={toggleViewSignosAlarma} />
+      {stateModalSignosAlarma && (
+        <ModalSignosAlarma
+          toggleViewSignosAlarma={toggleViewSignosAlarma}
+          nextViewModule={toggleViewSintomas}
+        />
+      )}
+      {stateModalSintomas && (
+        <ModalSintomas
+          toggleViewSintomas={toggleViewSintomas}
+          nextViewModule={toggleViewDiagnostico}
+        />
       )}
       {stateModalDiagnostico && (
-        <ModalDiagnostico toggleViewDiagnostico={toggleViewDiagnostico} />
+        <ModalDiagnostico
+          toggleViewDiagnostico={toggleViewDiagnostico}
+          nextViewModule={toggleViewAlarmaPrevencion}
+        />
       )}
       {stateModalAlarmaPrevencion && (
         <ModalAlarmaPrevencion
           toggleViewAlarmaPrevencion={toggleViewAlarmaPrevencion}
+          nextViewModule={toggleViewVacunas}
         />
       )}
-      {stateModalVarianteCovid && (
-        <ModalVarianteCovid toggleViewVarianteCovid={toggleViewVarianteCovid} />
-      )}
       {stateModalVacunas && (
-        <ModalVacunas toggleViewVacunas={toggleViewVacunas} />
+        <ModalVacunas
+          toggleViewVacunas={toggleViewVacunas}
+          nextViewModule={toggleViewInmunidadColectiva}
+        />
       )}
       {stateModalInmunidadColectiva && (
         <ModalInmunidadColectiva
           toggleViewInmunidadColectiva={toggleViewInmunidadColectiva}
+          nextViewModule={toggleViewTiposVacunas}
         />
       )}
       {stateModalTiposVacunas && (
-        <ModalTiposVacunas toggleViewTiposVacunas={toggleViewTiposVacunas} />
+        <ModalTiposVacunas toggleViewTiposVacunas={toggleViewTiposVacunas}    nextViewModule={toggleViewInocuidadEfectividad} />
       )}
       {stateModalInocuidadEfectividad && (
         <ModalInocuidadEfectividad
           toggleViewInocuidadEfectividad={toggleViewInocuidadEfectividad}
-        />
-      )}
-      {stateModalEmbarazoLactancia && (
-        <ModalEmbarazoLactancia
-          toggleViewEmbarazoLactancia={toggleViewEmbarazoLactancia}
+          nextViewModule={toggleViewEfectosSecundarios} 
         />
       )}
       {stateModalEfectosSecundarios && (
         <ModalEfectosSecundarios
-          toggleViewEfectosSecundarios={toggleViewEfectosSecundarios}
-        />
-      )}
-      {stateModalAvanceVacunacion && (
-        <ModalAvanceVacunacion
-          toggleViewAvanceVacunacion={toggleViewAvanceVacunacion}
+          toggleViewEfectosSecundarios={toggleViewEfectosSecundarios}       nextViewModule={toggleViewConsecuencias} 
         />
       )}
       {stateModalConsecuencias && (
-        <ModalConsecuencias toggleViewConsecuencias={toggleViewConsecuencias} />
+        <ModalConsecuencias toggleViewConsecuencias={toggleViewConsecuencias}     nextViewModule={toggleViewEmbarazoLactancia}  />
       )}
-      {stateModalSintomas && (
-        <ModalSintomas toggleViewSintomas={toggleViewSintomas} />
-      )}
-      {stateModalNuevasVacunas && (
-        <ModalNuevasVacunas toggleViewNuevasVacunas={toggleViewNuevasVacunas} />
-      )}
-      {stateModalVPH && <ModalVPH toggleViewVPH={toggleViewVPH} />}
-      {stateModalVacunacionHepatitisA && (
-        <ModalVacunacionHepatitisA
-          toggleViewVacunacionHepatitisA={toggleViewVacunacionHepatitisA}
+      {stateModalEmbarazoLactancia && (
+        <ModalEmbarazoLactancia
+          toggleViewEmbarazoLactancia={toggleViewEmbarazoLactancia}    nextViewModule={toggleViewNuevasVacunas} 
         />
       )}
+      {stateModalNuevasVacunas && (
+        <ModalNuevasVacunas toggleViewNuevasVacunas={toggleViewNuevasVacunas}   nextViewModule={toggleViewVPH}  />
+      )}
+      {stateModalVPH && <ModalVPH toggleViewVPH={toggleViewVPH} nextViewModule={toggleViewVacunacionHepatitisA}  />}
+      {/* {stateModalVarianteCovid && (
+        <ModalVarianteCovid toggleViewVarianteCovid={toggleViewVarianteCovid} nextViewModule={toggleViewVacunacionHepatitisA}  />
+      )} */}
+      {stateModalVacunacionHepatitisA && (
+        <ModalVacunacionHepatitisA
+          toggleViewVacunacionHepatitisA={toggleViewVacunacionHepatitisA} nextViewModule={toggleViewQuestSlide1} 
+        />
+      )}
+      {/* {stateModalAvanceVacunacion && (
+        <ModalAvanceVacunacion
+          toggleViewAvanceVacunacion={toggleViewAvanceVacunacion}
+        />
+      )} */}
+
       {stateModalQuestSlide1 && (
-        <ModalQuestSlide1 toggleViewQuestSlide1={toggleViewQuestSlide1} />
+        <ModalQuestSlide1 toggleViewQuestSlide1={toggleViewQuestSlide1} nextViewModule={toggleViewQuestSlide2}  />
       )}
       {stateModalQuestSlide2 && (
-        <ModalQuestSlide2 toggleViewQuestSlide2={toggleViewQuestSlide2} />
+        <ModalQuestSlide2 toggleViewQuestSlide2={toggleViewQuestSlide2} nextViewModule={toggleViewQuestSlide3}  />
       )}
       {stateModalQuestSlide3 && (
-        <ModalQuestSlide3 toggleViewQuestSlide3={toggleViewQuestSlide3} />
+        <ModalQuestSlide3 toggleViewQuestSlide3={toggleViewQuestSlide3} nextViewModule={toggleViewQuestSlide4}  />
       )}
       {stateModalQuestSlide4 && (
-        <ModalQuestSlide4 toggleViewQuestSlide4={toggleViewQuestSlide4} />
+        <ModalQuestSlide4 toggleViewQuestSlide4={toggleViewQuestSlide4} nextViewModule={toggleViewQuestSlide5}  />
       )}
       {stateModalQuestSlide5 && (
         <ModalQuestSlide5 toggleViewQuestSlide5={toggleViewQuestSlide5} />
       )}
-      {stateModalQuestSlide6 && (
-        <ModalQuestSlide6 toggleViewQuestSlide6={toggleViewQuestSlide6} />
+      {stateModalInit && (
+        <ModalInit toggleViewInit={toggleViewInit} handleNext={handleNext} />
       )}
-      {stateModalInit && <ModalInit toggleViewInit={toggleViewInit} handleNext={handleNext} />}
       <div className="absolute -bottom-14 -right-14 lg:-bottom-20 lg:-right-20 bg-blue-900/90 rounded-full w-32 h-32 lg:w-40 text-white z-40 background">
         <div className="contentMenu hidden">
           <Menu
@@ -330,7 +342,7 @@ const Carousell = (props) => {
         showThumbs={false}
         showStatus={false}
         showIndicators={false}
-        autoPlay={false}    
+        autoPlay={false}
         transitionTime={2000}
         swipeable={false}
         onChange={(index) => updateState(index)}
@@ -342,7 +354,7 @@ const Carousell = (props) => {
             if (data.type === "ViewInit")
               return (
                 <ViewInit
-                key={index}
+                  key={index}
                   keyCarrousel={index}
                   toggleViewInit={toggleViewInit}
                   index={stateCarousel}
@@ -352,7 +364,7 @@ const Carousell = (props) => {
             if (data.type === "ViewModule1") {
               return (
                 <View1
-                key={index}
+                  key={index}
                   toggleViewSintomas={toggleViewSintomas}
                   toggleViewSignosAlarma={toggleViewSignosAlarma}
                   toggleViewAntecedentes={toggleViewAntecedentes}
@@ -368,7 +380,7 @@ const Carousell = (props) => {
             if (data.type === "ViewGeneral" && data.moduleTrivia === "1") {
               return (
                 <ViewGeneral
-                key={index}
+                  key={index}
                   keyCarrousel={index}
                   index={stateCarousel}
                   stateSide={stateSide}
@@ -396,7 +408,7 @@ const Carousell = (props) => {
             if (data.type === "ViewModule2" && stateViewModule2) {
               return (
                 <View5
-                key={index}
+                  key={index}
                   toggleViewVacunas={toggleViewVacunas}
                   toggleViewInmunidadColectiva={toggleViewInmunidadColectiva}
                   toggleViewTiposVacunas={toggleViewTiposVacunas}
@@ -420,7 +432,7 @@ const Carousell = (props) => {
             ) {
               return (
                 <ViewGeneral
-                key={index}
+                  key={index}
                   keyCarrousel={index}
                   index={stateCarousel}
                   stateSide={stateSide}
@@ -438,7 +450,7 @@ const Carousell = (props) => {
             ) {
               return (
                 <ViewResults
-                key={index}
+                  key={index}
                   keyCarrousel={index}
                   arrNumberQuest={data.arrNumberQuest}
                   arrQuest={data.arrQuest}
@@ -452,7 +464,7 @@ const Carousell = (props) => {
             if (data.type === "ViewModule3" && stateViewModule3) {
               return (
                 <View15
-                key={index}
+                  key={index}
                   toggleViewNuevasVacunas={toggleViewNuevasVacunas}
                   toggleViewVPH={toggleViewVPH}
                   toggleViewVacunacionHepatitisA={
@@ -471,7 +483,7 @@ const Carousell = (props) => {
             ) {
               return (
                 <ViewGeneral
-                key={index}
+                  key={index}
                   keyCarrousel={index}
                   index={stateCarousel}
                   stateSide={stateSide}
@@ -489,7 +501,7 @@ const Carousell = (props) => {
             ) {
               return (
                 <ViewResults
-                key={index}
+                  key={index}
                   keyCarrousel={index}
                   arrNumberQuest={data.arrNumberQuest}
                   arrQuest={data.arrQuest}
@@ -503,13 +515,13 @@ const Carousell = (props) => {
             if (data.type === "ViewModule4" && stateViewModule4) {
               return (
                 <View4
-                key={index}
+                  key={index}
                   toggleViewQuestSlide1={toggleViewQuestSlide1}
                   toggleViewQuestSlide2={toggleViewQuestSlide2}
                   toggleViewQuestSlide3={toggleViewQuestSlide3}
                   toggleViewQuestSlide4={toggleViewQuestSlide4}
                   toggleViewQuestSlide5={toggleViewQuestSlide5}
-                  toggleViewQuestSlide6={toggleViewQuestSlide6}
+                  // toggleViewQuestSlide6={toggleViewQuestSlide6}
                   keyCarrousel={index}
                   index={stateCarousel}
                   stateSide={stateSide}
@@ -523,7 +535,7 @@ const Carousell = (props) => {
             ) {
               return (
                 <ViewGeneral
-                key={index}
+                  key={index}
                   keyCarrousel={index}
                   index={stateCarousel}
                   stateSide={stateSide}
@@ -541,7 +553,7 @@ const Carousell = (props) => {
             ) {
               return (
                 <ViewResults
-                key={index}
+                  key={index}
                   keyCarrousel={index}
                   arrNumberQuest={data.arrNumberQuest}
                   arrQuest={data.arrQuest}
@@ -551,7 +563,8 @@ const Carousell = (props) => {
                   moduleTrivia={data.moduleTrivia}
                 />
               );
-            }    if (  data.type === "ViewEnd" && stateViewModuleEnd) {
+            }
+            if (data.type === "ViewEnd" && stateViewModuleEnd) {
               return (
                 <ViewCompleted
                   key={index}

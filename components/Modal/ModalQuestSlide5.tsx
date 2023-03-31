@@ -10,9 +10,16 @@ import img7 from "../../public/img/view4/quest/quest7.jpg";
 
 type Props = {
   toggleViewQuestSlide5: () => void;
+  nextViewModule: () => void;
 };
 
-const ModalQuestSlide5 = ({ toggleViewQuestSlide5 }: Props) => {
+const ModalQuestSlide5 = ({ toggleViewQuestSlide5 , nextViewModule}: Props) => {
+
+  const nextModule = () => {
+    nextViewModule()
+    toggleViewQuestSlide5()
+  }
+
   const handleChildElementClick = (e: any) => {
     e.stopPropagation();
     // Do other stuff here

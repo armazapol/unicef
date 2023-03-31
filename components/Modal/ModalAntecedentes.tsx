@@ -7,14 +7,23 @@ import img1 from "../../public/img/view1/newModal2.jpg";
 
 type Props = {
   toggleViewAntecedentes: () => void;
+  nextViewModule: () => void;
 };
 
-const ModalAntecedentes = ({ toggleViewAntecedentes }: Props) => {
+const ModalAntecedentes = ({ toggleViewAntecedentes, nextViewModule }: Props) => {
+
+  const nextModule = () => {
+    nextViewModule()
+    toggleViewAntecedentes()
+  }
+
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(".modal", { opacity: 0.1 }, { opacity: 1, duration: 1.5 });
     tl.fromTo(".component", { opacity: 0 }, { opacity: 1, duration: 1 });
   }, []);
+
+
   return (
     <div
       className="fullvh lg:h-screen w-full z-60 bg-black/60 flex items-center justify-center fixed modal"
@@ -28,11 +37,17 @@ const ModalAntecedentes = ({ toggleViewAntecedentes }: Props) => {
         fill
         // quality={50}
       />
+        <a
+        onClick={nextModule}
+        className="cursor-pointer absolute right-14 top-4 lg:right-20 lg:top-10 text-white text-xl font-semibold "
+      >
+        <img className="w-4 lg:w-6" src="/img/arrowNext.png" alt="Siguiente módulo" />
+      </a>
       <a
         onClick={toggleViewAntecedentes}
         className="cursor-pointer absolute right-4 top-4 lg:right-10 lg:top-10 text-white text-xl font-semibold "
       >
-        <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="" />
+        <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="cerrar" />
       </a>
       <div className="w-10/12 md:w-[70rem] bg-white flex  gap-2 p-5 relative component rounded-md h-5/6 lg:h-auto overflow-x-hidden overflow-y-auto text-sm lg:text-base">
         <div className="flex-1 overflow-y-auto">

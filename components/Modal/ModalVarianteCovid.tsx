@@ -7,9 +7,16 @@ import img1 from "../../public/img/view1/variantes/img1.png";
 
 type Props = {
   toggleViewVarianteCovid: () => void;
+  nextViewModule: () => void;
 };
 
-const ModalVarianteCovid = ({ toggleViewVarianteCovid }: Props) => {
+const ModalVarianteCovid = ({ toggleViewVarianteCovid, nextViewModule }: Props) => {
+
+  const nextModule = () => {
+    nextViewModule()
+    toggleViewVarianteCovid()
+  }
+
   const handleChildElementClick = (e: any) => {
     e.stopPropagation();
     // Do other stuff here
@@ -33,6 +40,18 @@ const ModalVarianteCovid = ({ toggleViewVarianteCovid }: Props) => {
         fill
         // quality={50}
       />
+         <a
+        onClick={nextModule}
+        className="cursor-pointer absolute right-14 top-4 lg:right-20 lg:top-10 text-white text-xl font-semibold "
+      >
+        <img className="w-4 lg:w-6" src="/img/arrowNext.png" alt="Siguiente módulo" />
+      </a>
+      <a
+        onClick={toggleViewVarianteCovid}
+        className="cursor-pointer absolute right-4 top-4 lg:right-10 lg:top-10 text-white text-xl font-semibold z-50"
+      >
+        <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="" />
+      </a>
       <div className="flex flex-col gap-5">
         {/* <h3 className="text-white text-xl text-center font-semibold">Aislamiento y Prevención del Riesgo:</h3> */}
         <div
@@ -146,12 +165,6 @@ const ModalVarianteCovid = ({ toggleViewVarianteCovid }: Props) => {
               </div>
             </div>
           </Carousel>
-          <a
-            onClick={toggleViewVarianteCovid}
-            className="cursor-pointer absolute top-0 -right-5 text-white text-xl font-semibold"
-          >
-            <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="" />
-          </a>
         </div>
       </div>
     </div>
