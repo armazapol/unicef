@@ -150,22 +150,7 @@ const ModalConsecuencias = ({ toggleViewConsecuencias, nextViewModule }: Props) 
             <div className="w-10/12 lg:w-[55rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 lg:p-10 relative component rounded-md overflow-auto text-sm lg:text-base">
               <div className="text-left flex flex-col gap-2 flex-1 overflow-y-auto">
                 <p>
-                  Mientras esperamos a disponer de más información, tenemos que
-                  continuar haciendo lo posible por frenar la propagación del
-                  virus a fin de evitar que aparezcan mutaciones que puedan
-                  reducir la eficacia de las vacunas disponibles. Además, los
-                  fabricantes y los programas que utilizan las vacunas deberán
-                  adaptarse a la evolución del virus; por ejemplo, puede ser
-                  necesario que, en su fase de desarrollo, las vacunas deban
-                  incluir más de una cepa durante la fase de desarrollo, que se
-                  deban administrar dosis de refuerzo o que sea preciso realizar
-                  algún otro tipo de modificación en las vacunas. Asimismo, los
-                  ensayos se deben estructurar y mantener de manera que se
-                  puedan evaluar las variaciones en la eficacia, y han de
-                  realizarse a la escala adecuada y ser suficientemente variados
-                  para que se puedan interpretar claramente los resultados.
-                  También es necesario estudiar el impacto de las vacunas a
-                  medida que se administran.
+                Mientras esperamos a disponer de más información, tenemos que continuar haciendo lo posible por frenar la propagación del virus a fin de evitar que aparezcan mutaciones que puedan reducir la eficacia de las vacunas disponibles. Además, los fabricantes y los programas que utilizan las vacunas deberán adaptarse a la evolución del virus; por ejemplo, puede ser necesario que, en su fase de desarrollo, las vacunas deban incluir más de una cepa, durante la fase de desarrollo, que se deban administrar dosis de refuerzo o que sea preciso realizar algún otro tipo de modificación en las vacunas. Asimismo, los ensayos se deben estructurar y mantener de manera que se puedan evaluar las variaciones en la eficacia, y han de realizarse a la escala adecuada y ser suficientemente variados para que los resultados se puedan interpretar claramente. los resultados. También es necesario estudiar el impacto de las vacunas a medida que se administran.
                 </p>
                 <p className="text-sm">
                   <span className="font-semibold"> Fuente: </span>

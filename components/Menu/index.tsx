@@ -27,6 +27,7 @@ type Props = {
   toggleViewQuestSlide3: () => void;
   toggleViewQuestSlide2: () => void;
   toggleViewQuestSlide1: () => void;
+  toggleViewEsquemaVacunacionRegular: () => void; 
   viewVideo: () => void;
 };
 
@@ -51,6 +52,7 @@ const Menu = ({
   toggleViewQuestSlide4,
   toggleViewQuestSlide5,
   toggleViewQuestSlide1,
+  toggleViewEsquemaVacunacionRegular
 }: Props) => {
   const user = useSelector(selectCurrentUser);
   const dispatch = useDispatch();
@@ -157,6 +159,12 @@ const Menu = ({
             onClick={toggleViewVPH}
           >
             Vacuna contra el Virus Papiloma Humano (VPH)
+          </p>
+          <p
+            className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden"
+            onClick={toggleViewEsquemaVacunacionRegular}
+          >
+            Esquema de vacunación regular
           </p>
           <p
             className="hover:underline cursor-pointer text-xs lg:text-base whitespace-nowrap text-ellipsis overflow-hidden"

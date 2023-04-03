@@ -78,10 +78,9 @@ const ModalAntecedentes = ({ toggleViewAntecedentes, nextViewModule }: Props) =>
             confirmados y 6,653,453 fallecidos{" "}
           </p>
           <p>
-            A diciembre del presente en nuestro país se tienen 4,304,745 casos
-            confirmados de <span className="text-orange-600">COVID-19</span> y
+          A diciembre del 2022 en el Perú se registraron 4,304,745 casos confirmados de <span className="text-orange-600">COVID-19</span> y
             217,519 fallecidos, según la sala situacional del Ministerio de
-            Salud{" "}
+            Salud.
           </p>
           <div>
             <h3 className="font-semibold">Fuentes:</h3>

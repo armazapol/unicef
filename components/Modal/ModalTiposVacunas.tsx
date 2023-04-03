@@ -124,7 +124,7 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas, nextViewModule }: Props) =>
                       presente y crea linfocitos T y B que recordarán cómo
                       defenderse del virus que causa el{" "}
                       <span className="text-orange-600">COVID-19</span>
-                      en caso de infección. Ejemplos: Pfizer – BioNTech.
+                      en caso de infección. Ejemplo: Pfizer – BioNTech.
                     </li>
                     <li>
                       * Vacuna con vector vírico: Contienen una versión
@@ -139,7 +139,7 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas, nextViewModule }: Props) =>
                       Se producen linfocitos T y B que recordarán cómo
                       defenderse del virus que causa{" "}
                       <span className="text-orange-600"> COVID-19</span> en caso
-                      de infección. Ejemplos: AstraZeneca
+                      de infección. Ejemplo: AstraZeneca
                     </li>
                   </ul>
                 </div>

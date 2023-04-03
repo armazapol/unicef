@@ -39,6 +39,7 @@ import ViewInit from "../ViewInit";
 import ModalInit from "../Modal/Modalnit";
 import ModalSignosAlarma from "../Modal/ModalSignosAlarma";
 import ViewCompleted from "../views/ViewCompleted";
+import ModalEsquemaVacunacionRegular from "../Modal/ModalEsquemaVacunacionRegular";
 
 const Carousell = (props) => {
   const [stateModalAntecedentes, setStateModalAntecedentes] = useState(false);
@@ -63,6 +64,10 @@ const Carousell = (props) => {
   const [stateModalSintomas, setStateModalSintomas] = useState(false);
   const [stateModalNuevasVacunas, setStateModalNuevasVacunas] = useState(false);
   const [stateModalVPH, setStateModalVPH] = useState(false);
+  const [
+    stateModalEsquemaVacunacionRegular,
+    setStateModalEsquemaVacunacionRegular,
+  ] = useState(false);
   const [stateModalVacunacionHepatitisA, setStateModalVacunacionHepatitisA] =
     useState(false);
   const [stateModalQuestSlide1, setStateModalQuestSlide1] = useState(false);
@@ -129,6 +134,9 @@ const Carousell = (props) => {
   };
   const toggleViewVPH = () => {
     setStateModalVPH(!stateModalVPH);
+  };
+  const toggleViewEsquemaVacunacionRegular = () => {
+    setStateModalEsquemaVacunacionRegular(!stateModalEsquemaVacunacionRegular);
   };
   const toggleViewVacunacionHepatitisA = () => {
     setStateModalVacunacionHepatitisA(!stateModalVacunacionHepatitisA);
@@ -252,37 +260,63 @@ const Carousell = (props) => {
         />
       )}
       {stateModalTiposVacunas && (
-        <ModalTiposVacunas toggleViewTiposVacunas={toggleViewTiposVacunas}    nextViewModule={toggleViewInocuidadEfectividad} />
+        <ModalTiposVacunas
+          toggleViewTiposVacunas={toggleViewTiposVacunas}
+          nextViewModule={toggleViewInocuidadEfectividad}
+        />
       )}
       {stateModalInocuidadEfectividad && (
         <ModalInocuidadEfectividad
           toggleViewInocuidadEfectividad={toggleViewInocuidadEfectividad}
-          nextViewModule={toggleViewEfectosSecundarios} 
+          nextViewModule={toggleViewEfectosSecundarios}
         />
       )}
       {stateModalEfectosSecundarios && (
         <ModalEfectosSecundarios
-          toggleViewEfectosSecundarios={toggleViewEfectosSecundarios}       nextViewModule={toggleViewConsecuencias} 
+          toggleViewEfectosSecundarios={toggleViewEfectosSecundarios}
+          nextViewModule={toggleViewConsecuencias}
         />
       )}
       {stateModalConsecuencias && (
-        <ModalConsecuencias toggleViewConsecuencias={toggleViewConsecuencias}     nextViewModule={toggleViewEmbarazoLactancia}  />
+        <ModalConsecuencias
+          toggleViewConsecuencias={toggleViewConsecuencias}
+          nextViewModule={toggleViewEmbarazoLactancia}
+        />
       )}
       {stateModalEmbarazoLactancia && (
         <ModalEmbarazoLactancia
-          toggleViewEmbarazoLactancia={toggleViewEmbarazoLactancia}    nextViewModule={toggleViewNuevasVacunas} 
+          toggleViewEmbarazoLactancia={toggleViewEmbarazoLactancia}
+          nextViewModule={toggleViewNuevasVacunas}
         />
       )}
       {stateModalNuevasVacunas && (
-        <ModalNuevasVacunas toggleViewNuevasVacunas={toggleViewNuevasVacunas}   nextViewModule={toggleViewVPH}  />
+        <ModalNuevasVacunas
+          toggleViewNuevasVacunas={toggleViewNuevasVacunas}
+          nextViewModule={toggleViewVPH}
+        />
       )}
-      {stateModalVPH && <ModalVPH toggleViewVPH={toggleViewVPH} nextViewModule={toggleViewVacunacionHepatitisA}  />}
+     
+      {stateModalVPH && (
+        <ModalVPH
+          toggleViewVPH={toggleViewVPH}
+          nextViewModule={toggleViewEsquemaVacunacionRegular}
+        />
+      )}
+       {stateModalEsquemaVacunacionRegular && (
+        <ModalEsquemaVacunacionRegular
+          toggleViewEsquemaVacunacionRegular={
+            toggleViewEsquemaVacunacionRegular
+          }
+          nextViewModule={toggleViewVacunacionHepatitisA}
+        />
+      )}
       {/* {stateModalVarianteCovid && (
         <ModalVarianteCovid toggleViewVarianteCovid={toggleViewVarianteCovid} nextViewModule={toggleViewVacunacionHepatitisA}  />
       )} */}
       {stateModalVacunacionHepatitisA && (
         <ModalVacunacionHepatitisA
-          toggleViewVacunacionHepatitisA={toggleViewVacunacionHepatitisA} nextViewModule={toggleViewQuestSlide1} 
+          toggleViewVacunacionHepatitisA={toggleViewVacunacionHepatitisA}
+          nextViewModule={toggleViewQuestSlide1}
         />
       )}
       {/* {stateModalAvanceVacunacion && (
@@ -292,16 +326,28 @@ const Carousell = (props) => {
       )} */}
 
       {stateModalQuestSlide1 && (
-        <ModalQuestSlide1 toggleViewQuestSlide1={toggleViewQuestSlide1} nextViewModule={toggleViewQuestSlide2}  />
+        <ModalQuestSlide1
+          toggleViewQuestSlide1={toggleViewQuestSlide1}
+          nextViewModule={toggleViewQuestSlide2}
+        />
       )}
       {stateModalQuestSlide2 && (
-        <ModalQuestSlide2 toggleViewQuestSlide2={toggleViewQuestSlide2} nextViewModule={toggleViewQuestSlide3}  />
+        <ModalQuestSlide2
+          toggleViewQuestSlide2={toggleViewQuestSlide2}
+          nextViewModule={toggleViewQuestSlide3}
+        />
       )}
       {stateModalQuestSlide3 && (
-        <ModalQuestSlide3 toggleViewQuestSlide3={toggleViewQuestSlide3} nextViewModule={toggleViewQuestSlide4}  />
+        <ModalQuestSlide3
+          toggleViewQuestSlide3={toggleViewQuestSlide3}
+          nextViewModule={toggleViewQuestSlide4}
+        />
       )}
       {stateModalQuestSlide4 && (
-        <ModalQuestSlide4 toggleViewQuestSlide4={toggleViewQuestSlide4} nextViewModule={toggleViewQuestSlide5}  />
+        <ModalQuestSlide4
+          toggleViewQuestSlide4={toggleViewQuestSlide4}
+          nextViewModule={toggleViewQuestSlide5}
+        />
       )}
       {stateModalQuestSlide5 && (
         <ModalQuestSlide5 toggleViewQuestSlide5={toggleViewQuestSlide5} />
@@ -328,12 +374,14 @@ const Carousell = (props) => {
             toggleViewSignosAlarma={toggleViewSignosAlarma}
             toggleViewNuevasVacunas={toggleViewNuevasVacunas}
             toggleViewVPH={toggleViewVPH}
+            toggleViewEsquemaVacunacionRegular={toggleViewEsquemaVacunacionRegular}
             toggleViewVacunacionHepatitisA={toggleViewVacunacionHepatitisA}
             toggleViewQuestSlide1={toggleViewQuestSlide1}
             toggleViewQuestSlide2={toggleViewQuestSlide2}
             toggleViewQuestSlide3={toggleViewQuestSlide3}
             toggleViewQuestSlide4={toggleViewQuestSlide4}
             toggleViewQuestSlide5={toggleViewQuestSlide5}
+         
           />
         </div>
       </div>
@@ -469,6 +517,9 @@ const Carousell = (props) => {
                   toggleViewVPH={toggleViewVPH}
                   toggleViewVacunacionHepatitisA={
                     toggleViewVacunacionHepatitisA
+                  }
+                  toggleViewEsquemaVacunacionRegular={
+                    toggleViewEsquemaVacunacionRegular
                   }
                   keyCarrousel={index}
                   index={stateCarousel}

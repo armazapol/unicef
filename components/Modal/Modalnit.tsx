@@ -100,7 +100,7 @@ const ModalInit = ({ toggleViewInit, handleNext }: Props) => {
                     ¡Bienvenidos y bienvenidas!
                   </h3>
                   <p>
-                    Este curso tiene como objetivos conocer la importancia de las vacunas e identificar los principales cambios en el{" "}
+                  Este curso tiene dos objetivos: conocer la importancia de las vacunas e identificar los principales cambios en el
                     <span className="text-orange-600">
                       esquema nacional de vacunación.
                     </span>
@@ -222,12 +222,7 @@ const ModalInit = ({ toggleViewInit, handleNext }: Props) => {
                       Pantallas de Trivia
                     </h3>
                     <p>
-                      Tras revisar todo el contenido de cada pantalla de Módulo,
-                      podrás avanzar a las preguntas de Trivia, las cuales
-                      pondrán a prueba tus recién adquiridos conocimientos. En
-                      cada pregunta, si se pudo responder correctamente al
-                      primer intento, se obtendrán 20 puntos, pero si no, cada
-                      intento fallido restará 5 puntos de este.
+                    Luego de revisar todo el contenido pasamos a las pantallas de Trivia, donde deberá responder 5 preguntas. Cuando logre alcanzar 80 puntos como mínimo podrá acceder al siguiente módulo.
                     </p>
                   </div>
                 </div>

@@ -117,7 +117,7 @@ const ModalSignosAlarma = ({ toggleViewSignosAlarma, nextViewModule }: Props) =>
                       * Saturación de oxígeno menor al 95% a nivel del mar
                     </li>
                     <li>* Desorientación o confusión</li>
-                    <li>* Fiebre persistente por mas de 3 días</li>
+                    <li>* Fiebre persistente por más de 3 días</li>
                     <li>* Dolor intenso y constante en el pecho</li>
                     <li>* Coloración azul de los labios (cianosis)</li>
                   </ul>
@@ -161,14 +161,14 @@ const ModalSignosAlarma = ({ toggleViewSignosAlarma, nextViewModule }: Props) =>
                 </h3>
                 <div className="text-sm lg:text-base text-left flex flex-col gap-2">
                   <p>
-                    Los Factores de riesgo individual asociados a presentar complicaciones relacionadas al COVID-19 son:
+                    Los factores de riesgo individual asociados a presentar complicaciones relacionadas al COVID-19 son:
                   </p>
                   <ul>
                     <li>
-                      * Edad mayora 60 años
+                      * Edad mayor a 60 años
                     </li>
                     <li>
-                      * Comborbilidades como: hipertensión arterial, enfermedades cardiovasculares, diabetes, obesidad, asma, enfermedad pulmonar crónica (EPOC), insuficiencia renal crónica, enfermedad o tratamiento inmunosupresor
+                      * Comorbilidades como: hipertensión arterial, enfermedades cardiovasculares, diabetes, obesidad, asma, enfermedad pulmonar crónica (EPOC), insuficiencia renal crónica, enfermedad o tratamiento inmunosupresor
                     </li>
                   </ul>
                   <a

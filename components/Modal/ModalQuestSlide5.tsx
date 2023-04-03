@@ -103,14 +103,7 @@ const ModalQuestSlide5 = ({ toggleViewQuestSlide5 , nextViewModule}: Props) => {
                     zapatos.
                   </p>
                   <p>
-                  El uso prolongado de las mascarillas, cuando se llevan
-                    puestas correctamente, NO PROVOCA intoxicación por CO2 ni
-                    hipoxia Utilizar mascarillas durante mucho tiempo puede ser
-                    incómodo, pero no provoca intoxicación por CO2 ni hipoxia.
-                    Una vez puesta la mascarilla, compruebe que está bien
-                    colocada y que le permite respirar con normalidad. No
-                    reutilice una mascarilla desechable y cámbiela cuando se
-                    humedezca.
+                  El uso prolongado de las mascarillas, cuando se llevan puestas correctamente, NO PROVOCA intoxicación por CO2 ni hipoxia. Una vez puesta la mascarilla, compruebe que esté bien colocada y que le permita respirar con normalidad. No reutilice una mascarilla desechable y cámbiela cuando se humedezca.
                   </p>
                 </div>
               </div>
@@ -141,17 +134,7 @@ const ModalQuestSlide5 = ({ toggleViewQuestSlide5 , nextViewModule}: Props) => {
               <div className="flex-1 overflow-y-auto">
                 <div className="text-sm lg:text-base text-left flex flex-col gap-2">
                   <p>
-                    El nuevo coronavirus NO PUEDE transmitirse a través de
-                    picaduras de mosquitos El nuevo coronavirus es un virus
-                    respiratorio que se propaga principalmente por contacto con
-                    una persona infectada a través de las gotículas
-                    respiratorias que se generan cuando esta persona tose o
-                    estornuda, por ejemplo, o a través de gotículas de saliva o
-                    secreciones de la nariz. Hasta la fecha no hay información
-                    ni pruebas que indiquen que pueda transmitirse por medio de
-                    mosquitos. Para protegerse, evite el contacto cercano con
-                    cualquier persona que tenga fiebre y tos, y practique una
-                    buena higiene de las manos y de las vías respiratorias.
+                  El nuevo coronavirus NO PUEDE transmitirse a través de picaduras de mosquitos. El nuevo coronavirus es un virus respiratorio que se propaga principalmente por contacto con una persona infectada a través de las gotitas respiratorias que se generan cuando esta persona tose o estornuda, por ejemplo, o a través de las gotas de saliva o secreciones de la nariz. Hasta la fecha no hay información ni pruebas que indiquen que pueda transmitirse por medio de mosquitos. Para protegerse, evite el contacto cercano con cualquier persona que tenga fiebre y tos, y practique una buena higiene de las manos y de las vías respiratorias.
                   </p>
                   <p>
                   El frío y la nieve NO PUEDEN matar el nuevo coronavirus

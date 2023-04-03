@@ -151,21 +151,12 @@ const ModalEmbarazoLactancia = ({ toggleViewEmbarazoLactancia, nextViewModule }:
                       otras infecciones y que se usan en las gestantes.
                     </li>
                     <li>
-                      * Las vacunas de ARN-m{" "}
-                      <span className="text-orange-600">COVID-19</span> no son
-                      vacunas de virus vivos, por lo que no puede producir la
-                      enfermedad, ni usan coadyuvantes para mejorar su eficacia,
-                      tendrían el mismo perfil de seguridad y eficacia en las
-                      mujeres gestantes en comparación con las no gestantes.
-                      Además se observa en los recién nacidos IgG a{" "}
-                      <span className="text-orange-600">COVID-19</span>, por lo
-                      que ello estaría brindando protección también al recién
-                      nacido.
+                     * Las vacunas de ARN-m <span className="text-orange-600">COVID-19</span> no son vacunas de virus vivos, por lo que no pueden producir la enfermedad. No usan coadyuvantes para mejorar su eficacia, tendrían el mismo perfil de seguridad y eficacia en las mujeres gestantes en comparación con las no gestantes. Además, se observa en los recién nacidos inmunoglobulina tipo G a <span className="text-orange-600">COVID-19</span>, defensa transmitida a través de la madre cuando se vacunó estando embarazada. por lo que ello estaría brindando protección también al recién nacido.
                     </li>
                     <li>
                       * Si la gestante ha presentado infección por{" "}
                       <span className="text-orange-600">COVID-19</span> se
-                      recomienda que la vacuna se realice 90 días luego de haber
+                      recomienda que la vacuna se realice 90 días después de haber
                       recibido el diagnóstico.
                     </li>
                   </ul>

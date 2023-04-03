@@ -105,12 +105,7 @@ const ModalVacunacionHepatitisA = ({
                     incluye a la vacuna contra la Hepatitis A.
                   </p>
                   <p>
-                    La hepatitis A es una enfermedad del hígado causada por el
-                    virus de la hepatitis A. Los niños con este virus por lo
-                    general no tienen síntomas, pero a menudo contagian la
-                    enfermedad a otras personas, incluidos sus padres o las
-                    personas que los cuidan que no se hayan vacunado. Estas
-                    personas se pueden enfermar gravemente.
+                  Esta es una enfermedad del hígado causada por el virus de la hepatitis A. Los niños con este virus por lo general no tienen síntomas, pero a menudo contagian la enfermedad a otras personas, incluidos sus padres o las personas que los cuidan que no se hayan vacunado. Estas personas se pueden enfermar gravemente.
                   </p>
                   <p>
                     La prevalencia del anticuerpo contra la hepatitis A
@@ -127,14 +122,14 @@ const ModalVacunacionHepatitisA = ({
               <div className="w-10/12 lg:w-[40rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex flex-col gap-2 p-5 lg:p-10 relative component rounded-md overflow-auto text-sm lg:text-base">
                 <div className="text-left flex flex-col gap-2">
                   <p className="">
-                  Los niños menores de 6 años por lo general no tienen ningún síntoma. Los niños mayores y los adultos se sienten muy mal y débiles. Los síntomas aparecen, por lo general, entre 2 a 6 semanas después de que una persona contraiga el virus.	Estos síntomas pueden incluir los siguientes:
+                  Los niños menores de 6 años por lo general no tienen ningún síntoma. Los niños mayores y los adultos se sienten muy mal y débiles. Los síntomas aparecen, por lo general, entre 2 a 6 semanas después de que una persona contraiga el virus.	Estos síntomas pueden ser:
                   </p>
                   <ul>
                     <li>
                       * Fiebre
                     </li>
                     <li>
-                      *	Pérdida del apetito
+                      *	Pérdida de apetito
                     </li>
                     <li>* Cansancio</li>
                     <li>* Dolor de estómago</li>
@@ -143,7 +138,7 @@ const ModalVacunacionHepatitisA = ({
                     <li>* Piel y ojos amarillos</li>
                   </ul>
                   <p>
-                  El virus de la hepatitis A se encuentra en las heces de las personas que lo tienen. Se propaga cuando alguien se lleva a la boca algo que contiene el virus de la hepatitis A. Aunque se vea limpio, este artículo aún puede contener virus que podrían propagarse a otras personas. La cantidad de heces puede ser tan pequeña que no pueda verse a simple vista. Se puede contraer la hepatitis A mediante la ingesta de alimentos o agua que tengan el virus.
+                  El virus de la hepatitis A se encuentra en las heces de las personas que lo tienen. Se propaga cuando alguien se lleva a la boca algo que contiene el virus de la hepatitis A. Aunque se vea limpio, este artículo aún puede contener virus que podrían propagarse a otras personas. La cantidad de heces puede ser tan pequeña que no se distingue a simple vista. Se puede contraer la hepatitis A mediante la ingesta de alimentos o agua que tengan el virus.
                   </p>
                 </div>
               </div>

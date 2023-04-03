@@ -143,7 +143,7 @@ const ModalQuestSlide1 = ({ toggleViewQuestSlide1, nextViewModule }: Props) => {
                     familia y a tus amigos si todavía hay casos de COVID-19 en
                     tu zona, incluso después de haberte vacunado. Las vacunas
                     contra la COVID-19 son muy eficaces contra la enfermedad
-                    grave y la muerte, pero ninguna vacuna es un 100% eficaz.
+                    grave y la muerte, pero ninguna vacuna es 100% eficaz.
                   </p>
                   <p>
                     Las vacunas ofrecen menos protección contra la infección de

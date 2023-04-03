@@ -70,15 +70,11 @@ const ViewInit = ({ keyCarrousel, index, stateSide,toggleViewInit }: Props) => {
         </div> */}
         <h1 className=" text-2xl lg:text-5xl text-white font-bold third_color text-left w-full ">
           <p className="leading-snug">CURSO INTERACTIVO</p>
-          <p className="leading-snug"> <span className="text-white">COVID-19</span> Y <span className="text-white">VACUNAS</span> </p>
-          <p className="leading-snug">PARA LOS <span className="text-white">MEDIOS DE COMUNICACIÓN</span> </p>
+          <p className="leading-snug">LA IMPORTANCIA DE LAS VACUNAS: <span className="text-white">COVID-19</span> Y <span className="text-white">ESQUEMA NACIONAL</span> </p>
         
         </h1>
         <p className="text-sm  lg:text-2xl font-semibold text-left">
-          Curso auto formativo, asíncrono, de naturaleza teórica, que brinda
-          conocimientos básicos sobre la COVID-19, la vacunación contra la COVID-19 y el esquema nacional de vacunación actualizado,
-          dirigido al personal que labora en los distintos medios de
-          comunicación en el país.
+        Curso auto formativo, de naturaleza teórica, que brinda conocimientos básicos sobre la importancia de las vacunas, la vacunación contra la COVID-19 y el esquema nacional de vacunación actualizado. Está dirigido a periodistas que laboran en los medios de comunicación en el país.
         </p>
         <div className='bg-blue-900 rounded-md py-2 px-12 text-white font-bold text-md  lg:text-3xl cursor-pointer z-20 shadow-md shadow-black' onClick={toggleViewInit}>Iniciar</div>
       </div>

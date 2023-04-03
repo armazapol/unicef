@@ -96,19 +96,10 @@ const ModalVPH = ({ toggleViewVPH , nextViewModule}: Props) => {
                 </h3>
                 <div className="text-left flex flex-col gap-2">
                   <p>
-                    En nuestro país contamos dentro del Esquema Nacional de
-                    Vacunación, con la vacuna contra el virus del papiloma
-                    humano (VPH), la cual previene el desarrollo de cáncer
-                    cervical causado por el virus del papiloma humano (VPH)
-                    tipos 16 y 18, la neoplasia intraepitelial cervical (NIC)
-                    grado I y II y las verrugas genitales causadas por el VPH 6
-                    y 11.
+                  En nuestro país contamos dentro del Esquema Nacional de Vacunación, con la vacuna contra el Virus del Papiloma Humano (VPH), la cual previene el desarrollo de cáncer cervical causado por el VPH tipos 16 y 18, la Neoplasia Intraepitelial Cervical (NIC) grado I y II y las verrugas genitales causadas por el VPH 6 y 11.
                   </p>
                   <p>
-                    En mujeres el virus del Papiloma Humano es la principal
-                    causa del cáncer de cuello uterino, vulva y vagina. En
-                    hombres, la infección crónica por VPH, en raras ocasiones,
-                    puede producir cáncer de pene o cáncer de ano.
+                  En mujeres, el Virus del Papiloma Humano es la principal causa del cáncer de cuello uterino, vulva y vagina. En hombres, la infección crónica por VPH, en raras ocasiones, puede producir cáncer de pene o cáncer de ano.
                   </p>
                 </div>
               </div>
@@ -121,15 +112,10 @@ const ModalVPH = ({ toggleViewVPH , nextViewModule}: Props) => {
                   </p>
                   <ul>
                     <li>
-                      * Una dosis para niñas y niños del 5to grado de primaria regular de Instituciones Educativas públicas y
-privadas y niñas y niños que por alguna razón no estén estudiando que tengan de 9 a 13 años de edad.
+                      * Una dosis para niñas y niños del 5to grado de primaria regular de instituciones educativas públicas y privadas y niñas y niños que por alguna razón no estén estudiando, que tengan de 9 a 13 años de edad.
                     </li>
                     <li>
-                      * La 1ra dosis se aplicará al primer contacto con el
-                      servicio de salud y la 2da dosis: a los 6 meses de la 1ra
-                      dosis. Una de las modificaciones en este Esquema Nacional
-                      de Vacunación, es que a partir del 2023 se aplicará 1 sola
-                      dosis.
+                      * La primera dosis se aplicará al primer contacto con el servicio de salud y la segunda dosis: a los 6 meses de la primera dosis. Una de las modificaciones en este Esquema Nacional de Vacunación, es que a partir del 2023 se aplicará una sola dosis.
                     </li>
                   </ul>
                   <p className="font-semibold">

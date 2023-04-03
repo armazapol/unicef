@@ -158,7 +158,7 @@ const ModalInocuidadEfectividad = ({
                     una vacuna contra la <span className="text-orange-600">COVID-19</span>, la OMS presta apoyo a la
                     labor de los fabricantes, los funcionarios sanitarios de
                     cada país y otros asociados para hacer un seguimiento
-                    continuado de cualquier posible problema relativo a su
+                    continuo de cualquier posible problema relativo a su
                     seguridad.
                   </p>
                 </div>
@@ -248,7 +248,7 @@ const ModalInocuidadEfectividad = ({
                   <p>
                     En otro metaanálisis publicado en julio del 2022, se
                     encontró que tener un esquema completo de vacunas mostró una
-                    protección efectiva contra la variante omicrón, comparada
+                    protección efectiva contra la variante ómicron, comparada
                     con los no vacunados, con una disminución de efectividad a
                     partir de los 6 meses luego de la última dosis, sugiriendo
                     la importancia del uso de dosis de refuerzo (booster).

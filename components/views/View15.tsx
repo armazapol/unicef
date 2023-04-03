@@ -13,6 +13,7 @@ type Props = {
   toggleViewNuevasVacunas: () => void;
   toggleViewVPH: () => void;
   toggleViewVacunacionHepatitisA: () => void;
+  toggleViewEsquemaVacunacionRegular: () => void;
   keyCarrousel: number;
   index: number;
   stateSide: string;
@@ -22,6 +23,7 @@ const View15 = ({
   toggleViewNuevasVacunas,
   toggleViewVPH,
   toggleViewVacunacionHepatitisA,
+  toggleViewEsquemaVacunacionRegular,
   keyCarrousel,
   index,
   stateSide,
@@ -142,15 +144,13 @@ const View15 = ({
           fill
           quality={50}
         />
-        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex group items-start">
-          {/* <a
+         <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex  group items-start">
+          <a
+            onClick={toggleViewEsquemaVacunacionRegular}
             className="z-20 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 p-1 lg:p-2"
-            href="https://www.unicef.org/peru/"
-            target="_blank"
-            rel="noreferrer"
           >
-         
-          </a> */}
+            <Button text="Esquema de vacunación regular" />
+          </a>
         </div>
       </div>
       <div className="col-span-4 flex items-center justify-center bg-violet-500 relative">

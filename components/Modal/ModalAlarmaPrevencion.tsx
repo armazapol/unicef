@@ -17,12 +17,14 @@ type Props = {
   nextViewModule: () => void;
 };
 
-const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion, nextViewModule }: Props) => {
-
+const ModalAlarmaPrevencion = ({
+  toggleViewAlarmaPrevencion,
+  nextViewModule,
+}: Props) => {
   const nextModule = () => {
-    nextViewModule()
-    toggleViewAlarmaPrevencion()
-  }
+    nextViewModule();
+    toggleViewAlarmaPrevencion();
+  };
 
   const handleChildElementClick = (e: any) => {
     e.stopPropagation();
@@ -47,11 +49,15 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion, nextViewModule }: P
         fill
         // quality={50}
       />
-   <a
+      <a
         onClick={nextModule}
         className="cursor-pointer absolute right-14 top-4 lg:right-20 lg:top-9 text-white text-xl font-semibold "
       >
-        <img className="w-4 lg:w-8" src="/img/arrowNext.png" alt="Siguiente módulo" />
+        <img
+          className="w-4 lg:w-8"
+          src="/img/arrowNext.png"
+          alt="Siguiente módulo"
+        />
       </a>
       <a
         onClick={toggleViewAlarmaPrevencion}
@@ -104,16 +110,17 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion, nextViewModule }: P
                 <div className="text-sm lg:text-base text-left flex flex-col gap-2">
                   <p>
                     Es importante diferenciar en primer lugar el aislamiento de
-                    la cuarentena, la cuarentena es la restricción del
+                    la cuarentena. La cuarentena es la restricción del
                     desplazamiento fuera de su vivienda a la persona o personas
-                    expuestas a un caso sospechoso, probable o confirmado de
+                    expuestas a un caso sospechoso, probable o confirmado de{" "}
                     <span className="text-orange-600"> COVID-19</span>. El
                     aislamiento es el procedimiento por el cual una persona
-                    considerada sospechosa, probable o confirmada de
+                    considerada sospechosa, probable o confirmada de{" "}
                     <span className="text-orange-600"> COVID-19</span>, y que no
-                    requiera hospitalización se le indica aislamiento
+                    requiera hospitalización, debe permanecer en aislamiento
                     domiciliario. Durante el aislamiento se le restringe el
-                    desplazamiento fuera de su vivienda o centro de aislamiento.
+                    desplazamiento fuera de su vivienda o del espacio dentro de
+                    la casa en el que debe guardar reposo y tratamiento.
                   </p>
                   <p>
                     Para el caso de pacientes con síntomas respiratorios, y en
@@ -122,7 +129,7 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion, nextViewModule }: P
                   </p>
                   <ul>
                     <li>
-                      * Mayor de 60 años, presencia de comorbilidades o
+                      * Mayor de 60 años, con presencia de comorbilidades o
                       vacunación incompleta, se realiza aislamiento por 10 días.{" "}
                     </li>
                     <li>
@@ -204,7 +211,7 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion, nextViewModule }: P
                   <li>* Vacunación incompleta: 07 días</li>
                   <li>
                     * Mayores de 60 años o con comorbilidades: 07 días (se puede
-                    realizar una prueba molecular PCR al tercer día, de ser
+                    realizar una prueba molecular PCR al tercer día. De ser
                     negativa se puede concluir aislamiento
                   </li>
                   <li>
@@ -330,11 +337,7 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion, nextViewModule }: P
                     los cerrados. Abra una ventana si está en el interior.
                   </li>
                   <li>
-                    * Lávese las manos regularmente con agua y jabón o límpielas
-                    con un desinfectante de manos a base de alcohol. (acá se
-                    puede ampliar una imagen sobre la importancia del lavado de
-                    manos: Importancia del lavado de manos - Orientación -
-                    Ministerio de Salud - Gobierno del Perú )
+                    * Lávese las manos regularmente con agua y jabón o límpielas con un desinfectante de manos a base de alcohol. ( Importancia del lavado de manos - Orientación - Ministerio de Salud - Gobierno del Perú )
                   </li>
                   <li>* Cúbrase la boca y la nariz al toser o estornudar.</li>
                   <li>
@@ -343,8 +346,7 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion, nextViewModule }: P
                   </li>
                 </ul>
                 <p>
-               
-                  <h3 className="font-semibold">   Fuentes:{" "}</h3>
+                  <h3 className="font-semibold"> Fuentes: </h3>
                   <a
                     className="hover:underline hover:text-blue-500 text-sm block"
                     target="blank"

@@ -30,7 +30,7 @@ const ViewCompleted = () => {
             ¡Felicitaciones!
           </p>
           <p className="third_color font-bold text-base lg:text-3xl text-center">
-            Completaste Satifactoriamente el Curso Lúdico de la COVID-19
+            Completaste Satisfactoriamente el Curso Lúdico de la COVID-19
           </p>
           {/* <div className="flex items-center justify-center ">
 

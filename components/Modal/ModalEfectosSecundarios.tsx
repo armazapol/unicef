@@ -216,12 +216,12 @@ const ModalEfectosSecundarios = ({ toggleViewEfectosSecundarios, nextViewModule 
                   presente alguna reacción inmediata. Las personas vacunadas
                   deben avisar a los profesionales sanitarios de cualquier
                   efecto secundario inesperado o de otros problemas de salud
-                  tras la vacunación, por ejemplo, los efectos secundarios que
+                  tras la vacunación, por ejemplo, aquellos que
                   duren más de tres días. Uno de los efectos secundarios menos
                   frecuentes que se han notificado con las vacunas contra la{" "}
                   <span className="text-orange-600">COVID-19</span> son las
                   reacciones alérgicas graves (como casos de anafilaxia); sin
-                  embargo, esta reacción es muy infrecuente.
+                  embargo, esta reacción muy poco probable.
                 </p>
                 <p>
                   Las autoridades nacionales y los organismos internacionales,
