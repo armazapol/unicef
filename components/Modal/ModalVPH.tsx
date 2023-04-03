@@ -42,11 +42,11 @@ const ModalVPH = ({ toggleViewVPH , nextViewModule}: Props) => {
         fill
         // quality={50}
       />
-        <a
+      <a
         onClick={nextModule}
-        className="cursor-pointer absolute right-14 top-4 lg:right-20 lg:top-10 text-white text-xl font-semibold "
+        className="cursor-pointer absolute right-14 top-4 lg:right-20 lg:top-9 text-white text-xl font-semibold "
       >
-        <img className="w-4 lg:w-6" src="/img/arrowNext.png" alt="Siguiente módulo" />
+        <img className="w-4 lg:w-8" src="/img/arrowNext.png" alt="Siguiente módulo" />
       </a>
        <a
         onClick={toggleViewVPH}
@@ -90,7 +90,7 @@ const ModalVPH = ({ toggleViewVPH , nextViewModule}: Props) => {
             className="  w-full h-full relative carousel1"
           >
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[40rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
+              <div className="w-10/12 lg:w-[40rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex flex-col gap-2 p-5 lg:p-20 relative component rounded-md overflow-auto text-sm lg:text-base">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   Vacuna contra el Virus Papiloma Humano (VPH)
                 </h3>
@@ -114,7 +114,7 @@ const ModalVPH = ({ toggleViewVPH , nextViewModule}: Props) => {
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[40rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
+              <div className="w-10/12 lg:w-[40rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex flex-col gap-2 p-5 lg:p-10 relative component rounded-md overflow-auto text-sm lg:text-base">
                 <div className="text-left flex flex-col gap-2">
                   <p className="font-semibold">
                   En el Esquema Nacional de Vacunación, para el presente año 2023, se tienen las siguientes indicaciones:

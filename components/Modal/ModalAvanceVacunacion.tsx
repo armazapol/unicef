@@ -33,12 +33,12 @@ const ModalAvanceVacunacion = ({ toggleViewAvanceVacunacion, nextViewModule }: P
         fill
         // quality={50}
       />
-      <div className="w-[40rem] bg-white flex flex-col gap-2 p-5 relative component rounded-md">
+      <div className="w-[40rem] bg-white flex flex-col gap-2 p-5 lg:p-10 relative component rounded-md">
       <a
         onClick={nextModule}
-        className="cursor-pointer absolute right-14 top-4 lg:right-20 lg:top-10 text-white text-xl font-semibold "
+        className="cursor-pointer absolute right-14 top-4 lg:right-20 lg:top-9 text-white text-xl font-semibold "
       >
-        <img className="w-4 lg:w-6" src="/img/arrowNext.png" alt="Siguiente módulo" />
+        <img className="w-4 lg:w-8" src="/img/arrowNext.png" alt="Siguiente módulo" />
       </a>
         <a
           onClick={toggleViewAvanceVacunacion}

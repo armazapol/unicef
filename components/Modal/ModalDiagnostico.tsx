@@ -36,11 +36,11 @@ const ModalDiagnostico = ({ toggleViewDiagnostico, nextViewModule }: Props) => {
         fill
         // quality={50}
       />
-        <a
+       <a
         onClick={nextModule}
-        className="cursor-pointer absolute right-14 top-4 lg:right-20 lg:top-10 text-white text-xl font-semibold "
+        className="cursor-pointer absolute right-14 top-4 lg:right-20 lg:top-9 text-white text-xl font-semibold "
       >
-        <img className="w-4 lg:w-6" src="/img/arrowNext.png" alt="Siguiente módulo" />
+        <img className="w-4 lg:w-8" src="/img/arrowNext.png" alt="Siguiente módulo" />
       </a>
       <a
         onClick={toggleViewDiagnostico}
@@ -48,7 +48,7 @@ const ModalDiagnostico = ({ toggleViewDiagnostico, nextViewModule }: Props) => {
       >
         <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="" />
       </a>
-      <div className="w-10/12 md:w-[55rem] bg-white flex  gap-2 p-5 relative component rounded-md h-5/6 lg:h-auto overflow-x-hidden overflow-y-auto">
+      <div className="w-10/12 md:w-[55rem] bg-white flex  gap-2 p-5 lg:p-10 relative component rounded-md h-5/6 lg:h-auto overflow-x-hidden overflow-y-auto">
         <div className="flex-1 overflow-y-auto">
           <h2 className="font-semibold text-base lg:text-lg">Diagnóstico</h2>
           <p className="text-sm lg:text-base">

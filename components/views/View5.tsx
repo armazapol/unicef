@@ -161,12 +161,20 @@ const View5 = ({
           fill
           quality={50}
         />
-        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex  group items-start">
+        <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex flex-col group items-start">
           <a
             onClick={toggleViewTiposVacunas}
             className="z-20 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 p-1 lg:p-2"
           >
             <Button text="Tipos de Vacunas y Esquema de la vacunación" />
+          </a>
+          <a
+            href="https://www.minsa.gob.pe/reunis/data/vacunas-covid19.asp"
+            className="z-20 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 p-1 lg:p-2"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button text="Avance de vacunación" />
           </a>
         </div>
       </div>

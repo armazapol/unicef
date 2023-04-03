@@ -44,9 +44,9 @@ const ModalQuestSlide1 = ({ toggleViewQuestSlide1, nextViewModule }: Props) => {
       />
         <a
         onClick={nextModule}
-        className="cursor-pointer absolute right-14 top-4 lg:right-20 lg:top-10 text-white text-xl font-semibold "
+        className="cursor-pointer absolute right-14 top-4 lg:right-20 lg:top-9 text-white text-xl font-semibold "
       >
-        <img className="w-4 lg:w-6" src="/img/arrowNext.png" alt="Siguiente módulo" />
+        <img className="w-4 lg:w-8" src="/img/arrowNext.png" alt="Siguiente módulo" />
       </a>
       <a
         onClick={toggleViewQuestSlide1}
@@ -91,7 +91,7 @@ const ModalQuestSlide1 = ({ toggleViewQuestSlide1, nextViewModule }: Props) => {
           className="  w-full h-full relative carousel1 "
         >
           <div className=" flex items-center justify-center  relative h-full gap-5">
-            <div className="w-10/12 lg:w-[50rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
+            <div className="w-10/12 lg:w-[50rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 lg:p-20 relative component rounded-md overflow-auto">
               <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   ¿Debería vacunarme si ya he pasado la COVID-19?
@@ -131,7 +131,7 @@ const ModalQuestSlide1 = ({ toggleViewQuestSlide1, nextViewModule }: Props) => {
             </div>
           </div>
           <div className=" flex items-center justify-center  relative h-full gap-5">
-            <div className="w-10/12 lg:w-[60rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
+            <div className="w-10/12 lg:w-[60rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 lg:p-10 relative component rounded-md overflow-auto">
               <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   ¿Puedo dejar de tomar precauciones después de haberme

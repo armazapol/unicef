@@ -86,7 +86,7 @@ const ModalQuestSlide5 = ({ toggleViewQuestSlide5 , nextViewModule}: Props) => {
           className="  w-full h-full relative carousel1 "
         >
           <div className=" flex items-center justify-center  relative h-full gap-5">
-            <div className="w-10/12 lg:w-[60rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
+            <div className="w-10/12 lg:w-[60rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 lg:p-10 relative component rounded-md overflow-auto">
               <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   ¿Pueden los zapatos propagar el virus de la COVID-19?
@@ -137,7 +137,7 @@ const ModalQuestSlide5 = ({ toggleViewQuestSlide5 , nextViewModule}: Props) => {
             </div>
           </div>
           <div className=" flex items-center justify-center  relative h-full gap-5">
-            <div className="w-10/12 lg:w-[60rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
+            <div className="w-10/12 lg:w-[60rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 lg:p-10 relative component rounded-md overflow-auto">
               <div className="flex-1 overflow-y-auto">
                 <div className="text-sm lg:text-base text-left flex flex-col gap-2">
                   <p>

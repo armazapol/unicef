@@ -47,11 +47,11 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion, nextViewModule }: P
         fill
         // quality={50}
       />
-        <a
+   <a
         onClick={nextModule}
-        className="cursor-pointer absolute right-14 top-4 lg:right-20 lg:top-10 text-white text-xl font-semibold "
+        className="cursor-pointer absolute right-14 top-4 lg:right-20 lg:top-9 text-white text-xl font-semibold "
       >
-        <img className="w-4 lg:w-6" src="/img/arrowNext.png" alt="Siguiente módulo" />
+        <img className="w-4 lg:w-8" src="/img/arrowNext.png" alt="Siguiente módulo" />
       </a>
       <a
         onClick={toggleViewAlarmaPrevencion}
@@ -96,7 +96,7 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion, nextViewModule }: P
           className="  w-full h-full relative carousel1 "
         >
           <div className=" flex items-center justify-center  relative h-full gap-5">
-            <div className="w-10/12 lg:w-[60rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
+            <div className="w-10/12 lg:w-[60rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 lg:p-10 relative component rounded-md overflow-auto">
               <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   Aislamiento
@@ -193,7 +193,7 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion, nextViewModule }: P
             </div>
           </div>
           <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-            <div className="w-10/12 lg:w-[50rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md">
+            <div className="w-10/12 lg:w-[50rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 lg:p-20 relative component rounded-md">
               <div className="text-sm lg:text-base text-left flex flex-col gap-2 flex-1 overflow-y-auto">
                 <p>
                   En el caso de personas que habitan con personas positivas a
@@ -322,7 +322,7 @@ const ModalAlarmaPrevencion = ({ toggleViewAlarmaPrevencion, nextViewModule }: P
             </div>
           </div>
           <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-            <div className="w-10/12 lg:w-[50rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto">
+            <div className="w-10/12 lg:w-[50rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 lg:p-10 relative component rounded-md overflow-auto">
               <div className="text-left flex flex-col gap-2 flex-1 overflow-y-auto text-sm lg:text-base">
                 <ul>
                   <li>

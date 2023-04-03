@@ -47,9 +47,9 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas, nextViewModule }: Props) =>
       />
         <a
         onClick={nextModule}
-        className="cursor-pointer absolute right-14 top-4 lg:right-20 lg:top-10 text-white text-xl font-semibold "
+        className="cursor-pointer absolute right-14 top-4 lg:right-20 lg:top-9 text-white text-xl font-semibold "
       >
-        <img className="w-4 lg:w-6" src="/img/arrowNext.png" alt="Siguiente módulo" />
+        <img className="w-4 lg:w-8" src="/img/arrowNext.png" alt="Siguiente módulo" />
       </a>
       <a
         onClick={toggleViewTiposVacunas}
@@ -59,7 +59,7 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas, nextViewModule }: Props) =>
       </a>
       {/* <h3 className="text-white text-xl text-center font-semibold">Aislamiento y Prevención del Riesgo:</h3> */}
       <div
-        className="flex img gap-2 w-full h-auto xl:w-[70rem] items-center justify-center relative"
+        className="flex img gap-2 w-full h-auto xl:w-[75rem] items-center justify-center relative"
         onClick={(e) => handleChildElementClick(e)}
       >
         <Carousel
@@ -93,7 +93,7 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas, nextViewModule }: Props) =>
           className="  w-full h-full relative carousel1"
         >
           <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-            <div className="w-10/12 lg:w-[60rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
+            <div className="w-10/12 lg:w-[65rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 lg:p-10 relative component rounded-md overflow-auto text-sm lg:text-base">
               <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   Tipos de vacunas
@@ -168,7 +168,7 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas, nextViewModule }: Props) =>
             </div>
           </div>
           <div className=" flex items-center justify-center  relative flex-col h-full gap-2 lg:gap-5">
-            <div className="w-8/12 lg:w-6/12 relative group">
+            <div className="w-8/12 lg:w-[50rem] relative group">
               <Image
                 className="object-cover"
                 alt="img1"
@@ -199,7 +199,7 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas, nextViewModule }: Props) =>
             </p>
           </div>
           <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-            <div className="w-10/12 lg:w-[55rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
+            <div className="w-10/12 lg:w-[55rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 lg:p-10 relative component rounded-md overflow-auto text-sm lg:text-base">
               <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   Esquema de vacunación contra COVID-19
@@ -271,7 +271,7 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas, nextViewModule }: Props) =>
             </div>
           </div>
           <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-            <div className="w-8/12 lg:w-[35rem] relative group">
+            <div className="w-8/12 lg:w-[50rem] relative group">
               <Image
                 className="object-cover"
                 alt="img3"
@@ -293,7 +293,7 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas, nextViewModule }: Props) =>
             </div>
           </div>
           <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-            <div className="w-6/12 relative group">
+            <div className="w-6/12 lg:w-[50rem] relative group">
               <Image
                 className="object-cover"
                 alt="img1"
@@ -314,7 +314,7 @@ const ModalTiposVacunas = ({ toggleViewTiposVacunas, nextViewModule }: Props) =>
             </div>
           </div>
           <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-            <div className="w-10/12 lg:w-[60rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
+            <div className="w-10/12 lg:w-[60rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 lg:p-10 relative component rounded-md overflow-auto text-sm lg:text-base">
               <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   Importante

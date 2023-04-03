@@ -40,11 +40,11 @@ const ModalVarianteCovid = ({ toggleViewVarianteCovid, nextViewModule }: Props) 
         fill
         // quality={50}
       />
-         <a
+       <a
         onClick={nextModule}
-        className="cursor-pointer absolute right-14 top-4 lg:right-20 lg:top-10 text-white text-xl font-semibold "
+        className="cursor-pointer absolute right-14 top-4 lg:right-20 lg:top-9 text-white text-xl font-semibold "
       >
-        <img className="w-4 lg:w-6" src="/img/arrowNext.png" alt="Siguiente módulo" />
+        <img className="w-4 lg:w-8" src="/img/arrowNext.png" alt="Siguiente módulo" />
       </a>
       <a
         onClick={toggleViewVarianteCovid}
@@ -89,7 +89,7 @@ const ModalVarianteCovid = ({ toggleViewVarianteCovid, nextViewModule }: Props) 
             className="  w-full h-full relative carousel1"
           >
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-[40rem] bg-white flex flex-col gap-2 p-5 relative component rounded-md">
+              <div className="w-[40rem] bg-white flex flex-col gap-2 p-5 lg:p-10 relative component rounded-md">
                 <h3 className=" text-xl text-center font-semibold">
                   Variantes de Covid
                 </h3>

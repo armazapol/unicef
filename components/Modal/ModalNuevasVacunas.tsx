@@ -46,9 +46,9 @@ const ModalNuevasVacunas = ({ toggleViewNuevasVacunas, nextViewModule }: Props) 
       />
         <a
         onClick={nextModule}
-        className="cursor-pointer absolute right-14 top-4 lg:right-20 lg:top-10 text-white text-xl font-semibold "
+        className="cursor-pointer absolute right-14 top-4 lg:right-20 lg:top-9 text-white text-xl font-semibold "
       >
-        <img className="w-4 lg:w-6" src="/img/arrowNext.png" alt="Siguiente módulo" />
+        <img className="w-4 lg:w-8" src="/img/arrowNext.png" alt="Siguiente módulo" />
       </a>
     <a
         onClick={toggleViewNuevasVacunas}
@@ -92,7 +92,7 @@ const ModalNuevasVacunas = ({ toggleViewNuevasVacunas, nextViewModule }: Props) 
             className="  w-full h-full relative carousel1"
           >
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[40rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
+              <div className="w-10/12 lg:w-[40rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex flex-col gap-2 p-5 lg:p-20 relative component rounded-md overflow-auto text-sm lg:text-base">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                 Nuevas vacunas incluidas
                 </h3>
@@ -126,7 +126,7 @@ const ModalNuevasVacunas = ({ toggleViewNuevasVacunas, nextViewModule }: Props) 
                   />
                 </a>
               </div>
-              <div className="w-44 lg:w-[30rem] relative group">
+              {/* <div className="w-44 lg:w-[30rem] relative group">
                 <Image
                   className="object-cover"
                   alt="img3"
@@ -144,7 +144,7 @@ const ModalNuevasVacunas = ({ toggleViewNuevasVacunas, nextViewModule }: Props) 
                     alt=""
                   />
                 </a>
-              </div>
+              </div> */}
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
               <h3 className="text-base lg:text-xl text-center font-semibold text-white">

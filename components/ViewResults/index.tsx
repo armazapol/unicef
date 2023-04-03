@@ -204,7 +204,7 @@ const ViewResults = ({
               <div>
 
                   <div
-                    className="bg-blue-900 rounded-md py-2 px-12 text-white font-bold text-md  lg:text-xl z-20 shadow-md "
+                    className="bg-white third_color rounded-md py-2 px-12 text-white font-bold text-md  lg:text-xl z-20 shadow-md "
                   >
                      TU PUNTAJE TOTAL ES: <span className="text-orange-600">{totalScore}</span> 
                   </div>

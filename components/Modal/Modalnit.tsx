@@ -245,13 +245,7 @@ const ModalInit = ({ toggleViewInit, handleNext }: Props) => {
                       Pantallas de Resultados
                     </h3>
                     <p>
-                      Son 5 las preguntas por cada módulo, y al responder todas,
-                      aparecerá la pantalla de Resultados, la cual dará un
-                      resumen de cómo fue el desempeño en cada pregunta del
-                      Módulo. Podrás volver a las pantallas interactivas para
-                      repasar contenido, pero una vez hayas respondido las
-                      preguntas, así obtengas 25 o 100 puntos, no podrás volver
-                      a responderlas y tu puntaje quedará guardado.
+                    Tras responder las preguntas, se te dará tus Resultados. Si pasaste el mínimo obligatorio de 80 puntos, podrás pasar al siguiente módulo, pero si no, tendrás que “Volver a dar el módulo”.
                     </p>
                   </div>
                 </div>

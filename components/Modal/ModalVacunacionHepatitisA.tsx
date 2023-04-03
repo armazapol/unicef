@@ -48,9 +48,9 @@ const ModalVacunacionHepatitisA = ({
       />
         <a
         onClick={nextModule}
-        className="cursor-pointer absolute right-14 top-4 lg:right-20 lg:top-10 text-white text-xl font-semibold "
+        className="cursor-pointer absolute right-14 top-4 lg:right-20 lg:top-9 text-white text-xl font-semibold "
       >
-        <img className="w-4 lg:w-6" src="/img/arrowNext.png" alt="Siguiente módulo" />
+        <img className="w-4 lg:w-8" src="/img/arrowNext.png" alt="Siguiente módulo" />
       </a>
          <a
         onClick={toggleViewVacunacionHepatitisA}
@@ -95,7 +95,7 @@ const ModalVacunacionHepatitisA = ({
             className="  w-full h-full relative carousel1"
           >
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[40rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
+              <div className="w-10/12 lg:w-[40rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex flex-col gap-2 p-5 lg:p-10 relative component rounded-md overflow-auto text-sm lg:text-base">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   Vacunación hepatitis A
                 </h3>
@@ -124,7 +124,7 @@ const ModalVacunacionHepatitisA = ({
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[40rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
+              <div className="w-10/12 lg:w-[40rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex flex-col gap-2 p-5 lg:p-10 relative component rounded-md overflow-auto text-sm lg:text-base">
                 <div className="text-left flex flex-col gap-2">
                   <p className="">
                   Los niños menores de 6 años por lo general no tienen ningún síntoma. Los niños mayores y los adultos se sienten muy mal y débiles. Los síntomas aparecen, por lo general, entre 2 a 6 semanas después de que una persona contraiga el virus.	Estos síntomas pueden incluir los siguientes:
@@ -149,7 +149,7 @@ const ModalVacunacionHepatitisA = ({
               </div>
             </div>
             <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[40rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex flex-col gap-2 p-5 relative component rounded-md overflow-auto text-sm lg:text-base">
+              <div className="w-10/12 lg:w-[40rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex flex-col gap-2 p-5 lg:p-10 relative component rounded-md overflow-auto text-sm lg:text-base">
                 <div className="text-left flex flex-col gap-2">
                   <p>
                   La complicación más temida es la hepatitis fulminante, caracterizada por una rápida progresión a insuficiencia hepática asociando encefalopatía. Si bien solo el 1% -2% de todos los casos de hepatitis virales agudas se complican con hepatitis fulminante, el 75% de los casos de hepatitis fulminante son causados por hepatitis virales.

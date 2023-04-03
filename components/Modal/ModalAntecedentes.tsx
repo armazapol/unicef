@@ -39,9 +39,9 @@ const ModalAntecedentes = ({ toggleViewAntecedentes, nextViewModule }: Props) =>
       />
         <a
         onClick={nextModule}
-        className="cursor-pointer absolute right-14 top-4 lg:right-20 lg:top-10 text-white text-xl font-semibold "
+        className="cursor-pointer absolute right-14 top-4 lg:right-20 lg:top-9 text-white text-xl font-semibold "
       >
-        <img className="w-4 lg:w-6" src="/img/arrowNext.png" alt="Siguiente módulo" />
+        <img className="w-4 lg:w-8" src="/img/arrowNext.png" alt="Siguiente módulo" />
       </a>
       <a
         onClick={toggleViewAntecedentes}
@@ -49,7 +49,7 @@ const ModalAntecedentes = ({ toggleViewAntecedentes, nextViewModule }: Props) =>
       >
         <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="cerrar" />
       </a>
-      <div className="w-10/12 md:w-[70rem] bg-white flex  gap-2 p-5 relative component rounded-md h-5/6 lg:h-auto overflow-x-hidden overflow-y-auto text-sm lg:text-base">
+      <div className="w-10/12 md:w-[70rem] bg-white flex  gap-2 p-5 lg:p-10 relative component rounded-md h-5/6 lg:h-auto overflow-x-hidden overflow-y-auto text-sm lg:text-base">
         <div className="flex-1 overflow-y-auto">
           <h2 className="font-semibold text-base lg:text-lg">Antedecentes</h2>
           <p>
