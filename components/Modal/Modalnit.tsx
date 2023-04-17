@@ -222,7 +222,7 @@ const ModalInit = ({ toggleViewInit, handleNext }: Props) => {
                       Pantallas de Trivia
                     </h3>
                     <p>
-                    Luego de revisar todo el contenido pasamos a las pantallas de Trivia, donde deberá responder 5 preguntas. Cuando logre alcanzar 80 puntos como mínimo podrá acceder al siguiente módulo.
+                    Luego de revisar todo el contenido pasamos a las pantallas de Trivia, donde deberás responder 5 preguntas. Cuando logres alcanzar 80 puntos como mínimo podrás acceder al siguiente módulo.
                     </p>
                   </div>
                 </div>
