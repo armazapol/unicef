@@ -73,7 +73,7 @@ const View5 = ({
           src={img3}
           placeholder="blur"
           fill
-          quality={50}
+          quality={30}
         />
         <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700"></div>
         <div className="flex flex-col z-20 relative items-center  gap-5">
@@ -139,7 +139,7 @@ const View5 = ({
             src={img2}
             placeholder="blur"
             fill
-            quality={50}
+            quality={30}
           />
           <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex group items-start">
             {" "}
@@ -159,7 +159,7 @@ const View5 = ({
           src={img5}
           placeholder="blur"
           fill
-          quality={50}
+          quality={30}
         />
         <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex flex-col group items-start">
           <a
@@ -185,7 +185,7 @@ const View5 = ({
           src={img4}
           placeholder="blur"
           fill
-          quality={50}
+          quality={10}
         />
         <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex group items-start">
           <a
@@ -203,7 +203,7 @@ const View5 = ({
           src={img1}
           placeholder="blur"
           fill
-          quality={50}
+          quality={30}
         />
         <div className="bg-blue-800/30 absolute z-10 w-full h-full hover:bg-transparent transition-all duration-700 flex group items-start">
           {" "}

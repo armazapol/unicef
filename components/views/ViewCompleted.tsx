@@ -4,8 +4,12 @@ import Image from "next/image";
 import background from "../../public/img/bgModal.png";
 import logo from "../../public/img/logo.png";
 import icon from "../../public/img/icono-verificado.png";
+import { useSelector, useDispatch } from "react-redux";
+import { selectCurrentUser } from "./../../pages/api/features/auth/authSlice";
 
 const ViewCompleted = () => {
+  const user = useSelector(selectCurrentUser);
+  console.log(user)
 
   return (
     <div className="fullvh lg:h-screen w-full z-60 bg-black/60 flex items-center justify-center fixed modal">
@@ -27,10 +31,10 @@ const ViewCompleted = () => {
             <Image className="" alt="quest" src={icon} placeholder="blur" />
           </div>
           <p className="text-orange-600 font-bold text-xl lg:text-4xl text-center">
-            ¡Felicitaciones!
+            ¡Felicitaciones, {user.firstName} {user.lastName} !
           </p>
           <p className="third_color font-bold text-base lg:text-3xl text-center">
-            Completaste Satisfactoriamente el Curso Lúdico de la COVID-19
+          Completaste satisfactoriamente el curso sobre vacunación regular y Covid-19 
           </p>
           {/* <div className="flex items-center justify-center ">
 

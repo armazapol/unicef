@@ -89,7 +89,7 @@ const ModalAntecedentes = ({ toggleViewAntecedentes, nextViewModule }: Props) =>
               href="https://cdn.www.gob.pe/uploads/document/file/1206594/DS_N__008-2020-SA.pdf?v=1596682779"
               target="blank"
             >
-              1. (Normas_Legales_20200311_EXTRAORDINARIA.indd (www.gob.pe))
+              1. Edición extraordinaria de las Normas Legales
             </a>
             <a
               className="hover:underline hover:text-blue-500 text-sm block"

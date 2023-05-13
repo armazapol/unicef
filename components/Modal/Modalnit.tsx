@@ -100,10 +100,10 @@ const ModalInit = ({ toggleViewInit, handleNext }: Props) => {
                     ¡Bienvenidos y bienvenidas!
                   </h3>
                   <p>
-                  Este curso tiene dos objetivos: conocer la importancia de las vacunas e identificar los principales cambios en el
-                    <span className="text-orange-600">
+                  Este curso tiene el objetivo de reconocer la importancia de la vacunación y los cambios en el esquema regular tras la pandemia del Covid-19.
+                    {/* <span className="text-orange-600">
                       esquema nacional de vacunación.
-                    </span>
+                    </span> */}
                   </p>
                   <div>
                     <p>
@@ -143,7 +143,8 @@ const ModalInit = ({ toggleViewInit, handleNext }: Props) => {
           <div className=" flex items-center justify-center  relative  h-full  ">
             <div className="h-[13rem] sm:h-[14rem] lg:h-auto flex flex-col gap-2 lg:gap-5 items-center">
               <h3 className=" text-base lg:text-4xl text-center font-semibold text-white">
-                <span className="text-blue-700">Pantallas</span> Interactivas
+                {/* <span className="text-blue-700">Pantallas</span> Interactivas */}
+                ¿Qué encontrarás en este curso?
               </h3>
               <div className="w-10/12 lg:w-[70rem] bg-white flex gap-2 p-10 relative rounded-md justify-evenly overflow-y-auto h-[15rem] sm:h-[18rem] lg:h-auto">
                 <div className=" w-5/12 lg:w-3/12">
@@ -205,7 +206,8 @@ const ModalInit = ({ toggleViewInit, handleNext }: Props) => {
           <div className=" flex items-center justify-center  relative h-full  ">
             <div className="h-[13rem] sm:h-[14rem] lg:h-auto flex flex-col gap-2 lg:gap-5 items-center">
               <h3 className=" text-base lg:text-4xl text-center font-semibold text-white">
-                <span className="text-blue-700">Pantallas</span> Evaluativas
+                {/* <span className="text-blue-700">Pantallas</span> Evaluativas */}
+                ¿Qué encontrarás en este curso?
               </h3>
               <div className="w-10/12 lg:w-[70rem] bg-white flex gap-2 p-10 relative rounded-md justify-evenly overflow-y-auto h-[15rem] sm:h-[18rem] lg:h-auto">
                 <div className="w-5/12 lg:w-3/12">
@@ -262,9 +264,9 @@ const ModalInit = ({ toggleViewInit, handleNext }: Props) => {
               </div>
               <div className="px-0 lg:px-40 ">
                 <div className="text-sm lg:text-xl text-left flex flex-col gap-3 ">
-                  <h3 className="text-base lg:text-2xl  font-bold text-blue-700 text-left">
+                  {/* <h3 className="text-base lg:text-2xl  font-bold text-blue-700 text-left">
                     Eso es todo.
-                  </h3>
+                  </h3> */}
                   <p>
                     Por un periodismo bien informado, disfruta la experiencia,
                     responde las preguntas y difunde información de calidad.
@@ -277,7 +279,7 @@ const ModalInit = ({ toggleViewInit, handleNext }: Props) => {
                       className="bg-blue-900 rounded-md py-2 px-12 text-white font-bold text-md  lg:text-3xl cursor-pointer z-20 shadow-md shadow-black"
                       onClick={handleFinalizar}
                     >
-                      Finalizar
+                      Vayamos al curso
                     </div>
                   </div>
                 </div>
