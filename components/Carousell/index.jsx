@@ -207,6 +207,10 @@ const Carousell = (props) => {
     setStateCarousel((prevIndex) => prevIndex + 1);
   };
 
+  const downPositionCarrousel = () => {
+    setStateCarousel((prevIndex) => prevIndex - 5);
+  };
+
   useEffect(() => {
     stateHamburger
       ? menuTimeline.current.play()
@@ -450,6 +454,7 @@ const Carousell = (props) => {
                   stateSide={stateSide}
                   activateNewView={activateView2}
                   moduleTrivia={data.moduleTrivia}
+                  downPositionCarrousel={downPositionCarrousel}
                 />
               );
             }

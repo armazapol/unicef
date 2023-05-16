@@ -5,11 +5,7 @@ import Image from "next/image";
 import background from "../../public/img/bgModal.png";
 import close from "../../public/img/closeModal.png";
 import img1 from "../../public/img/view1/alarma/img1.png";
-import img2 from "../../public/img/view1/alarma/img2.png";
-import img3 from "../../public/img/view1/alarma/img3.png";
-import img4 from "../../public/img/view1/newModal3.jpg";
-import img5 from "../../public/img/view1/newModal4.jpg";
-import img6 from "../../public/img/view1/newModal5.jpg";
+import img2 from "../../public/img/view1/newModal6.jpg";
 import ButtonLink from "../commons/button/ButtonLink";
 
 type Props = {
@@ -17,12 +13,14 @@ type Props = {
   nextViewModule: () => void;
 };
 
-const ModalSignosAlarma = ({ toggleViewSignosAlarma, nextViewModule }: Props) => {
-
+const ModalSignosAlarma = ({
+  toggleViewSignosAlarma,
+  nextViewModule,
+}: Props) => {
   const nextModule = () => {
-    nextViewModule()
-    toggleViewSignosAlarma()
-  }
+    nextViewModule();
+    toggleViewSignosAlarma();
+  };
 
   const handleChildElementClick = (e: any) => {
     e.stopPropagation();
@@ -51,7 +49,11 @@ const ModalSignosAlarma = ({ toggleViewSignosAlarma, nextViewModule }: Props) =>
         onClick={nextModule}
         className="cursor-pointer absolute right-14 top-4 lg:right-20 lg:top-9 text-white text-xl font-semibold "
       >
-        <img className="w-4 lg:w-8" src="/img/arrowNext.png" alt="Siguiente módulo" />
+        <img
+          className="w-4 lg:w-8"
+          src="/img/arrowNext.png"
+          alt="Siguiente módulo"
+        />
       </a>
       <a
         onClick={toggleViewSignosAlarma}
@@ -95,8 +97,28 @@ const ModalSignosAlarma = ({ toggleViewSignosAlarma, nextViewModule }: Props) =>
           }
           className="  w-full h-full relative carousel1 "
         >
-          <div className=" flex items-center justify-center  relative h-full gap-5">
-            <div className="w-10/12 lg:w-[40rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 lg:p-20 relative component rounded-md overflow-auto">
+          <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
+            <div className="w-10/12 lg:w-[60rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-5 p-5 lg:p-10 relative component rounded-md overflow-auto text-sm lg:text-base">
+              <div className="relative flex-1">
+                <Image
+                  className="object-cover rounded-md"
+                  alt="img1"
+                  src={img2}
+                  placeholder="blur"
+                  fill
+                  quality={50}
+                />
+                <a
+                  onClick={() => window.open("/img/view1/newModal6.jpg")}
+                  className="absolute left-5 bottom-5 z-20 cursor-pointer"
+                >
+                  <img
+                    className="w_loop hidden lg:block"
+                    src="/img/lupa.png"
+                    alt=""
+                  />
+                </a>
+              </div>
               <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   Signos de Alarma
@@ -131,28 +153,9 @@ const ModalSignosAlarma = ({ toggleViewSignosAlarma, nextViewModule }: Props) =>
                   </a>
                 </div>
               </div>
-              {/* <div className="relative flex-1">
-                <Image
-                  className="object-cover rounded-md"
-                  alt="img1"
-                  src={img4}
-                  placeholder="blur"
-                  fill
-                  quality={50}
-                />
-                <a
-                  onClick={() => window.open("/img/view1/newModal3.jpg")}
-                  className="absolute left-5 bottom-5 z-20 cursor-pointer"
-                >
-                  <img
-                    className="w_loop hidden lg:block"
-                    src="/img/lupa.png"
-                    alt=""
-                  />
-                </a>
-              </div> */}
             </div>
           </div>
+
           <div className=" flex items-center justify-center  relative h-full gap-5">
             <div className="w-10/12 lg:w-[40rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 lg:p-20 relative component rounded-md overflow-auto">
               <div className="flex-1 overflow-y-auto">
@@ -161,14 +164,16 @@ const ModalSignosAlarma = ({ toggleViewSignosAlarma, nextViewModule }: Props) =>
                 </h3>
                 <div className="text-sm lg:text-base text-left flex flex-col gap-2">
                   <p>
-                    Los factores de riesgo individual asociados a presentar complicaciones relacionadas al COVID-19 son:
+                    Los factores de riesgo individual asociados a presentar
+                    complicaciones relacionadas al COVID-19 son:
                   </p>
                   <ul>
+                    <li>* Edad mayor a 60 años</li>
                     <li>
-                      * Edad mayor a 60 años
-                    </li>
-                    <li>
-                      * Comorbilidades como: hipertensión arterial, enfermedades cardiovasculares, diabetes, obesidad, asma, enfermedad pulmonar crónica (EPOC), insuficiencia renal crónica, enfermedad o tratamiento inmunosupresor
+                      * Comorbilidades como: hipertensión arterial, enfermedades
+                      cardiovasculares, diabetes, obesidad, asma, enfermedad
+                      pulmonar crónica (EPOC), insuficiencia renal crónica,
+                      enfermedad o tratamiento inmunosupresor
                     </li>
                   </ul>
                   <a

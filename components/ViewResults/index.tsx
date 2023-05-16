@@ -24,6 +24,7 @@ type Props = {
   activateNewView: () => void;
   arrQuest: string[];
   moduleTrivia: string;
+  downPositionCarrousel : ()=> void;
 };
 
 type DataTable = {
@@ -40,6 +41,7 @@ const ViewResults = ({
   activateNewView,
   moduleTrivia,
   arrQuest,
+  downPositionCarrousel
 }: Props) => {
   const [dataTable, setDataTable] = useState<DataTable[] | []>([]);
   const [totalScore, setTotalScore] = useState<number>(0);
@@ -135,6 +137,7 @@ const ViewResults = ({
     var tl = gsap.timeline();
     tl.to(".toast_format", { x: -350, duration: 1, opacity:1 });
     tl.to(".toast_format", { x: 0, duration: 1,opacity:0, delay: 3 });
+    downPositionCarrousel()
   };
 
   useEffect(() => {

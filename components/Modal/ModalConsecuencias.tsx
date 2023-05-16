@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 import background from "../../public/img/bgModal.png";
-import img1 from "../../public/img/view2/newModal4.png";
+import img1 from "../../public/img/view2/newModal20.jpg";
 import img2 from "../../public/img/view2/newModal12.png";
 import arrow from "../../public/img/arrow.png";
 
@@ -134,7 +134,7 @@ const ModalConsecuencias = ({ toggleViewConsecuencias, nextViewModule }: Props) 
                   quality={50}
                 />
                 <a
-                  onClick={() => window.open("/img/view2/newModal4.png")}
+                  onClick={() => window.open("/img/view2/newModal20.jpg")}
                   className="absolute left-5 bottom-5 z-20 cursor-pointer"
                 >
                   <img

@@ -6,6 +6,7 @@ import background from "../../public/img/bgModal.png";
 import img1 from "../../public/img/view2/newModal3.png";
 import img2 from "../../public/img/view2/newModal4.png";
 
+
 type Props = {
   toggleViewInmunidadColectiva: () => void;
   nextViewModule: () => void;

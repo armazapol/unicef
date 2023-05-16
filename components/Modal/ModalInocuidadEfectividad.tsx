@@ -6,7 +6,7 @@ import background from "../../public/img/bgModal.png";
 import img1 from "../../public/img/view2/newModal18.jpg"; //cambiar
 import img2 from "../../public/img/view2/newModal14.png"; 
 import img3 from "../../public/img/view2/newModal13.png"; 
-import img4 from "../../public/img/view2/newModal4.png"; 
+import img4 from "../../public/img/view2/newModal19.jpg"; 
 import img5 from "../../public/img/view2/newModal15.png"; 
 
 type Props = {
@@ -278,7 +278,7 @@ const ModalInocuidadEfectividad = ({
                     quality={50}
                   />
                   <a
-                    onClick={() => window.open("/img/view2/newModal4.png")}
+                    onClick={() => window.open("/img/view2/newModal19.jpg")}
                     className="absolute left-5 bottom-5 z-20 cursor-pointer"
                   >
                     <img

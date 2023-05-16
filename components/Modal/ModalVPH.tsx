@@ -5,6 +5,7 @@ import Image from "next/image";
 import background from "../../public/img/bgModal.png";
 import close from "../../public/img/closeModal.png";
 import img1 from "../../public/img/view3/vph/img1.png";
+import img2 from "../../public/img/view3/vph/img2.jpg";
 import ButtonLink from "../commons/button/ButtonLink";
 
 type Props = {
@@ -12,12 +13,11 @@ type Props = {
   nextViewModule: () => void;
 };
 
-const ModalVPH = ({ toggleViewVPH , nextViewModule}: Props) => {
-
+const ModalVPH = ({ toggleViewVPH, nextViewModule }: Props) => {
   const nextModule = () => {
-    nextViewModule()
-    toggleViewVPH()
-  }
+    nextViewModule();
+    toggleViewVPH();
+  };
 
   const handleChildElementClick = (e: any) => {
     e.stopPropagation();
@@ -46,141 +46,202 @@ const ModalVPH = ({ toggleViewVPH , nextViewModule}: Props) => {
         onClick={nextModule}
         className="cursor-pointer absolute right-14 top-4 lg:right-20 lg:top-9 text-white text-xl font-semibold "
       >
-        <img className="w-4 lg:w-8" src="/img/arrowNext.png" alt="Siguiente módulo" />
+        <img
+          className="w-4 lg:w-8"
+          src="/img/arrowNext.png"
+          alt="Siguiente módulo"
+        />
       </a>
-       <a
+      <a
         onClick={toggleViewVPH}
         className="cursor-pointer absolute right-4 top-4 lg:right-10 lg:top-10 text-white text-xl font-semibold z-50"
       >
         <img className="w-4 lg:w-6" src="/img/closeModal.png" alt="" />
       </a>
-        {/* <h3 className="text-white text-xl text-center font-semibold">Aislamiento y Prevención del Riesgo:</h3> */}
-        <div
-          className="flex img gap-2 w-full h-auto xl:w-[70rem] items-center justify-center relative"
-          onClick={(e) => handleChildElementClick(e)}
-        >
-          <Carousel
-            showThumbs={false}
-            showStatus={false}
-            showIndicators={true}
-            infiniteLoop={true}
-            autoPlay={false}
-            stopOnHover={false}
-            swipeable={false}
-            renderArrowPrev={(onClickHandler, hasNext, label) =>
-              hasNext && (
-                <div
-                  className="absolute z-10 cursor-pointer top-[calc(50%-1.25rem)] lg:top-[calc(50%-1.8rem)] left-1 lg:left-2 w-10 lg:w-14"
-                  onClick={onClickHandler}
-                >
-                  <img src="/img/arrow.png" className="rotate-180" />
-                </div>
-              )
-            }
-            renderArrowNext={(onClickHandler, hasNext, label) =>
-              hasNext && (
-                <div
+      {/* <h3 className="text-white text-xl text-center font-semibold">Aislamiento y Prevención del Riesgo:</h3> */}
+      <div
+        className="flex img gap-2 w-full h-auto xl:w-[70rem] items-center justify-center relative"
+        onClick={(e) => handleChildElementClick(e)}
+      >
+        <Carousel
+          showThumbs={false}
+          showStatus={false}
+          showIndicators={true}
+          infiniteLoop={true}
+          autoPlay={false}
+          stopOnHover={false}
+          swipeable={false}
+          renderArrowPrev={(onClickHandler, hasNext, label) =>
+            hasNext && (
+              <div
+                className="absolute z-10 cursor-pointer top-[calc(50%-1.25rem)] lg:top-[calc(50%-1.8rem)] left-1 lg:left-2 w-10 lg:w-14"
+                onClick={onClickHandler}
+              >
+                <img src="/img/arrow.png" className="rotate-180" />
+              </div>
+            )
+          }
+          renderArrowNext={(onClickHandler, hasNext, label) =>
+            hasNext && (
+              <div
                 className="absolute z-10 cursor-pointer top-[calc(50%-1.25rem)] lg:top-[calc(50%-1.8rem)] right-1 lg:right-2 w-10 lg:w-14"
                 onClick={onClickHandler}
-                >
-                  <img src="/img/arrow.png" className="" />
-                </div>
-              )
-            }
-            className="  w-full h-full relative carousel1"
-          >
-            <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[40rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex flex-col gap-2 p-5 lg:p-20 relative component rounded-md overflow-auto text-sm lg:text-base">
+              >
+                <img src="/img/arrow.png" className="" />
+              </div>
+            )
+          }
+          className="  w-full h-full relative carousel1"
+        >
+          <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
+            <div className="w-10/12 lg:w-[55rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex gap-2 p-5 lg:p-10 relative component rounded-md overflow-auto">
+              <div className="flex-1 overflow-y-auto">
                 <h3 className="text-base lg:text-xl text-center font-semibold">
                   Vacuna contra el Virus Papiloma Humano (VPH)
                 </h3>
                 <div className="text-left flex flex-col gap-2">
                   <p>
-                  En nuestro país contamos dentro del Esquema Nacional de Vacunación, con la vacuna contra el Virus del Papiloma Humano (VPH), la cual previene el desarrollo de cáncer cervical causado por el VPH tipos 16 y 18, la Neoplasia Intraepitelial Cervical (NIC) grado I y II y las verrugas genitales causadas por el VPH 6 y 11.
+                    En nuestro país contamos dentro del Esquema Nacional de
+                    Vacunación, con la vacuna contra el Virus del Papiloma
+                    Humano (VPH), la cual previene el desarrollo de cáncer
+                    cervical causado por el VPH tipos 16 y 18, la Neoplasia
+                    Intraepitelial Cervical (NIC) grado I y II y las verrugas
+                    genitales causadas por el VPH 6 y 11.
                   </p>
                   <p>
-                  En mujeres, el Virus del Papiloma Humano es la principal causa del cáncer de cuello uterino, vulva y vagina. En hombres, la infección crónica por VPH, en raras ocasiones, puede producir cáncer de pene o cáncer de ano.
+                    En mujeres, el Virus del Papiloma Humano es la principal
+                    causa del cáncer de cuello uterino, vulva y vagina. En
+                    hombres, la infección crónica por VPH, en raras ocasiones,
+                    puede producir cáncer de pene o cáncer de ano.
                   </p>
                 </div>
               </div>
-            </div>
-            <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <div className="w-10/12 lg:w-[40rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex flex-col gap-2 p-5 lg:p-10 relative component rounded-md overflow-auto text-sm lg:text-base">
-                <div className="text-left flex flex-col gap-2">
-                  <p className="font-semibold">
-                  En el Esquema Nacional de Vacunación, para el presente año 2023, se tienen las siguientes indicaciones:
-                  </p>
-                  <ul>
-                    <li>
-                      * Una dosis para niñas y niños del 5to grado de primaria regular de instituciones educativas públicas y privadas y niñas y niños que por alguna razón no estén estudiando, que tengan de 9 a 13 años de edad.
-                    </li>
-                    <li>
-                      * La primera dosis se aplicará al primer contacto con el servicio de salud y la segunda dosis: a los 6 meses de la primera dosis. Una de las modificaciones en este Esquema Nacional de Vacunación, es que a partir del 2023 se aplicará una sola dosis.
-                    </li>
-                  </ul>
-                  <p className="font-semibold">
-                    Otro cambio dentro del Esquema Nacional de Vacunación es el
-                    inicio de la inmunización contra VPH en varones de 9 a 13
-                    años, esto desde el año 2023, según las siguientes
-                    indicaciones:{" "}
-                  </p>
-                  <ul>
-                    <li>
-                      * Una dosis para niños del 5to grado de primaria regular
-                      de Instituciones Educativas públicas y privadas y niños
-                      que por alguna razón no estén estudiando que tengan de 9 a
-                      13 años de edad
-                    </li>
-                    <li>
-                      * 1ra dosis: al primer contacto con el servicio de salud
-                    </li>
-                  </ul>
-                  <p>
-                    Como posibles efectos luego de la aplicación tenemos:
-                    enrojecimiento en la zona de aplicación, adormecimiento de
-                    la zona de inyección, alza térmica y sensación de fatiga.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
-              <h3 className="text-base lg:text-xl text-center font-semibold text-white">
-              Mitos sobre la vacuna contra el Virus del Papiloma Humano
-                  (VPH)
-              </h3>
-              <div className="w-5/12 lg:w-[50rem] relative group">
+              <div className="relative flex-1">
                 <Image
-                  className="object-cover"
-                  alt="img2"
-                  src={img1}
+                  className="object-cover rounded-md"
+                  alt="img1"
+                  src={img2}
                   placeholder="blur"
+                  fill
                   quality={50}
                 />
                 <a
-                  onClick={() => window.open("/img/view3/vph/img1.png")}
-                  className="cursor-pointer absolute left-5 bottom-5 text-white text-xl font-semibold hidden group-hover:block"
+                  onClick={() => window.open("/img/view3/vph/img2.jpg")}
+                  className="absolute left-5 bottom-5 z-20 cursor-pointer"
                 >
                   <img
-                    className="w_loop hidden lg:block "
+                    className="w_loop hidden lg:block"
                     src="/img/lupa.png"
                     alt=""
                   />
                 </a>
               </div>
-              <p className="underline hover:text-blue-500  text-sm text-white">
-                <span className="font-semibold"> Fuente: </span>
-                <a
-                  href="https://www.gob.pe/21473"
-                  target="blank"
-                >
-                  Mitos sobre la vacuna contra el Virus del Papiloma Humano (VPH) - Orientación - Ministerio de Salud - Gobierno del Perú (www.gob.pe)
-                </a>
-              </p>
             </div>
-
-          </Carousel>
-        </div>
-     
+          </div>
+          <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
+            <div className="w-10/12 lg:w-[40rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex flex-col gap-2 p-5 lg:p-20 relative component rounded-md overflow-auto text-sm lg:text-base">
+              <h3 className="text-base lg:text-xl text-center font-semibold">
+                Vacuna contra el Virus Papiloma Humano (VPH)
+              </h3>
+              <div className="text-left flex flex-col gap-2">
+                <p>
+                  En nuestro país contamos dentro del Esquema Nacional de
+                  Vacunación, con la vacuna contra el Virus del Papiloma Humano
+                  (VPH), la cual previene el desarrollo de cáncer cervical
+                  causado por el VPH tipos 16 y 18, la Neoplasia Intraepitelial
+                  Cervical (NIC) grado I y II y las verrugas genitales causadas
+                  por el VPH 6 y 11.
+                </p>
+                <p>
+                  En mujeres, el Virus del Papiloma Humano es la principal causa
+                  del cáncer de cuello uterino, vulva y vagina. En hombres, la
+                  infección crónica por VPH, en raras ocasiones, puede producir
+                  cáncer de pene o cáncer de ano.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
+            <div className="w-10/12 lg:w-[40rem] h-[14rem] sm:h-[15rem] lg:h-auto bg-white flex flex-col gap-2 p-5 lg:p-10 relative component rounded-md overflow-auto text-sm lg:text-base">
+              <div className="text-left flex flex-col gap-2">
+                <p className="font-semibold">
+                  En el Esquema Nacional de Vacunación, para el presente año
+                  2023, se tienen las siguientes indicaciones:
+                </p>
+                <ul>
+                  <li>
+                    * Una dosis para niñas y niños del 5to grado de primaria
+                    regular de instituciones educativas públicas y privadas y
+                    niñas y niños que por alguna razón no estén estudiando, que
+                    tengan de 9 a 13 años de edad.
+                  </li>
+                  <li>
+                    * La primera dosis se aplicará al primer contacto con el
+                    servicio de salud y la segunda dosis: a los 6 meses de la
+                    primera dosis. Una de las modificaciones en este Esquema
+                    Nacional de Vacunación, es que a partir del 2023 se aplicará
+                    una sola dosis.
+                  </li>
+                </ul>
+                <p className="font-semibold">
+                  Otro cambio dentro del Esquema Nacional de Vacunación es el
+                  inicio de la inmunización contra VPH en varones de 9 a 13
+                  años, esto desde el año 2023, según las siguientes
+                  indicaciones:{" "}
+                </p>
+                <ul>
+                  <li>
+                    * Una dosis para niños del 5to grado de primaria regular de
+                    Instituciones Educativas públicas y privadas y niños que por
+                    alguna razón no estén estudiando que tengan de 9 a 13 años
+                    de edad
+                  </li>
+                  <li>
+                    * 1ra dosis: al primer contacto con el servicio de salud
+                  </li>
+                </ul>
+                <p>
+                  Como posibles efectos luego de la aplicación tenemos:
+                  enrojecimiento en la zona de aplicación, adormecimiento de la
+                  zona de inyección, alza térmica y sensación de fatiga.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className=" flex items-center justify-center  relative flex-col h-full gap-5">
+            <h3 className="text-base lg:text-xl text-center font-semibold text-white">
+              Mitos sobre la vacuna contra el Virus del Papiloma Humano (VPH)
+            </h3>
+            <div className="w-5/12 lg:w-[50rem] relative group">
+              <Image
+                className="object-cover"
+                alt="img2"
+                src={img1}
+                placeholder="blur"
+                quality={50}
+              />
+              <a
+                onClick={() => window.open("/img/view3/vph/img1.png")}
+                className="cursor-pointer absolute left-5 bottom-5 text-white text-xl font-semibold hidden group-hover:block"
+              >
+                <img
+                  className="w_loop hidden lg:block "
+                  src="/img/lupa.png"
+                  alt=""
+                />
+              </a>
+            </div>
+            <p className="underline hover:text-blue-500  text-sm text-white">
+              <span className="font-semibold"> Fuente: </span>
+              <a href="https://www.gob.pe/21473" target="blank">
+                Mitos sobre la vacuna contra el Virus del Papiloma Humano (VPH)
+                - Orientación - Ministerio de Salud - Gobierno del Perú
+                (www.gob.pe)
+              </a>
+            </p>
+          </div>
+        </Carousel>
+      </div>
     </div>
   );
 };
