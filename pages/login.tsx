@@ -37,6 +37,7 @@ const Login = () => {
   } = useForm<Form>();
 
   const onSubmit: SubmitHandler<Form> = async (data) => {
+    return toast.error("ocurrió un error");
     const { email, password } = data;
     if (email === "" || password === "")
       return toast.error("Llenar todos los campos");
